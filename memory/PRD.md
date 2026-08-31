@@ -66,6 +66,12 @@ Web principal moderna y orientada a conversión para Celina (La Seu d'Urgell). F
 - i18n: nuevas claves hero.connectPrefix/rotateWords/nodes y jewelry.ctaWhatsapp en es/ca/en.
 - Verificado: capturas desktop (constelación + tilt + rotación de palabra) y móvil (grid 2x2), hrefs de catálogo y formulario confirmados, sin errores de consola.
 
+## Actualización 2026-08-31 (5ª iteración)
+- Micrositio /viajes (src/pages/TravelPage.jsx): hero propio ("El mundo entero, desde La Seu d'Urgell"), banda "Viajamos contigo a cualquier parte del mundo", grid de 6 destinos inspiracionales con fotos (playas, ciudades, cruceros, aventura, escapadas, a medida — sin precios ni ofertas inventadas), 4 servicios, proceso en 3 pasos y CTA final (WhatsApp + cómo llegar + volver al inicio). Trilingüe (i18n.travelPage), title/meta propios por idioma.
+- Enrutado con react-router: / (landing) y /viajes. Navbar/Footer prefijan los anchors con "/" fuera de home. Title/meta gestionados por página (LanguageContext ya no fija el título).
+- site.links.travel = "/viajes": tarjeta del hub, nodo del hero (desktop y móvil) enlazan a la página. Imágenes de destinos centralizadas en site.images.travelDestinations. sitemap.xml incluye /viajes.
+- Verificado: /viajes en ES y CA (título cambia), nav vuelve a "/#inicio", home intacta, tarjeta travel del hub → /viajes, sin errores de consola.
+
 ## Backlog priorizado
 - P0: Activar GA4/Meta Pixel con IDs reales (rellenar variables en frontend/.env).
 - P0: Páginas especializadas /envios-dinero, /viajes, /bisuteria (cambiar hrefs en site.js → links).

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLocation } from "react-router-dom";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { waLink } from "../lib/whatsapp";
 import { trackEvent } from "../lib/analytics";
@@ -34,6 +35,8 @@ export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const { t } = useLanguage();
+  const { pathname } = useLocation();
+  const home = pathname === "/" ? "" : "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -55,7 +58,7 @@ export const Navbar = () => {
         data-testid="main-navbar"
       >
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
-          <a href="#inicio" className="flex items-baseline gap-2" data-testid="nav-logo">
+          <a href={`${home}#inicio`} className="flex items-baseline gap-2" data-testid="nav-logo">
             <span className="font-display text-2xl sm:text-3xl font-medium tracking-tight text-[#1E2430]">
               CELINA
             </span>
@@ -68,7 +71,7 @@ export const Navbar = () => {
             {t.nav.links.map((l) => (
               <a
                 key={l.href}
-                href={l.href}
+                href={`${home}${l.href}`}
                 data-testid={`nav-link-${l.href.slice(1)}`}
                 className="link-underline text-sm font-medium text-[#1E2430]/75 hover:text-[#1E2430] transition-colors"
               >
@@ -128,7 +131,7 @@ export const Navbar = () => {
               {t.nav.links.map((l, i) => (
                 <motion.a
                   key={l.href}
-                  href={l.href}
+                  href={`${home}${l.href}`}
                   onClick={() => setOpen(false)}
                   initial={{ opacity: 0, x: -24 }}
                   animate={{ opacity: 1, x: 0 }}

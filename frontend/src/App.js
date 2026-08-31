@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Lenis from "lenis";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "@/App.css";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
@@ -14,7 +15,38 @@ import { LocationSection } from "./components/LocationSection";
 import { ContactSection } from "./components/ContactSection";
 import { Footer } from "./components/Footer";
 import { WhatsAppButton } from "./components/WhatsAppButton";
-import { LanguageProvider } from "./context/LanguageContext";
+import { LanguageProvider, useLanguage } from "./context/LanguageContext";
+import TravelPage from "./pages/TravelPage";
+
+const Landing = () => {
+  const { t } = useLanguage();
+
+  useEffect(() => {
+    document.title = t.seo.title;
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) meta.setAttribute("content", t.seo.description);
+  }, [t]);
+
+  return (
+    <div className="App">
+      <Navbar />
+      <main>
+        <Hero />
+        <Marquee />
+        <ServicesHub />
+        <MoneySection />
+        <TravelSection />
+        <JewelrySection />
+        <StudioSection />
+        <TrustSection />
+        <LocationSection />
+        <ContactSection />
+      </main>
+      <Footer />
+      <WhatsAppButton />
+    </div>
+  );
+};
 
 function App() {
   useEffect(() => {
@@ -45,23 +77,12 @@ function App() {
 
   return (
     <LanguageProvider>
-      <div className="App">
-      <Navbar />
-      <main>
-        <Hero />
-        <Marquee />
-        <ServicesHub />
-        <MoneySection />
-        <TravelSection />
-        <JewelrySection />
-        <StudioSection />
-        <TrustSection />
-        <LocationSection />
-        <ContactSection />
-      </main>
-      <Footer />
-      <WhatsAppButton />
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/viajes" element={<TravelPage />} />
+        </Routes>
+      </BrowserRouter>
     </LanguageProvider>
   );
 }

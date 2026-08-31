@@ -19,9 +19,6 @@ export const LanguageProvider = ({ children }) => {
       localStorage.setItem("celina-lang", lang);
     } catch {}
     document.documentElement.lang = lang;
-    document.title = translations[lang].seo.title;
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute("content", translations[lang].seo.description);
   }, [lang]);
 
   return (

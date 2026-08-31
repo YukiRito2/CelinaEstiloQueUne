@@ -49,7 +49,7 @@ export const site = {
   // ----------------------------------------------------------
   links: {
     money: "https://datosdeenvio.vercel.app/", // Formulario externo: datos → WhatsApp
-    travel: "#viajes",
+    travel: "/viajes",
     jewelry: "https://celina-estilo-que-une.vercel.app/", // Catálogo de bisutería
     studio: "https://celina-studio-app.vercel.app/",
   },
@@ -66,6 +66,14 @@ export const site = {
     hero: "https://images.unsplash.com/photo-1585960622850-ed33c41d6418?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjBnb2xkJTIwamV3ZWxyeSUyMG1vZGVsJTIwd29tYW58ZW58MHx8fHwxNzgzOTgwMDc0fDA&ixlib=rb-4.1.0&q=85",
     travel:
       "https://images.unsplash.com/photo-1759340875604-84a9d7473b21?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwzfHxtZWRpdGVycmFuZWFuJTIwdHJhdmVsJTIwZmxpZ2h0JTIwYWlycGxhbmUlMjB3YW5kZXJsdXN0JTIwYmVhY2glMjBkZXN0aW5hdGlvbnxlbnwwfHx8fDE3ODgxOTU0Mjl8MA&ixlib=rb-4.1.0&q=85",
+    travelDestinations: [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
+      "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80",
+      "https://images.unsplash.com/photo-1548574505-5e239809ee19?w=800&q=80",
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
+      "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=800&q=80",
+      "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80",
+    ],
     studio:
       "https://images.unsplash.com/photo-1779949294758-f2728920623c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjV8MHwxfHNlYXJjaHwxfHxwYXN0ZWwlMjB3YXJtJTIwYWVzdGhldGljJTIwZGlnaXRhbCUyMGNyZWF0aXZlJTIwc3R1ZGlvJTIwd29ya3NwYWNlfGVufDB8fHx8MTc4ODE5NjMyNnww&ixlib=rb-4.1.0&q=85",
     jewelry: [

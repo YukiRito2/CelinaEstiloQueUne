@@ -189,7 +189,7 @@ const Constellation = ({ t }) => {
           <Node
             depth={85}
             className="top-0 left-0"
-            href="#viajes"
+            href="/viajes"
             event="travel_click"
             delay={0.8}
             floatY={[6, -10, 6]}
@@ -301,7 +301,7 @@ const MobileNodes = ({ t }) => (
       <p className="text-[10px] text-[#2D7A54]">Ria · Western Union</p>
     </motion.a>
     <motion.a
-      href="#viajes"
+      href="/viajes"
       onClick={() => trackEvent("travel_click", { source: "hero_mobile" })}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
