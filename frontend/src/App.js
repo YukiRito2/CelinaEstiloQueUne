@@ -14,6 +14,7 @@ import { LocationSection } from "./components/LocationSection";
 import { ContactSection } from "./components/ContactSection";
 import { Footer } from "./components/Footer";
 import { WhatsAppButton } from "./components/WhatsAppButton";
+import { LanguageProvider } from "./context/LanguageContext";
 
 function App() {
   useEffect(() => {
@@ -43,7 +44,8 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <LanguageProvider>
+      <div className="App">
       <Navbar />
       <main>
         <Hero />
@@ -59,7 +61,8 @@ function App() {
       </main>
       <Footer />
       <WhatsAppButton />
-    </div>
+      </div>
+    </LanguageProvider>
   );
 }
 

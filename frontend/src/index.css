@@ -3,14 +3,19 @@
 @tailwind utilities;
 
 :root {
-  --navy: #0b235e;
-  --navy-dark: #061334;
-  --green: #04be4f;
-  --green-dark: #039c40;
-  --light: #f5f7fa;
-  --gold: #d4af37;
-  --ink: #0a1224;
-  --muted: #5a677d;
+  --cream: #faf7f2;
+  --cream-2: #f5efe6;
+  --ink: #1e2430;
+  --ink-soft: #475569;
+  --ink-muted: #78869a;
+  --terra: #c88463;
+  --terra-soft: #d99776;
+  --wa: #25d366;
+  --wa-hover: #20bd5a;
+  --mint: #eef7f2;
+  --sky: #f0f6ff;
+  --blush: #fdf2f0;
+  --lavender-dark: #2b2638;
 }
 
 html {
@@ -20,7 +25,7 @@ html {
 body {
   margin: 0;
   font-family: "Plus Jakarta Sans", system-ui, sans-serif;
-  background-color: var(--light);
+  background-color: var(--cream);
   color: var(--ink);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -36,7 +41,7 @@ body {
 }
 
 ::selection {
-  background: var(--green);
+  background: var(--terra-soft);
   color: #fff;
 }
 
@@ -110,18 +115,37 @@ body {
 /* Floating WhatsApp pulse */
 @keyframes wa-pulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(4, 190, 79, 0.5);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
   }
   70% {
-    box-shadow: 0 0 0 18px rgba(4, 190, 79, 0);
+    box-shadow: 0 0 0 18px rgba(37, 211, 102, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(4, 190, 79, 0);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
   }
 }
 
 .wa-pulse {
   animation: wa-pulse 2.4s ease-out infinite;
+}
+
+/* Soft floating for 3D hero orbs */
+@keyframes orb-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0, -18px, 0) scale(1.05);
+  }
+}
+
+.orb-float {
+  animation: orb-float 9s ease-in-out infinite;
+}
+
+.orb-float-slow {
+  animation: orb-float 13s ease-in-out infinite reverse;
 }
 
 /* Underline link hover */
@@ -149,7 +173,9 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   .marquee-track,
-  .wa-pulse {
+  .wa-pulse,
+  .orb-float,
+  .orb-float-slow {
     animation: none;
   }
 }

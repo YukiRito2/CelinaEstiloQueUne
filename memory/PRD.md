@@ -47,11 +47,18 @@ Web principal moderna y orientada a conversión para Celina (La Seu d'Urgell). F
 - curl: frontend 200, /api 200, robots.txt 200, sitemap.xml 200.
 - Screenshots desktop (hero, servicios, envíos, viajes, bisutería, studio, confianza, ubicación, contacto, footer) y móvil (hero, menú, servicios). Sin errores de consola. Enlaces wa.me y Celina Studio verificados.
 
+## Actualización 2026-08-31 (2ª iteración)
+- Web bilingüe ES/CA: selector ES/CAT en navbar (desktop + móvil), persistencia en localStorage, `html lang` y meta title/description se actualizan al cambiar. Todos los textos en `src/config/i18n.js` (es/ca), incluidos los mensajes predefinidos de WhatsApp en catalán.
+- Paleta pastel completa (a petición de la dueña): crema alabastro #FAF7F2, menta #EEF7F2 (envíos), celeste #F0F6FF (viajes), rosa #FDF2F0 (bisutería), lavanda oscuro #2B2638 (Celina Studio) y footer #26232E, terracota #C88463 como acento, verde WhatsApp #25D366 para CTAs. Texto ink #1E2430 (contraste WCAG AA).
+- Hero con efecto 3D: escena con perspective + preserve-3d, tilt por puntero (rotateX/rotateY con springs), orbes pastel flotantes (profundidad -40px), retrato (35px) y badges de cristal (75px/110px).
+- Nota técnica: animar transform con framer-motion en un elemento con translateZ rompe la profundidad — los badges usan solo fade.
+- Verificado: capturas desktop/móvil, cambio ES→CA (título, lang, textos), enlaces wa.me, sin errores de consola.
+
 ## Backlog priorizado
 - P0: Activar GA4/Meta Pixel con IDs reales (rellenar variables en frontend/.env).
 - P0: Páginas especializadas /envios-dinero, /viajes, /bisuteria (cambiar hrefs en site.js → links).
 - P1: Dominio propio + actualizar seo.siteUrl, canonical, sitemap y robots.
 - P1: Catálogo real de bisutería con fotos propias.
 - P1: Añadir Facebook/TikTok cuando existan.
-- P2: Versión en catalán/inglés.
+- P2: ~~Versión en catalán~~ (hecho: selector ES/CAT). Valorar versión en inglés.
 - P2: Formulario de contacto con envío a email (además de WhatsApp).

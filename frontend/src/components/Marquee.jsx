@@ -1,17 +1,12 @@
-const items = [
-  "Envíos de dinero",
-  "Agencia de viajes",
-  "Bisutería",
-  "Diseño web & marketing",
-  "La Seu d'Urgell",
-  "Estilo que Une",
-];
+import { useLanguage } from "../context/LanguageContext";
 
 export const Marquee = () => {
-  const row = [...items, ...items];
+  const { t } = useLanguage();
+  const row = [...t.marquee, ...t.marquee];
+
   return (
     <div
-      className="relative overflow-hidden bg-[#0B235E] py-5 border-y border-white/10"
+      className="relative overflow-hidden bg-[#F5EFE6] py-5 border-y border-[#1E2430]/8"
       aria-hidden="true"
       data-testid="editorial-marquee"
     >
@@ -20,10 +15,10 @@ export const Marquee = () => {
           <div key={half} className="flex items-center">
             {row.map((item, i) => (
               <span key={`${half}-${i}`} className="flex items-center">
-                <span className="font-display italic text-xl sm:text-2xl text-white/85 px-8 whitespace-nowrap">
+                <span className="font-display italic text-xl sm:text-2xl text-[#1E2430]/70 px-8 whitespace-nowrap">
                   {item}
                 </span>
-                <span className="text-[#04BE4F] text-xs">◆</span>
+                <span className="text-[#D99776] text-xs">◆</span>
               </span>
             ))}
           </div>

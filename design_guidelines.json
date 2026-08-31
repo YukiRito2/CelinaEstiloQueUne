@@ -1,73 +1,136 @@
 {
-  "project_name": "CELINA — ESTILO QUE UNE",
-  "archetype": "EUROPEAN_BOUTIQUE_HYBRID",
-  "description": "Award-worthy (Awwwards-level) main hub website for CELINA in La Seu d'Urgell, Spain. CELINA is a multi-service brand bringing together International Money Transfers (Ria, Western Union), Travel Agency, Jewelry/Bisutería, and Celina Studio (Web Design & Digital Marketing).",
+  "project_name": "CELINA — ESTILO QUE UNE (Rediseño Pastel + Hero 3D)",
+  "archetype": "EUROPEAN_PASTEL_BOUTIQUE_3D",
+  "description": "Rediseño completo del sistema de color y hero banner 3D para la marca multiservicio CELINA en La Seu d'Urgell, Lleida. Combina una paleta refinada de tonos pasteles mediterráneos (crema alabastro, rosa empolvado, menta suave, celeste y lavanda profundo) con una experiencia tipográfica editorial de alto nivel (Cormorant Garamond + Plus Jakarta Sans + JetBrains Mono) y un Hero Banner interactivo con efecto 3D por perspectiva física y giroscopio de cursor.",
+  "user_customizations": {
+    "color_preference": "Pastel System — Todos los módulos reemplazan los azules/verdes oscuros por tonos pasteles equilibrados y accesibles (WCAG AA).",
+    "hero_banner": "Efecto 3D interactivo — Escena con profundidades Z diferenciadas, seguimiento de puntero/mouse tilt (`preserve-3d`), esferas difuminadas flotantes y tarjetas de cristal con paralaje en vivo.",
+    "whatsapp_brand_identity": "El color verde de WhatsApp (#25D366 / #128C7E) se mantiene reconocible e hiper-destacado para optimizar conversión directa.",
+    "language": "Bilingüe Castellano / Català con selectores dinámicos y textos adaptados a la comarca de l'Alt Urgell y Andorra."
+  },
   "color_palette": {
-    "primary_navy": "#0B235E",
-    "primary_navy_dark": "#061334",
-    "action_green": "#04BE4F",
-    "action_green_hover": "#039C40",
-    "action_green_subtle": "rgba(4, 190, 79, 0.12)",
-    "white": "#FFFFFF",
-    "background_light": "#F5F7FA",
-    "surface_warm_card": "#FFFFFF",
-    "surface_navy_card": "#0F2B72",
-    "text_dark": "#0A1224",
-    "text_muted": "#5A677D",
-    "text_light": "#F5F7FA",
-    "border_subtle_light": "rgba(11, 35, 94, 0.08)",
-    "border_subtle_dark": "rgba(255, 255, 255, 0.12)",
-    "gold_accent": "#D4AF37",
-    "gold_subtle": "rgba(212, 175, 55, 0.15)"
+    "page_background": "#FAF7F2",
+    "page_background_secondary": "#F5EFE6",
+    "ink_primary": "#1E2430",
+    "ink_secondary": "#475569",
+    "ink_muted": "#78869A",
+    "border_pastel": "rgba(30, 36, 48, 0.08)",
+    "border_pastel_accent": "rgba(217, 119, 6, 0.2)",
+    "primary_pastel_cta": "#D99776",
+    "primary_pastel_cta_hover": "#C88463",
+    "whatsapp_green": "#25D366",
+    "whatsapp_green_hover": "#20BD5A",
+    "whatsapp_green_subtle": "rgba(37, 211, 102, 0.12)",
+    "services_pastel_map": {
+      "money_transfers": {
+        "bg_surface": "#EEF7F2",
+        "border": "#C2E8D2",
+        "accent": "#2D7A54",
+        "pill": "#D3EEDD",
+        "badge_text": "#1E5238",
+        "tag": "Ria & Western Union — Envíos Seguros"
+      },
+      "travel_agency": {
+        "bg_surface": "#F0F6FF",
+        "border": "#C7E0FE",
+        "accent": "#2B6CB0",
+        "pill": "#D8E8FD",
+        "badge_text": "#1A497A",
+        "tag": "Vuelos & Paquetes Internacionales"
+      },
+      "jewelry_bisuteria": {
+        "bg_surface": "#FDF2F0",
+        "border": "#F7D8D3",
+        "accent": "#C47B62",
+        "pill": "#FBE3DF",
+        "badge_text": "#874B38",
+        "tag": "Joyería & Bisutería de Autor"
+      },
+      "celina_studio": {
+        "bg_surface": "#2B2638",
+        "bg_surface_card": "#363046",
+        "border": "rgba(226, 207, 248, 0.15)",
+        "accent": "#E2D4F0",
+        "accent_glow": "#A78BFA",
+        "ink_primary": "#F8F5FC",
+        "ink_secondary": "#C8C2DB",
+        "tag": "Estudio Digital & Marketing"
+      }
+    },
+    "trust_and_location": {
+      "bg_surface": "#F4F7F4",
+      "border": "#DBE4DC",
+      "accent": "#3D6E54"
+    },
+    "footer": {
+      "bg_surface": "#26232E",
+      "ink": "#F8F5FC",
+      "muted": "#9F99B0",
+      "border": "rgba(255, 255, 255, 0.1)"
+    }
+  },
+  "hero_3d_specification": {
+    "technique": "Framer Motion 3D Tilt Vector Physics + CSS preserve-3d + Pointer Tracking Engine",
+    "container_style": "perspective: 1200px; transform-style: preserve-3d",
+    "layers": [
+      {
+        "layer_id": "background_orbs",
+        "depth_z": "-40px",
+        "effect": "Soft pastel gradient mesh (peach #FDE8E1 + mint #E3F5EC + sky #E8F2FC) blurring smoothly with backdrop-blur-3xl and gentle floating keyframes"
+      },
+      {
+        "layer_id": "editorial_backdrop",
+        "depth_z": "0px",
+        "effect": "Kinetic display title 'CELINA' with watermarked serif elegance and asymmetric column grid"
+      },
+      {
+        "layer_id": "hero_portrait_card",
+        "depth_z": "35px",
+        "effect": "Rounded multi-layered portrait frame (rounded-3xl shadow-2xl) featuring warm lifestyle boutique imagery"
+      },
+      {
+        "layer_id": "floating_glass_badge_1",
+        "depth_z": "75px",
+        "position": "Top Right (-top-6 -right-6)",
+        "content": "Giro de Dinero Directo (Ria / Western Union) • 0% Comisiones Sorpresa",
+        "style": "backdrop-blur-xl bg-white/85 border border-white/60 shadow-xl shadow-rose-900/5 text-slate-800"
+      },
+      {
+        "layer_id": "floating_glass_badge_2",
+        "depth_z": "110px",
+        "position": "Bottom Left (-bottom-8 -left-6)",
+        "content": "La Seu d'Urgell & Andorra Hub • Atenció en Català i Castellà",
+        "style": "backdrop-blur-xl bg-emerald-50/90 border border-emerald-200/80 shadow-xl shadow-emerald-950/5 text-emerald-900"
+      },
+      {
+        "layer_id": "interactive_cursor_tracker",
+        "behavior": "Calculates mouse position relative to container center (rotateX max ±12deg, rotateY max ±15deg) with spring physics (damping: 25, stiffness: 180) to eliminate layout jank"
+      }
+    ]
   },
   "typography": {
     "heading_font": "Cormorant Garamond, Serif, Playfair Display",
     "body_font": "Plus Jakarta Sans, sans-serif",
     "mono_font": "JetBrains Mono, monospace",
     "scale": {
-      "hero_title": "text-4xl sm:text-6xl lg:text-7xl font-light tracking-tight leading-[1.05]",
-      "section_title": "text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight leading-tight",
-      "card_title": "text-xl sm:text-2xl font-normal tracking-tight",
-      "subtitle": "text-base sm:text-lg font-light text-slate-600 leading-relaxed",
-      "overline": "text-xs uppercase tracking-[0.25em] font-medium text-emerald-600"
+      "hero_title": "text-4xl sm:text-6xl lg:text-7xl font-light tracking-tight leading-[1.05] text-[#1E2430]",
+      "section_title": "text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight leading-tight text-[#1E2430]",
+      "card_title": "text-xl sm:text-2xl font-normal tracking-tight text-[#1E2430]",
+      "subtitle": "text-base sm:text-lg font-light text-[#475569] leading-relaxed",
+      "overline": "text-xs uppercase tracking-[0.25em] font-medium text-[#C47B62]"
     }
   },
   "visual_enhancers": {
-    "glassmorphism": "backdrop-blur-xl bg-white/80 border border-white/40 shadow-xl shadow-slate-900/5",
-    "glassmorphism_dark": "backdrop-blur-xl bg-[#0B235E]/85 border border-white/10 shadow-2xl shadow-black/30",
-    "card_hover_effect": "transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#0B235E]/15",
-    "gradient_overlays": {
-      "navy_hero_scrim": "linear-gradient(to right, rgba(11, 35, 94, 0.92) 0%, rgba(11, 35, 94, 0.6) 50%, rgba(11, 35, 94, 0.2) 100%)",
-      "gold_glow": "radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.15) 0%, transparent 70%)",
-      "green_glow": "radial-gradient(circle at 50% 50%, rgba(4, 190, 79, 0.2) 0%, transparent 70%)"
-    },
-    "editorial_marquee": "Very smooth low-speed drifting band with serif typography and understated green & navy accents."
-  },
-  "motion_and_interactions": {
-    "smooth_scroll": "Lenis Smooth Scroll engine integrated globally.",
-    "framer_motion_patterns": {
-      "hero_line_reveal": "Staggered masked character/word reveal with 0.8s easeOut duration.",
-      "scroll_reveal": "Viewport margin -10% with opacity and y-axis offset (30px -> 0px).",
-      "service_cards_stagger": "Stagger children by 0.12s for the 4 core business hubs.",
-      "interactive_tabs": "Framer Motion layoutId for fluid active bar indicator."
-    },
-    "micro_interactions": {
-      "cta_button": "Scale 1.02 on hover, 0.98 on press, text shimmer on focus.",
-      "floating_whatsapp": "Pulse ring indicator + subtle bounce reveal after 2s scroll."
-    }
-  },
-  "layout_and_grids": {
-    "container_max_width": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
-    "hero_layout": "Asymmetric Split Hero — Left: Kinetic Editorial typography + CTA group; Right: Layered frame with real Mediterranean visual + floating 3D glass accent badges.",
-    "service_grid": "Tetris Bento Grid (4 Hubs) — Transfers (span 6), Travel (span 6), Jewelry (span 7), Studio (span 5).",
-    "trust_grid": "4-column responsive grid with subtle card outline and hover highlight.",
-    "location_layout": "Split layout — Left: La Seu d'Urgell details & interactive contact cards; Right: Custom interactive location card with styled map representation and real directions."
+    "glassmorphism_pastel": "backdrop-blur-xl bg-white/75 border border-white/80 shadow-lg shadow-slate-900/5",
+    "glassmorphism_studio": "backdrop-blur-xl bg-[#363046]/80 border border-purple-300/20 shadow-2xl shadow-black/30",
+    "card_hover_effect": "transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-slate-900/8",
+    "editorial_marquee": "Cinta continua sutil en tono crema suave #F5EFE6 con tipografía serif y micro-iconos de servicios celestes, dorados y verdes."
   },
   "image_urls": {
     "hero_lifestyle": {
       "url": "https://images.unsplash.com/photo-1585960622850-ed33c41d6418?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjBnb2xkJTIwamV3ZWxyeSUyMG1vZGVsJTIwd29tYW58ZW58MHx8fHwxNzgzOTgwMDc0fDA&ixlib=rb-4.1.0&q=85",
-      "placement": "Hero Section - Main visual portrait overlay",
-      "alt": "Celina Estilo - Elegancia y Conexión"
+      "placement": "Hero 3D Section - Main visual portrait overlay",
+      "alt": "Celina Estilo - Elegancia y Conexión en La Seu d'Urgell"
     },
     "jewelry_featured": [
       {
@@ -95,71 +158,76 @@
       "alt": "Vuelos y Destinos Internacionales Celina Viajes"
     },
     "studio_showcase": {
-      "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBkaWdpdGFsJTIwYWdlbmN5JTIwY3JlYXRpdmUlMjBjYW1wYWlnbiUyMGxhcHRvcCUyMGRlc2t8ZW58MHx8fHwxNzg2MzQ3MTA1fDA&ixlib=rb-4.1.0&q=85",
+      "url": "https://images.unsplash.com/photo-1779949294758-f2728920623c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjV8MHwxfHNlYXJjaHwxfHxwYXN0ZWwlMjB3YXJtJTIwYWVzdGhldGljJTIwZGlnaXRhbCUyMGNyZWF0aXZlJTIwc3R1ZGlvJTIwd29ya3NwYWNlfGVufDB8fHx8MTc4ODE5NjMyNnww&ixlib=rb-4.1.0&q=85",
       "placement": "Celina Studio Digital Workspace",
       "alt": "Diseño Web y Marketing Digital Celina Studio"
+    },
+    "location_pyrenees": {
+      "url": "https://images.unsplash.com/photo-1604863046148-917557d161fe?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwxfHxtZWRpdGVycmFuZWFuJTIwdHJhdmVsJTIwZGVzdGluYXRpb24lMjBweXJlbmVlcyUyMHN1bnxlbnwwfHx8fDE3ODgxOTYzMjZ8MA&ixlib=rb-4.1.0&q=85",
+      "placement": "Location Section — La Seu d'Urgell Town Visual",
+      "alt": "La Seu d'Urgell — Pirineus i Alt Urgell"
     }
   },
   "sections_structure": [
     {
       "id": "header_navbar",
       "name": "Navigation Bar",
-      "features": ["Logo CELINA with tagline", "Links: Inicio, Servicios, Sobre Celina, Ubicación, Contacto", "Direct WhatsApp CTA Button with Green accent", "Mobile Responsive Drawer Menu"]
+      "features": ["Pastel glassmorphism backdrop (#FAF7F2 with 85% opacity & blur)", "Logo CELINA with tagline", "Links: Inicio, Servicios, Sobre Celina, Ubicación, Contacto", "Direct WhatsApp CTA Button with WhatsApp Green #25D366", "Language Switcher (ES / CAT)"]
     },
     {
-      "id": "hero_kinetic",
-      "name": "Hero Section — Kinetic Reveal",
-      "features": ["Title: CELINA / ESTILO QUE UNE", "Subtitle: Un solo lugar para conectar personas, destinos, estilos y negocios", "CTAs: Explora nuestros servicios & WhatsApp rápido", "Mediterranean luxury badge with location La Seu d'Urgell"]
+      "id": "hero_kinetic_3d",
+      "name": "Hero Section — Banner 3D Interactivo",
+      "features": ["3D Tilt visual card with mouse physics", "Layered depth Z elements with floating glass badges", "Title: CELINA / ESTILO QUE UNE", "Pastel background mesh gradients", "CTAs: Explora los 4 Servicios & Consulta por WhatsApp"]
     },
     {
       "id": "editorial_marquee",
       "name": "Editorial Marquee",
-      "features": ["Continuous smooth scroll: Giro de Dinero • Agencias de Viajes • Bisutería de Autor • Diseño Web & Marketing • La Seu d'Urgell"]
+      "features": ["Continuous smooth scroll in soft cream palette #F5EFE6: Enviament de Diners • Agència de Viatges • Bisutería de Disseny • Celina Studio Web • La Seu d'Urgell"]
     },
     {
       "id": "hub_services",
-      "name": "Todo lo que nos une — 4 Big Visual Cards",
-      "features": ["Envío de Dinero (Ria & Western Union)", "Agencia de Viajes", "Joyería & Bisutería", "Celina Studio Digital"]
+      "name": "Todo lo que nos une — 4 Pastel Visual Cards",
+      "features": ["Envío de Dinero (Menta Pastel #EEF7F2)", "Agencia de Viajes (Celeste Pastel #F0F6FF)", "Joyería & Bisutería (Rosa Empolvado #FDF2F0)", "Celina Studio (Lavanda Profundo #2B2638)"]
     },
     {
       "id": "money_transfers",
-      "name": "Money Transfer Section — Conecta con quienes están lejos",
-      "features": ["Logos for Ria & Western Union", "Interactive Rate Calculator Mockup (EUR to LATAM/Global)", "Key guarantees: Seguridad, Rapidez, Mejor cambio, Atención humana"]
+      "name": "Money Transfer Section — Conecta con los tuyos",
+      "features": ["Logos for Ria & Western Union", "Pastel mint container & interactive exchange calculator", "Guarantees: Rapidez, Comisiones Transparentes, Trato Humano Cercano"]
     },
     {
       "id": "travel_agency",
-      "name": "Travel Section — El mundo está más cerca de lo que parece",
-      "features": ["4 Cards: Vuelos, Alojamientos, Destinos, Experiencias", "Custom itinerary request form modal / WhatsApp link trigger"]
+      "name": "Travel Section — El mundo a tu alcance",
+      "features": ["Pastel sky blue styling", "4 service pills: Vuelos, Hoteles, Circuitos, Paquetes a Medida", "Direct WhatsApp inquiry modal trigger"]
     },
     {
       "id": "jewelry_bisuteria",
-      "name": "Jewelry Showcase — Estilo que habla de ti",
-      "features": ["Filter Tabs: Todos, Collares, Pulseras, Anillos, Aretes, Accesorios", "Product cards with quick view detail dialog and WhatsApp reservation"]
+      "name": "Jewelry Showcase — Estilo que te acompaña",
+      "features": ["Pastel rose gold / blush palette", "Filter categories: Todos, Collares, Pulseras, Anillos, Pendientes", "Product cards with quick view detail dialog & direct reservation"]
     },
     {
       "id": "celina_studio",
-      "name": "Celina Studio Section — ¿Tienes un negocio?",
-      "features": ["Tech-differentiated dark navy futuristic interface", "Services: Diseño Web, Marketing Digital, Identidad de Marca, Redes Sociales", "Interactive ROI/Digital Audit Request Modal"]
+      "name": "Celina Studio Section — Impulsa tu Negocio",
+      "features": ["Matte dark lavender section (#2B2638) providing elegant tech contrast within the pastel universe", "Services: Diseño Web, SEO Local, Redes Sociales, Marca", "Interactive Digital Audit Request Trigger"]
     },
     {
       "id": "trust_features",
-      "name": "Trust Section — Más que un local",
-      "features": ["4 Pillars: Cercanía Humana, Licencias Oficiales, Asesoría Personalizada, Multi-servicio Integrado"]
+      "name": "Trust Section — Cercanía & Garantía",
+      "features": ["Soft sage pastel surface", "4 Pillars: Atención 100% Personalizada, Licencias Oficiales Ria/WU, Asesoría de Vuelo, Identidad Local"]
     },
     {
       "id": "location_map",
-      "name": "Location — Ven a conocernos",
-      "features": ["La Seu d'Urgell address details", "Opening Hours & Phone", "Direct WhatsApp click", "Interactive Styled Map Card"]
+      "name": "Location — Visítanos en La Seu d'Urgell",
+      "features": ["Pastel map wrapper", "Address details, opening hours, parking tips", "Direct WhatsApp & Call triggers"]
     },
     {
       "id": "contact_hub",
-      "name": "Contact — ¿En qué podemos ayudarte?",
-      "features": ["4 Direct Quick Options: Enviar Dinero, Planear Viaje, Consultar Joyas, Proyecto Digital", "Direct WhatsApp Deep Links per choice"]
+      "name": "Contact — ¿En qué te ayudamos hoy?",
+      "features": ["4 Quick action chips with corresponding service pastels", "Direct WhatsApp conversation routing"]
     },
     {
       "id": "footer",
       "name": "Footer",
-      "features": ["Legal notice, social links, full navigation, copyright and developer credits"]
+      "features": ["Dark lavender pastel backdrop (#26232E)", "Legal notice, Catalan/Spanish terms, copyright and location links"]
     }
   ],
   "testing_attributes": {
@@ -167,6 +235,7 @@
     "examples": [
       "data-testid=\"nav-whatsapp-button\"",
       "data-testid=\"hero-explore-services-btn\"",
+      "data-testid=\"hero-3d-tilt-card\"",
       "data-testid=\"service-card-transfers\"",
       "data-testid=\"service-card-travel\"",
       "data-testid=\"service-card-jewelry\"",
@@ -179,11 +248,10 @@
     ]
   },
   "instructions_to_main_agent": [
-    "Build the complete implementation inside /app/frontend/src/ using high quality React components.",
-    "Ensure Lenis smooth scroll and Framer Motion are initialized for award-winning scroll feel.",
-    "Maintain strict adherence to the brand color palette (#0B235E primary navy, #04BE4F green action button accent, #F5F7FA background).",
-    "Include direct WhatsApp deep links (e.g., https://wa.me/34600000000?text=Hola%20Celina...) across all CTA buttons.",
-    "Ensure total mobile responsiveness and add a sticky floating WhatsApp button on bottom right with subtle pulse animation.",
-    "Add detailed interactive state dialogs for product details, transfer calculator, and studio audit request to make the site fully engaging."
+    "Verify that /app/design_guidelines.json contains the updated pastel design system and 3D hero specification.",
+    "Ensure all components use the new pastel colors (#FAF7F2 background, pastel surfaces per service, WCAG AA ink text #1E2430 / #475569) while maintaining the recognizable #25D366 WhatsApp green CTA.",
+    "Build/verify the 3D tilt interaction in the Hero section using Framer Motion 3D physics / pointer tracking with depth Z layers.",
+    "Keep Celina Studio section distinct using dark matte lavender (#2B2638 surface, #E2D4F0 accent text) for contrast without breaking the pastel balance.",
+    "Preserve data-testid attributes across all interactive elements for test compliance."
   ]
 }
