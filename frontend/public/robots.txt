@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://celina-main.preview.emergentagent.com/sitemap.xml

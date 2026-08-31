@@ -1,0 +1,189 @@
+{
+  "project_name": "CELINA — ESTILO QUE UNE",
+  "archetype": "EUROPEAN_BOUTIQUE_HYBRID",
+  "description": "Award-worthy (Awwwards-level) main hub website for CELINA in La Seu d'Urgell, Spain. CELINA is a multi-service brand bringing together International Money Transfers (Ria, Western Union), Travel Agency, Jewelry/Bisutería, and Celina Studio (Web Design & Digital Marketing).",
+  "color_palette": {
+    "primary_navy": "#0B235E",
+    "primary_navy_dark": "#061334",
+    "action_green": "#04BE4F",
+    "action_green_hover": "#039C40",
+    "action_green_subtle": "rgba(4, 190, 79, 0.12)",
+    "white": "#FFFFFF",
+    "background_light": "#F5F7FA",
+    "surface_warm_card": "#FFFFFF",
+    "surface_navy_card": "#0F2B72",
+    "text_dark": "#0A1224",
+    "text_muted": "#5A677D",
+    "text_light": "#F5F7FA",
+    "border_subtle_light": "rgba(11, 35, 94, 0.08)",
+    "border_subtle_dark": "rgba(255, 255, 255, 0.12)",
+    "gold_accent": "#D4AF37",
+    "gold_subtle": "rgba(212, 175, 55, 0.15)"
+  },
+  "typography": {
+    "heading_font": "Cormorant Garamond, Serif, Playfair Display",
+    "body_font": "Plus Jakarta Sans, sans-serif",
+    "mono_font": "JetBrains Mono, monospace",
+    "scale": {
+      "hero_title": "text-4xl sm:text-6xl lg:text-7xl font-light tracking-tight leading-[1.05]",
+      "section_title": "text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight leading-tight",
+      "card_title": "text-xl sm:text-2xl font-normal tracking-tight",
+      "subtitle": "text-base sm:text-lg font-light text-slate-600 leading-relaxed",
+      "overline": "text-xs uppercase tracking-[0.25em] font-medium text-emerald-600"
+    }
+  },
+  "visual_enhancers": {
+    "glassmorphism": "backdrop-blur-xl bg-white/80 border border-white/40 shadow-xl shadow-slate-900/5",
+    "glassmorphism_dark": "backdrop-blur-xl bg-[#0B235E]/85 border border-white/10 shadow-2xl shadow-black/30",
+    "card_hover_effect": "transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#0B235E]/15",
+    "gradient_overlays": {
+      "navy_hero_scrim": "linear-gradient(to right, rgba(11, 35, 94, 0.92) 0%, rgba(11, 35, 94, 0.6) 50%, rgba(11, 35, 94, 0.2) 100%)",
+      "gold_glow": "radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.15) 0%, transparent 70%)",
+      "green_glow": "radial-gradient(circle at 50% 50%, rgba(4, 190, 79, 0.2) 0%, transparent 70%)"
+    },
+    "editorial_marquee": "Very smooth low-speed drifting band with serif typography and understated green & navy accents."
+  },
+  "motion_and_interactions": {
+    "smooth_scroll": "Lenis Smooth Scroll engine integrated globally.",
+    "framer_motion_patterns": {
+      "hero_line_reveal": "Staggered masked character/word reveal with 0.8s easeOut duration.",
+      "scroll_reveal": "Viewport margin -10% with opacity and y-axis offset (30px -> 0px).",
+      "service_cards_stagger": "Stagger children by 0.12s for the 4 core business hubs.",
+      "interactive_tabs": "Framer Motion layoutId for fluid active bar indicator."
+    },
+    "micro_interactions": {
+      "cta_button": "Scale 1.02 on hover, 0.98 on press, text shimmer on focus.",
+      "floating_whatsapp": "Pulse ring indicator + subtle bounce reveal after 2s scroll."
+    }
+  },
+  "layout_and_grids": {
+    "container_max_width": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "hero_layout": "Asymmetric Split Hero — Left: Kinetic Editorial typography + CTA group; Right: Layered frame with real Mediterranean visual + floating 3D glass accent badges.",
+    "service_grid": "Tetris Bento Grid (4 Hubs) — Transfers (span 6), Travel (span 6), Jewelry (span 7), Studio (span 5).",
+    "trust_grid": "4-column responsive grid with subtle card outline and hover highlight.",
+    "location_layout": "Split layout — Left: La Seu d'Urgell details & interactive contact cards; Right: Custom interactive location card with styled map representation and real directions."
+  },
+  "image_urls": {
+    "hero_lifestyle": {
+      "url": "https://images.unsplash.com/photo-1585960622850-ed33c41d6418?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjBnb2xkJTIwamV3ZWxyeSUyMG1vZGVsJTIwd29tYW58ZW58MHx8fHwxNzgzOTgwMDc0fDA&ixlib=rb-4.1.0&q=85",
+      "placement": "Hero Section - Main visual portrait overlay",
+      "alt": "Celina Estilo - Elegancia y Conexión"
+    },
+    "jewelry_featured": [
+      {
+        "url": "https://images.unsplash.com/photo-1585960622850-ed33c41d6418?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjBnb2xkJTIwamV3ZWxyeSUyMG1vZGVsJTIwd29tYW58ZW58MHx8fHwxNzgzOTgwMDc0fDA&ixlib=rb-4.1.0&q=85",
+        "title": "Collares Finos & Medallas",
+        "category": "Collares",
+        "price": "Desde €24.90"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1633934542430-0905ccb5f050?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBnb2xkJTIwamV3ZWxyeSUyMG1vZGVsJTIwd29tYW58ZW58MHx8fHwxNzgzOTgwMDc0fDA&ixlib=rb-4.1.0&q=85",
+        "title": "Pulseras Bañadas en Oro",
+        "category": "Pulseras",
+        "price": "Desde €19.90"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1620656798579-1984d9e87df7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwzfHxsdXh1cnklMjBnb2xkJTIwamV3ZWxyeSUyMG1vZGVsJTIwd29tYW58ZW58MHx8fHwxNzgzOTgwMDc0fDA&ixlib=rb-4.1.0&q=85",
+        "title": "Anillos Escultóricos & Circones",
+        "category": "Anillos",
+        "price": "Desde €18.50"
+      }
+    ],
+    "travel_showcase": {
+      "url": "https://images.unsplash.com/photo-1759340875604-84a9d7473b21?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwzfHxtZWRpdGVycmFuZWFuJTIwdHJhdmVsJTIwZmxpZ2h0JTIwYWlycGxhbmUlMjB3YW5kZXJsdXN0JTIwYmVhY2glMjBkZXN0aW5hdGlvbnxlbnwwfHx8fDE3ODgxOTU0Mjl8MA&ixlib=rb-4.1.0&q=85",
+      "placement": "Travel Section Card Showcase",
+      "alt": "Vuelos y Destinos Internacionales Celina Viajes"
+    },
+    "studio_showcase": {
+      "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBkaWdpdGFsJTIwYWdlbmN5JTIwY3JlYXRpdmUlMjBjYW1wYWlnbiUyMGxhcHRvcCUyMGRlc2t8ZW58MHx8fHwxNzg2MzQ3MTA1fDA&ixlib=rb-4.1.0&q=85",
+      "placement": "Celina Studio Digital Workspace",
+      "alt": "Diseño Web y Marketing Digital Celina Studio"
+    }
+  },
+  "sections_structure": [
+    {
+      "id": "header_navbar",
+      "name": "Navigation Bar",
+      "features": ["Logo CELINA with tagline", "Links: Inicio, Servicios, Sobre Celina, Ubicación, Contacto", "Direct WhatsApp CTA Button with Green accent", "Mobile Responsive Drawer Menu"]
+    },
+    {
+      "id": "hero_kinetic",
+      "name": "Hero Section — Kinetic Reveal",
+      "features": ["Title: CELINA / ESTILO QUE UNE", "Subtitle: Un solo lugar para conectar personas, destinos, estilos y negocios", "CTAs: Explora nuestros servicios & WhatsApp rápido", "Mediterranean luxury badge with location La Seu d'Urgell"]
+    },
+    {
+      "id": "editorial_marquee",
+      "name": "Editorial Marquee",
+      "features": ["Continuous smooth scroll: Giro de Dinero • Agencias de Viajes • Bisutería de Autor • Diseño Web & Marketing • La Seu d'Urgell"]
+    },
+    {
+      "id": "hub_services",
+      "name": "Todo lo que nos une — 4 Big Visual Cards",
+      "features": ["Envío de Dinero (Ria & Western Union)", "Agencia de Viajes", "Joyería & Bisutería", "Celina Studio Digital"]
+    },
+    {
+      "id": "money_transfers",
+      "name": "Money Transfer Section — Conecta con quienes están lejos",
+      "features": ["Logos for Ria & Western Union", "Interactive Rate Calculator Mockup (EUR to LATAM/Global)", "Key guarantees: Seguridad, Rapidez, Mejor cambio, Atención humana"]
+    },
+    {
+      "id": "travel_agency",
+      "name": "Travel Section — El mundo está más cerca de lo que parece",
+      "features": ["4 Cards: Vuelos, Alojamientos, Destinos, Experiencias", "Custom itinerary request form modal / WhatsApp link trigger"]
+    },
+    {
+      "id": "jewelry_bisuteria",
+      "name": "Jewelry Showcase — Estilo que habla de ti",
+      "features": ["Filter Tabs: Todos, Collares, Pulseras, Anillos, Aretes, Accesorios", "Product cards with quick view detail dialog and WhatsApp reservation"]
+    },
+    {
+      "id": "celina_studio",
+      "name": "Celina Studio Section — ¿Tienes un negocio?",
+      "features": ["Tech-differentiated dark navy futuristic interface", "Services: Diseño Web, Marketing Digital, Identidad de Marca, Redes Sociales", "Interactive ROI/Digital Audit Request Modal"]
+    },
+    {
+      "id": "trust_features",
+      "name": "Trust Section — Más que un local",
+      "features": ["4 Pillars: Cercanía Humana, Licencias Oficiales, Asesoría Personalizada, Multi-servicio Integrado"]
+    },
+    {
+      "id": "location_map",
+      "name": "Location — Ven a conocernos",
+      "features": ["La Seu d'Urgell address details", "Opening Hours & Phone", "Direct WhatsApp click", "Interactive Styled Map Card"]
+    },
+    {
+      "id": "contact_hub",
+      "name": "Contact — ¿En qué podemos ayudarte?",
+      "features": ["4 Direct Quick Options: Enviar Dinero, Planear Viaje, Consultar Joyas, Proyecto Digital", "Direct WhatsApp Deep Links per choice"]
+    },
+    {
+      "id": "footer",
+      "name": "Footer",
+      "features": ["Legal notice, social links, full navigation, copyright and developer credits"]
+    }
+  ],
+  "testing_attributes": {
+    "rule": "All interactive elements, buttons, cards, links, tabs, and form inputs must have descriptive data-testid attributes in kebab-case.",
+    "examples": [
+      "data-testid=\"nav-whatsapp-button\"",
+      "data-testid=\"hero-explore-services-btn\"",
+      "data-testid=\"service-card-transfers\"",
+      "data-testid=\"service-card-travel\"",
+      "data-testid=\"service-card-jewelry\"",
+      "data-testid=\"service-card-studio\"",
+      "data-testid=\"transfer-calculator-amount-input\"",
+      "data-testid=\"jewelry-tab-collares\"",
+      "data-testid=\"studio-request-audit-btn\"",
+      "data-testid=\"contact-option-whatsapp-transfers\"",
+      "data-testid=\"floating-whatsapp-fab\""
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Build the complete implementation inside /app/frontend/src/ using high quality React components.",
+    "Ensure Lenis smooth scroll and Framer Motion are initialized for award-winning scroll feel.",
+    "Maintain strict adherence to the brand color palette (#0B235E primary navy, #04BE4F green action button accent, #F5F7FA background).",
+    "Include direct WhatsApp deep links (e.g., https://wa.me/34600000000?text=Hola%20Celina...) across all CTA buttons.",
+    "Ensure total mobile responsiveness and add a sticky floating WhatsApp button on bottom right with subtle pulse animation.",
+    "Add detailed interactive state dialogs for product details, transfer calculator, and studio audit request to make the site fully engaging."
+  ]
+}
