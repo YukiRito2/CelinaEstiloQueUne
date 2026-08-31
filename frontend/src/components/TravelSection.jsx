@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Plane, Hotel, Globe2, Backpack, MessageCircle } from "lucide-react";
+import { Plane, Hotel, Globe2, Backpack, MessageCircle, ArrowUpRight } from "lucide-react";
 import { site } from "../config/site";
 import { waLink } from "../lib/whatsapp";
 import { trackEvent } from "../lib/analytics";
@@ -70,17 +70,30 @@ export const TravelSection = () => {
           </div>
 
           <Reveal delay={0.2}>
-            <a
-              href={waLink(t.messages.travel)}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => trackEvent("whatsapp_click", { source: "travel_section" })}
-              data-testid="travel-plan-whatsapp-btn"
-              className="mt-9 inline-flex items-center gap-2 rounded-full bg-[#1E2430] hover:bg-[#2A3242] text-white font-semibold px-8 py-4 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
-            >
-              <MessageCircle className="w-5 h-5" />
-              {t.travel.cta}
-            </a>
+            <div className="mt-9 flex flex-col sm:flex-row sm:items-center gap-4">
+              <a
+                href={site.links.travelForm}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackEvent("travel_click", { source: "travel_section" })}
+                data-testid="travel-plan-form-btn"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#1E2430] hover:bg-[#2A3242] text-white font-semibold px-8 py-4 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+              >
+                {t.travel.cta}
+                <ArrowUpRight className="w-5 h-5" />
+              </a>
+              <a
+                href={waLink(t.messages.travel)}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackEvent("whatsapp_click", { source: "travel_section" })}
+                data-testid="travel-plan-whatsapp-btn"
+                className="inline-flex items-center gap-2 text-[#128C7E] font-semibold px-2 py-2 link-underline"
+              >
+                <MessageCircle className="w-5 h-5" />
+                {t.travelPage.form.whatsappAlt}
+              </a>
+            </div>
           </Reveal>
         </div>
       </div>

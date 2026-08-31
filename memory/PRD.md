@@ -76,6 +76,11 @@ Web principal moderna y orientada a conversión para Celina (La Seu d'Urgell). F
 - Formulario de viaje (src/components/TravelForm.jsx) en /viajes entre pasos y CTA final: destino (obligatorio, validación), fecha ida/vuelta, nº personas, checkbox "fechas flexibles". Al enviar compone un mensaje estructurado y abre WhatsApp (wa.me/34621428021) en pestaña nueva — sin backend, igual que el flujo de envíos. Trilingüe (travelPage.form en i18n). Evento travel_click con source=travel_form y destino.
 - Verificado e2e: error si falta destino, popup de WhatsApp con mensaje completo (Destino: Perú / Ida / Vuelta / Personas: 3 / Fechas flexibles: Sí).
 
+## Actualización 2026-08-31 (7ª iteración)
+- Viajes redirige al Google Form del negocio (site.links.travelForm): la sección de viajes de la home (CTA principal + alternativa WhatsApp) y la sección de formulario de /viajes. La tarjeta de /viajes destaca "Buscamos las mejores opciones, combinaciones y precios para tu viaje" y advierte: foto de pasaporte a mano (se pide al final) + inicio de sesión con Gmail para subirla. El mini-formulario propio (destino/fechas/personas) se sustituyó por este flujo, que coincide con la automatización de WhatsApp del negocio.
+- i18n: travelPage.form reescrito en es/ca/en (bullets pasaporte/Gmail, priceNote, submit, whatsappAlt).
+- Verificado: botón home y tarjeta /viajes abren el Google Form; alternativa WhatsApp intacta; sin errores de consola.
+
 ## Backlog priorizado
 - P0: Activar GA4/Meta Pixel con IDs reales (rellenar variables en frontend/.env).
 - P0: Páginas especializadas /envios-dinero, /viajes, /bisuteria (cambiar hrefs en site.js → links).

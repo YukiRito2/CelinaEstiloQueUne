@@ -50,6 +50,8 @@ export const site = {
   links: {
     money: "https://datosdeenvio.vercel.app/", // Formulario externo: datos → WhatsApp
     travel: "/viajes",
+    travelForm:
+      "https://docs.google.com/forms/d/e/1FAIpQLSfWYgf772uZPd5TzYtkJMkQ2eRi0tTsiXVVOVbxrXGaj-hZNw/viewform?usp=header", // Formulario Google de viajes
     jewelry: "https://celina-estilo-que-une.vercel.app/", // Catálogo de bisutería
     studio: "https://celina-studio-app.vercel.app/",
   },
