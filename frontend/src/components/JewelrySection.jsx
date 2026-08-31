@@ -1,4 +1,4 @@
-import { Gem, MessageCircle } from "lucide-react";
+import { ArrowUpRight, Gem, MessageCircle } from "lucide-react";
 import { site } from "../config/site";
 import { waLink } from "../lib/whatsapp";
 import { trackEvent } from "../lib/analytics";
@@ -74,17 +74,30 @@ export const JewelrySection = () => {
 
         <Reveal delay={0.2} className="mt-16 text-center">
           <p className="text-sm font-light text-[#78869A] italic">{t.jewelry.sampleNote}</p>
-          <a
-            href={waLink(t.messages.jewelry)}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => trackEvent("whatsapp_click", { source: "jewelry_section" })}
-            data-testid="jewelry-view-whatsapp-btn"
-            className="mt-6 inline-flex items-center gap-2 rounded-full border-2 border-[#1E2430] text-[#1E2430] font-semibold px-8 py-4 transition-all duration-300 hover:bg-[#1E2430] hover:text-white hover:scale-[1.02] active:scale-[0.98]"
-          >
-            <MessageCircle className="w-5 h-5" />
-            {t.jewelry.cta}
-          </a>
+          <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href={site.links.jewelry}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackEvent("jewelry_click", { source: "jewelry_section" })}
+              data-testid="jewelry-view-catalog-btn"
+              className="inline-flex items-center gap-2 rounded-full bg-[#1E2430] hover:bg-[#2A3242] text-white font-semibold px-8 py-4 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+            >
+              {t.jewelry.cta}
+              <ArrowUpRight className="w-5 h-5" />
+            </a>
+            <a
+              href={waLink(t.messages.jewelry)}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackEvent("whatsapp_click", { source: "jewelry_section" })}
+              data-testid="jewelry-view-whatsapp-btn"
+              className="inline-flex items-center gap-2 text-[#128C7E] font-semibold px-2 py-2 link-underline"
+            >
+              <MessageCircle className="w-5 h-5" />
+              {t.jewelry.ctaWhatsapp}
+            </a>
+          </div>
         </Reveal>
       </div>
     </section>

@@ -60,6 +60,12 @@ Web principal moderna y orientada a conversión para Celina (La Seu d'Urgell). F
 - Analítica: `trackEvent` añade automáticamente el parámetro `language` (es/ca/en) a todos los eventos para medir contacto por servicio e idioma. GA4/Meta Pixel siguen esperando los IDs reales (REACT_APP_GA_MEASUREMENT_ID / REACT_APP_META_PIXEL_ID en frontend/.env) — solicitados al usuario.
 - Verificado: cambio a EN (título, lang, textos), los 3 CTAs de envío apuntan a datosdeenvio.vercel.app, pasos visibles, sin errores de consola.
 
+## Actualización 2026-08-31 (4ª iteración)
+- Nuevo hero "Constelación de Conexión": retrato central en arco (bisutería, enlaza a #bisuteria) rodeado de 4 nodos satélite clicables (Envíos → formulario datosdeenvio.vercel.app, Viajes → #viajes, Celina Studio → externo, Ubicación → #ubicacion), conectados por arcos SVG animados (pathLength) con pulsos de luz viajando (animateMotion), orbes pastel flotantes, tilt 3D por puntero (perspective 1400px, springs) y parallax de scroll. Palabra rotativa "Conectamos personas/destinos/estilos/negocios" (trilingüe). Fallback móvil: grid 2x2 de los 4 nodos.
+- Catálogo de bisutería enlazado: site.links.jewelry = https://celina-estilo-que-une.vercel.app/ — tarjeta del hub, CTA de la sección (nuevo botón principal + WhatsApp secundario) y opción del hub de contacto apuntan al catálogo externo.
+- i18n: nuevas claves hero.connectPrefix/rotateWords/nodes y jewelry.ctaWhatsapp en es/ca/en.
+- Verificado: capturas desktop (constelación + tilt + rotación de palabra) y móvil (grid 2x2), hrefs de catálogo y formulario confirmados, sin errores de consola.
+
 ## Backlog priorizado
 - P0: Activar GA4/Meta Pixel con IDs reales (rellenar variables en frontend/.env).
 - P0: Páginas especializadas /envios-dinero, /viajes, /bisuteria (cambiar hrefs en site.js → links).

@@ -16,6 +16,7 @@ const meta = [
     iconBox: "bg-[#D3EEDD] text-[#2D7A54]",
     cta: "text-[#2D7A54]",
     external: true,
+    href: site.links.money,
   },
   {
     icon: Plane,
@@ -34,6 +35,8 @@ const meta = [
     card: "bg-[#FDF2F0] border-[#F7D8D3] hover:border-[#C47B62]/40",
     iconBox: "bg-[#FBE3DF] text-[#C47B62]",
     cta: "text-[#C47B62]",
+    external: true,
+    href: site.links.jewelry,
   },
   {
     icon: MonitorSmartphone,
@@ -79,7 +82,7 @@ export const ContactSection = () => {
             return (
               <motion.a
                 key={o.title}
-                href={m.external ? site.links.money : waLink(t.messages[m.msgKey])}
+                href={m.external ? m.href : waLink(t.messages[m.msgKey])}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackEvent(m.event, { source: "contact_hub" })}

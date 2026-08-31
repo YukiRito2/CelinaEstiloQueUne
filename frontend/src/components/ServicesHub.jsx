@@ -40,6 +40,7 @@ const meta = {
     href: site.links.jewelry,
     event: "jewelry_click",
     span: "md:col-span-7",
+    external: true,
     card: "bg-[#FDF2F0] border-[#F7D8D3]",
     iconBox: "bg-[#FBE3DF] text-[#C47B62]",
     numColor: "text-[#C47B62]/50",

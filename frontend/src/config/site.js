@@ -50,7 +50,7 @@ export const site = {
   links: {
     money: "https://datosdeenvio.vercel.app/", // Formulario externo: datos → WhatsApp
     travel: "#viajes",
-    jewelry: "#bisuteria",
+    jewelry: "https://celina-estilo-que-une.vercel.app/", // Catálogo de bisutería
     studio: "https://celina-studio-app.vercel.app/",
   },
 
