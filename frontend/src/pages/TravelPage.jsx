@@ -17,6 +17,7 @@ import { useLanguage } from "../context/LanguageContext";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import { WhatsAppButton } from "../components/WhatsAppButton";
+import { TravelForm } from "../components/TravelForm";
 import { Reveal, MaskedLine } from "../components/Reveal";
 
 const serviceIcons = [Plane, Hotel, Globe2, Backpack];
@@ -249,6 +250,9 @@ export default function TravelPage() {
             </div>
           </div>
         </section>
+
+        {/* Formulario */}
+        <TravelForm />
 
         {/* CTA final */}
         <section

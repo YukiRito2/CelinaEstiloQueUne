@@ -72,6 +72,10 @@ Web principal moderna y orientada a conversión para Celina (La Seu d'Urgell). F
 - site.links.travel = "/viajes": tarjeta del hub, nodo del hero (desktop y móvil) enlazan a la página. Imágenes de destinos centralizadas en site.images.travelDestinations. sitemap.xml incluye /viajes.
 - Verificado: /viajes en ES y CA (título cambia), nav vuelve a "/#inicio", home intacta, tarjeta travel del hub → /viajes, sin errores de consola.
 
+## Actualización 2026-08-31 (6ª iteración)
+- Formulario de viaje (src/components/TravelForm.jsx) en /viajes entre pasos y CTA final: destino (obligatorio, validación), fecha ida/vuelta, nº personas, checkbox "fechas flexibles". Al enviar compone un mensaje estructurado y abre WhatsApp (wa.me/34621428021) en pestaña nueva — sin backend, igual que el flujo de envíos. Trilingüe (travelPage.form en i18n). Evento travel_click con source=travel_form y destino.
+- Verificado e2e: error si falta destino, popup de WhatsApp con mensaje completo (Destino: Perú / Ida / Vuelta / Personas: 3 / Fechas flexibles: Sí).
+
 ## Backlog priorizado
 - P0: Activar GA4/Meta Pixel con IDs reales (rellenar variables en frontend/.env).
 - P0: Páginas especializadas /envios-dinero, /viajes, /bisuteria (cambiar hrefs en site.js → links).
