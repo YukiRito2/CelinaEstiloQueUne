@@ -39,20 +39,28 @@ export const site = {
     tiktok: "", // Añadir URL cuando exista
   },
 
+  // Reseñas reales de Google: añade aquí las verdaderas
+  // ({ name: "María G.", text: "...", rating: 5 }). Mientras esté
+  // vacío, la sección muestra un enlace honesto a Google.
+  reviews: {
+    googleUrl:
+      "https://www.google.com/maps/search/?api=1&query=Celina+Estilo+que+Une,+Avinguda+del+Sal%C3%B2ria+34,+La+Seu+d'Urgell",
+    items: [],
+  },
+
   // ----------------------------------------------------------
-  // Enlaces de las áreas especializadas.
-  // Hoy los servicios apuntan a su sección dentro de esta página.
-  // Cuando existan las webs independientes, sustituye el href:
-  //   money:   "/envios-dinero"  o  "https://envios.celina..."
-  //   travel:  "/viajes"
-  //   jewelry: "/bisuteria"
+  // Enlaces del ecosistema Celina.
+  // Páginas internas: money, travel, jewelry, studio.
+  // Destinos externos: moneyForm, travelForm, jewelryCatalog, studioExternal.
   // ----------------------------------------------------------
   links: {
-    money: "https://datosdeenvio.vercel.app/", // Formulario externo: datos → WhatsApp
+    money: "/envios-dinero",
+    moneyForm: "https://datosdeenvio.vercel.app/",
     travel: "/viajes",
     travelForm:
-      "https://docs.google.com/forms/d/e/1FAIpQLSfWYgf772uZPd5TzYtkJMkQ2eRi0tTsiXVVOVbxrXGaj-hZNw/viewform?usp=header", // Formulario Google de viajes
-    jewelry: "https://celina-estilo-que-une.vercel.app/", // Catálogo de bisutería
+      "https://docs.google.com/forms/d/e/1FAIpQLSfWYgf772uZPd5TzYtkJMkQ2eRi0tTsiXVVOVbxrXGaj-hZNw/viewform?usp=header",
+    jewelry: "/bisuteria",
+    jewelryCatalog: "https://celina-estilo-que-une.vercel.app/",
     studio: "https://celina-studio-app.vercel.app/",
   },
 

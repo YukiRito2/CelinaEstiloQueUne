@@ -168,6 +168,59 @@ export const translations = {
         note: "Sin compromiso. La propuesta se prepara en tienda o por WhatsApp.",
       },
     },
+    qrPage: {
+      title: "Planifica tu próximo viaje",
+      subtitle: "Escanea el código con tu móvil y cuéntanos tu idea de viaje.",
+      printBtn: "Imprimir",
+      note: "Página pensada para imprimir y colocar en el local.",
+    },
+    reviews: {
+      overline: "Reseñas",
+      title: "Lo que dicen quienes nos conocen",
+      emptyText:
+        "Nuestros clientes nos valoran en Google. Lee sus experiencias reales o deja la tuya después de visitarnos.",
+      readCta: "Leer reseñas en Google",
+      writeCta: "Dejar una reseña",
+    },
+    moneyPage: {
+      seoTitle: "Envíos de dinero | Celina Estilo que Une — La Seu d'Urgell",
+      seoDesc:
+        "Envía dinero a cualquier parte del mundo desde La Seu d'Urgell con Ria y Western Union. Asesoramiento presencial y por WhatsApp.",
+      overline: "Envíos de dinero · Ria & Western Union",
+      title: "Envía dinero a cualquier parte del mundo",
+      subtitle:
+        "Desde nuestro local en La Seu d'Urgell te ayudamos a realizar tu envío con Ria o Western Union, resolviendo todas tus dudas antes de enviar.",
+      featuresTitle: "Por qué hacerlo con Celina",
+      features: [
+        { title: "A todo el mundo", text: "Destinos de Europa, Latinoamérica, África, Asia y más." },
+        { title: "Asesoramiento en persona", text: "Te explicamos el proceso y la documentación necesaria en tienda." },
+        { title: "A tu ritmo", text: "Rellena tus datos online o ven directamente al local." },
+      ],
+      stepsTitle: "Cómo funciona",
+      steps: [
+        "Rellena tus datos de envío en nuestro formulario",
+        "Los recibimos por WhatsApp al instante",
+        "Te preparamos la cotización en tienda o por WhatsApp",
+      ],
+      ctaForm: "Rellenar mis datos de envío",
+    },
+    jewelryPage: {
+      seoTitle: "Bisutería | Celina Estilo que Une — La Seu d'Urgell",
+      seoDesc:
+        "Bisutería y accesorios en La Seu d'Urgell: collares, pulseras, anillos, aretes y más. Explora el catálogo y reserva por WhatsApp.",
+      overline: "Bisutería & estilo",
+      title: "Estilo que habla de ti",
+      subtitle:
+        "Piezas pensadas para acompañarte todos los días: collares, pulseras, anillos, aretes y accesorios para cada ocasión.",
+      ctaCatalog: "Explorar el catálogo",
+      featuresTitle: "Nuestra forma de trabajar",
+      features: [
+        { title: "Colección en tienda", text: "Ven a ver y probarte las piezas en nuestro local." },
+        { title: "Para regalar", text: "Te ayudamos a elegir el detalle perfecto." },
+        { title: "Catálogo online", text: "Explora la colección desde tu móvil y reserva por WhatsApp." },
+      ],
+      visitTitle: "Ven a probártelas",
+    },
     jewelry: {
       overline: "Bisutería & estilo",
       title: "Estilo que habla de ti",
@@ -413,6 +466,59 @@ export const translations = {
         note: "Sense compromís. La proposta es prepara a la botiga o per WhatsApp.",
       },
     },
+    qrPage: {
+      title: "Planifica el teu proper viatge",
+      subtitle: "Escaneja el codi amb el mòbil i explica'ns la teva idea de viatge.",
+      printBtn: "Imprimir",
+      note: "Pàgina pensada per imprimir i posar al local.",
+    },
+    reviews: {
+      overline: "Ressenyes",
+      title: "El que diuen els que ens coneixen",
+      emptyText:
+        "Els nostres clients ens valoren a Google. Llegeix les seves experiències reals o deixa la teva després de visitar-nos.",
+      readCta: "Llegir ressenyes a Google",
+      writeCta: "Deixar una ressenya",
+    },
+    moneyPage: {
+      seoTitle: "Enviaments de diners | Celina Estilo que Une — la Seu d'Urgell",
+      seoDesc:
+        "Envia diners a qualsevol part del món des de la Seu d'Urgell amb Ria i Western Union. Assessorament presencial i per WhatsApp.",
+      overline: "Enviaments de diners · Ria & Western Union",
+      title: "Envia diners a qualsevol part del món",
+      subtitle:
+        "Des del nostre local de la Seu d'Urgell t'ajudem a fer el teu enviament amb Ria o Western Union, resolent tots els teus dubtes abans d'enviar.",
+      featuresTitle: "Per què fer-ho amb Celina",
+      features: [
+        { title: "A tot el món", text: "Destinacions d'Europa, Llatinoamèrica, l'Àfrica, l'Àsia i més." },
+        { title: "Assessorament en persona", text: "T'expliquem el procés i la documentació necessària a la botiga." },
+        { title: "Al teu ritme", text: "Emplena les teves dades online o vine directament al local." },
+      ],
+      stepsTitle: "Com funciona",
+      steps: [
+        "Emplena les teves dades d'enviament al nostre formulari",
+        "Les rebem per WhatsApp a l'instant",
+        "Et preparem la cotització a la botiga o per WhatsApp",
+      ],
+      ctaForm: "Emplenar les meves dades d'enviament",
+    },
+    jewelryPage: {
+      seoTitle: "Bisuteria | Celina Estilo que Une — la Seu d'Urgell",
+      seoDesc:
+        "Bisuteria i accessoris a la Seu d'Urgell: collars, polseres, anells, arracades i més. Explora el catàleg i reserva per WhatsApp.",
+      overline: "Bisuteria & estil",
+      title: "Estil que parla de tu",
+      subtitle:
+        "Peces pensades per acompanyar-te cada dia: collars, polseres, anells, arracades i accessoris per a cada ocasió.",
+      ctaCatalog: "Explorar el catàleg",
+      featuresTitle: "La nostra manera de treballar",
+      features: [
+        { title: "Col·lecció a la botiga", text: "Vine a veure i provar-te les peces al nostre local." },
+        { title: "Per regalar", text: "T'ajudem a triar el detall perfecte." },
+        { title: "Catàleg online", text: "Explora la col·lecció des del mòbil i reserva-la per WhatsApp." },
+      ],
+      visitTitle: "Vine a provar-te-les",
+    },
     jewelry: {
       overline: "Bisuteria & estil",
       title: "Estil que parla de tu",
@@ -657,6 +763,59 @@ export const translations = {
         whatsappAlt: "Or message us on WhatsApp",
         note: "No obligation. Your proposal is prepared in store or via WhatsApp.",
       },
+    },
+    qrPage: {
+      title: "Plan your next trip",
+      subtitle: "Scan the code with your phone and tell us your trip idea.",
+      printBtn: "Print",
+      note: "Page designed to be printed and displayed in store.",
+    },
+    reviews: {
+      overline: "Reviews",
+      title: "What people who know us say",
+      emptyText:
+        "Our customers rate us on Google. Read their real experiences or leave yours after visiting us.",
+      readCta: "Read reviews on Google",
+      writeCta: "Leave a review",
+    },
+    moneyPage: {
+      seoTitle: "Money transfers | Celina Estilo que Une — La Seu d'Urgell",
+      seoDesc:
+        "Send money anywhere in the world from La Seu d'Urgell with Ria and Western Union. In-person and WhatsApp advice.",
+      overline: "Money transfers · Ria & Western Union",
+      title: "Send money anywhere in the world",
+      subtitle:
+        "From our store in La Seu d'Urgell we help you make your transfer with Ria or Western Union, answering all your questions before you send.",
+      featuresTitle: "Why do it with Celina",
+      features: [
+        { title: "Worldwide", text: "Destinations across Europe, Latin America, Africa, Asia and more." },
+        { title: "In-person advice", text: "We explain the process and required documentation in store." },
+        { title: "At your pace", text: "Fill in your details online or come straight to the store." },
+      ],
+      stepsTitle: "How it works",
+      steps: [
+        "Fill in your transfer details in our form",
+        "We receive them on WhatsApp instantly",
+        "We prepare your quote in store or via WhatsApp",
+      ],
+      ctaForm: "Fill in my transfer details",
+    },
+    jewelryPage: {
+      seoTitle: "Jewelry | Celina Estilo que Une — La Seu d'Urgell",
+      seoDesc:
+        "Jewelry and accessories in La Seu d'Urgell: necklaces, bracelets, rings, earrings and more. Browse the catalog and reserve via WhatsApp.",
+      overline: "Jewelry & style",
+      title: "Style that speaks about you",
+      subtitle:
+        "Pieces made to accompany you every day: necklaces, bracelets, rings, earrings and accessories for every occasion.",
+      ctaCatalog: "Browse the catalog",
+      featuresTitle: "How we work",
+      features: [
+        { title: "In-store collection", text: "Come see and try the pieces in our store." },
+        { title: "Gift-ready", text: "We help you choose the perfect detail." },
+        { title: "Online catalog", text: "Browse the collection from your phone and reserve via WhatsApp." },
+      ],
+      visitTitle: "Come and try them on",
     },
     jewelry: {
       overline: "Jewelry & style",

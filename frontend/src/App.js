@@ -6,18 +6,19 @@ import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { Marquee } from "./components/Marquee";
 import { ServicesHub } from "./components/ServicesHub";
-import { MoneySection } from "./components/MoneySection";
-import { TravelSection } from "./components/TravelSection";
-import { JewelrySection } from "./components/JewelrySection";
-import { StudioSection } from "./components/StudioSection";
 import { TrustSection } from "./components/TrustSection";
+import { ReviewsSection } from "./components/ReviewsSection";
 import { LocationSection } from "./components/LocationSection";
 import { ContactSection } from "./components/ContactSection";
 import { Footer } from "./components/Footer";
 import { WhatsAppButton } from "./components/WhatsAppButton";
 import { LanguageProvider, useLanguage } from "./context/LanguageContext";
 import TravelPage from "./pages/TravelPage";
+import MoneyPage from "./pages/MoneyPage";
+import JewelryPage from "./pages/JewelryPage";
+import QrPage from "./pages/QrPage";
 
+// Home ligera: hub de marca que deriva a las páginas de cada servicio
 const Landing = () => {
   const { t } = useLanguage();
 
@@ -34,11 +35,8 @@ const Landing = () => {
         <Hero />
         <Marquee />
         <ServicesHub />
-        <MoneySection />
-        <TravelSection />
-        <JewelrySection />
-        <StudioSection />
         <TrustSection />
+        <ReviewsSection />
         <LocationSection />
         <ContactSection />
       </main>
@@ -80,7 +78,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Landing />} />
+          <Route path="/envios-dinero" element={<MoneyPage />} />
           <Route path="/viajes" element={<TravelPage />} />
+          <Route path="/bisuteria" element={<JewelryPage />} />
+          <Route path="/qr" element={<QrPage />} />
         </Routes>
       </BrowserRouter>
     </LanguageProvider>

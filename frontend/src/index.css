@@ -179,3 +179,12 @@ body {
     animation: none;
   }
 }
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: #faf7f2 !important;
+  }
+}

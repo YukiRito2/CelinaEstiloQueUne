@@ -81,6 +81,14 @@ Web principal moderna y orientada a conversión para Celina (La Seu d'Urgell). F
 - i18n: travelPage.form reescrito en es/ca/en (bullets pasaporte/Gmail, priceNote, submit, whatsappAlt).
 - Verificado: botón home y tarjeta /viajes abren el Google Form; alternativa WhatsApp intacta; sin errores de consola.
 
+## Actualización 2026-08-31 (8ª iteración)
+- Póster imprimible con QR en /qr (src/pages/QrPage.jsx, librería `qrcode`): QR generado en cliente hacia site.links.travelForm, marca CELINA, bullets pasaporte/Gmail, dirección y horario; botón Imprimir (no-print) y CSS @media print. Trilingüe.
+- Sección Reseñas en home (src/components/ReviewsSection.jsx, entre Confianza y Ubicación): lee site.reviews.items; vacío → tarjeta honesta con logo Google y botones "Leer reseñas en Google" / "Dejar una reseña" (site.reviews.googleUrl). Con items reales → cards con estrellas. NUNCA inventar reseñas: el usuario debe pasarlas.
+- Reestructura multi-página: home ligera (Hero, Marquee, Hub, Confianza, Reseñas, Ubicación, Contacto). Nuevas páginas /envios-dinero (MoneyPage: hero menta + Ria/WU + por qué + cómo funciona, CTA → datosdeenvio.vercel.app) y /bisuteria (JewelryPage: hero blush + categorías + muestras + cómo trabajamos + ven a la tienda, CTA → catálogo celina-estilo-que-une.vercel.app). Layout compartido: components/ServicePageLayout.jsx (themes mint/blush/lavender). Los antiguos MoneySection/TravelSection/JewelrySection/StudioSection quedan sin uso en home.
+- Enlaces: site.links reestructurado (money→página, moneyForm→externo; jewelry→página, jewelryCatalog→externo; studio→externo celina-studio-app.vercel.app en TODOS los puntos: hub, hero, footer, contacto). Hub cards, nodos del hero y hub de contacto llevan a las páginas internas; Navbar/Footer resuelven anchors vs páginas (pageMap en Footer, linkHref en Navbar).
+- i18n: moneyPage, jewelryPage, qrPage, reviews en es/ca/en. Sitemap con /envios-dinero, /viajes, /bisuteria.
+- Verificado: home (hub cards correctos), /envios-dinero (title SEO, CTA→formulario), /bisuteria (CTA→catálogo), /qr (QR presente), sin errores de consola.
+
 ## Backlog priorizado
 - P0: Activar GA4/Meta Pixel con IDs reales (rellenar variables en frontend/.env).
 - P0: Páginas especializadas /envios-dinero, /viajes, /bisuteria (cambiar hrefs en site.js → links).

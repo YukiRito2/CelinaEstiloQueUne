@@ -142,7 +142,7 @@ const Constellation = ({ t }) => {
           {/* Retrato central: bisutería / estilo */}
           <div className="absolute inset-0 flex items-center justify-center" style={{ transform: "translateZ(40px)" }}>
             <motion.a
-              href="#bisuteria"
+              href="/bisuteria"
               onClick={() => trackEvent("jewelry_click", { source: "hero_center" })}
               initial={{ opacity: 0, scale: 0.88 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -167,7 +167,6 @@ const Constellation = ({ t }) => {
             depth={110}
             className="top-2 right-0"
             href={site.links.money}
-            external
             event="money_transfer_click"
             delay={0.65}
             floatY={[-8, 8, -8]}
@@ -287,8 +286,6 @@ const MobileNodes = ({ t }) => (
   <div className="lg:hidden mt-12 grid grid-cols-2 gap-3" data-testid="hero-mobile-nodes">
     <motion.a
       href={site.links.money}
-      target="_blank"
-      rel="noopener noreferrer"
       onClick={() => trackEvent("money_transfer_click", { source: "hero_mobile" })}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -313,7 +310,7 @@ const MobileNodes = ({ t }) => (
       <p className="p-3 text-xs font-semibold text-[#1A497A]">{t.hero.nodes.travel}</p>
     </motion.a>
     <motion.a
-      href="#bisuteria"
+      href="/bisuteria"
       onClick={() => trackEvent("jewelry_click", { source: "hero_mobile" })}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}

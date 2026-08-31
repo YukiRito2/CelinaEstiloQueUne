@@ -5,10 +5,18 @@ import { waLink } from "../lib/whatsapp";
 import { trackEvent } from "../lib/analytics";
 import { useLanguage } from "../context/LanguageContext";
 
+// Los servicios tienen página propia; el resto son secciones de la home
+const pageMap = {
+  "#envios-dinero": "/envios-dinero",
+  "#viajes": "/viajes",
+  "#bisuteria": "/bisuteria",
+};
+
 export const Footer = () => {
   const { t } = useLanguage();
   const { pathname } = useLocation();
   const home = pathname === "/" ? "" : "/";
+  const linkHref = (h) => pageMap[h] || (h.startsWith("#") ? `${home}${h}` : h);
 
   return (
     <footer className="bg-[#26232E] text-[#F8F5FC] pt-16 pb-8" data-testid="main-footer">
@@ -30,9 +38,9 @@ export const Footer = () => {
               {t.footer.links.map((l) => (
                 <li key={l.href}>
                   <a
-                    href={`${home}${l.href}`}
+                    href={linkHref(l.href)}
                     className="text-sm font-light text-[#C8C2DB] hover:text-[#D99776] transition-colors"
-                    data-testid={`footer-link-${l.href.slice(1)}`}
+                    data-testid={`footer-link-${l.href.replace(/[#/]/g, "")}`}
                   >
                     {l.label}
                   </a>

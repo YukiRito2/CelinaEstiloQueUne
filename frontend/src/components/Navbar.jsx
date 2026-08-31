@@ -12,7 +12,7 @@ const LangSwitch = ({ className = "" }) => {
     <div
       className={`inline-flex items-center rounded-full border border-[#1E2430]/15 bg-white/70 backdrop-blur p-1 ${className}`}
       role="group"
-      aria-label="Idioma / Idioma"
+      aria-label="Idioma / Idioma / Language"
     >
       {["es", "ca", "en"].map((l) => (
         <button
@@ -37,6 +37,7 @@ export const Navbar = () => {
   const { t } = useLanguage();
   const { pathname } = useLocation();
   const home = pathname === "/" ? "" : "/";
+  const linkHref = (h) => (h.startsWith("#") ? `${home}${h}` : h);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -58,7 +59,7 @@ export const Navbar = () => {
         data-testid="main-navbar"
       >
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
-          <a href={`${home}#inicio`} className="flex items-baseline gap-2" data-testid="nav-logo">
+          <a href={linkHref("#inicio")} className="flex items-baseline gap-2" data-testid="nav-logo">
             <span className="font-display text-2xl sm:text-3xl font-medium tracking-tight text-[#1E2430]">
               CELINA
             </span>
@@ -71,8 +72,8 @@ export const Navbar = () => {
             {t.nav.links.map((l) => (
               <a
                 key={l.href}
-                href={`${home}${l.href}`}
-                data-testid={`nav-link-${l.href.slice(1)}`}
+                href={linkHref(l.href)}
+                data-testid={`nav-link-${l.href.replace(/[#/]/g, "")}`}
                 className="link-underline text-sm font-medium text-[#1E2430]/75 hover:text-[#1E2430] transition-colors"
               >
                 {l.label}
@@ -131,13 +132,13 @@ export const Navbar = () => {
               {t.nav.links.map((l, i) => (
                 <motion.a
                   key={l.href}
-                  href={`${home}${l.href}`}
+                  href={linkHref(l.href)}
                   onClick={() => setOpen(false)}
                   initial={{ opacity: 0, x: -24 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.08 * i, duration: 0.5 }}
                   className="font-display text-4xl py-3 border-b border-white/10 hover:text-[#D99776] transition-colors"
-                  data-testid={`mobile-nav-link-${l.href.slice(1)}`}
+                  data-testid={`mobile-nav-link-${l.href.replace(/[#/]/g, "")}`}
                 >
                   {l.label}
                 </motion.a>
