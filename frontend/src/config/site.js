@@ -48,7 +48,7 @@ export const site = {
   //   jewelry: "/bisuteria"
   // ----------------------------------------------------------
   links: {
-    money: "#envios-dinero",
+    money: "https://datosdeenvio.vercel.app/", // Formulario externo: datos → WhatsApp
     travel: "#viajes",
     jewelry: "#bisuteria",
     studio: "https://celina-studio-app.vercel.app/",

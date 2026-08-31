@@ -6,7 +6,9 @@ const LanguageContext = createContext(null);
 export const LanguageProvider = ({ children }) => {
   const [lang, setLang] = useState(() => {
     try {
-      return localStorage.getItem("celina-lang") === "ca" ? "ca" : "es";
+      return ["es", "ca", "en"].includes(localStorage.getItem("celina-lang"))
+        ? localStorage.getItem("celina-lang")
+        : "es";
     } catch {
       return "es";
     }

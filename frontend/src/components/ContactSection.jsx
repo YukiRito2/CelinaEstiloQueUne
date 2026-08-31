@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Banknote, Plane, Gem, MonitorSmartphone, ArrowUpRight } from "lucide-react";
+import { site } from "../config/site";
 import { waLink } from "../lib/whatsapp";
 import { trackEvent } from "../lib/analytics";
 import { useLanguage } from "../context/LanguageContext";
@@ -14,6 +15,7 @@ const meta = [
     card: "bg-[#EEF7F2] border-[#C2E8D2] hover:border-[#2D7A54]/40",
     iconBox: "bg-[#D3EEDD] text-[#2D7A54]",
     cta: "text-[#2D7A54]",
+    external: true,
   },
   {
     icon: Plane,
@@ -77,7 +79,7 @@ export const ContactSection = () => {
             return (
               <motion.a
                 key={o.title}
-                href={waLink(t.messages[m.msgKey])}
+                href={m.external ? site.links.money : waLink(t.messages[m.msgKey])}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackEvent(m.event, { source: "contact_hub" })}

@@ -11,6 +11,7 @@ const meta = {
     href: site.links.money,
     event: "money_transfer_click",
     span: "md:col-span-6",
+    external: true,
     card: "bg-[#EEF7F2] border-[#C2E8D2]",
     iconBox: "bg-[#D3EEDD] text-[#2D7A54]",
     numColor: "text-[#2D7A54]/50",

@@ -1,4 +1,5 @@
-import { MessageCircle, Globe2, HandHeart, ShieldCheck } from "lucide-react";
+import { MessageCircle, Globe2, HandHeart, ShieldCheck, ArrowUpRight } from "lucide-react";
+import { site } from "../config/site";
 import { waLink } from "../lib/whatsapp";
 import { trackEvent } from "../lib/analytics";
 import { useLanguage } from "../context/LanguageContext";
@@ -45,17 +46,42 @@ export const MoneySection = () => {
             })}
           </ul>
 
-          <a
-            href={waLink(t.messages.money)}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => trackEvent("whatsapp_click", { source: "money_section" })}
-            data-testid="money-consult-whatsapp-btn"
-            className="mt-10 inline-flex items-center gap-2 rounded-full bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold px-8 py-4 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
-          >
-            <MessageCircle className="w-5 h-5" />
-            {t.money.cta}
-          </a>
+          {/* Proceso: formulario → WhatsApp → cotización */}
+          <div className="mt-9 space-y-2.5" data-testid="money-process-steps">
+            {t.money.steps.map((step, i) => (
+              <div key={step} className="flex items-center gap-3.5">
+                <span className="font-mono-brand text-[10px] tracking-[0.2em] w-9 h-9 shrink-0 rounded-full bg-[#1E2430] text-white inline-flex items-center justify-center">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <p className="text-sm font-medium text-[#1E2430]/90">{step}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-9 flex flex-col sm:flex-row sm:items-center gap-4">
+            <a
+              href={site.links.money}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackEvent("money_transfer_click", { source: "money_section_form" })}
+              data-testid="money-form-btn"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#1E2430] hover:bg-[#2A3242] text-white font-semibold px-8 py-4 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+            >
+              {t.money.ctaForm}
+              <ArrowUpRight className="w-5 h-5" />
+            </a>
+            <a
+              href={waLink(t.messages.money)}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackEvent("whatsapp_click", { source: "money_section" })}
+              data-testid="money-consult-whatsapp-btn"
+              className="inline-flex items-center justify-center gap-2 text-[#128C7E] font-semibold px-2 py-2 link-underline"
+            >
+              <MessageCircle className="w-5 h-5" />
+              {t.money.ctaWhatsapp}
+            </a>
+          </div>
         </Reveal>
 
         <Reveal delay={0.15}>

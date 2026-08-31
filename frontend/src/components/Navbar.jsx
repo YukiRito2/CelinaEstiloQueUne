@@ -13,7 +13,7 @@ const LangSwitch = ({ className = "" }) => {
       role="group"
       aria-label="Idioma / Idioma"
     >
-      {["es", "ca"].map((l) => (
+      {["es", "ca", "en"].map((l) => (
         <button
           key={l}
           onClick={() => setLang(l)}
@@ -23,7 +23,7 @@ const LangSwitch = ({ className = "" }) => {
             lang === l ? "bg-[#1E2430] text-white shadow-sm" : "text-[#475569] hover:text-[#1E2430]"
           }`}
         >
-          {l === "es" ? "ES" : "CAT"}
+          {l === "ca" ? "CAT" : l.toUpperCase()}
         </button>
       ))}
     </div>
