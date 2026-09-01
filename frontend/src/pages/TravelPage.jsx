@@ -8,7 +8,6 @@ import {
   MessageCircle,
   Navigation,
   Plane,
-  Sparkles,
 } from "lucide-react";
 import { site } from "../config/site";
 import { waLink } from "../lib/whatsapp";
@@ -227,35 +226,6 @@ export default function TravelPage() {
                   </Reveal>
                 );
               })}
-            </div>
-          </div>
-        </section>
-
-        {/* Pasos */}
-        <section className="py-24 sm:py-32 bg-[#FAF7F2]" data-testid="travel-page-steps">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <Reveal className="text-center">
-              <p className="font-mono-brand text-[11px] tracking-[0.35em] uppercase text-[#2B6CB0] mb-4">
-                <Sparkles className="inline w-4 h-4 -mt-1" />
-              </p>
-              <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight text-[#1E2430]">
-                {tp.stepsTitle}
-              </h2>
-            </Reveal>
-            <div className="mt-14 grid sm:grid-cols-3 gap-5">
-              {tp.steps.map((step, i) => (
-                <Reveal key={step} delay={i * 0.12}>
-                  <div
-                    className="rounded-3xl bg-white border border-[#1E2430]/8 p-8 text-center shadow-sm"
-                    data-testid={`travel-step-${i}`}
-                  >
-                    <span className="font-mono-brand text-xs tracking-[0.3em] w-12 h-12 rounded-full bg-[#1E2430] text-white inline-flex items-center justify-center">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <p className="mt-5 font-medium text-[#1E2430]">{step}</p>
-                  </div>
-                </Reveal>
-              ))}
             </div>
           </div>
         </section>
