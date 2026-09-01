@@ -95,6 +95,12 @@ Web principal moderna y orientada a conversión para Celina (La Seu d'Urgell). F
 - i18n: nav/footer links a rutas, pagesSeo, qrMoney, homeCta en es/ca/en.
 - Verificado: navegación por navbar entre las 5 vistas con cambio de URL y título, logo vuelve a /, póster /qr-envios con QR presente, sin errores de consola.
 
+## Actualización 2026-09-01 (10ª iteración)
+- Ubicación y Contacto fusionados en /contacto (ContactSection + LocationSection con mapa); /ubicacion redirige a /contacto (Navigate). "Ubicación" eliminado del menú en es/ca/en; nodo de ubicación del hero → /contacto; sitemap sin /ubicacion. LocationPage.jsx queda sin uso.
+- Tarjetas de servicios con imagen identificativa (cabecera visual por servicio: envíos, viajes, bisutería, studio) con número e icono flotantes y degradado hacia el color de cada tarjeta. Imagen de envíos en site.images.money.
+- Navbar con estado activo: el enlace de la página actual se ilumina en terracota con una píldora subrayada animada que se desliza entre enlaces (framer-motion layoutId); en el menú móvil, punto terracota junto a la página activa.
+- Verificado: /servicios con imágenes, clase activa en Contacto, redirect /ubicacion→/contacto, sin errores de consola.
+
 ## Backlog priorizado
 - P0: Activar GA4/Meta Pixel con IDs reales (rellenar variables en frontend/.env).
 - P0: Páginas especializadas /envios-dinero, /viajes, /bisuteria (cambiar hrefs en site.js → links).

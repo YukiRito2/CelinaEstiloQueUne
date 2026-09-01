@@ -11,9 +11,10 @@ const meta = {
     href: site.links.money,
     event: "money_transfer_click",
     span: "md:col-span-6",
+    image: site.images.money,
+    blend: "from-[#EEF7F2]",
     card: "bg-[#EEF7F2] border-[#C2E8D2]",
     iconBox: "bg-[#D3EEDD] text-[#2D7A54]",
-    numColor: "text-[#2D7A54]/50",
     ctaColor: "text-[#2D7A54]",
     chip: "bg-white/70 border-[#C2E8D2] text-[#1E5238]",
     shadow: "hover:shadow-[#2D7A54]/15",
@@ -25,9 +26,10 @@ const meta = {
     href: site.links.travel,
     event: "travel_click",
     span: "md:col-span-6",
+    image: site.images.travel,
+    blend: "from-[#F0F6FF]",
     card: "bg-[#F0F6FF] border-[#C7E0FE]",
     iconBox: "bg-[#D8E8FD] text-[#2B6CB0]",
-    numColor: "text-[#2B6CB0]/50",
     ctaColor: "text-[#2B6CB0]",
     chip: "bg-white/70 border-[#C7E0FE] text-[#1A497A]",
     shadow: "hover:shadow-[#2B6CB0]/15",
@@ -39,9 +41,10 @@ const meta = {
     href: site.links.jewelry,
     event: "jewelry_click",
     span: "md:col-span-7",
+    image: site.images.jewelry[1],
+    blend: "from-[#FDF2F0]",
     card: "bg-[#FDF2F0] border-[#F7D8D3]",
     iconBox: "bg-[#FBE3DF] text-[#C47B62]",
-    numColor: "text-[#C47B62]/50",
     ctaColor: "text-[#C47B62]",
     chip: "bg-white/70 border-[#F7D8D3] text-[#874B38]",
     shadow: "hover:shadow-[#C47B62]/15",
@@ -53,14 +56,15 @@ const meta = {
     href: site.links.studio,
     event: "studio_click",
     span: "md:col-span-5",
+    external: true,
+    image: site.images.studio,
+    blend: "from-[#2B2638]",
     card: "bg-[#2B2638] border-[#E2D4F0]/15",
     iconBox: "bg-[#A78BFA]/15 text-[#A78BFA]",
-    numColor: "text-[#A78BFA]",
     ctaColor: "text-[#E2D4F0]",
     chip: "",
     shadow: "hover:shadow-black/40",
     dark: true,
-    external: true,
   },
 };
 
@@ -75,19 +79,31 @@ const ServiceCard = ({ s, m, index }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-10% 0px" }}
       transition={{ duration: 0.7, delay: index * 0.12, ease: [0.22, 1, 0.36, 1] }}
-      className={`group relative overflow-hidden rounded-3xl p-8 sm:p-10 flex flex-col justify-between min-h-[280px] border transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl ${m.span} ${m.card} ${m.shadow}`}
+      className={`group relative overflow-hidden rounded-3xl border transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl ${m.span} ${m.card} ${m.shadow}`}
       data-testid={`service-card-${s.id}`}
     >
-      <div className="flex items-start justify-between">
-        <span className={`font-mono-brand text-xs tracking-[0.3em] ${m.numColor}`}>{m.num}</span>
+      {/* Imagen identificativa del servicio */}
+      <div className="relative h-36 sm:h-44 overflow-hidden">
+        <img
+          src={m.image}
+          alt=""
+          loading="lazy"
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+        />
+        <div className={`absolute inset-0 bg-gradient-to-t ${m.blend} via-transparent to-transparent`} aria-hidden="true" />
+        <span className="absolute top-4 left-4 font-mono-brand text-[10px] tracking-[0.25em] px-2.5 py-1 rounded-full bg-white/85 backdrop-blur text-[#1E2430]">
+          {m.num}
+        </span>
         <span
-          className={`inline-flex w-12 h-12 rounded-2xl items-center justify-center transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6 ${m.iconBox}`}
+          className={`absolute top-4 right-4 inline-flex w-11 h-11 rounded-2xl items-center justify-center backdrop-blur bg-white/85 transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6 ${
+            m.dark ? "text-[#A78BFA]" : m.iconBox.split(" ")[1]
+          }`}
         >
-          <Icon className="w-6 h-6" />
+          <Icon className="w-5 h-5" />
         </span>
       </div>
 
-      <div className="mt-10">
+      <div className="p-7 sm:p-8 pt-4 sm:pt-5">
         <h3
           className={`font-display text-2xl sm:text-3xl font-medium tracking-tight ${
             m.dark ? "text-[#F8F5FC]" : "text-[#1E2430]"
@@ -95,11 +111,7 @@ const ServiceCard = ({ s, m, index }) => {
         >
           {s.title}
         </h3>
-        <p
-          className={`mt-3 text-sm sm:text-base font-light leading-relaxed ${
-            m.dark ? "text-[#C8C2DB]" : "text-[#475569]"
-          }`}
-        >
+        <p className={`mt-3 text-sm sm:text-base font-light leading-relaxed ${m.dark ? "text-[#C8C2DB]" : "text-[#475569]"}`}>
           {s.text}
         </p>
         {s.chips.length > 0 && (

@@ -229,7 +229,7 @@ const Constellation = ({ t }) => {
           <Node
             depth={70}
             className="bottom-8 left-0"
-            href="/ubicacion"
+            href="/contacto"
             delay={1.1}
             floatY={[4, -6, 4]}
             floatDur={3.8}

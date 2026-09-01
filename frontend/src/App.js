@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import Lenis from "lenis";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import "@/App.css";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
@@ -14,7 +14,6 @@ import TravelPage from "./pages/TravelPage";
 import MoneyPage from "./pages/MoneyPage";
 import JewelryPage from "./pages/JewelryPage";
 import AboutPage from "./pages/AboutPage";
-import LocationPage from "./pages/LocationPage";
 import ContactPage from "./pages/ContactPage";
 import QrPage from "./pages/QrPage";
 import QrMoneyPage from "./pages/QrMoneyPage";
@@ -70,8 +69,8 @@ function App() {
           <Route path="/viajes" element={<TravelPage />} />
           <Route path="/bisuteria" element={<JewelryPage />} />
           <Route path="/sobre-celina" element={<AboutPage />} />
-          <Route path="/ubicacion" element={<LocationPage />} />
           <Route path="/contacto" element={<ContactPage />} />
+          <Route path="/ubicacion" element={<Navigate to="/contacto" replace />} />
           <Route path="/qr" element={<QrPage />} />
           <Route path="/qr-envios" element={<QrMoneyPage />} />
         </Routes>
