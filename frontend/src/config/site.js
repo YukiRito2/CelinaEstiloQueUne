@@ -99,7 +99,7 @@ export const site = {
   },
 
   seo: {
-    siteUrl: "https://celina-main.preview.emergentagent.com", // Cambiar al dominio propio
+    siteUrl: "https://celinaestiloqueune.com",
     title: "Celina Estilo que Une | Servicios, viajes, envíos de dinero y bisutería",
     description:
       "Celina Estilo que Une en La Seu d'Urgell. Envíos de dinero a todo el mundo, agencia de viajes, bisutería y servicios digitales.",
