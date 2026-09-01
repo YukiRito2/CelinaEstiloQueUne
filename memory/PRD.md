@@ -108,6 +108,10 @@ Web principal moderna y orientada a conversión para Celina (La Seu d'Urgell). F
 - i18n: qrJewelry + notFound en es/ca/en.
 - Verificado: QR bisutería presente, 404 renderiza con título, directions → maps.app.goo.gl del local, sin errores de consola.
 
+## Actualización 2026-09-01 (12ª iteración)
+- Todos los enlaces de ubicación/reseñas apuntan a la ficha real del negocio: maps.directions y reviews.googleUrl = https://maps.app.goo.gl/6inodAoKQkdFLPvv9 (botones "Cómo llegar", "Leer reseñas en Google", "Dejar una reseña"). El iframe embebido se mantiene con la dirección escrita.
+- Verificado: los 3 botones devuelven la URL del negocio.
+
 ## Backlog priorizado
 - P0: Activar GA4/Meta Pixel con IDs reales (rellenar variables en frontend/.env).
 - P0: Páginas especializadas /envios-dinero, /viajes, /bisuteria (cambiar hrefs en site.js → links).

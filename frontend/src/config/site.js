@@ -42,8 +42,7 @@ export const site = {
   // ({ name: "María G.", text: "...", rating: 5 }). Mientras esté
   // vacío, la sección muestra un enlace honesto a Google.
   reviews: {
-    googleUrl:
-      "https://www.google.com/maps/search/?api=1&query=Celina+Estilo+que+Une,+Avinguda+del+Sal%C3%B2ria+34,+La+Seu+d'Urgell",
+    googleUrl: "https://maps.app.goo.gl/6inodAoKQkdFLPvv9", // Ficha Google del local
     items: [],
   },
 
