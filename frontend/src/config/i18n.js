@@ -203,6 +203,11 @@ export const translations = {
         "Los recibimos por WhatsApp al instante",
         "Te preparamos la cotización en tienda o por WhatsApp",
       ],
+      destinations: ["Perú", "Colombia", "Marruecos", "Senegal", "R. Dominicana", "Y todo el mundo"],
+      hereLabel: "Tú estás aquí",
+      honestyTitle: "Sin letra pequeña",
+      honestyText:
+        "Antes de confirmar tu envío te explicamos las comisiones, el importe que recibirá tu familia y el plazo estimado. Tú decides.",
       ctaForm: "Rellenar mis datos de envío",
     },
     jewelryPage: {
@@ -551,6 +556,11 @@ export const translations = {
         "Les rebem per WhatsApp a l'instant",
         "Et preparem la cotització a la botiga o per WhatsApp",
       ],
+      destinations: ["Perú", "Colòmbia", "Marroc", "Senegal", "R. Dominicana", "I tot el món"],
+      hereLabel: "Tu ets aquí",
+      honestyTitle: "Sense lletra petita",
+      honestyText:
+        "Abans de confirmar l'enviament t'expliquem les comissions, l'import que rebrà la teva família i el termini estimat. Tu decides.",
       ctaForm: "Emplenar les meves dades d'enviament",
     },
     jewelryPage: {
@@ -899,6 +909,11 @@ export const translations = {
         "We receive them on WhatsApp instantly",
         "We prepare your quote in store or via WhatsApp",
       ],
+      destinations: ["Peru", "Colombia", "Morocco", "Senegal", "Dominican Rep.", "And the whole world"],
+      hereLabel: "You are here",
+      honestyTitle: "No fine print",
+      honestyText:
+        "Before confirming your transfer we explain the fees, the amount your family will receive and the estimated time. You decide.",
       ctaForm: "Fill in my transfer details",
     },
     jewelryPage: {

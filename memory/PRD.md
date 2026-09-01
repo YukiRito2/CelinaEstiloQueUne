@@ -128,6 +128,10 @@ Web principal moderna y orientada a conversión para Celina (La Seu d'Urgell). F
 - Imagen de Celina Studio sustituida por foto de diseño web/marketing (portátil con web en pantalla): site.images.studio — aplica en hero, hub y Sobre Celina.
 - Verificado: /servicios con guía y botones, nodo Studio del hero con nueva imagen, Sobre Celina completa desktop+móvil, sin errores de consola.
 
+## Actualización 2026-09-01 (16ª iteración)
+- /envios-dinero rediseñada: visual "órbita de destinos" (La Seu d'Urgell al centro con Ria·Western Union, chips flotantes de Perú, Colombia, Marruecos, Senegal, R. Dominicana y "Y todo el mundo" con arcos punteados animados), banda de transparencia "Sin letra pequeña" (comisiones/importe/plazo explicados antes de confirmar — sin cifras inventadas), pasos como línea de tiempo con conector. i18n: moneyPage.destinations/hereLabel/honestyTitle/honestyText en es/ca/en.
+- Verificado: hero con órbita animada, banda, timeline y móvil; sin errores de consola.
+
 ## Backlog priorizado
 - P0: Activar GA4/Meta Pixel con IDs reales (rellenar variables en frontend/.env).
 - P0: Páginas especializadas /envios-dinero, /viajes, /bisuteria (cambiar hrefs en site.js → links).
