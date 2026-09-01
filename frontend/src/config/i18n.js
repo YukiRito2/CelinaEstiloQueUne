@@ -53,6 +53,8 @@ export const translations = {
       overline: "Todo lo que nos une",
       title: "Descubre todo lo que Celina tiene para ti",
       subtitle: "Diferentes necesidades. Una misma marca.",
+      guide: ["Elige tu servicio", "Te lo explicamos en su página", "Contacta por WhatsApp o formulario"],
+      externalHint: "Web independiente",
       cards: [
         {
           id: "transfers",
@@ -244,6 +246,21 @@ export const translations = {
       note: "Ria · Western Union · Asesoramiento en tienda",
     },
     homeCta: "Ir a contacto",
+    aboutPage: {
+      overline: "Sobre Celina",
+      title: "Más que un local",
+      intro:
+        "Celina nace en La Seu d'Urgell con una idea sencilla: un mismo lugar donde resolver cosas muy distintas — enviar dinero a tu familia, preparar un viaje, encontrar un detalle o impulsar tu negocio — con trato cercano y de confianza.",
+      manifestoOverline: "Lo que nos une",
+      chapters: [
+        { title: "Personas", text: "Conexión directa con quien entra por la puerta: te escuchamos y te ayudamos." },
+        { title: "Destinos", text: "Del Pirineo a cualquier parte del mundo: viajes y envíos que acercan distancias." },
+        { title: "Estilos", text: "Piezas y detalles que hablan de ti, para cada día y cada ocasión." },
+        { title: "Negocios", text: "Presencia digital para los comercios y proyectos de la zona." },
+      ],
+      quote: "Conectamos personas, destinos, estilos y negocios.",
+      visitCta: "Ven a conocernos",
+    },
     qrJewelry: {
       title: "Descubre nuestra bisutería",
       subtitle: "Escanea el código y explora el catálogo desde tu móvil.",
@@ -384,6 +401,8 @@ export const translations = {
       overline: "Tot el que ens uneix",
       title: "Descobreix tot el que Celina té per a tu",
       subtitle: "Diferents necessitats. Una mateixa marca.",
+      guide: ["Tria el teu servei", "T'ho expliquem a la seva pàgina", "Contacta per WhatsApp o formulari"],
+      externalHint: "Web independent",
       cards: [
         {
           id: "transfers",
@@ -575,6 +594,21 @@ export const translations = {
       note: "Ria · Western Union · Assessorament a la botiga",
     },
     homeCta: "Anar a contacte",
+    aboutPage: {
+      overline: "Sobre Celina",
+      title: "Més que un local",
+      intro:
+        "Celina neix a la Seu d'Urgell amb una idea senzilla: un mateix lloc on resoldre coses molt diferents — enviar diners a la teva família, preparar un viatge, trobar un detall o impulsar el teu negoci — amb un tracte proper i de confiança.",
+      manifestoOverline: "El que ens uneix",
+      chapters: [
+        { title: "Persones", text: "Connexió directa amb qui entra per la porta: t'escoltem i t'ajudem." },
+        { title: "Destinacions", text: "Del Pirineu a qualsevol part del món: viatges i enviaments que apropen distàncies." },
+        { title: "Estils", text: "Peces i detalls que parlen de tu, per a cada dia i cada ocasió." },
+        { title: "Negocis", text: "Presència digital per als comerços i projectes de la zona." },
+      ],
+      quote: "Connectem persones, destinacions, estils i negocis.",
+      visitCta: "Vine a conèixer-nos",
+    },
     qrJewelry: {
       title: "Descobreix la nostra bisuteria",
       subtitle: "Escaneja el codi i explora el catàleg des del mòbil.",
@@ -715,6 +749,8 @@ export const translations = {
       overline: "Everything that unites us",
       title: "Discover everything Celina has for you",
       subtitle: "Different needs. One same brand.",
+      guide: ["Choose your service", "We explain it on its page", "Contact us via WhatsApp or form"],
+      externalHint: "Separate website",
       cards: [
         {
           id: "transfers",
@@ -906,6 +942,21 @@ export const translations = {
       note: "Ria · Western Union · In-store advice",
     },
     homeCta: "Go to contact",
+    aboutPage: {
+      overline: "About Celina",
+      title: "More than a store",
+      intro:
+        "Celina was born in La Seu d'Urgell with a simple idea: one place to solve very different things — sending money to your family, planning a trip, finding a gift or boosting your business — with warm, trustworthy service.",
+      manifestoOverline: "What unites us",
+      chapters: [
+        { title: "People", text: "Direct connection with everyone who walks in: we listen and we help." },
+        { title: "Destinations", text: "From the Pyrenees to anywhere in the world: trips and transfers that shorten distances." },
+        { title: "Styles", text: "Pieces and details that speak about you, for every day and every occasion." },
+        { title: "Businesses", text: "Digital presence for local shops and projects." },
+      ],
+      quote: "We connect people, destinations, styles and businesses.",
+      visitCta: "Come and meet us",
+    },
     qrJewelry: {
       title: "Discover our jewelry",
       subtitle: "Scan the code and browse the catalog from your phone.",

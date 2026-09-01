@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Banknote, Plane, Gem, MonitorSmartphone } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Banknote, Plane, Gem, MonitorSmartphone } from "lucide-react";
 import { site } from "../config/site";
 import { trackEvent } from "../lib/analytics";
 import { useLanguage } from "../context/LanguageContext";
+import { Reveal } from "./Reveal";
 
 const meta = {
   transfers: {
@@ -14,8 +15,9 @@ const meta = {
     image: site.images.money,
     blend: "from-[#EEF7F2]",
     card: "bg-[#EEF7F2] border-[#C2E8D2]",
+    tag: "bg-[#2D7A54] text-white",
     iconBox: "bg-[#D3EEDD] text-[#2D7A54]",
-    ctaColor: "text-[#2D7A54]",
+    ctaBtn: "bg-[#2D7A54] hover:bg-[#256646] text-white",
     chip: "bg-white/70 border-[#C2E8D2] text-[#1E5238]",
     shadow: "hover:shadow-[#2D7A54]/15",
     dark: false,
@@ -29,8 +31,9 @@ const meta = {
     image: site.images.travel,
     blend: "from-[#F0F6FF]",
     card: "bg-[#F0F6FF] border-[#C7E0FE]",
+    tag: "bg-[#2B6CB0] text-white",
     iconBox: "bg-[#D8E8FD] text-[#2B6CB0]",
-    ctaColor: "text-[#2B6CB0]",
+    ctaBtn: "bg-[#2B6CB0] hover:bg-[#235a94] text-white",
     chip: "bg-white/70 border-[#C7E0FE] text-[#1A497A]",
     shadow: "hover:shadow-[#2B6CB0]/15",
     dark: false,
@@ -44,8 +47,9 @@ const meta = {
     image: site.images.jewelry[1],
     blend: "from-[#FDF2F0]",
     card: "bg-[#FDF2F0] border-[#F7D8D3]",
+    tag: "bg-[#C47B62] text-white",
     iconBox: "bg-[#FBE3DF] text-[#C47B62]",
-    ctaColor: "text-[#C47B62]",
+    ctaBtn: "bg-[#C47B62] hover:bg-[#ac6850] text-white",
     chip: "bg-white/70 border-[#F7D8D3] text-[#874B38]",
     shadow: "hover:shadow-[#C47B62]/15",
     dark: false,
@@ -60,16 +64,18 @@ const meta = {
     image: site.images.studio,
     blend: "from-[#2B2638]",
     card: "bg-[#2B2638] border-[#E2D4F0]/15",
+    tag: "bg-[#A78BFA] text-[#2B2638]",
     iconBox: "bg-[#A78BFA]/15 text-[#A78BFA]",
-    ctaColor: "text-[#E2D4F0]",
+    ctaBtn: "bg-[#A78BFA] hover:bg-[#c4b5fc] text-[#2B2638]",
     chip: "",
     shadow: "hover:shadow-black/40",
     dark: true,
   },
 };
 
-const ServiceCard = ({ s, m, index }) => {
+const ServiceCard = ({ s, m, index, externalHint }) => {
   const Icon = m.icon;
+  const CtaIcon = m.external ? ArrowUpRight : ArrowRight;
   return (
     <motion.a
       href={m.href}
@@ -79,11 +85,11 @@ const ServiceCard = ({ s, m, index }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-10% 0px" }}
       transition={{ duration: 0.7, delay: index * 0.12, ease: [0.22, 1, 0.36, 1] }}
-      className={`group relative overflow-hidden rounded-3xl border transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl ${m.span} ${m.card} ${m.shadow}`}
+      className={`group relative overflow-hidden rounded-3xl border flex flex-col transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl ${m.span} ${m.card} ${m.shadow}`}
       data-testid={`service-card-${s.id}`}
     >
-      {/* Imagen identificativa del servicio */}
-      <div className="relative h-36 sm:h-44 overflow-hidden">
+      {/* Imagen identificativa con etiqueta de categoría */}
+      <div className="relative h-40 sm:h-48 overflow-hidden shrink-0">
         <img
           src={m.image}
           alt=""
@@ -91,19 +97,21 @@ const ServiceCard = ({ s, m, index }) => {
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
         <div className={`absolute inset-0 bg-gradient-to-t ${m.blend} via-transparent to-transparent`} aria-hidden="true" />
-        <span className="absolute top-4 left-4 font-mono-brand text-[10px] tracking-[0.25em] px-2.5 py-1 rounded-full bg-white/85 backdrop-blur text-[#1E2430]">
+        <span
+          className={`absolute top-4 left-4 inline-flex items-center gap-1.5 font-mono-brand text-[10px] tracking-[0.2em] uppercase px-3 py-1.5 rounded-full shadow-md ${m.tag}`}
+        >
           {m.num}
         </span>
         <span
-          className={`absolute top-4 right-4 inline-flex w-11 h-11 rounded-2xl items-center justify-center backdrop-blur bg-white/85 transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6 ${
-            m.dark ? "text-[#A78BFA]" : m.iconBox.split(" ")[1]
+          className={`absolute top-4 right-4 inline-flex w-11 h-11 rounded-2xl items-center justify-center backdrop-blur bg-white/90 transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6 ${
+            m.dark ? "text-[#7C5CD6]" : m.iconBox.split(" ")[1]
           }`}
         >
           <Icon className="w-5 h-5" />
         </span>
       </div>
 
-      <div className="p-7 sm:p-8 pt-4 sm:pt-5">
+      <div className="p-7 sm:p-8 pt-5 flex flex-col flex-1">
         <h3
           className={`font-display text-2xl sm:text-3xl font-medium tracking-tight ${
             m.dark ? "text-[#F8F5FC]" : "text-[#1E2430]"
@@ -126,10 +134,21 @@ const ServiceCard = ({ s, m, index }) => {
             ))}
           </div>
         )}
-        <span className={`mt-6 inline-flex items-center gap-2 text-sm font-semibold ${m.ctaColor}`}>
-          {s.cta}
-          <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5" />
-        </span>
+
+        <div className="mt-auto pt-6">
+          <span
+            className={`inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full font-semibold px-6 py-3.5 text-sm transition-all duration-300 group-hover:gap-3 ${m.ctaBtn}`}
+            data-testid={`service-card-${s.id}-cta`}
+          >
+            {s.cta}
+            <CtaIcon className="w-4 h-4" />
+          </span>
+          {m.external && (
+            <p className="mt-3 font-mono-brand text-[10px] tracking-[0.15em] uppercase text-[#9F99B0]">
+              {externalHint} · celina-studio-app.vercel.app
+            </p>
+          )}
+        </div>
       </div>
     </motion.a>
   );
@@ -156,9 +175,29 @@ export const ServicesHub = () => {
           <p className="mt-4 text-base sm:text-lg font-light text-[#475569]">{t.services.subtitle}</p>
         </motion.div>
 
-        <div className="mt-14 grid md:grid-cols-12 gap-5">
+        {/* Guía de 3 pasos para no perderse */}
+        <Reveal delay={0.1}>
+          <div
+            className="mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-0 rounded-2xl bg-white border border-[#1E2430]/8 p-5 sm:p-6 shadow-sm"
+            data-testid="services-guide-strip"
+          >
+            {t.services.guide.map((step, i) => (
+              <div key={step} className="flex items-center gap-3 sm:flex-1">
+                <span className="font-mono-brand text-[10px] tracking-[0.2em] w-8 h-8 shrink-0 rounded-full bg-[#F5EFE6] border border-[#D99776]/30 text-[#C47B62] inline-flex items-center justify-center">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <p className="text-sm font-medium text-[#1E2430]">{step}</p>
+                {i < t.services.guide.length - 1 && (
+                  <ArrowRight className="hidden sm:block w-4 h-4 text-[#D99776] ml-auto mr-4 shrink-0" aria-hidden="true" />
+                )}
+              </div>
+            ))}
+          </div>
+        </Reveal>
+
+        <div className="mt-10 grid md:grid-cols-12 gap-5">
           {t.services.cards.map((s, i) => (
-            <ServiceCard key={s.id} s={s} m={meta[s.id]} index={i} />
+            <ServiceCard key={s.id} s={s} m={meta[s.id]} index={i} externalHint={t.services.externalHint} />
           ))}
         </div>
       </div>

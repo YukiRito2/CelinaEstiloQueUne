@@ -122,6 +122,12 @@ Web principal moderna y orientada a conversión para Celina (La Seu d'Urgell). F
 - El enlace de Instagram del footer (perfil real) se mantiene.
 - Verificado: sección eliminada, resto de la página intacto.
 
+## Actualización 2026-09-01 (15ª iteración)
+- /sobre-celina rediseñada: hero editorial con collage de 3 fotos en arco rotadas, manifiesto numerado (01 Personas, 02 Destinos, 03 Estilos, 04 Negocios) con imágenes alternadas y parallax, banda de cita de marca en lavanda oscuro, pilares, reseñas y cierre a /contacto. i18n aboutPage en es/ca/en.
+- Hub de servicios mejorado: guía de 3 pasos ("Elige tu servicio → Te lo explicamos → Contacta"), etiqueta de categoría numerada sobre cada imagen, botones CTA grandes con color de cada servicio, hint "Web independiente · celina-studio-app.vercel.app" en la tarjeta de Studio. i18n services.guide/externalHint en es/ca/en.
+- Imagen de Celina Studio sustituida por foto de diseño web/marketing (portátil con web en pantalla): site.images.studio — aplica en hero, hub y Sobre Celina.
+- Verificado: /servicios con guía y botones, nodo Studio del hero con nueva imagen, Sobre Celina completa desktop+móvil, sin errores de consola.
+
 ## Backlog priorizado
 - P0: Activar GA4/Meta Pixel con IDs reales (rellenar variables en frontend/.env).
 - P0: Páginas especializadas /envios-dinero, /viajes, /bisuteria (cambiar hrefs en site.js → links).

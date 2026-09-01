@@ -83,8 +83,7 @@ export const site = {
       "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=800&q=80",
       "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80",
     ],
-    studio:
-      "https://images.unsplash.com/photo-1779949294758-f2728920623c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjV8MHwxfHNlYXJjaHwxfHxwYXN0ZWwlMjB3YXJtJTIwYWVzdGhldGljJTIwZGlnaXRhbCUyMGNyZWF0aXZlJTIwc3R1ZGlvJTIwd29ya3NwYWNlfGVufDB8fHx8MTc4ODE5NjMyNnww&ixlib=rb-4.1.0&q=85",
+    studio: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&q=80",
     jewelry: [
       "https://images.unsplash.com/photo-1585960622850-ed33c41d6418?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjBnb2xkJTIwamV3ZWxyeSUyMG1vZGVsJTIwd29tYW58ZW58MHx8fHwxNzgzOTgwMDc0fDA&ixlib=rb-4.1.0&q=85",
       "https://images.unsplash.com/photo-1633934542430-0905ccb5f050?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBnb2xkJTIwamV3ZWxyeSUyMG1vZGVsJTIwd29tYW58ZW58MHx8fHwxNzgzOTgwMDc0fDA&ixlib=rb-4.1.0&q=85",
