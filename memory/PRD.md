@@ -89,6 +89,12 @@ Web principal moderna y orientada a conversión para Celina (La Seu d'Urgell). F
 - i18n: moneyPage, jewelryPage, qrPage, reviews en es/ca/en. Sitemap con /envios-dinero, /viajes, /bisuteria.
 - Verificado: home (hub cards correctos), /envios-dinero (title SEO, CTA→formulario), /bisuteria (CTA→catálogo), /qr (QR presente), sin errores de consola.
 
+## Actualización 2026-09-01 (9ª iteración)
+- Sitio totalmente multipágina con navegación real (react-router), sin anclas: / (home ligera: hero + marquee + hub + cierre), /servicios, /envios-dinero, /viajes, /bisuteria, /sobre-celina (confianza + reseñas), /ubicacion (mapa + datos), /contacto (hub + tarjetas de datos), /qr (póster viajes), /qr-envios (póster envíos → datosdeenvio.vercel.app). Navbar y footer usan rutas reales; cada página fija su propio title/meta por idioma (i18n.pagesSeo). Sitemap actualizado.
+- QrPoster refactor: components/QrPoster.jsx genérico; QrPage (viajes) y QrMoneyPage (envíos) lo reutilizan.
+- i18n: nav/footer links a rutas, pagesSeo, qrMoney, homeCta en es/ca/en.
+- Verificado: navegación por navbar entre las 5 vistas con cambio de URL y título, logo vuelve a /, póster /qr-envios con QR presente, sin errores de consola.
+
 ## Backlog priorizado
 - P0: Activar GA4/Meta Pixel con IDs reales (rellenar variables en frontend/.env).
 - P0: Páginas especializadas /envios-dinero, /viajes, /bisuteria (cambiar hrefs en site.js → links).

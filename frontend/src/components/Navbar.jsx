@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useLocation } from "react-router-dom";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { waLink } from "../lib/whatsapp";
 import { trackEvent } from "../lib/analytics";
@@ -31,13 +30,12 @@ const LangSwitch = ({ className = "" }) => {
   );
 };
 
+const slug = (h) => (h === "/" ? "inicio" : h.replace(/[#/]/g, ""));
+
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const { t } = useLanguage();
-  const { pathname } = useLocation();
-  const home = pathname === "/" ? "" : "/";
-  const linkHref = (h) => (h.startsWith("#") ? `${home}${h}` : h);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -59,7 +57,7 @@ export const Navbar = () => {
         data-testid="main-navbar"
       >
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
-          <a href={linkHref("#inicio")} className="flex items-baseline gap-2" data-testid="nav-logo">
+          <a href="/" className="flex items-baseline gap-2" data-testid="nav-logo">
             <span className="font-display text-2xl sm:text-3xl font-medium tracking-tight text-[#1E2430]">
               CELINA
             </span>
@@ -72,8 +70,8 @@ export const Navbar = () => {
             {t.nav.links.map((l) => (
               <a
                 key={l.href}
-                href={linkHref(l.href)}
-                data-testid={`nav-link-${l.href.replace(/[#/]/g, "")}`}
+                href={l.href}
+                data-testid={`nav-link-${slug(l.href)}`}
                 className="link-underline text-sm font-medium text-[#1E2430]/75 hover:text-[#1E2430] transition-colors"
               >
                 {l.label}
@@ -132,13 +130,13 @@ export const Navbar = () => {
               {t.nav.links.map((l, i) => (
                 <motion.a
                   key={l.href}
-                  href={linkHref(l.href)}
+                  href={l.href}
                   onClick={() => setOpen(false)}
                   initial={{ opacity: 0, x: -24 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.08 * i, duration: 0.5 }}
                   className="font-display text-4xl py-3 border-b border-white/10 hover:text-[#D99776] transition-colors"
-                  data-testid={`mobile-nav-link-${l.href.replace(/[#/]/g, "")}`}
+                  data-testid={`mobile-nav-link-${slug(l.href)}`}
                 >
                   {l.label}
                 </motion.a>

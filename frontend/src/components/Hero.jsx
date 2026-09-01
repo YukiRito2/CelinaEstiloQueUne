@@ -229,7 +229,7 @@ const Constellation = ({ t }) => {
           <Node
             depth={70}
             className="bottom-8 left-0"
-            href="#ubicacion"
+            href="/ubicacion"
             delay={1.1}
             floatY={[4, -6, 4]}
             floatDur={3.8}
@@ -389,7 +389,7 @@ export const Hero = () => {
             className="mt-9 flex flex-col sm:flex-row gap-4"
           >
             <a
-              href="#servicios"
+              href="/servicios"
               data-testid="hero-explore-services-btn"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-[#1E2430] text-white font-semibold px-8 py-4 text-sm sm:text-base transition-all duration-300 hover:bg-[#2A3242] hover:scale-[1.02] active:scale-[0.98]"
             >

@@ -1,22 +1,13 @@
 import { Instagram, Facebook, Music2, MessageCircle, Mail } from "lucide-react";
-import { useLocation } from "react-router-dom";
 import { site } from "../config/site";
 import { waLink } from "../lib/whatsapp";
 import { trackEvent } from "../lib/analytics";
 import { useLanguage } from "../context/LanguageContext";
 
-// Los servicios tienen página propia; el resto son secciones de la home
-const pageMap = {
-  "#envios-dinero": "/envios-dinero",
-  "#viajes": "/viajes",
-  "#bisuteria": "/bisuteria",
-};
+const slug = (h) => (h === "/" ? "inicio" : h.replace(/[#/]/g, ""));
 
 export const Footer = () => {
   const { t } = useLanguage();
-  const { pathname } = useLocation();
-  const home = pathname === "/" ? "" : "/";
-  const linkHref = (h) => pageMap[h] || (h.startsWith("#") ? `${home}${h}` : h);
 
   return (
     <footer className="bg-[#26232E] text-[#F8F5FC] pt-16 pb-8" data-testid="main-footer">
@@ -38,9 +29,9 @@ export const Footer = () => {
               {t.footer.links.map((l) => (
                 <li key={l.href}>
                   <a
-                    href={linkHref(l.href)}
+                    href={l.href}
                     className="text-sm font-light text-[#C8C2DB] hover:text-[#D99776] transition-colors"
-                    data-testid={`footer-link-${l.href.replace(/[#/]/g, "")}`}
+                    data-testid={`footer-link-${slug(l.href)}`}
                   >
                     {l.label}
                   </a>
