@@ -21,7 +21,7 @@ export const legalDocs = {
         list: [
           "Titular: Celina — Estilo que Une",
           "Titular persona física: Calina Martha Valle Cabanillas",
-          "NIF/CIF: [Completar]",
+          "NIF/CIF: 53922761C",
           `Domicilio: ${direccion}`,
           `Teléfono: ${telefono}`,
           `Correo electrónico: ${contacto}`,
@@ -70,7 +70,7 @@ export const legalDocs = {
         h: "1. Responsable del tratamiento",
         list: [
           "Responsable: Calina Martha Valle Cabanillas (Celina — Estilo que Une)",
-          "NIF/CIF: [Completar]",
+          "NIF/CIF: 53922761C",
           `Domicilio: ${direccion}`,
           `Teléfono: ${telefono}`,
           `Correo electrónico: ${contacto}`,
