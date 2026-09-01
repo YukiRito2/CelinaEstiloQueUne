@@ -58,7 +58,7 @@ export const QrPoster = ({ target, title, subtitle, highlightNote, bullets = [],
         )}
 
         {bullets.length > 0 && (
-          <ul className="mt-7 space-y-3 text-left max-w-md mx-auto">
+          <ul className={`mt-7 space-y-3 max-w-md mx-auto ${bulletIcons.length > 0 ? "text-left" : "text-center"}`}>
             {bullets.map((b, i) => {
               const Icon = bulletIcons[i];
               return (

@@ -244,6 +244,16 @@ export const translations = {
       note: "Ria · Western Union · Asesoramiento en tienda",
     },
     homeCta: "Ir a contacto",
+    qrJewelry: {
+      title: "Descubre nuestra bisutería",
+      subtitle: "Escanea el código y explora el catálogo desde tu móvil.",
+      note: "Reserva por WhatsApp o ven a probártela en tienda",
+    },
+    notFound: {
+      title: "Esta página no existe",
+      text: "Puede que el enlace haya cambiado o que la página se haya movido.",
+      cta: "Volver al inicio",
+    },
     jewelry: {
       overline: "Bisutería & estilo",
       title: "Estilo que habla de ti",
@@ -565,6 +575,16 @@ export const translations = {
       note: "Ria · Western Union · Assessorament a la botiga",
     },
     homeCta: "Anar a contacte",
+    qrJewelry: {
+      title: "Descobreix la nostra bisuteria",
+      subtitle: "Escaneja el codi i explora el catàleg des del mòbil.",
+      note: "Reserva per WhatsApp o vine a provar-te-la a la botiga",
+    },
+    notFound: {
+      title: "Aquesta pàgina no existeix",
+      text: "Potser l'enllaç ha canviat o la pàgina s'ha mogut.",
+      cta: "Tornar a l'inici",
+    },
     jewelry: {
       overline: "Bisuteria & estil",
       title: "Estil que parla de tu",
@@ -886,6 +906,16 @@ export const translations = {
       note: "Ria · Western Union · In-store advice",
     },
     homeCta: "Go to contact",
+    qrJewelry: {
+      title: "Discover our jewelry",
+      subtitle: "Scan the code and browse the catalog from your phone.",
+      note: "Reserve via WhatsApp or come try it in store",
+    },
+    notFound: {
+      title: "This page doesn't exist",
+      text: "The link may have changed or the page has moved.",
+      cta: "Back to home",
+    },
     jewelry: {
       overline: "Jewelry & style",
       title: "Style that speaks about you",

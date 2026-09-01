@@ -29,8 +29,7 @@ export const site = {
   maps: {
     embed:
       "https://www.google.com/maps?q=Avinguda+del+Sal%C3%B2ria+34,+25700+La+Seu+d'Urgell,+Lleida&output=embed",
-    directions:
-      "https://www.google.com/maps/dir/?api=1&destination=Avinguda+del+Sal%C3%B2ria+34,+25700+La+Seu+d'Urgell,+Lleida,+Espa%C3%B1a",
+    directions: "https://maps.app.goo.gl/6inodAoKQkdFLPvv9", // Ficha Google del local
   },
 
   social: {

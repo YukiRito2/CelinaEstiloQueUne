@@ -17,6 +17,8 @@ import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import QrPage from "./pages/QrPage";
 import QrMoneyPage from "./pages/QrMoneyPage";
+import QrJewelryPage from "./pages/QrJewelryPage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 // Home: hub de marca que deriva a la página de cada servicio
 const Landing = () => {
@@ -73,6 +75,8 @@ function App() {
           <Route path="/ubicacion" element={<Navigate to="/contacto" replace />} />
           <Route path="/qr" element={<QrPage />} />
           <Route path="/qr-envios" element={<QrMoneyPage />} />
+          <Route path="/qr-bisuteria" element={<QrJewelryPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </BrowserRouter>
     </LanguageProvider>
