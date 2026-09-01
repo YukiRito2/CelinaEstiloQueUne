@@ -243,10 +243,10 @@ export const translations = {
       seoTitle: "Hacer un CV y documentos | Celina, La Seu d'Urgell",
       seoDesc:
         "Preparamos tu CV, cartas de presentación, formularios y cualquier documento en La Seu d'Urgell. Mecanografiado rápido, normalmente en el mismo día.",
-      overline: "CV, cartas y documentos",
+      overline: "CV y documentos · La Seu d'Urgell",
       title: "Tu CV y tus papeles, listos el mismo día",
       subtitle:
-        "Te ayudamos a preparar tu currículum, cartas de presentación, formularios oficiales o cualquier documento que traigas en papel — mecanografiado y listo en PDF o impreso, normalmente en menos de una hora y media.",
+        "Te ayudamos a preparar tu currículum, cartas de presentación, formularios oficiales o cualquier documento que traigas en papel, aquí en La Seu d'Urgell — mecanografiado y listo en PDF o impreso, normalmente en menos de una hora y media.",
       priceOver: "Desde",
       priceSub: "5€",
       ctaLabel: "Cómo llegar a la tienda",
@@ -259,6 +259,7 @@ export const translations = {
         { title: "De todo tipo", text: "CV, cartas de presentación, formularios oficiales, traducciones o cualquier papel que traigas — lo mecanografiamos y lo dejamos listo." },
       ],
       visitTitle: "¿Traes tu documento?",
+      visitNote: "Y para cualquier otra cosa que necesites, ¡pásate a vernos!",
     },
     pagesSeo: {
       services: {
@@ -635,10 +636,10 @@ export const translations = {
       seoTitle: "Fer un CV i documents | Celina, la Seu d'Urgell",
       seoDesc:
         "Preparem el teu CV, cartes de presentació, formularis i qualsevol document a la Seu d'Urgell. Mecanografiat ràpid, normalment el mateix dia.",
-      overline: "CV, cartes i documents",
+      overline: "CV i documents · la Seu d'Urgell",
       title: "El teu CV i els teus papers, llestos el mateix dia",
       subtitle:
-        "T'ajudem a preparar el teu currículum, cartes de presentació, formularis oficials o qualsevol document que portis en paper — mecanografiat i llest en PDF o imprès, normalment en menys d'una hora i mitja.",
+        "T'ajudem a preparar el teu currículum, cartes de presentació, formularis oficials o qualsevol document que portis en paper, aquí a la Seu d'Urgell — mecanografiat i llest en PDF o imprès, normalment en menys d'una hora i mitja.",
       priceOver: "Des de",
       priceSub: "5€",
       ctaLabel: "Com arribar a la botiga",
@@ -651,6 +652,7 @@ export const translations = {
         { title: "De tota mena", text: "CV, cartes de presentació, formularis oficials, traduccions o qualsevol paper que portis — el mecanografiem i el deixem llest." },
       ],
       visitTitle: "Portes el teu document?",
+      visitNote: "I per qualsevol altra cosa que necessitis, passa't a veure'ns!",
     },
     pagesSeo: {
       services: {
@@ -1027,10 +1029,10 @@ export const translations = {
       seoTitle: "CV & Document Help | Celina, La Seu d'Urgell",
       seoDesc:
         "We prepare your CV, cover letters, forms and any document in La Seu d'Urgell. Fast typing service, usually ready the same day.",
-      overline: "CV, letters & documents",
+      overline: "CV & documents · La Seu d'Urgell",
       title: "Your CV and paperwork, ready the same day",
       subtitle:
-        "We help you prepare your resume, cover letters, official forms or any document you bring on paper — typed up and ready as a PDF or printed, usually in under an hour and a half.",
+        "We help you prepare your resume, cover letters, official forms or any document you bring on paper, right here in La Seu d'Urgell — typed up and ready as a PDF or printed, usually in under an hour and a half.",
       priceOver: "From",
       priceSub: "5€",
       ctaLabel: "How to reach the store",
@@ -1043,6 +1045,7 @@ export const translations = {
         { title: "Any kind of document", text: "CVs, cover letters, official forms, translations or anything you bring — we type it up and get it ready." },
       ],
       visitTitle: "Bringing a document?",
+      visitNote: "And for anything else you need, come say hello!",
     },
     pagesSeo: {
       services: {

@@ -87,6 +87,7 @@ export default function DocumentsPage() {
                 <p className="mt-4 text-sm sm:text-base font-light text-[#C8C2DB]">
                   {site.address.street} · {site.address.city} — {site.hours}
                 </p>
+                <p className="mt-2 text-sm sm:text-base font-light text-[#C8C2DB]">{p.visitNote}</p>
                 <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
                   <a
                     href={site.maps.directions}
