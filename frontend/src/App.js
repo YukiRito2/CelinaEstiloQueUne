@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Lenis from "lenis";
+import { Analytics } from "@vercel/analytics/react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import "@/App.css";
 import { Navbar } from "./components/Navbar";
@@ -83,6 +84,7 @@ function App() {
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </BrowserRouter>
+      <Analytics />
     </LanguageProvider>
   );
 }
