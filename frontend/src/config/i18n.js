@@ -178,12 +178,6 @@ export const translations = {
         note: "Sin compromiso. La propuesta se prepara en tienda o por WhatsApp.",
       },
     },
-    qrPage: {
-      title: "Planifica tu próximo viaje",
-      subtitle: "Escanea el código con tu móvil y cuéntanos tu idea de viaje.",
-      printBtn: "Imprimir",
-      note: "Página pensada para imprimir y colocar en el local.",
-    },
     reviews: {
       overline: "Reseñas",
       title: "Lo que dicen quienes nos conocen",
@@ -262,11 +256,6 @@ export const translations = {
         desc: "Contacta con Celina: envíos de dinero, viajes, bisutería y diseño web. WhatsApp, teléfono y tienda en La Seu d'Urgell.",
       },
     },
-    qrMoney: {
-      title: "Envía dinero a todo el mundo",
-      subtitle: "Escanea el código y rellena tus datos de envío.",
-      note: "Ria · Western Union · Transfast · Asesoramiento en tienda",
-    },
     homeCta: "Ir a contacto",
     ui: { backServices: "Volver a servicios" },
     aboutPage: {
@@ -283,11 +272,6 @@ export const translations = {
       ],
       quote: "Conectamos personas, destinos, estilos y negocios.",
       visitCta: "Ven a conocernos",
-    },
-    qrJewelry: {
-      title: "Descubre nuestra bisutería",
-      subtitle: "Escanea el código y explora el catálogo desde tu móvil.",
-      note: "Reserva por WhatsApp o ven a probártela en tienda",
     },
     notFound: {
       title: "Esta página no existe",
@@ -561,12 +545,6 @@ export const translations = {
         note: "Sense compromís. La proposta es prepara a la botiga o per WhatsApp.",
       },
     },
-    qrPage: {
-      title: "Planifica el teu proper viatge",
-      subtitle: "Escaneja el codi amb el mòbil i explica'ns la teva idea de viatge.",
-      printBtn: "Imprimir",
-      note: "Pàgina pensada per imprimir i posar al local.",
-    },
     reviews: {
       overline: "Ressenyes",
       title: "El que diuen els que ens coneixen",
@@ -645,11 +623,6 @@ export const translations = {
         desc: "Contacta amb Celina: enviaments de diners, viatges, bisuteria i disseny web a la Seu d'Urgell.",
       },
     },
-    qrMoney: {
-      title: "Envia diners a tot el món",
-      subtitle: "Escaneja el codi i emplena les teves dades d'enviament.",
-      note: "Ria · Western Union · Transfast · Assessorament a la botiga",
-    },
     homeCta: "Anar a contacte",
     ui: { backServices: "Tornar a serveis" },
     aboutPage: {
@@ -666,11 +639,6 @@ export const translations = {
       ],
       quote: "Connectem persones, destinacions, estils i negocis.",
       visitCta: "Vine a conèixer-nos",
-    },
-    qrJewelry: {
-      title: "Descobreix la nostra bisuteria",
-      subtitle: "Escaneja el codi i explora el catàleg des del mòbil.",
-      note: "Reserva per WhatsApp o vine a provar-te-la a la botiga",
     },
     notFound: {
       title: "Aquesta pàgina no existeix",
@@ -944,12 +912,6 @@ export const translations = {
         note: "No obligation. Your proposal is prepared in store or via WhatsApp.",
       },
     },
-    qrPage: {
-      title: "Plan your next trip",
-      subtitle: "Scan the code with your phone and tell us your trip idea.",
-      printBtn: "Print",
-      note: "Page designed to be printed and displayed in store.",
-    },
     reviews: {
       overline: "Reviews",
       title: "What people who know us say",
@@ -1028,11 +990,6 @@ export const translations = {
         desc: "Contact Celina: money transfers, travel, jewelry and web design in La Seu d'Urgell.",
       },
     },
-    qrMoney: {
-      title: "Send money worldwide",
-      subtitle: "Scan the code and fill in your transfer details.",
-      note: "Ria · Western Union · Transfast · In-store advice",
-    },
     homeCta: "Go to contact",
     ui: { backServices: "Back to services" },
     aboutPage: {
@@ -1049,11 +1006,6 @@ export const translations = {
       ],
       quote: "We connect people, destinations, styles and businesses.",
       visitCta: "Come and meet us",
-    },
-    qrJewelry: {
-      title: "Discover our jewelry",
-      subtitle: "Scan the code and browse the catalog from your phone.",
-      note: "Reserve via WhatsApp or come try it in store",
     },
     notFound: {
       title: "This page doesn't exist",

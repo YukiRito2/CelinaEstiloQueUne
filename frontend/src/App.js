@@ -19,9 +19,6 @@ const MoneyPage = lazy(() => import("./pages/MoneyPage"));
 const JewelryPage = lazy(() => import("./pages/JewelryPage"));
 const AboutPage = lazy(() => import("./pages/AboutPage"));
 const ContactPage = lazy(() => import("./pages/ContactPage"));
-const QrPage = lazy(() => import("./pages/QrPage"));
-const QrMoneyPage = lazy(() => import("./pages/QrMoneyPage"));
-const QrJewelryPage = lazy(() => import("./pages/QrJewelryPage"));
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
 const LegalPage = lazy(() => import("./pages/LegalPage"));
 
@@ -77,9 +74,6 @@ function App() {
             <Route path="/sobre-celina" element={<AboutPage />} />
             <Route path="/contacto" element={<ContactPage />} />
             <Route path="/ubicacion" element={<Navigate to="/contacto" replace />} />
-            <Route path="/qr" element={<QrPage />} />
-            <Route path="/qr-envios" element={<QrMoneyPage />} />
-            <Route path="/qr-bisuteria" element={<QrJewelryPage />} />
             <Route path="/aviso-legal" element={<LegalPage doc="aviso" />} />
             <Route path="/privacidad" element={<LegalPage doc="privacidad" />} />
             <Route path="/cookies" element={<LegalPage doc="cookies" />} />
