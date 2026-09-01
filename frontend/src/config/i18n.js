@@ -79,6 +79,13 @@ export const translations = {
           chips: ["COLLARES", "PULSERAS", "ANILLOS", "ARETES"],
         },
         {
+          id: "documents",
+          title: "Prepara tu CV o documento",
+          text: "Te ayudamos con tu currículum, cartas, formularios o cualquier papel que traigas — listo el mismo día.",
+          cta: "Preparar mi documento",
+          chips: ["CV", "CARTAS", "FORMULARIOS"],
+        },
+        {
           id: "studio",
           title: "Impulsa tu negocio",
           text: "Diseño web, desarrollo y marketing digital para negocios que quieren crecer.",
@@ -232,6 +239,27 @@ export const translations = {
       ],
       visitTitle: "Ven a probártelas",
     },
+    documentsPage: {
+      seoTitle: "Hacer un CV y documentos | Celina, La Seu d'Urgell",
+      seoDesc:
+        "Preparamos tu CV, cartas de presentación, formularios y cualquier documento en La Seu d'Urgell. Mecanografiado rápido, normalmente en el mismo día.",
+      overline: "CV, cartas y documentos",
+      title: "Tu CV y tus papeles, listos el mismo día",
+      subtitle:
+        "Te ayudamos a preparar tu currículum, cartas de presentación, formularios oficiales o cualquier documento que traigas en papel — mecanografiado y listo en PDF o impreso, normalmente en menos de una hora y media.",
+      priceOver: "Desde",
+      priceSub: "5€",
+      ctaLabel: "Cómo llegar a la tienda",
+      ctaHint: "Normalmente en el mismo día — como mucho, hora y media, según la complejidad del documento.",
+      whatsappLabel: "O pregunta por WhatsApp",
+      featuresTitle: "Por qué hacerlo con Celina",
+      features: [
+        { title: "Rápido de verdad", text: "La mayoría de documentos salen el mismo día — como mucho, en hora y media." },
+        { title: "Como tú lo necesites", text: "Te lo entregamos en PDF por WhatsApp o email, impreso en tienda, o las dos cosas." },
+        { title: "De todo tipo", text: "CV, cartas de presentación, formularios oficiales, traducciones o cualquier papel que traigas — lo mecanografiamos y lo dejamos listo." },
+      ],
+      visitTitle: "¿Traes tu documento?",
+    },
     pagesSeo: {
       services: {
         title: "Servicios | Celina Estilo que Une — La Seu d'Urgell",
@@ -334,6 +362,7 @@ export const translations = {
         { title: "Enviar dinero", cta: "Quiero enviar dinero" },
         { title: "Planificar un viaje", cta: "Quiero organizar un viaje" },
         { title: "Comprar bisutería", cta: "Quiero ver bisutería" },
+        { title: "Hacer mi CV o un documento", cta: "Quiero hacer mi CV o documento" },
         { title: "Crear una web", cta: "Quiero crear una página web" },
       ],
     },
@@ -348,6 +377,7 @@ export const translations = {
         { label: "Envíos de dinero", href: "/envios-dinero" },
         { label: "Viajes", href: "/viajes" },
         { label: "Bisutería", href: "/bisuteria" },
+        { label: "CV y documentos", href: "/documentos" },
         { label: "Contacto", href: "/contacto" },
       ],
       legal: [
@@ -362,6 +392,7 @@ export const translations = {
       money: "Hola, quiero información sobre un envío de dinero.",
       travel: "Hola, quiero información sobre un viaje.",
       jewelry: "Hola, quiero información sobre un producto de bisutería.",
+      documents: "Hola, quiero información sobre hacer un CV o mecanografiar un documento.",
       studio: "Hola, quiero información sobre una página web para mi negocio.",
     },
   },
@@ -438,6 +469,13 @@ export const translations = {
           text: "Descobreix la nostra selecció d'accessoris i bisuteria per a cada ocasió.",
           cta: "Veure col·lecció",
           chips: ["COLLARS", "POLSERES", "ANELLS", "ARRACADES"],
+        },
+        {
+          id: "documents",
+          title: "Prepara el teu CV o document",
+          text: "T'ajudem amb el teu currículum, cartes, formularis o qualsevol paper que portis — llest el mateix dia.",
+          cta: "Preparar el meu document",
+          chips: ["CV", "CARTES", "FORMULARIS"],
         },
         {
           id: "studio",
@@ -593,6 +631,27 @@ export const translations = {
       ],
       visitTitle: "Vine a provar-te-les",
     },
+    documentsPage: {
+      seoTitle: "Fer un CV i documents | Celina, la Seu d'Urgell",
+      seoDesc:
+        "Preparem el teu CV, cartes de presentació, formularis i qualsevol document a la Seu d'Urgell. Mecanografiat ràpid, normalment el mateix dia.",
+      overline: "CV, cartes i documents",
+      title: "El teu CV i els teus papers, llestos el mateix dia",
+      subtitle:
+        "T'ajudem a preparar el teu currículum, cartes de presentació, formularis oficials o qualsevol document que portis en paper — mecanografiat i llest en PDF o imprès, normalment en menys d'una hora i mitja.",
+      priceOver: "Des de",
+      priceSub: "5€",
+      ctaLabel: "Com arribar a la botiga",
+      ctaHint: "Normalment el mateix dia — com a molt, una hora i mitja, segons la complexitat del document.",
+      whatsappLabel: "O pregunta per WhatsApp",
+      featuresTitle: "Per què fer-ho amb Celina",
+      features: [
+        { title: "Ràpid de veritat", text: "La majoria de documents surten el mateix dia — com a molt, en una hora i mitja." },
+        { title: "Com tu ho necessitis", text: "T'ho lliurem en PDF per WhatsApp o email, imprès a la botiga, o totes dues coses." },
+        { title: "De tota mena", text: "CV, cartes de presentació, formularis oficials, traduccions o qualsevol paper que portis — el mecanografiem i el deixem llest." },
+      ],
+      visitTitle: "Portes el teu document?",
+    },
     pagesSeo: {
       services: {
         title: "Serveis | Celina Estilo que Une — la Seu d'Urgell",
@@ -695,6 +754,7 @@ export const translations = {
         { title: "Enviar diners", cta: "Vull enviar diners" },
         { title: "Planificar un viatge", cta: "Vull organitzar un viatge" },
         { title: "Comprar bisuteria", cta: "Vull veure bisuteria" },
+        { title: "Fer el meu CV o un document", cta: "Vull fer el meu CV o document" },
         { title: "Crear una web", cta: "Vull crear una pàgina web" },
       ],
     },
@@ -709,6 +769,7 @@ export const translations = {
         { label: "Enviaments de diners", href: "/envios-dinero" },
         { label: "Viatges", href: "/viajes" },
         { label: "Bisuteria", href: "/bisuteria" },
+        { label: "CV i documents", href: "/documentos" },
         { label: "Contacte", href: "/contacto" },
       ],
       legal: [
@@ -723,6 +784,7 @@ export const translations = {
       money: "Hola, vull informació sobre un enviament de diners.",
       travel: "Hola, vull informació sobre un viatge.",
       jewelry: "Hola, vull informació sobre un producte de bisuteria.",
+      documents: "Hola, vull informació sobre fer un CV o mecanografiar un document.",
       studio: "Hola, vull informació sobre una pàgina web per al meu negoci.",
     },
   },
@@ -799,6 +861,13 @@ export const translations = {
           text: "Discover our selection of accessories and jewelry for every occasion.",
           cta: "View collection",
           chips: ["NECKLACES", "BRACELETS", "RINGS", "EARRINGS"],
+        },
+        {
+          id: "documents",
+          title: "Get your CV or document ready",
+          text: "We help with your resume, letters, forms or any paper you bring — ready the same day.",
+          cta: "Get my document ready",
+          chips: ["CV", "LETTERS", "FORMS"],
         },
         {
           id: "studio",
@@ -954,6 +1023,27 @@ export const translations = {
       ],
       visitTitle: "Come and try them on",
     },
+    documentsPage: {
+      seoTitle: "CV & Document Help | Celina, La Seu d'Urgell",
+      seoDesc:
+        "We prepare your CV, cover letters, forms and any document in La Seu d'Urgell. Fast typing service, usually ready the same day.",
+      overline: "CV, letters & documents",
+      title: "Your CV and paperwork, ready the same day",
+      subtitle:
+        "We help you prepare your resume, cover letters, official forms or any document you bring on paper — typed up and ready as a PDF or printed, usually in under an hour and a half.",
+      priceOver: "From",
+      priceSub: "5€",
+      ctaLabel: "How to reach the store",
+      ctaHint: "Usually ready the same day — at most an hour and a half, depending on the document.",
+      whatsappLabel: "Or ask on WhatsApp",
+      featuresTitle: "Why do it with Celina",
+      features: [
+        { title: "Genuinely fast", text: "Most documents are ready the same day — an hour and a half at most." },
+        { title: "However you need it", text: "We deliver it as a PDF via WhatsApp or email, printed in store, or both." },
+        { title: "Any kind of document", text: "CVs, cover letters, official forms, translations or anything you bring — we type it up and get it ready." },
+      ],
+      visitTitle: "Bringing a document?",
+    },
     pagesSeo: {
       services: {
         title: "Services | Celina Estilo que Une — La Seu d'Urgell",
@@ -1056,6 +1146,7 @@ export const translations = {
         { title: "Send money", cta: "I want to send money" },
         { title: "Plan a trip", cta: "I want to plan a trip" },
         { title: "Buy jewelry", cta: "I want to see jewelry" },
+        { title: "Do my CV or a document", cta: "I want my CV or document done" },
         { title: "Create a website", cta: "I want to create a website" },
       ],
     },
@@ -1070,6 +1161,7 @@ export const translations = {
         { label: "Money transfers", href: "/envios-dinero" },
         { label: "Travel", href: "/viajes" },
         { label: "Jewelry", href: "/bisuteria" },
+        { label: "CV & documents", href: "/documentos" },
         { label: "Contact", href: "/contacto" },
       ],
       legal: [
@@ -1084,6 +1176,7 @@ export const translations = {
       money: "Hi, I'd like information about a money transfer.",
       travel: "Hi, I'd like information about a trip.",
       jewelry: "Hi, I'd like information about a jewelry product.",
+      documents: "Hi, I'd like information about doing a CV or typing up a document.",
       studio: "Hi, I'd like information about a website for my business.",
     },
   },

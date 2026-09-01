@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
-import { Banknote, Plane, Gem, MonitorSmartphone, ArrowUpRight } from "lucide-react";
+import { Banknote, Plane, Gem, FileText, MonitorSmartphone, ArrowUpRight } from "lucide-react";
 import { site } from "../config/site";
 import { trackEvent } from "../lib/analytics";
 import { useLanguage } from "../context/LanguageContext";
@@ -37,6 +37,16 @@ const meta = [
     cta: "text-[#C47B62]",
     spot: "rgba(196,123,98,0.20)",
     href: site.links.jewelry,
+  },
+  {
+    icon: FileText,
+    event: "documents_click",
+    testid: "contact-option-documents",
+    card: "bg-[#FBF1E6] border-[#EAD2B3] hover:border-[#B8763F]/40",
+    iconBox: "bg-[#F3E1C8] text-[#B8763F]",
+    cta: "text-[#B8763F]",
+    spot: "rgba(184,118,63,0.20)",
+    href: site.links.documents,
   },
   {
     icon: MonitorSmartphone,

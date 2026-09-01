@@ -61,6 +61,7 @@ export const site = {
       "https://docs.google.com/forms/d/e/1FAIpQLSfWYgf772uZPd5TzYtkJMkQ2eRi0tTsiXVVOVbxrXGaj-hZNw/viewform?usp=header",
     jewelry: "/bisuteria",
     jewelryCatalog: "https://bisuteria.celinaestiloqueune.com/",
+    documents: "/documentos",
     studio: "https://studio.celinaestiloqueune.com/",
   },
 
@@ -86,6 +87,7 @@ export const site = {
       "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80",
     ],
     studio: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&q=80",
+    documents: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80",
     partners: {
       ria: "/ria-Biw3tYS-.png",
       westernUnion: "/westernUnion-CJWZ6tgq.png",

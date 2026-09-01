@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, ArrowUpRight, Banknote, Plane, Gem, MonitorSmartphone } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Banknote, Plane, Gem, FileText, MonitorSmartphone } from "lucide-react";
 import { site } from "../config/site";
 import { trackEvent } from "../lib/analytics";
 import { useLanguage } from "../context/LanguageContext";
@@ -43,7 +43,7 @@ const meta = {
     icon: Gem,
     href: site.links.jewelry,
     event: "jewelry_click",
-    span: "md:col-span-7",
+    span: "md:col-span-6",
     image: site.images.jewelry[1],
     blend: "from-[#FDF2F0]",
     card: "bg-[#FDF2F0] border-[#F7D8D3]",
@@ -54,12 +54,28 @@ const meta = {
     shadow: "hover:shadow-[#C47B62]/15",
     dark: false,
   },
-  studio: {
+  documents: {
     num: "04",
+    icon: FileText,
+    href: site.links.documents,
+    event: "documents_click",
+    span: "md:col-span-6",
+    image: site.images.documents,
+    blend: "from-[#FBF1E6]",
+    card: "bg-[#FBF1E6] border-[#EAD2B3]",
+    tag: "bg-[#B8763F] text-white",
+    iconBox: "bg-[#F3E1C8] text-[#B8763F]",
+    ctaBtn: "bg-[#B8763F] hover:bg-[#9c632f] text-white",
+    chip: "bg-white/70 border-[#EAD2B3] text-[#7A4E24]",
+    shadow: "hover:shadow-[#B8763F]/15",
+    dark: false,
+  },
+  studio: {
+    num: "05",
     icon: MonitorSmartphone,
     href: site.links.studio,
     event: "studio_click",
-    span: "md:col-span-5",
+    span: "md:col-span-12",
     external: true,
     image: site.images.studio,
     blend: "from-[#2B2638]",

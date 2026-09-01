@@ -17,6 +17,7 @@ import ServicesPage, { HomeClosing } from "./pages/ServicesPage";
 const TravelPage = lazy(() => import("./pages/TravelPage"));
 const MoneyPage = lazy(() => import("./pages/MoneyPage"));
 const JewelryPage = lazy(() => import("./pages/JewelryPage"));
+const DocumentsPage = lazy(() => import("./pages/DocumentsPage"));
 const AboutPage = lazy(() => import("./pages/AboutPage"));
 const ContactPage = lazy(() => import("./pages/ContactPage"));
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
@@ -71,6 +72,7 @@ function App() {
             <Route path="/envios-dinero" element={<MoneyPage />} />
             <Route path="/viajes" element={<TravelPage />} />
             <Route path="/bisuteria" element={<JewelryPage />} />
+            <Route path="/documentos" element={<DocumentsPage />} />
             <Route path="/sobre-celina" element={<AboutPage />} />
             <Route path="/contacto" element={<ContactPage />} />
             <Route path="/ubicacion" element={<Navigate to="/contacto" replace />} />
