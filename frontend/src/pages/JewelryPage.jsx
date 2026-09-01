@@ -9,22 +9,18 @@ import { Footer } from "../components/Footer";
 import { WhatsAppButton } from "../components/WhatsAppButton";
 import { ServicePageLayout } from "../components/ServicePageLayout";
 import { Reveal } from "../components/Reveal";
+import { usePageSeo } from "../lib/seo";
 
 const featureIcons = [Store, Gift, Smartphone];
 
 export default function JewelryPage() {
   const { t } = useLanguage();
   const p = t.jewelryPage;
+  usePageSeo(p.seoTitle, p.seoDesc);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  useEffect(() => {
-    document.title = p.seoTitle;
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute("content", p.seoDesc);
-  }, [p]);
 
   return (
     <div className="App">

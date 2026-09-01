@@ -15,6 +15,11 @@ export default function NotFoundPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
     document.title = "404 | CELINA";
+    const robots = document.querySelector('meta[name="robots"]');
+    if (robots) robots.setAttribute("content", "noindex, follow");
+    return () => {
+      if (robots) robots.setAttribute("content", "index, follow");
+    };
   }, []);
 
   return (

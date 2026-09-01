@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import Lenis from "lenis";
 import { Analytics } from "@vercel/analytics/react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
@@ -10,27 +10,28 @@ import { ServicesHub } from "./components/ServicesHub";
 import { Footer } from "./components/Footer";
 import { WhatsAppButton } from "./components/WhatsAppButton";
 import { LanguageProvider, useLanguage } from "./context/LanguageContext";
+import { usePageSeo } from "./lib/seo";
 import ServicesPage, { HomeClosing } from "./pages/ServicesPage";
-import TravelPage from "./pages/TravelPage";
-import MoneyPage from "./pages/MoneyPage";
-import JewelryPage from "./pages/JewelryPage";
-import AboutPage from "./pages/AboutPage";
-import ContactPage from "./pages/ContactPage";
-import QrPage from "./pages/QrPage";
-import QrMoneyPage from "./pages/QrMoneyPage";
-import QrJewelryPage from "./pages/QrJewelryPage";
-import NotFoundPage from "./pages/NotFoundPage";
-import LegalPage from "./pages/LegalPage";
+
+// Rutas fuera de la home en su propio chunk: reduce el bundle inicial
+const TravelPage = lazy(() => import("./pages/TravelPage"));
+const MoneyPage = lazy(() => import("./pages/MoneyPage"));
+const JewelryPage = lazy(() => import("./pages/JewelryPage"));
+const AboutPage = lazy(() => import("./pages/AboutPage"));
+const ContactPage = lazy(() => import("./pages/ContactPage"));
+const QrPage = lazy(() => import("./pages/QrPage"));
+const QrMoneyPage = lazy(() => import("./pages/QrMoneyPage"));
+const QrJewelryPage = lazy(() => import("./pages/QrJewelryPage"));
+const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
+const LegalPage = lazy(() => import("./pages/LegalPage"));
 
 // Home: hub de marca que deriva a la página de cada servicio
 const Landing = () => {
   const { t } = useLanguage();
+  usePageSeo(t.seo.title, t.seo.description);
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = t.seo.title;
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute("content", t.seo.description);
   }, [t]);
 
   return (
@@ -66,23 +67,25 @@ function App() {
   return (
     <LanguageProvider>
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="/servicios" element={<ServicesPage />} />
-          <Route path="/envios-dinero" element={<MoneyPage />} />
-          <Route path="/viajes" element={<TravelPage />} />
-          <Route path="/bisuteria" element={<JewelryPage />} />
-          <Route path="/sobre-celina" element={<AboutPage />} />
-          <Route path="/contacto" element={<ContactPage />} />
-          <Route path="/ubicacion" element={<Navigate to="/contacto" replace />} />
-          <Route path="/qr" element={<QrPage />} />
-          <Route path="/qr-envios" element={<QrMoneyPage />} />
-          <Route path="/qr-bisuteria" element={<QrJewelryPage />} />
-          <Route path="/aviso-legal" element={<LegalPage doc="aviso" />} />
-          <Route path="/privacidad" element={<LegalPage doc="privacidad" />} />
-          <Route path="/cookies" element={<LegalPage doc="cookies" />} />
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
+        <Suspense fallback={<div className="min-h-screen bg-[#FAF7F2]" />}>
+          <Routes>
+            <Route path="/" element={<Landing />} />
+            <Route path="/servicios" element={<ServicesPage />} />
+            <Route path="/envios-dinero" element={<MoneyPage />} />
+            <Route path="/viajes" element={<TravelPage />} />
+            <Route path="/bisuteria" element={<JewelryPage />} />
+            <Route path="/sobre-celina" element={<AboutPage />} />
+            <Route path="/contacto" element={<ContactPage />} />
+            <Route path="/ubicacion" element={<Navigate to="/contacto" replace />} />
+            <Route path="/qr" element={<QrPage />} />
+            <Route path="/qr-envios" element={<QrMoneyPage />} />
+            <Route path="/qr-bisuteria" element={<QrJewelryPage />} />
+            <Route path="/aviso-legal" element={<LegalPage doc="aviso" />} />
+            <Route path="/privacidad" element={<LegalPage doc="privacidad" />} />
+            <Route path="/cookies" element={<LegalPage doc="cookies" />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+        </Suspense>
       </BrowserRouter>
       <Analytics />
     </LanguageProvider>

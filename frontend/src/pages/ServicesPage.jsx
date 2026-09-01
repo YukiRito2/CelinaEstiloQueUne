@@ -7,6 +7,7 @@ import { WhatsAppButton } from "../components/WhatsAppButton";
 import { ServicesHub } from "../components/ServicesHub";
 import { BackButton } from "../components/BackButton";
 import { Reveal } from "../components/Reveal";
+import { usePageSeo } from "../lib/seo";
 
 export const HomeClosing = () => {
   const { t } = useLanguage();
@@ -31,16 +32,11 @@ export const HomeClosing = () => {
 
 export default function ServicesPage() {
   const { t } = useLanguage();
+  usePageSeo(t.pagesSeo.services.title, t.pagesSeo.services.desc);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  useEffect(() => {
-    document.title = t.pagesSeo.services.title;
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute("content", t.pagesSeo.services.desc);
-  }, [t]);
 
   return (
     <div className="App">

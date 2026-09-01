@@ -20,22 +20,18 @@ import { WhatsAppButton } from "../components/WhatsAppButton";
 import { TravelForm } from "../components/TravelForm";
 import { BackButton } from "../components/BackButton";
 import { Reveal, MaskedLine } from "../components/Reveal";
+import { usePageSeo } from "../lib/seo";
 
 const serviceIcons = [Plane, Hotel, Globe2, Backpack];
 
 export default function TravelPage() {
   const { t } = useLanguage();
   const tp = t.travelPage;
+  usePageSeo(tp.seoTitle, tp.seoDesc);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  useEffect(() => {
-    document.title = tp.seoTitle;
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute("content", tp.seoDesc);
-  }, [tp]);
 
   return (
     <div className="App">

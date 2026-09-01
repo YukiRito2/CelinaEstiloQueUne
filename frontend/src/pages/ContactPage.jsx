@@ -7,20 +7,16 @@ import { ContactSection } from "../components/ContactSection";
 import { DirectContact } from "../components/DirectContact";
 import { LocationSection } from "../components/LocationSection";
 import { BackButton } from "../components/BackButton";
+import { usePageSeo } from "../lib/seo";
 
 // Contacto: opciones por servicio + contacto directo + ubicación
 export default function ContactPage() {
   const { t } = useLanguage();
+  usePageSeo(t.pagesSeo.contact.title, t.pagesSeo.contact.desc);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  useEffect(() => {
-    document.title = t.pagesSeo.contact.title;
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute("content", t.pagesSeo.contact.desc);
-  }, [t]);
 
   return (
     <div className="App">

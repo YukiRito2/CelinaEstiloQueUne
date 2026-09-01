@@ -10,6 +10,7 @@ import { TrustSection } from "../components/TrustSection";
 import { ReviewsSection } from "../components/ReviewsSection";
 import { BackButton } from "../components/BackButton";
 import { Reveal, MaskedLine } from "../components/Reveal";
+import { usePageSeo } from "../lib/seo";
 
 // Collage editorial: 3 imágenes en arco rotadas con flotación
 const Collage = () => (
@@ -87,16 +88,11 @@ const Chapter = ({ num, title, text, index }) => {
 export default function AboutPage() {
   const { t } = useLanguage();
   const ap = t.aboutPage;
+  usePageSeo(t.pagesSeo.about.title, t.pagesSeo.about.desc);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  useEffect(() => {
-    document.title = t.pagesSeo.about.title;
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute("content", t.pagesSeo.about.desc);
-  }, [t]);
 
   return (
     <div className="App">

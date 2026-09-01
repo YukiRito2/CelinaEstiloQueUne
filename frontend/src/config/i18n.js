@@ -7,9 +7,9 @@
 export const translations = {
   es: {
     seo: {
-      title: "Celina Estilo que Une | Servicios, viajes, envíos de dinero y bisutería",
+      title: "Celina | Envíos, viajes y bisutería en La Seu d'Urgell",
       description:
-        "Celina Estilo que Une en La Seu d'Urgell. Envíos de dinero a todo el mundo, agencia de viajes, bisutería y servicios digitales.",
+        "Celina Estilo que Une en La Seu d'Urgell: envíos de dinero a todo el mundo, agencia de viajes, bisutería y servicios digitales, con atención cercana.",
     },
     nav: {
       links: [
@@ -390,9 +390,9 @@ export const translations = {
 
   ca: {
     seo: {
-      title: "Celina Estilo que Une | Serveis, viatges, enviaments de diners i bisuteria",
+      title: "Celina | Enviaments, viatges i bisuteria a la Seu d'Urgell",
       description:
-        "Celina Estilo que Une a la Seu d'Urgell. Enviaments de diners a tot el món, agència de viatges, bisuteria i serveis digitals.",
+        "Celina Estilo que Une a la Seu d'Urgell: enviaments de diners a tot el món, agència de viatges, bisuteria i serveis digitals, amb tracte proper.",
     },
     nav: {
       links: [
@@ -773,9 +773,9 @@ export const translations = {
 
   en: {
     seo: {
-      title: "Celina Estilo que Une | Services, travel, money transfers and jewelry",
+      title: "Celina | Money Transfers, Travel & Jewelry in La Seu d'Urgell",
       description:
-        "Celina Estilo que Une in La Seu d'Urgell. Money transfers worldwide, travel agency, jewelry and digital services.",
+        "Celina Estilo que Une in La Seu d'Urgell: worldwide money transfers, travel agency, jewelry and digital services, with a personal touch.",
     },
     nav: {
       links: [

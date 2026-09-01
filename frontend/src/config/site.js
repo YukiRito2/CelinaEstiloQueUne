@@ -100,9 +100,9 @@ export const site = {
 
   seo: {
     siteUrl: "https://celinaestiloqueune.com",
-    title: "Celina Estilo que Une | Servicios, viajes, envíos de dinero y bisutería",
+    title: "Celina | Envíos, viajes y bisutería en La Seu d'Urgell",
     description:
-      "Celina Estilo que Une en La Seu d'Urgell. Envíos de dinero a todo el mundo, agencia de viajes, bisutería y servicios digitales.",
+      "Celina Estilo que Une en La Seu d'Urgell: envíos de dinero a todo el mundo, agencia de viajes, bisutería y servicios digitales, con atención cercana.",
   },
 
   analytics: {

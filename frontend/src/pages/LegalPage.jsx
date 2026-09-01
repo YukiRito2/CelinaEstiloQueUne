@@ -7,15 +7,16 @@ import { Footer } from "../components/Footer";
 import { WhatsAppButton } from "../components/WhatsAppButton";
 import { BackButton } from "../components/BackButton";
 import { Reveal } from "../components/Reveal";
+import { usePageSeo } from "../lib/seo";
 
 // Página legal genérica: /aviso-legal, /privacidad, /cookies
 export default function LegalPage({ doc }) {
   const { t } = useLanguage();
   const d = legalDocs[doc];
+  usePageSeo(`${d.title} | Celina Estilo que Une`, `${d.title} de Celina Estilo que Une, La Seu d'Urgell.`);
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = `${d.title} | Celina Estilo que Une`;
   }, [d]);
 
   return (
