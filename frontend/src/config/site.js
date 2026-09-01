@@ -62,6 +62,7 @@ export const site = {
     jewelry: "/bisuteria",
     jewelryCatalog: "https://bisuteria.celinaestiloqueune.com/",
     documents: "/documentos",
+    documentsForm: "https://cv.celinaestiloqueune.com/",
     studio: "https://studio.celinaestiloqueune.com/",
   },
 

@@ -38,9 +38,9 @@ export default function DocumentsPage() {
           imageBadgeOver={p.priceOver}
           imageBadgeSub={p.priceSub}
           ctaLabel={p.ctaLabel}
-          ctaHref={site.maps.directions}
+          ctaHref={site.links.documentsForm}
           ctaExternal
-          ctaEvent="documents_directions_click"
+          ctaEvent="documents_form_click"
           ctaHint={p.ctaHint}
           whatsappLabel={p.whatsappLabel}
           whatsappMessage={t.messages.documents}
