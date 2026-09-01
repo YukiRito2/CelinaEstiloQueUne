@@ -112,6 +112,11 @@ Web principal moderna y orientada a conversión para Celina (La Seu d'Urgell). F
 - Todos los enlaces de ubicación/reseñas apuntan a la ficha real del negocio: maps.directions y reviews.googleUrl = https://maps.app.goo.gl/6inodAoKQkdFLPvv9 (botones "Cómo llegar", "Leer reseñas en Google", "Dejar una reseña"). El iframe embebido se mantiene con la dirección escrita.
 - Verificado: los 3 botones devuelven la URL del negocio.
 
+## Actualización 2026-09-01 (13ª iteración)
+- Sección Instagram en /bisuteria (components/InstagramSection.jsx, tras las fotos de muestra) con 3 modos configurables en site.instagram: (1) widgetScript+widgetHtml (SnapWidget/Behold/Elfsight → feed automático real), (2) posts[] (permalinks → embeds oficiales de Instagram con embed.js), (3) vacío → tarjeta honesta con enlace al perfil @celina_estilqueuneix. Sin contenido falso. i18n igFeed en es/ca/en.
+- Nota: Instagram no permite feed automático sin que la dueña conecte un widget (SnapWidget/Behold recomendados) o API de Meta. Cuando pegue el código del proveedor en site.instagram, el feed aparece solo.
+- Verificado: modo CTA renderiza y enlaza al perfil real; sin errores de consola.
+
 ## Backlog priorizado
 - P0: Activar GA4/Meta Pixel con IDs reales (rellenar variables en frontend/.env).
 - P0: Páginas especializadas /envios-dinero, /viajes, /bisuteria (cambiar hrefs en site.js → links).
