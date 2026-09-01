@@ -8,7 +8,6 @@ import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import { WhatsAppButton } from "../components/WhatsAppButton";
 import { ServicePageLayout } from "../components/ServicePageLayout";
-import { InstagramSection } from "../components/InstagramSection";
 import { Reveal } from "../components/Reveal";
 
 const featureIcons = [Store, Gift, Smartphone];
@@ -91,9 +90,6 @@ export default function JewelryPage() {
               </Reveal>
             </div>
           </section>
-
-          {/* Instagram */}
-          <InstagramSection />
 
           {/* Forma de trabajar */}
           <section className="py-24 sm:py-28 bg-[#FDF2F0]" data-testid="jewelry-page-features">

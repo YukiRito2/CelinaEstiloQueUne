@@ -38,16 +38,6 @@ export const site = {
     tiktok: "", // Añadir URL cuando exista
   },
 
-  // Feed de Instagram en /bisuteria (3 modos, por prioridad):
-  // 1) widgetScript + widgetHtml: pega el código de SnapWidget/Behold/Elfsight → feed automático.
-  // 2) posts: permalinks oficiales ("https://www.instagram.com/p/XXX/") → embeds oficiales.
-  // 3) Si ambos están vacíos → tarjeta con enlace al perfil (sin contenido falso).
-  instagram: {
-    widgetScript: "",
-    widgetHtml: "",
-    posts: [],
-  },
-
   // Reseñas reales de Google: añade aquí las verdaderas
   // ({ name: "María G.", text: "...", rating: 5 }). Mientras esté
   // vacío, la sección muestra un enlace honesto a Google.

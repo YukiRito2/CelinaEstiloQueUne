@@ -117,6 +117,11 @@ Web principal moderna y orientada a conversión para Celina (La Seu d'Urgell). F
 - Nota: Instagram no permite feed automático sin que la dueña conecte un widget (SnapWidget/Behold recomendados) o API de Meta. Cuando pegue el código del proveedor en site.instagram, el feed aparece solo.
 - Verificado: modo CTA renderiza y enlaza al perfil real; sin errores de consola.
 
+## Actualización 2026-09-01 (14ª iteración — REVERSIÓN)
+- A petición del usuario se deshace el feed de Instagram: eliminado InstagramSection.jsx, su uso en JewelryPage, el bloque site.instagram y las claves igFeed de i18n (es/ca/en). La página /bisuteria vuelve a: hero, categorías+muestras, forma de trabajar, ven a la tienda.
+- El enlace de Instagram del footer (perfil real) se mantiene.
+- Verificado: sección eliminada, resto de la página intacto.
+
 ## Backlog priorizado
 - P0: Activar GA4/Meta Pixel con IDs reales (rellenar variables en frontend/.env).
 - P0: Páginas especializadas /envios-dinero, /viajes, /bisuteria (cambiar hrefs en site.js → links).

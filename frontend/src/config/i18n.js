@@ -244,13 +244,6 @@ export const translations = {
       note: "Ria · Western Union · Asesoramiento en tienda",
     },
     homeCta: "Ir a contacto",
-    igFeed: {
-      overline: "Instagram",
-      title: "Síguenos en Instagram",
-      subtitle: "Novedades, piezas y el día a día de la tienda.",
-      emptyText: "Publicamos novedades y piezas nuevas en nuestro Instagram. Síguenos para no perderte nada.",
-      cta: "Ver @celina_estilqueuneix",
-    },
     qrJewelry: {
       title: "Descubre nuestra bisutería",
       subtitle: "Escanea el código y explora el catálogo desde tu móvil.",
@@ -582,13 +575,6 @@ export const translations = {
       note: "Ria · Western Union · Assessorament a la botiga",
     },
     homeCta: "Anar a contacte",
-    igFeed: {
-      overline: "Instagram",
-      title: "Segueix-nos a Instagram",
-      subtitle: "Novetats, peces i el dia a dia de la botiga.",
-      emptyText: "Publiquem novetats i peces noves al nostre Instagram. Segueix-nos per no perdre't res.",
-      cta: "Veure @celina_estilqueuneix",
-    },
     qrJewelry: {
       title: "Descobreix la nostra bisuteria",
       subtitle: "Escaneja el codi i explora el catàleg des del mòbil.",
@@ -920,13 +906,6 @@ export const translations = {
       note: "Ria · Western Union · In-store advice",
     },
     homeCta: "Go to contact",
-    igFeed: {
-      overline: "Instagram",
-      title: "Follow us on Instagram",
-      subtitle: "New arrivals, pieces and day-to-day at the store.",
-      emptyText: "We post new arrivals and pieces on our Instagram. Follow us so you don't miss anything.",
-      cta: "View @celina_estilqueuneix",
-    },
     qrJewelry: {
       title: "Discover our jewelry",
       subtitle: "Scan the code and browse the catalog from your phone.",
