@@ -30,7 +30,7 @@ export const legalDocs = {
       {
         h: "2. Objeto",
         p: [
-          "Este sitio web tiene carácter informativo y presenta los servicios de Celina — Estilo que Une: envíos de dinero internacionales (a través de proveedores como Ria y Western Union), agencia de viajes, venta de bisutería y servicios digitales (Celina Studio).",
+          "Este sitio web tiene carácter informativo y presenta los servicios de Celina — Estilo que Une: envíos de dinero internacionales (a través de proveedores como Ria, Western Union y Transfast), agencia de viajes, venta de bisutería y servicios digitales (Celina Studio).",
           "El acceso y uso de este sitio web implica la aceptación de las presentes condiciones.",
         ],
       },
@@ -44,7 +44,7 @@ export const legalDocs = {
         h: "4. Propiedad intelectual",
         p: [
           "Los contenidos, textos, diseño y elementos gráficos de este sitio web pertenecen a su titular o se utilizan con licencia. Queda prohibida su reproducción sin autorización.",
-          "Ria y Western Union son marcas registradas de sus respectivos titulares; se mencionan únicamente como proveedores del servicio de envío de dinero ofrecido en el establecimiento.",
+          "Ria, Western Union y Transfast son marcas registradas de sus respectivos titulares; se mencionan únicamente como proveedores del servicio de envío de dinero ofrecido en el establecimiento.",
         ],
       },
       {
@@ -104,7 +104,7 @@ export const legalDocs = {
       {
         h: "5. Destinatarios",
         p: [
-          "Los datos no se ceden a terceros salvo obligación legal o cuando sea necesario para prestar el servicio solicitado (por ejemplo: Ria o Western Union para envíos de dinero, proveedores de viajes, o las plataformas de mensajería y formularios utilizadas).",
+          "Los datos no se ceden a terceros salvo obligación legal o cuando sea necesario para prestar el servicio solicitado (por ejemplo: Ria, Western Union o Transfast para envíos de dinero, proveedores de viajes, o las plataformas de mensajería y formularios utilizadas).",
         ],
       },
       {

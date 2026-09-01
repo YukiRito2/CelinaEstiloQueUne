@@ -4,6 +4,7 @@ import { waLink } from "../lib/whatsapp";
 import { trackEvent } from "../lib/analytics";
 import { useLanguage } from "../context/LanguageContext";
 import { Reveal } from "./Reveal";
+import { PartnerLogos } from "./PartnerLogos";
 
 const icons = [Globe2, HandHeart, ShieldCheck];
 
@@ -89,22 +90,7 @@ export const MoneySection = () => {
             <p className="font-mono-brand text-[10px] tracking-[0.3em] uppercase text-[#78869A] mb-8 text-center">
               {t.money.partners}
             </p>
-            <div className="space-y-5">
-              <div
-                className="rounded-2xl bg-white border border-[#C2E8D2] px-8 py-7 flex items-center justify-center shadow-sm"
-                data-testid="partner-badge-ria"
-              >
-                <span className="text-3xl sm:text-4xl font-black italic tracking-tight text-[#1E2430]">Ria</span>
-              </div>
-              <div
-                className="rounded-2xl bg-white border border-[#C2E8D2] px-8 py-7 flex items-center justify-center shadow-sm"
-                data-testid="partner-badge-western-union"
-              >
-                <span className="text-xl sm:text-2xl font-bold tracking-[0.12em] text-[#1E2430]">
-                  WESTERN <span className="text-[#C88463]">UNION</span>
-                </span>
-              </div>
-            </div>
+            <PartnerLogos />
             <p className="mt-8 text-center text-xs text-[#78869A] font-light">{t.money.note}</p>
           </div>
         </Reveal>

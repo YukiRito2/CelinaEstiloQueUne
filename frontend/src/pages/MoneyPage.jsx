@@ -1,13 +1,15 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { Globe2, HandHeart, MapPin, ShieldCheck, Smartphone } from "lucide-react";
+import { ArrowUpRight, Clock3, Globe2, HandHeart, MapPin, ShieldCheck, Smartphone } from "lucide-react";
 import { site } from "../config/site";
+import { trackEvent } from "../lib/analytics";
 import { useLanguage } from "../context/LanguageContext";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import { WhatsAppButton } from "../components/WhatsAppButton";
 import { ServicePageLayout } from "../components/ServicePageLayout";
 import { Reveal } from "../components/Reveal";
+import { PartnerLogos } from "../components/PartnerLogos";
 
 const featureIcons = [Globe2, HandHeart, Smartphone];
 
@@ -80,7 +82,11 @@ const MoneyVisual = ({ t }) => {
             {t.moneyPage.hereLabel}
           </p>
           <p className="text-base font-bold text-[#1E2430]">La Seu d'Urgell</p>
-          <p className="mt-1 text-[11px] font-semibold text-[#2D7A54]">Ria · Western Union</p>
+          <div className="mt-1.5 flex items-center justify-center gap-1.5">
+            <img src={site.images.partners.ria} alt="Ria" className="h-4 w-4 rounded-md" />
+            <img src={site.images.partners.westernUnion} alt="Western Union" className="h-3.5 w-auto rounded" />
+            <img src={site.images.partners.transfast} alt="Transfast" className="h-2.5 w-auto" />
+          </div>
         </div>
       </motion.div>
 
@@ -136,9 +142,29 @@ export default function MoneyPage() {
           ctaHref={site.links.moneyForm}
           ctaExternal
           ctaEvent="money_transfer_click"
+          ctaHint={p.ctaHint}
           whatsappLabel={t.money.ctaWhatsapp}
           whatsappMessage={t.messages.money}
         >
+          {/* Banda: adelanta tus datos y gana tiempo */}
+          <section className="bg-[#EEF7F2] pb-2 pt-4 sm:pt-6" data-testid="money-time-band">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <Reveal>
+                <div className="rounded-3xl bg-[#1E2430] shadow-lg shadow-[#1E2430]/15 px-7 py-6 sm:px-10 sm:py-8 flex flex-col sm:flex-row items-start sm:items-center gap-5">
+                  <span className="inline-flex w-14 h-14 rounded-2xl bg-white/10 text-[#25D366] items-center justify-center shrink-0">
+                    <Clock3 className="w-7 h-7" />
+                  </span>
+                  <div>
+                    <h2 className="font-display text-2xl sm:text-3xl font-medium text-white">{p.timeTitle}</h2>
+                    <p className="mt-2 text-sm sm:text-base font-light text-[#C8CFDB] leading-relaxed max-w-2xl">
+                      {p.timeText}
+                    </p>
+                  </div>
+                </div>
+              </Reveal>
+            </div>
+          </section>
+
           {/* Banda de transparencia */}
           <section className="bg-[#EEF7F2] pb-2 pt-4 sm:pt-6" data-testid="money-honesty-band">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -216,6 +242,46 @@ export default function MoneyPage() {
               </div>
               <Reveal delay={0.2} className="text-center">
                 <p className="mt-12 text-xs text-[#78869A] font-light">{t.money.note}</p>
+              </Reveal>
+            </div>
+          </section>
+
+          {/* Trabajamos con: logos reales de los proveedores */}
+          <section className="py-24 sm:py-28 bg-[#FAF7F2]" data-testid="money-page-partners">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+              <Reveal>
+                <p className="font-mono-brand text-[10px] tracking-[0.3em] uppercase text-[#78869A] mb-8">
+                  {t.money.partners}
+                </p>
+                <PartnerLogos className="grid grid-cols-1 sm:grid-cols-3 gap-4" />
+              </Reveal>
+            </div>
+          </section>
+
+          {/* CTA final: recalca rellenar el formulario antes de venir */}
+          <section className="py-20 sm:py-24 bg-[#1E2430]" data-testid="money-page-closing-cta">
+            <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+              <Reveal>
+                <span className="inline-flex w-14 h-14 rounded-2xl bg-white/10 text-[#25D366] items-center justify-center mb-6">
+                  <Clock3 className="w-7 h-7" />
+                </span>
+                <h2 className="font-display text-3xl sm:text-4xl font-light tracking-tight text-white">
+                  {p.closingTitle}
+                </h2>
+                <p className="mt-4 text-base sm:text-lg font-light text-[#C8CFDB] leading-relaxed max-w-xl mx-auto">
+                  {p.closingText}
+                </p>
+                <a
+                  href={site.links.moneyForm}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => trackEvent("money_transfer_click", { source: "money_page_closing" })}
+                  data-testid="money-page-closing-cta-btn"
+                  className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-white hover:bg-[#EEF7F2] text-[#1E2430] font-semibold px-10 py-5 text-base sm:text-lg transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-xl shadow-black/20"
+                >
+                  {p.ctaForm}
+                  <ArrowUpRight className="w-5 h-5" />
+                </a>
               </Reveal>
             </div>
           </section>

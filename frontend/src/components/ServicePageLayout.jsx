@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, MessageCircle } from "lucide-react";
+import { ArrowUpRight, Clock3, MessageCircle } from "lucide-react";
 import { waLink } from "../lib/whatsapp";
 import { trackEvent } from "../lib/analytics";
 import { BackButton } from "./BackButton";
@@ -55,6 +55,7 @@ export const ServicePageLayout = ({
   ctaHref,
   ctaExternal = false,
   ctaEvent,
+  ctaHint,
   whatsappLabel,
   whatsappMessage,
   children,
@@ -135,6 +136,19 @@ export const ServicePageLayout = ({
                 {whatsappLabel}
               </a>
             </motion.div>
+
+            {ctaHint && (
+              <motion.p
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.95 }}
+                className={`mt-4 flex items-start gap-2 text-sm font-light ${th.subtitle} max-w-md`}
+                data-testid="service-page-cta-hint"
+              >
+                <Clock3 className={`w-4 h-4 mt-0.5 shrink-0 ${th.accent}`} />
+                {ctaHint}
+              </motion.p>
+            )}
           </div>
 
           <div className="lg:col-span-5 relative">

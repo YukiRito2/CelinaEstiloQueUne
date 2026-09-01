@@ -31,6 +31,7 @@ export const site = {
     embed:
       "https://www.google.com/maps?q=Avinguda+del+Sal%C3%B2ria+34,+25700+La+Seu+d'Urgell,+Lleida&output=embed",
     directions: "https://maps.app.goo.gl/6inodAoKQkdFLPvv9", // Ficha Google del local
+    footerAddress: "https://maps.app.goo.gl/1CWSG3kMdLckyGGeA", // Enlace de la dirección en el pie de página
   },
 
   social: {
@@ -85,6 +86,11 @@ export const site = {
       "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80",
     ],
     studio: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&q=80",
+    partners: {
+      ria: "/ria-Biw3tYS-.png",
+      westernUnion: "/westernUnion-CJWZ6tgq.png",
+      transfast: "/transfast-logo.png",
+    },
     jewelry: [
       "https://images.unsplash.com/photo-1585960622850-ed33c41d6418?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjBnb2xkJTIwamV3ZWxyeSUyMG1vZGVsJTIwd29tYW58ZW58MHx8fHwxNzgzOTgwMDc0fDA&ixlib=rb-4.1.0&q=85",
       "https://images.unsplash.com/photo-1633934542430-0905ccb5f050?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBnb2xkJTIwamV3ZWxyeSUyMG1vZGVsJTIwd29tYW58ZW58MHx8fHwxNzgzOTgwMDc0fDA&ixlib=rb-4.1.0&q=85",

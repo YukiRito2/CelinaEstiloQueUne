@@ -7,7 +7,7 @@ import {
   useSpring,
   useTransform,
 } from "framer-motion";
-import { ArrowDown, Banknote, MapPin, MessageCircle, MonitorSmartphone, Plane } from "lucide-react";
+import { ArrowDown, Banknote, Gem, MessageCircle, MonitorSmartphone, Plane } from "lucide-react";
 import { site } from "../config/site";
 import { waLink } from "../lib/whatsapp";
 import { trackEvent } from "../lib/analytics";
@@ -19,7 +19,7 @@ const ARCS = [
   { d: "M300,300 C 220,240 160,200 108,128", color: "#2B6CB0", dur: 5.4 }, // viajes ↖
   { d: "M300,300 C 380,240 440,200 498,118", color: "#2D7A54", dur: 4.6 }, // dinero ↗
   { d: "M300,300 C 392,362 452,422 502,492", color: "#A78BFA", dur: 5.9 }, // studio ↘
-  { d: "M300,300 C 218,362 158,422 102,492", color: "#C47B62", dur: 5.1 }, // ubicación ↙
+  { d: "M300,300 C 218,362 158,422 102,492", color: "#C47B62", dur: 5.1 }, // bisutería ↙
 ];
 
 const ArcLayer = () => (
@@ -180,7 +180,11 @@ const Constellation = ({ t }) => {
                   {t.hero.nodes.money}
                 </p>
               </div>
-              <p className="mt-1.5 text-sm font-bold text-[#1E5238]">Ria · Western Union</p>
+              <div className="mt-2 flex items-center gap-2">
+                <img src={site.images.partners.ria} alt="Ria" className="h-5 w-5 rounded-md" />
+                <img src={site.images.partners.westernUnion} alt="Western Union" className="h-4 w-auto rounded" />
+                <img src={site.images.partners.transfast} alt="Transfast" className="h-3 w-auto" />
+              </div>
             </div>
           </Node>
 
@@ -225,19 +229,23 @@ const Constellation = ({ t }) => {
             </div>
           </Node>
 
-          {/* Nodo: Ubicación */}
+          {/* Nodo: Bisutería */}
           <Node
             depth={70}
             className="bottom-8 left-0"
-            href="/contacto"
+            href="/bisuteria"
+            event="jewelry_click"
             delay={1.1}
             floatY={[4, -6, 4]}
             floatDur={3.8}
-            testid="hero-satellite-location-badge"
+            testid="hero-satellite-jewelry-card"
           >
-            <div className="backdrop-blur-xl bg-[#FDF2F0]/95 border border-[#F7D8D3] shadow-lg rounded-full px-4 py-2.5 flex items-center gap-2 text-xs font-medium text-[#874B38]">
-              <MapPin className="w-4 h-4" />
-              {t.hero.nodes.location}
+            <div className="w-[168px] rounded-2xl overflow-hidden border border-white/80 shadow-xl shadow-[#C47B62]/15 bg-white/90 backdrop-blur-md">
+              <img src={site.images.jewelry[1]} alt="" className="h-20 w-full object-cover" loading="lazy" />
+              <p className="px-3 py-2 text-[11px] font-semibold text-[#874B38] flex items-center gap-1.5">
+                <Gem className="w-3.5 h-3.5" />
+                {t.hero.nodes.jewelry}
+              </p>
             </div>
           </Node>
         </motion.div>
@@ -295,7 +303,11 @@ const MobileNodes = ({ t }) => (
     >
       <Banknote className="w-5 h-5 text-[#2D7A54]" />
       <p className="mt-2 text-xs font-semibold text-[#1E5238]">{t.hero.nodes.money}</p>
-      <p className="text-[10px] text-[#2D7A54]">Ria · Western Union</p>
+      <div className="mt-1 flex items-center gap-1.5">
+        <img src={site.images.partners.ria} alt="Ria" className="h-3.5 w-3.5 rounded" />
+        <img src={site.images.partners.westernUnion} alt="Western Union" className="h-3 w-auto rounded" />
+        <img src={site.images.partners.transfast} alt="Transfast" className="h-2 w-auto" />
+      </div>
     </motion.a>
     <motion.a
       href="/viajes"

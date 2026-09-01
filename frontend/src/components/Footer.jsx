@@ -111,9 +111,16 @@ export const Footer = () => {
                 <Mail className="w-5 h-5" />
               </a>
             </div>
-            <p className="mt-6 text-xs font-light text-[#9F99B0]">
+            <a
+              href={site.maps.footerAddress}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackEvent("directions_click", { source: "footer" })}
+              data-testid="footer-address-link"
+              className="mt-6 block text-xs font-light text-[#9F99B0] hover:text-[#D99776] transition-colors"
+            >
               {site.address.street}, {site.address.city}
-            </p>
+            </a>
           </div>
         </div>
 

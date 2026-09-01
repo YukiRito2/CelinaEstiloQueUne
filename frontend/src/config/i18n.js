@@ -32,6 +32,7 @@ export const translations = {
         money: "Envíos de dinero",
         travel: "Vuelos & Viajes",
         studio: "Celina Studio",
+        jewelry: "Bisutería",
         location: "La Seu d'Urgell",
       },
       ctaPrimary: "Descubrir nuestros servicios",
@@ -61,7 +62,7 @@ export const translations = {
           title: "Envía dinero al mundo",
           text: "Realiza tus envíos de dinero de forma sencilla y recibe asesoramiento en nuestro local.",
           cta: "Quiero enviar dinero",
-          chips: ["RIA", "WESTERN UNION"],
+          chips: ["RIA", "WESTERN UNION", "TRANSFAST"],
         },
         {
           id: "travel",
@@ -194,11 +195,13 @@ export const translations = {
     moneyPage: {
       seoTitle: "Envíos de dinero | Celina Estilo que Une — La Seu d'Urgell",
       seoDesc:
-        "Envía dinero a cualquier parte del mundo desde La Seu d'Urgell con Ria y Western Union. Asesoramiento presencial y por WhatsApp.",
-      overline: "Envíos de dinero · Ria & Western Union",
+        "Envía dinero a cualquier parte del mundo desde La Seu d'Urgell con Ria, Western Union y Transfast. Asesoramiento presencial y por WhatsApp.",
+      overline: "Envíos de dinero · Ria, Western Union & Transfast",
       title: "Envía dinero a cualquier parte del mundo",
       subtitle:
-        "Desde nuestro local en La Seu d'Urgell te ayudamos a realizar tu envío con Ria o Western Union, resolviendo todas tus dudas antes de enviar.",
+        "Desde nuestro local en La Seu d'Urgell te ayudamos a realizar tu envío con Ria, Western Union o Transfast, resolviendo todas tus dudas antes de enviar.",
+      ctaHint:
+        "Así tenemos tus datos listos: te atendemos en minutos y te ahorras hasta 10 minutos de espera en tienda.",
       featuresTitle: "Por qué hacerlo con Celina",
       features: [
         { title: "A todo el mundo", text: "Destinos de Europa, Latinoamérica, África, Asia y más." },
@@ -207,16 +210,22 @@ export const translations = {
       ],
       stepsTitle: "Cómo funciona",
       steps: [
-        "Rellena tus datos de envío en nuestro formulario",
+        "Rellena tus datos de envío en nuestro formulario (ahorra tiempo en tienda)",
         "Los recibimos por WhatsApp al instante",
         "Te preparamos la cotización en tienda o por WhatsApp",
       ],
       destinations: ["Perú", "Colombia", "Marruecos", "Senegal", "R. Dominicana", "Y todo el mundo"],
       hereLabel: "Tú estás aquí",
+      timeTitle: "Adelanta tus datos, gana tiempo",
+      timeText:
+        "Este formulario es solo para tener tus datos a mano antes de que vengas: en tienda no rellenas nada, te atendemos al momento y te ahorras unos 10 minutos de espera.",
       honestyTitle: "Sin letra pequeña",
       honestyText:
         "Antes de confirmar tu envío te explicamos las comisiones, el importe que recibirá tu familia y el plazo estimado. Tú decides.",
       ctaForm: "Rellenar mis datos de envío",
+      closingTitle: "No dejes tus datos para el último momento",
+      closingText:
+        "Rellénalos ahora y cuando llegues a la tienda te atendemos al momento — ahorras hasta 10 minutos de espera.",
     },
     jewelryPage: {
       seoTitle: "Bisutería | Celina Estilo que Une — La Seu d'Urgell",
@@ -256,7 +265,7 @@ export const translations = {
     qrMoney: {
       title: "Envía dinero a todo el mundo",
       subtitle: "Escanea el código y rellena tus datos de envío.",
-      note: "Ria · Western Union · Asesoramiento en tienda",
+      note: "Ria · Western Union · Transfast · Asesoramiento en tienda",
     },
     homeCta: "Ir a contacto",
     ui: { backServices: "Volver a servicios" },
@@ -406,6 +415,7 @@ export const translations = {
         money: "Enviaments de diners",
         travel: "Vols & Viatges",
         studio: "Celina Studio",
+        jewelry: "Bijuteria",
         location: "La Seu d'Urgell",
       },
       ctaPrimary: "Descobrir els nostres serveis",
@@ -435,7 +445,7 @@ export const translations = {
           title: "Envia diners a tot el món",
           text: "Fes els teus enviaments de diners de manera senzilla i rep assessorament al nostre local.",
           cta: "Vull enviar diners",
-          chips: ["RIA", "WESTERN UNION"],
+          chips: ["RIA", "WESTERN UNION", "TRANSFAST"],
         },
         {
           id: "travel",
@@ -568,11 +578,13 @@ export const translations = {
     moneyPage: {
       seoTitle: "Enviaments de diners | Celina Estilo que Une — la Seu d'Urgell",
       seoDesc:
-        "Envia diners a qualsevol part del món des de la Seu d'Urgell amb Ria i Western Union. Assessorament presencial i per WhatsApp.",
-      overline: "Enviaments de diners · Ria & Western Union",
+        "Envia diners a qualsevol part del món des de la Seu d'Urgell amb Ria, Western Union i Transfast. Assessorament presencial i per WhatsApp.",
+      overline: "Enviaments de diners · Ria, Western Union & Transfast",
       title: "Envia diners a qualsevol part del món",
       subtitle:
-        "Des del nostre local de la Seu d'Urgell t'ajudem a fer el teu enviament amb Ria o Western Union, resolent tots els teus dubtes abans d'enviar.",
+        "Des del nostre local de la Seu d'Urgell t'ajudem a fer el teu enviament amb Ria, Western Union o Transfast, resolent tots els teus dubtes abans d'enviar.",
+      ctaHint:
+        "Així tenim les teves dades a punt: t'atenem en minuts i t'estalvies fins a 10 minuts d'espera a la botiga.",
       featuresTitle: "Per què fer-ho amb Celina",
       features: [
         { title: "A tot el món", text: "Destinacions d'Europa, Llatinoamèrica, l'Àfrica, l'Àsia i més." },
@@ -581,16 +593,22 @@ export const translations = {
       ],
       stepsTitle: "Com funciona",
       steps: [
-        "Emplena les teves dades d'enviament al nostre formulari",
+        "Emplena les teves dades d'enviament al nostre formulari (estalvia temps a la botiga)",
         "Les rebem per WhatsApp a l'instant",
         "Et preparem la cotització a la botiga o per WhatsApp",
       ],
       destinations: ["Perú", "Colòmbia", "Marroc", "Senegal", "R. Dominicana", "I tot el món"],
       hereLabel: "Tu ets aquí",
+      timeTitle: "Avança les teves dades, guanya temps",
+      timeText:
+        "Aquest formulari és només per tenir les teves dades a mà abans de venir: a la botiga no cal emplenar res, t'atenem a l'instant i t'estalvies uns 10 minuts d'espera.",
       honestyTitle: "Sense lletra petita",
       honestyText:
         "Abans de confirmar l'enviament t'expliquem les comissions, l'import que rebrà la teva família i el termini estimat. Tu decides.",
       ctaForm: "Emplenar les meves dades d'enviament",
+      closingTitle: "No deixis les teves dades per a l'últim moment",
+      closingText:
+        "Emplena-les ara i quan arribis a la botiga t'atenem a l'instant — t'estalvies fins a 10 minuts d'espera.",
     },
     jewelryPage: {
       seoTitle: "Bisuteria | Celina Estilo que Une — la Seu d'Urgell",
@@ -630,7 +648,7 @@ export const translations = {
     qrMoney: {
       title: "Envia diners a tot el món",
       subtitle: "Escaneja el codi i emplena les teves dades d'enviament.",
-      note: "Ria · Western Union · Assessorament a la botiga",
+      note: "Ria · Western Union · Transfast · Assessorament a la botiga",
     },
     homeCta: "Anar a contacte",
     ui: { backServices: "Tornar a serveis" },
@@ -780,6 +798,7 @@ export const translations = {
         money: "Money transfers",
         travel: "Flights & Travel",
         studio: "Celina Studio",
+        jewelry: "Jewelry",
         location: "La Seu d'Urgell",
       },
       ctaPrimary: "Discover our services",
@@ -809,7 +828,7 @@ export const translations = {
           title: "Send money worldwide",
           text: "Make your money transfers easily and get advice in our store.",
           cta: "I want to send money",
-          chips: ["RIA", "WESTERN UNION"],
+          chips: ["RIA", "WESTERN UNION", "TRANSFAST"],
         },
         {
           id: "travel",
@@ -942,11 +961,13 @@ export const translations = {
     moneyPage: {
       seoTitle: "Money transfers | Celina Estilo que Une — La Seu d'Urgell",
       seoDesc:
-        "Send money anywhere in the world from La Seu d'Urgell with Ria and Western Union. In-person and WhatsApp advice.",
-      overline: "Money transfers · Ria & Western Union",
+        "Send money anywhere in the world from La Seu d'Urgell with Ria, Western Union and Transfast. In-person and WhatsApp advice.",
+      overline: "Money transfers · Ria, Western Union & Transfast",
       title: "Send money anywhere in the world",
       subtitle:
-        "From our store in La Seu d'Urgell we help you make your transfer with Ria or Western Union, answering all your questions before you send.",
+        "From our store in La Seu d'Urgell we help you make your transfer with Ria, Western Union or Transfast, answering all your questions before you send.",
+      ctaHint:
+        "This way we have your details ready: we can serve you in minutes and you save up to 10 minutes of waiting in store.",
       featuresTitle: "Why do it with Celina",
       features: [
         { title: "Worldwide", text: "Destinations across Europe, Latin America, Africa, Asia and more." },
@@ -955,16 +976,22 @@ export const translations = {
       ],
       stepsTitle: "How it works",
       steps: [
-        "Fill in your transfer details in our form",
+        "Fill in your transfer details in our form (saves time in store)",
         "We receive them on WhatsApp instantly",
         "We prepare your quote in store or via WhatsApp",
       ],
       destinations: ["Peru", "Colombia", "Morocco", "Senegal", "Dominican Rep.", "And the whole world"],
       hereLabel: "You are here",
+      timeTitle: "Send your details ahead, save time",
+      timeText:
+        "This form is just to have your details on hand before you arrive: nothing to fill in at the store — we serve you right away and you save about 10 minutes of waiting.",
       honestyTitle: "No fine print",
       honestyText:
         "Before confirming your transfer we explain the fees, the amount your family will receive and the estimated time. You decide.",
       ctaForm: "Fill in my transfer details",
+      closingTitle: "Don't leave your details for the last minute",
+      closingText:
+        "Fill them in now and when you arrive at the store we'll serve you right away — save up to 10 minutes of waiting.",
     },
     jewelryPage: {
       seoTitle: "Jewelry | Celina Estilo que Une — La Seu d'Urgell",
@@ -1004,7 +1031,7 @@ export const translations = {
     qrMoney: {
       title: "Send money worldwide",
       subtitle: "Scan the code and fill in your transfer details.",
-      note: "Ria · Western Union · In-store advice",
+      note: "Ria · Western Union · Transfast · In-store advice",
     },
     homeCta: "Go to contact",
     ui: { backServices: "Back to services" },
