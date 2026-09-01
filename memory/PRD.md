@@ -138,6 +138,10 @@ Web principal moderna y orientada a conversión para Celina (La Seu d'Urgell). F
 - Legal: /aviso-legal, /privacidad, /cookies (config/legal.js, LSSI-CE + RGPD + LOPDGDD) con datos reales del negocio y placeholders [Nombre/NIF] que el titular debe completar. Enlaces legales en el footer (es/ca/en). Sitemap actualizado.
 - Verificado: estado en vivo, copia de email, back buttons, página privacidad renderiza, footer legal presente, sin errores de consola.
 
+## Actualización 2026-09-01 (18ª iteración)
+- Titular legal completado: Calina Martha Valle Cabanillas en Aviso Legal y Privacidad. Pendiente solo el NIF/CIF (placeholder [Completar] en src/config/legal.js).
+- Verificado: ambas páginas muestran el nombre del titular.
+
 ## Backlog priorizado
 - P0: Activar GA4/Meta Pixel con IDs reales (rellenar variables en frontend/.env).
 - P0: Páginas especializadas /envios-dinero, /viajes, /bisuteria (cambiar hrefs en site.js → links).
