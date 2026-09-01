@@ -18,6 +18,7 @@ import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import { WhatsAppButton } from "../components/WhatsAppButton";
 import { TravelForm } from "../components/TravelForm";
+import { BackButton } from "../components/BackButton";
 import { Reveal, MaskedLine } from "../components/Reveal";
 
 const serviceIcons = [Plane, Hotel, Globe2, Backpack];
@@ -48,6 +49,10 @@ export default function TravelPage() {
           <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
             <div className="orb-float absolute top-16 right-[15%] w-56 h-56 rounded-full bg-[#D8E8FD] blur-2xl opacity-80" />
             <div className="orb-float-slow absolute bottom-0 left-[10%] w-64 h-64 rounded-full bg-[#FDE8E1] blur-2xl opacity-70" />
+          </div>
+
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+            <BackButton to="/servicios" label={t.ui.backServices} />
           </div>
 
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-12 items-center">

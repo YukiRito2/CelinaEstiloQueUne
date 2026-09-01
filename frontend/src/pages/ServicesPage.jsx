@@ -5,6 +5,7 @@ import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import { WhatsAppButton } from "../components/WhatsAppButton";
 import { ServicesHub } from "../components/ServicesHub";
+import { BackButton } from "../components/BackButton";
 import { Reveal } from "../components/Reveal";
 
 export const HomeClosing = () => {
@@ -44,7 +45,10 @@ export default function ServicesPage() {
   return (
     <div className="App">
       <Navbar />
-      <main className="pt-16">
+      <main className="pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <BackButton to="/" label={t.travelPage.back} />
+        </div>
         <ServicesHub />
         <HomeClosing />
       </main>

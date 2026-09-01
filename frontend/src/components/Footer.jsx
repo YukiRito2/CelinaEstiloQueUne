@@ -117,11 +117,25 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-14 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-3">
+        <div className="mt-14 pt-6 border-t border-white/10">
+          <div className="flex flex-wrap justify-center gap-x-7 gap-y-2 mb-6">
+            {t.footer.legal.map((l) => (
+              <a
+                key={l.href}
+                href={l.href}
+                className="text-xs font-light text-[#9F99B0] hover:text-[#D99776] transition-colors"
+                data-testid={`footer-legal-${l.href.replace(/\//g, "")}`}
+              >
+                {l.label}
+              </a>
+            ))}
+          </div>
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-3">
           <p className="text-xs font-light text-[#9F99B0]">{t.footer.rights}</p>
           <p className="font-mono-brand text-[10px] tracking-[0.25em] uppercase text-[#9F99B0]/60">
             {t.hero.pillars}
           </p>
+          </div>
         </div>
       </div>
     </footer>

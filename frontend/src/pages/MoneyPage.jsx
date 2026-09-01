@@ -129,6 +129,8 @@ export default function MoneyPage() {
           overline={p.overline}
           title={p.title}
           subtitle={p.subtitle}
+          backTo="/servicios"
+          backLabel={t.ui.backServices}
           right={<MoneyVisual t={t} />}
           ctaLabel={p.ctaForm}
           ctaHref={site.links.moneyForm}

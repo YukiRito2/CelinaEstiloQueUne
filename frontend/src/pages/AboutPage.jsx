@@ -8,6 +8,7 @@ import { Footer } from "../components/Footer";
 import { WhatsAppButton } from "../components/WhatsAppButton";
 import { TrustSection } from "../components/TrustSection";
 import { ReviewsSection } from "../components/ReviewsSection";
+import { BackButton } from "../components/BackButton";
 import { Reveal, MaskedLine } from "../components/Reveal";
 
 // Collage editorial: 3 imágenes en arco rotadas con flotación
@@ -102,7 +103,10 @@ export default function AboutPage() {
       <Navbar />
       <main>
         {/* Hero editorial con collage */}
-        <section className="noise relative overflow-hidden bg-[#FAF7F2] pt-32 pb-20 sm:pb-24" data-testid="about-hero">
+        <section className="noise relative overflow-hidden bg-[#FAF7F2] pt-28 pb-20 sm:pb-24" data-testid="about-hero">
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
+            <BackButton to="/" label={t.travelPage.back} />
+          </div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7">
               <motion.p

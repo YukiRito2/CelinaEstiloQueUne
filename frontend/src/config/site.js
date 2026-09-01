@@ -25,6 +25,7 @@ export const site = {
   },
 
   hours: "Todos los días · 08:00 – 22:00",
+  hoursRange: { open: 8, close: 22 }, // Para el indicador "Abierto ahora"
 
   maps: {
     embed:

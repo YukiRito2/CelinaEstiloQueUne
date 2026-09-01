@@ -35,6 +35,8 @@ export default function JewelryPage() {
           overline={p.overline}
           title={p.title}
           subtitle={p.subtitle}
+          backTo="/servicios"
+          backLabel={t.ui.backServices}
           image={site.images.hero}
           imageAlt={t.hero.imageAlt}
           imageBadgeOver={t.jewelry.overline}

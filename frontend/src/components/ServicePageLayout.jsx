@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, MessageCircle } from "lucide-react";
 import { waLink } from "../lib/whatsapp";
 import { trackEvent } from "../lib/analytics";
+import { BackButton } from "./BackButton";
 import { MaskedLine } from "./Reveal";
 
 const themes = {
@@ -37,9 +38,11 @@ const themes = {
   },
 };
 
-// Layout común de las páginas de servicio: hero temático + CTAs + contenido
+// Layout común de las páginas de servicio: botón volver + hero temático + CTAs + contenido
 export const ServicePageLayout = ({
   theme = "mint",
+  backTo,
+  backLabel,
   overline,
   title,
   subtitle,
@@ -61,13 +64,19 @@ export const ServicePageLayout = ({
   return (
     <>
       <section
-        className={`noise relative overflow-hidden ${th.bg} pt-32 pb-20 sm:pb-28`}
+        className={`noise relative overflow-hidden ${th.bg} pt-28 pb-20 sm:pb-28`}
         data-testid="service-page-hero"
       >
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
           <div className={`orb-float absolute top-16 right-[12%] w-56 h-56 rounded-full ${th.orb1} blur-2xl opacity-80`} />
           <div className={`orb-float-slow absolute bottom-0 left-[8%] w-64 h-64 rounded-full ${th.orb2} blur-2xl opacity-70`} />
         </div>
+
+        {backLabel && (
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
+            <BackButton to={backTo} label={backLabel} dark={th === themes.lavender} />
+          </div>
+        )}
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7">
