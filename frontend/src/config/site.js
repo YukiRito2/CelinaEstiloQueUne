@@ -55,13 +55,13 @@ export const site = {
   // ----------------------------------------------------------
   links: {
     money: "/envios-dinero",
-    moneyForm: "https://datosdeenvio.vercel.app/",
+    moneyForm: "https://formulario.celinaestiloqueune.com/",
     travel: "/viajes",
     travelForm:
       "https://docs.google.com/forms/d/e/1FAIpQLSfWYgf772uZPd5TzYtkJMkQ2eRi0tTsiXVVOVbxrXGaj-hZNw/viewform?usp=header",
     jewelry: "/bisuteria",
-    jewelryCatalog: "https://celina-estilo-que-une.vercel.app/",
-    studio: "https://celina-studio-app.vercel.app/",
+    jewelryCatalog: "https://bisuteria.celinaestiloqueune.com/",
+    studio: "https://studio.celinaestiloqueune.com/",
   },
 
   whatsappMessages: {
