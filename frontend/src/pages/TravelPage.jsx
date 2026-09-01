@@ -50,6 +50,14 @@ export default function TravelPage() {
             <div className="orb-float absolute top-16 right-[15%] w-56 h-56 rounded-full bg-[#D8E8FD] blur-2xl opacity-80" />
             <div className="orb-float-slow absolute bottom-0 left-[10%] w-64 h-64 rounded-full bg-[#FDE8E1] blur-2xl opacity-70" />
           </div>
+          <svg className="absolute inset-x-0 top-10 w-full h-56 opacity-50 pointer-events-none" viewBox="0 0 1200 220" fill="none" aria-hidden="true">
+            <path d="M-60 190 C 300 60, 750 200, 1260 40" stroke="#2B6CB0" strokeWidth="1.6" strokeDasharray="6 9" strokeOpacity="0.4" />
+            <g>
+              <path d="M0,-7 L14,0 L0,7 L4,0 Z" fill="#2B6CB0">
+                <animateMotion dur="10s" repeatCount="indefinite" rotate="auto" path="M-60 190 C 300 60, 750 200, 1260 40" />
+              </path>
+            </g>
+          </svg>
 
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
             <BackButton to="/servicios" label={t.ui.backServices} />

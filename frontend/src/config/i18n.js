@@ -160,6 +160,14 @@ export const translations = {
         title: "Cuéntanos tu viaje",
         subtitle: "Rellena nuestro breve formulario digital y, en cuanto lo recibamos, nos ponemos manos a la obra con tu presupuesto.",
         priceNote: "Buscamos las mejores opciones, combinaciones y precios para tu viaje.",
+        ticketOver: "Tarjeta de embarque · Formulario de viaje",
+        ticketOriginLabel: "Origen",
+        ticketFrom: "La Seu d'Urgell",
+        ticketDestLabel: "Destino",
+        ticketTo: "Tu destino soñado",
+        securityTitle: "Tus datos viajan seguros",
+        securityText:
+          "El formulario es de Google, va cifrado y solo usamos tus datos para preparar tu presupuesto. Nada más.",
         bullets: [
           "Ten a mano la foto de tu pasaporte: el formulario te la pedirá al final (puedes hacerla con el móvil en el momento).",
           "Al subir la foto, Google te pedirá iniciar sesión con tu correo de Gmail por seguridad.",
@@ -526,6 +534,14 @@ export const translations = {
         title: "Explica'ns el teu viatge",
         subtitle: "Emplena el nostre breu formulari digital i, tan bon punt el rebem, ens posem mans a l'obra amb el teu pressupost.",
         priceNote: "Cerquem les millors opcions, combinacions i preus per al teu viatge.",
+        ticketOver: "Targeta d'embarcament · Formulari de viatge",
+        ticketOriginLabel: "Origen",
+        ticketFrom: "La Seu d'Urgell",
+        ticketDestLabel: "Destinació",
+        ticketTo: "La teva destinació somiada",
+        securityTitle: "Les teves dades viatgen segures",
+        securityText:
+          "El formulari és de Google, va xifrat i només fem servir les teves dades per preparar el teu pressupost. Res més.",
         bullets: [
           "Tingues a mà la foto del teu passaport: el formulari te la demanarà al final (la pots fer amb el mòbil en el moment).",
           "En pujar la foto, Google et demanarà iniciar sessió amb el teu correu de Gmail per seguretat.",
@@ -892,6 +908,14 @@ export const translations = {
         title: "Tell us about your trip",
         subtitle: "Fill in our short digital form and, as soon as we receive it, we'll get to work on your quote.",
         priceNote: "We search for the best options, combinations and prices for your trip.",
+        ticketOver: "Boarding pass · Travel form",
+        ticketOriginLabel: "Origin",
+        ticketFrom: "La Seu d'Urgell",
+        ticketDestLabel: "Destination",
+        ticketTo: "Your dream destination",
+        securityTitle: "Your data travels safely",
+        securityText:
+          "The form is Google's, it's encrypted and we only use your data to prepare your quote. Nothing else.",
         bullets: [
           "Have a photo of your passport ready: the form will ask for it at the end (you can take it with your phone right there).",
           "To upload the photo, Google will ask you to sign in with your Gmail account for security.",

@@ -142,6 +142,11 @@ Web principal moderna y orientada a conversión para Celina (La Seu d'Urgell). F
 - Titular legal completado: Calina Martha Valle Cabanillas en Aviso Legal y Privacidad. Pendiente solo el NIF/CIF (placeholder [Completar] en src/config/legal.js).
 - Verificado: ambas páginas muestran el nombre del titular.
 
+## Actualización 2026-09-01 (19ª iteración)
+- /viajes más creativa y orientada al formulario: ruta de vuelo animada en el hero (avión SVG recorriendo una trayectoria punteada), y el formulario rediseñado como TARJETA DE EMBARQUE (cabecera oscura, ORIGEN La Seu d'Urgell → DESTINO "Tu destino soñado" con línea punteada y avión, perforación de ticket, mensaje de mejores precios). Banda de seguridad "Tus datos viajan seguros" (Google cifrado, solo para el presupuesto). CTA azul al Google Form + alternativa WhatsApp.
+- i18n: travelPage.form ticket*/security* en es/ca/en.
+- Verificado: hero con avión animado, tarjeta de embarque desktop y móvil, botón al Google Form, banda de seguridad presente.
+
 ## Backlog priorizado
 - P0: Activar GA4/Meta Pixel con IDs reales (rellenar variables en frontend/.env).
 - P0: Páginas especializadas /envios-dinero, /viajes, /bisuteria (cambiar hrefs en site.js → links).
