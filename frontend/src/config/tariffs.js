@@ -8,12 +8,15 @@
 // `kind` alimenta el filtro rápido: "mobile" | "combo" | "fiber" | "extras".
 // ============================================================
 
+import { site } from "./site";
+
 export const tariffs = [
   {
     id: "simyo",
     name: "Simyo",
     badgeKey: "simyo",
     accent: "#F26722", // naranja Simyo
+    logo: site.images.partners.simyo,
     groups: [
       {
         key: "mobile",
@@ -52,6 +55,7 @@ export const tariffs = [
         key: "additional",
         type: "mobile",
         kind: "mobile",
+        footnoteKey: "simyoAddonCondition",
         items: [
           { mobile: "15GB", price: "3€" },
           { mobile: "50GB", price: "5€" },
@@ -63,6 +67,7 @@ export const tariffs = [
         key: "secondHome",
         type: "fiber",
         kind: "fiber",
+        footnoteKey: "simyoAddonCondition",
         items: [
           { fiber: "300Mb", price: "15€" },
           { fiber: "600Mb", price: "21,99€" },
@@ -76,6 +81,7 @@ export const tariffs = [
     name: "Jazztel",
     badgeKey: "jazztel",
     accent: "#E6007E", // magenta Jazztel
+    logo: site.images.partners.jazztel,
     groups: [
       {
         key: "fibraMobile",
@@ -94,7 +100,7 @@ export const tariffs = [
         type: "fiber",
         kind: "fiber",
         items: [
-          { fiber: "600Mb", price: "19,95€", tag: "limited" },
+          { fiber: "600Mb", price: "19,95€", tag: "limited", noteKey: "jazztelFinalPrice" },
           { fiber: "1Gb", price: "30,95€" },
         ],
       },
@@ -114,10 +120,10 @@ export const tariffs = [
         kind: "extras",
         footnoteKey: "callsAddon",
         items: [
-          { name: "Jazztel TV + Disney+", price: "6,99€" },
-          { name: "Jazztel TV + Netflix", price: "8,99€" },
-          { name: "Jazztel TV + Prime / HBO Max", price: "9,99€" },
-          { name: "Orange TV Libre", price: "2,99€", from: true },
+          { name: "Jazztel TV + Disney+", price: "6,99€", noteKey: "jazztelDisney" },
+          { name: "Jazztel TV + Netflix", price: "8,99€", noteKey: "jazztelNetflix" },
+          { name: "Jazztel TV + Prime / HBO Max", price: "9,99€", noteKey: "jazztelPrimeHbo" },
+          { name: "Orange TV Libre", price: "2,99€", from: true, noteKey: "orangeTvLibre" },
         ],
       },
     ],

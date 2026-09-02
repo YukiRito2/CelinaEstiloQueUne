@@ -3,6 +3,7 @@ import {
   ArrowUpRight,
   Gauge,
   Layers,
+  MapPin,
   MessageCircle,
   ShieldCheck,
   Smartphone,
@@ -29,6 +30,12 @@ import {
 
 const featureIcons = [Gauge, ShieldCheck, Layers];
 
+// Logos disponibles por operador (los que aun no tienen PNG/JPG se muestran solo como texto)
+const operatorLogos = {
+  Simyo: site.images.partners.simyo,
+  Jazztel: site.images.partners.jazztel,
+};
+
 export default function FiberPage() {
   const { t } = useLanguage();
   const p = t.fiberPage;
@@ -36,7 +43,7 @@ export default function FiberPage() {
   useBreadcrumbSchema([
     { name: "Inicio", path: "/" },
     { name: "Servicios", path: "/servicios" },
-    { name: "Fibra óptica y móvil", path: "/fibra-optica" },
+    { name: "Móvil y fibra óptica", path: "/fibra-optica" },
   ]);
   useFaqSchema(p.faq);
 
@@ -67,6 +74,92 @@ export default function FiberPage() {
           whatsappLabel={p.whatsappLabel}
           whatsappMessage={t.messages.fiber}
         >
+          {/* Telefonía móvil */}
+          <section
+            className="noise relative overflow-hidden bg-[#0B4A50] py-20 sm:py-24 text-[#EAF7F7]"
+            data-testid="fiber-page-mobile"
+          >
+            <div
+              className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(14,124,134,0.4),transparent_55%)]"
+              aria-hidden="true"
+            />
+            <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+              <Reveal>
+                <p className="font-mono-brand text-[11px] tracking-[0.3em] uppercase text-[#8FD4D9] mb-4">
+                  Telefonía móvil
+                </p>
+                <h2 className="font-display text-3xl sm:text-4xl font-light tracking-tight">{p.mobile.title}</h2>
+                <p className="mt-4 max-w-2xl text-sm sm:text-base font-light text-[#B8DDDF] leading-relaxed">
+                  {p.mobile.text}
+                </p>
+              </Reveal>
+
+              <div className="mt-10 grid sm:grid-cols-3 gap-5">
+                {p.mobile.points.map((point, i) => (
+                  <Reveal key={i} delay={i * 0.1}>
+                    <div className="h-full rounded-3xl bg-white/8 border border-white/12 p-6 flex flex-col gap-4 backdrop-blur-sm">
+                      <span className="inline-flex w-11 h-11 rounded-2xl bg-[#0E7C86] text-white items-center justify-center">
+                        <Smartphone className="w-5 h-5" />
+                      </span>
+                      <p className="text-sm font-light text-[#EAF7F7] leading-relaxed">{point}</p>
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
+
+              <Reveal delay={0.15}>
+                <div className="mt-8 flex flex-wrap gap-2">
+                  {p.operators.map((op) => (
+                    <span
+                      key={op}
+                      className="inline-flex items-center gap-1.5 font-mono-brand text-[10px] tracking-[0.15em] px-3 py-1.5 rounded-full border border-white/20 bg-white/10 text-[#EAF7F7]"
+                      data-testid={`fiber-mobile-operator-${op.toLowerCase()}`}
+                    >
+                      {operatorLogos[op] && (
+                        <img src={operatorLogos[op]} alt="" loading="lazy" className="w-4 h-4 rounded-full object-cover" />
+                      )}
+                      {op}
+                    </span>
+                  ))}
+                </div>
+              </Reveal>
+
+              <Reveal delay={0.18}>
+                <div
+                  className="mt-6 flex items-start gap-3 rounded-2xl bg-white/8 border border-white/12 px-5 py-4 backdrop-blur-sm max-w-xl"
+                  data-testid="fiber-mobile-sim-note"
+                >
+                  <span className="inline-flex w-10 h-10 rounded-xl bg-[#0E7C86] text-white items-center justify-center shrink-0">
+                    <MapPin className="w-5 h-5" />
+                  </span>
+                  <div>
+                    <p className="text-sm font-medium text-[#EAF7F7]">{p.mobile.simNote}</p>
+                    <p className="mt-1 text-xs font-light text-[#8FD4D9]">
+                      {site.address.street} · {site.address.city} — {site.hours}
+                    </p>
+                  </div>
+                </div>
+              </Reveal>
+
+              <Reveal delay={0.2}>
+                <a
+                  href={waLink(t.messages.mobile)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => trackEvent("mobile_whatsapp_click", { source: "fiber_page_mobile" })}
+                  data-testid="fiber-page-mobile-whatsapp-btn"
+                  className="mt-9 inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] hover:bg-[#1eb257] text-white font-semibold px-8 py-4 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+                >
+                  <MessageCircle className="w-5 h-5" />
+                  {p.mobile.ctaLabel}
+                </a>
+              </Reveal>
+            </div>
+          </section>
+
+          {/* Tarifas de los operadores */}
+          <TariffTables />
+
           {/* Por qué elegir fibra óptica */}
           <section className="py-24 sm:py-28 bg-[#FAF7F2]" data-testid="fiber-page-features">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -103,7 +196,7 @@ export default function FiberPage() {
               <Reveal>
                 <p className="font-mono-brand text-[11px] tracking-[0.3em] uppercase text-[#0E7C86] mb-4">FAQ</p>
                 <h2 className="font-display text-3xl sm:text-4xl font-light tracking-tight text-[#1E2430]">
-                  {p.featuresTitle}
+                  {p.faqTitle}
                 </h2>
               </Reveal>
               <Reveal delay={0.1}>
@@ -154,72 +247,6 @@ export default function FiberPage() {
             </div>
           </section>
 
-          {/* Telefonía móvil */}
-          <section
-            className="noise relative overflow-hidden bg-[#0B4A50] py-20 sm:py-24 text-[#EAF7F7]"
-            data-testid="fiber-page-mobile"
-          >
-            <div
-              className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(14,124,134,0.4),transparent_55%)]"
-              aria-hidden="true"
-            />
-            <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-              <Reveal>
-                <p className="font-mono-brand text-[11px] tracking-[0.3em] uppercase text-[#8FD4D9] mb-4">
-                  Telefonía móvil
-                </p>
-                <h2 className="font-display text-3xl sm:text-4xl font-light tracking-tight">{p.mobile.title}</h2>
-                <p className="mt-4 max-w-2xl text-sm sm:text-base font-light text-[#B8DDDF] leading-relaxed">
-                  {p.mobile.text}
-                </p>
-              </Reveal>
-
-              <div className="mt-10 grid sm:grid-cols-3 gap-5">
-                {p.mobile.points.map((point, i) => (
-                  <Reveal key={i} delay={i * 0.1}>
-                    <div className="h-full rounded-3xl bg-white/8 border border-white/12 p-6 flex flex-col gap-4 backdrop-blur-sm">
-                      <span className="inline-flex w-11 h-11 rounded-2xl bg-[#0E7C86] text-white items-center justify-center">
-                        <Smartphone className="w-5 h-5" />
-                      </span>
-                      <p className="text-sm font-light text-[#EAF7F7] leading-relaxed">{point}</p>
-                    </div>
-                  </Reveal>
-                ))}
-              </div>
-
-              <Reveal delay={0.15}>
-                <div className="mt-8 flex flex-wrap gap-2">
-                  {p.operators.map((op) => (
-                    <span
-                      key={op}
-                      className="font-mono-brand text-[10px] tracking-[0.15em] px-3 py-1.5 rounded-full border border-white/20 bg-white/10 text-[#EAF7F7]"
-                      data-testid={`fiber-mobile-operator-${op.toLowerCase()}`}
-                    >
-                      {op}
-                    </span>
-                  ))}
-                </div>
-              </Reveal>
-
-              <Reveal delay={0.2}>
-                <a
-                  href={waLink(t.messages.mobile)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => trackEvent("mobile_whatsapp_click", { source: "fiber_page_mobile" })}
-                  data-testid="fiber-page-mobile-whatsapp-btn"
-                  className="mt-9 inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] hover:bg-[#1eb257] text-white font-semibold px-8 py-4 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
-                >
-                  <MessageCircle className="w-5 h-5" />
-                  {p.mobile.ctaLabel}
-                </a>
-              </Reveal>
-            </div>
-          </section>
-
-          {/* Tarifas de los operadores */}
-          <TariffTables />
-
           {/* Partner: Nasertel */}
           <section className="py-20 sm:py-24 bg-[#E9F6F6]" data-testid="fiber-page-partner">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -241,9 +268,12 @@ export default function FiberPage() {
                   {p.operators.map((op) => (
                     <span
                       key={op}
-                      className="font-mono-brand text-[10px] tracking-[0.15em] px-3 py-1.5 rounded-full border border-[#BFE6E6] bg-white/70 text-[#0B5158]"
+                      className="inline-flex items-center gap-1.5 font-mono-brand text-[10px] tracking-[0.15em] px-3 py-1.5 rounded-full border border-[#BFE6E6] bg-white/70 text-[#0B5158]"
                       data-testid={`fiber-partner-operator-${op.toLowerCase()}`}
                     >
+                      {operatorLogos[op] && (
+                        <img src={operatorLogos[op]} alt="" loading="lazy" className="w-4 h-4 rounded-full object-cover" />
+                      )}
                       {op}
                     </span>
                   ))}

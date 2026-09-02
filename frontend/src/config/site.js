@@ -93,14 +93,18 @@ export const site = {
     ],
     studio: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&q=80&fm=auto",
     documents: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80&fm=auto",
-    fiber: "https://images.unsplash.com/photo-1604869515882-4d10fa4b0492?crop=entropy&cs=srgb&fm=auto&w=1200&q=85",
+    fiber: "https://images.unsplash.com/photo-1606420187127-dae7c868fa7a?crop=entropy&cs=srgb&fm=auto&w=1200&q=85",
+    // Logos alojados en Cloudinary (f_auto,q_auto: formato y calidad optimos
+    // automaticamente segun el navegador, para que pesen lo minimo).
     partners: {
-      ria: "/ria-Biw3tYS-.png",
-      westernUnion: "/westernUnion-CJWZ6tgq.png",
-      transfast: "/transfast-logo.png",
-      moneygram: "/moneygram.png",
+      ria: "https://res.cloudinary.com/iliifvu8/image/upload/f_auto,q_auto/celina/partners/ria",
+      westernUnion: "https://res.cloudinary.com/iliifvu8/image/upload/f_auto,q_auto/celina/partners/western-union",
+      transfast: "https://res.cloudinary.com/iliifvu8/image/upload/f_auto,q_auto/celina/partners/transfast",
+      moneygram: "https://res.cloudinary.com/iliifvu8/image/upload/f_auto,q_auto/celina/partners/moneygram",
       // TODO: sustituir por el logo real de Nasertel en PNG (placeholder de texto por ahora)
       nasertel: null,
+      simyo: "https://res.cloudinary.com/iliifvu8/image/upload/f_auto,q_auto/celina/partners/simyo",
+      jazztel: "https://res.cloudinary.com/iliifvu8/image/upload/f_auto,q_auto/celina/partners/jazztel",
     },
     jewelry: [
       "https://images.unsplash.com/photo-1585960622850-ed33c41d6418?crop=entropy&cs=srgb&fm=auto&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjBnb2xkJTIwamV3ZWxyeSUyMG1vZGVsJTIwd29tYW58ZW58MHx8fHwxNzgzOTgwMDc0fDA&ixlib=rb-4.1.0&q=85",

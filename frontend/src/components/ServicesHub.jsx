@@ -151,7 +151,11 @@ const ServiceCard = ({ s, m, index, externalHint }) => {
         >
           {s.title}
         </h3>
-        <p className={`mt-3 text-sm sm:text-base font-light leading-relaxed ${m.dark ? "text-[#C8C2DB]" : "text-[#475569]"}`}>
+        <p
+          className={`mt-3 max-w-2xl text-sm sm:text-base font-light leading-relaxed ${
+            m.dark ? "text-[#C8C2DB]" : "text-[#475569]"
+          }`}
+        >
           {s.text}
         </p>
         {s.chips.length > 0 && (
