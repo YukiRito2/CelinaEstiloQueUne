@@ -56,13 +56,14 @@ export const translations = {
       subtitle: "Diferentes necesidades. Una misma marca.",
       guide: ["Elige tu servicio", "Te lo explicamos en su página", "Contacta por WhatsApp o formulario"],
       externalHint: "Web independiente",
+      discoverAlso: "Descubre también",
       cards: [
         {
           id: "transfers",
           title: "Envía dinero al mundo",
           text: "Realiza tus envíos de dinero de forma sencilla y recibe asesoramiento en nuestro local.",
           cta: "Quiero enviar dinero",
-          chips: ["RIA", "WESTERN UNION", "TRANSFAST"],
+          chips: ["RIA", "WESTERN UNION", "MONEYGRAM", "TRANSFAST"],
         },
         {
           id: "travel",
@@ -129,9 +130,9 @@ export const translations = {
       seoDesc:
         "Agencia de viajes en La Seu d'Urgell para ir a cualquier parte del mundo. Vuelos, alojamientos, cruceros y viajes a medida con atención personalizada.",
       overline: "Agencia de viajes · La Seu d'Urgell",
-      title: "El mundo entero, desde La Seu d'Urgell",
+      title: "Agencia de viajes en La Seu d'Urgell",
       subtitle:
-        "Somos tu agencia de viajes de confianza para ir a cualquier parte del mundo. Cuéntanos tu idea y te ayudamos a convertirla en realidad, con atención cercana y personalizada.",
+        "Somos tu agencia de viajes de confianza en La Seu d'Urgell, muy cerca de Andorra, para ir a cualquier parte del mundo. Cuéntanos tu idea y te ayudamos a convertirla en realidad, con atención cercana y personalizada.",
       ctaPrimary: "Planificar mi viaje por WhatsApp",
       ctaSecondary: "Ver destinos",
       heroBadge: "Atención personalizada",
@@ -190,11 +191,11 @@ export const translations = {
     moneyPage: {
       seoTitle: "Envíos de dinero | Celina Estilo que Une — La Seu d'Urgell",
       seoDesc:
-        "Envía dinero a cualquier parte del mundo desde La Seu d'Urgell con Ria, Western Union y Transfast. Asesoramiento presencial y por WhatsApp.",
-      overline: "Envíos de dinero · Ria, Western Union & Transfast",
-      title: "Envía dinero a cualquier parte del mundo",
+        "Envía dinero a cualquier parte del mundo desde La Seu d'Urgell con Ria, Western Union, MoneyGram y Transfast. Asesoramiento presencial y por WhatsApp.",
+      overline: "Envíos de dinero · Ria, Western Union, MoneyGram & Transfast",
+      title: "Envío de dinero desde La Seu d'Urgell",
       subtitle:
-        "Desde nuestro local en La Seu d'Urgell te ayudamos a realizar tu envío con Ria, Western Union o Transfast, resolviendo todas tus dudas antes de enviar.",
+        "Desde nuestro local en La Seu d'Urgell gestionamos tu envío de dinero internacional con Ria, Western Union, MoneyGram o Transfast, resolviendo todas tus dudas antes de enviar.",
       ctaHint:
         "Así tenemos tus datos listos: te atendemos en minutos y te ahorras hasta 10 minutos de espera en tienda.",
       featuresTitle: "Por qué hacerlo con Celina",
@@ -221,15 +222,34 @@ export const translations = {
       closingTitle: "No dejes tus datos para el último momento",
       closingText:
         "Rellénalos ahora y cuando llegues a la tienda te atendemos al momento — ahorras hasta 10 minutos de espera.",
+      extrasTitle: "También en tienda",
+      extras: [
+        {
+          title: "Punto de paquetería",
+          text: "Envía paquetes, haz devoluciones de compras online y recoge tus pedidos. Punto multiservicio de la red Idoneo, con MRW, GLS, SEUR, Correos Express, Amazon Hub, Collect+, Vinted Go, TIPSA e InPost (Mondial Relay).",
+        },
+        {
+          title: "Móvil: SIMs y recargas",
+          text: "Venta de tarjetas SIM Digi y Vodafone, y recarga de tu línea al momento.",
+        },
+        {
+          title: "Fotocopias",
+          text: "¿Te urge sacar una copia? La hacemos al momento.",
+        },
+        {
+          title: "Bebidas y snacks",
+          text: "Refrescos, agua y algún dulce para el camino.",
+        },
+      ],
     },
     jewelryPage: {
-      seoTitle: "Bisutería | Celina Estilo que Une — La Seu d'Urgell",
+      seoTitle: "Tienda de bisutería en La Seu d'Urgell | Celina",
       seoDesc:
         "Bisutería y accesorios en La Seu d'Urgell: collares, pulseras, anillos, aretes y más. Explora el catálogo y reserva por WhatsApp.",
       overline: "Bisutería & estilo",
-      title: "Estilo que habla de ti",
+      title: "Bisutería y accesorios en La Seu d'Urgell",
       subtitle:
-        "Piezas pensadas para acompañarte todos los días: collares, pulseras, anillos, aretes y accesorios para cada ocasión.",
+        "En nuestra tienda de bisutería en La Seu d'Urgell encontrarás piezas pensadas para acompañarte todos los días: collares, pulseras, anillos, aretes y accesorios para cada ocasión.",
       ctaCatalog: "Explorar el catálogo",
       featuresTitle: "Nuestra forma de trabajar",
       features: [
@@ -265,6 +285,7 @@ export const translations = {
       services: {
         title: "Servicios | Celina Estilo que Une — La Seu d'Urgell",
         desc: "Envíos de dinero, agencia de viajes, bisutería y servicios digitales en La Seu d'Urgell. Descubre cada servicio de Celina.",
+        h1: "Servicios de Celina en La Seu d'Urgell",
       },
       about: {
         title: "Sobre Celina | Estilo que Une — La Seu d'Urgell",
@@ -277,6 +298,7 @@ export const translations = {
       contact: {
         title: "Contacto | Celina Estilo que Une — La Seu d'Urgell",
         desc: "Contacta con Celina: envíos de dinero, viajes, bisutería y diseño web. WhatsApp, teléfono y tienda en La Seu d'Urgell.",
+        h1: "Contacta con Celina en La Seu d'Urgell",
       },
     },
     homeCta: "Ir a contacto",
@@ -315,7 +337,7 @@ export const translations = {
       overline: "Celina Studio — Digital",
       title: "¿Tienes un negocio?",
       sub: "Tu presencia digital también puede hacer la diferencia.",
-      text: "En Celina Studio diseñamos y desarrollamos páginas web, tiendas online y soluciones digitales para negocios que quieren crecer.",
+      text: "En Celina Studio diseñamos y desarrollamos páginas web, tiendas online y soluciones digitales en La Seu d'Urgell para negocios que quieren crecer.",
       services: [
         "Diseño y desarrollo web",
         "Tiendas online",
@@ -449,13 +471,14 @@ export const translations = {
       subtitle: "Diferents necessitats. Una mateixa marca.",
       guide: ["Tria el teu servei", "T'ho expliquem a la seva pàgina", "Contacta per WhatsApp o formulari"],
       externalHint: "Web independent",
+      discoverAlso: "Descobreix també",
       cards: [
         {
           id: "transfers",
           title: "Envia diners a tot el món",
           text: "Fes els teus enviaments de diners de manera senzilla i rep assessorament al nostre local.",
           cta: "Vull enviar diners",
-          chips: ["RIA", "WESTERN UNION", "TRANSFAST"],
+          chips: ["RIA", "WESTERN UNION", "MONEYGRAM", "TRANSFAST"],
         },
         {
           id: "travel",
@@ -522,9 +545,9 @@ export const translations = {
       seoDesc:
         "Agència de viatges a la Seu d'Urgell per anar a qualsevol part del món. Vols, allotjaments, creuers i viatges a mida amb atenció personalitzada.",
       overline: "Agència de viatges · La Seu d'Urgell",
-      title: "El món sencer, des de la Seu d'Urgell",
+      title: "Agència de viatges a la Seu d'Urgell",
       subtitle:
-        "Som la teva agència de viatges de confiança per anar a qualsevol part del món. Explica'ns la teva idea i t'ajudem a fer-la realitat, amb atenció propera i personalitzada.",
+        "Som la teva agència de viatges de confiança a la Seu d'Urgell, molt a prop d'Andorra, per anar a qualsevol part del món. Explica'ns la teva idea i t'ajudem a fer-la realitat, amb atenció propera i personalitzada.",
       ctaPrimary: "Planificar el meu viatge per WhatsApp",
       ctaSecondary: "Veure destinacions",
       heroBadge: "Atenció personalitzada",
@@ -583,11 +606,11 @@ export const translations = {
     moneyPage: {
       seoTitle: "Enviaments de diners | Celina Estilo que Une — la Seu d'Urgell",
       seoDesc:
-        "Envia diners a qualsevol part del món des de la Seu d'Urgell amb Ria, Western Union i Transfast. Assessorament presencial i per WhatsApp.",
-      overline: "Enviaments de diners · Ria, Western Union & Transfast",
-      title: "Envia diners a qualsevol part del món",
+        "Envia diners a qualsevol part del món des de la Seu d'Urgell amb Ria, Western Union, MoneyGram i Transfast. Assessorament presencial i per WhatsApp.",
+      overline: "Enviaments de diners · Ria, Western Union, MoneyGram & Transfast",
+      title: "Enviament de diners des de la Seu d'Urgell",
       subtitle:
-        "Des del nostre local de la Seu d'Urgell t'ajudem a fer el teu enviament amb Ria, Western Union o Transfast, resolent tots els teus dubtes abans d'enviar.",
+        "Des del nostre local de la Seu d'Urgell gestionem el teu enviament de diners internacional amb Ria, Western Union, MoneyGram o Transfast, resolent tots els teus dubtes abans d'enviar.",
       ctaHint:
         "Així tenim les teves dades a punt: t'atenem en minuts i t'estalvies fins a 10 minuts d'espera a la botiga.",
       featuresTitle: "Per què fer-ho amb Celina",
@@ -614,15 +637,34 @@ export const translations = {
       closingTitle: "No deixis les teves dades per a l'últim moment",
       closingText:
         "Emplena-les ara i quan arribis a la botiga t'atenem a l'instant — t'estalvies fins a 10 minuts d'espera.",
+      extrasTitle: "També a la botiga",
+      extras: [
+        {
+          title: "Punt de paqueteria",
+          text: "Envia paquets, fes devolucions de compres online i recull les teves comandes. Punt multiservei de la xarxa Idoneo, amb MRW, GLS, SEUR, Correos Express, Amazon Hub, Collect+, Vinted Go, TIPSA i InPost (Mondial Relay).",
+        },
+        {
+          title: "Mòbil: SIMs i recàrregues",
+          text: "Venda de targetes SIM Digi i Vodafone, i recàrrega de la teva línia a l'instant.",
+        },
+        {
+          title: "Fotocòpies",
+          text: "Necessites una còpia urgent? La fem a l'instant.",
+        },
+        {
+          title: "Begudes i snacks",
+          text: "Refrescos, aigua i algun dolç per al camí.",
+        },
+      ],
     },
     jewelryPage: {
-      seoTitle: "Bisuteria | Celina Estilo que Une — la Seu d'Urgell",
+      seoTitle: "Botiga de bisuteria a la Seu d'Urgell | Celina",
       seoDesc:
         "Bisuteria i accessoris a la Seu d'Urgell: collars, polseres, anells, arracades i més. Explora el catàleg i reserva per WhatsApp.",
       overline: "Bisuteria & estil",
-      title: "Estil que parla de tu",
+      title: "Bisuteria i accessoris a la Seu d'Urgell",
       subtitle:
-        "Peces pensades per acompanyar-te cada dia: collars, polseres, anells, arracades i accessoris per a cada ocasió.",
+        "A la nostra botiga de bisuteria a la Seu d'Urgell trobaràs peces pensades per acompanyar-te cada dia: collars, polseres, anells, arracades i accessoris per a cada ocasió.",
       ctaCatalog: "Explorar el catàleg",
       featuresTitle: "La nostra manera de treballar",
       features: [
@@ -658,6 +700,7 @@ export const translations = {
       services: {
         title: "Serveis | Celina Estilo que Une — la Seu d'Urgell",
         desc: "Enviaments de diners, agència de viatges, bisuteria i serveis digitals a la Seu d'Urgell.",
+        h1: "Serveis de Celina a la Seu d'Urgell",
       },
       about: {
         title: "Sobre Celina | Estilo que Une — la Seu d'Urgell",
@@ -670,6 +713,7 @@ export const translations = {
       contact: {
         title: "Contacte | Celina Estilo que Une — la Seu d'Urgell",
         desc: "Contacta amb Celina: enviaments de diners, viatges, bisuteria i disseny web a la Seu d'Urgell.",
+        h1: "Contacta amb Celina a la Seu d'Urgell",
       },
     },
     homeCta: "Anar a contacte",
@@ -708,7 +752,7 @@ export const translations = {
       overline: "Celina Studio — Digital",
       title: "Tens un negoci?",
       sub: "La teva presència digital també pot marcar la diferència.",
-      text: "A Celina Studio dissenyem i desenvolupem pàgines web, botigues online i solucions digitals per a negocis que volen créixer.",
+      text: "A Celina Studio dissenyem i desenvolupem pàgines web, botigues online i solucions digitals a la Seu d'Urgell per a negocis que volen créixer.",
       services: [
         "Disseny i desenvolupament web",
         "Botigues online",
@@ -842,13 +886,14 @@ export const translations = {
       subtitle: "Different needs. One same brand.",
       guide: ["Choose your service", "We explain it on its page", "Contact us via WhatsApp or form"],
       externalHint: "Separate website",
+      discoverAlso: "Discover also",
       cards: [
         {
           id: "transfers",
           title: "Send money worldwide",
           text: "Make your money transfers easily and get advice in our store.",
           cta: "I want to send money",
-          chips: ["RIA", "WESTERN UNION", "TRANSFAST"],
+          chips: ["RIA", "WESTERN UNION", "MONEYGRAM", "TRANSFAST"],
         },
         {
           id: "travel",
@@ -915,9 +960,9 @@ export const translations = {
       seoDesc:
         "Travel agency in La Seu d'Urgell for trips anywhere in the world. Flights, accommodation, cruises and tailor-made trips with personalized attention.",
       overline: "Travel agency · La Seu d'Urgell",
-      title: "The whole world, from La Seu d'Urgell",
+      title: "Travel agency in La Seu d'Urgell",
       subtitle:
-        "We are your trusted travel agency for anywhere in the world. Tell us your idea and we'll help you make it real, with warm and personalized attention.",
+        "We are your trusted travel agency in La Seu d'Urgell, just a few minutes from Andorra, for anywhere in the world. Tell us your idea and we'll help you make it real, with warm and personalized attention.",
       ctaPrimary: "Plan my trip on WhatsApp",
       ctaSecondary: "See destinations",
       heroBadge: "Personalized attention",
@@ -976,11 +1021,11 @@ export const translations = {
     moneyPage: {
       seoTitle: "Money transfers | Celina Estilo que Une — La Seu d'Urgell",
       seoDesc:
-        "Send money anywhere in the world from La Seu d'Urgell with Ria, Western Union and Transfast. In-person and WhatsApp advice.",
-      overline: "Money transfers · Ria, Western Union & Transfast",
-      title: "Send money anywhere in the world",
+        "Send money anywhere in the world from La Seu d'Urgell with Ria, Western Union, MoneyGram and Transfast. In-person and WhatsApp advice.",
+      overline: "Money transfers · Ria, Western Union, MoneyGram & Transfast",
+      title: "Money transfers from La Seu d'Urgell",
       subtitle:
-        "From our store in La Seu d'Urgell we help you make your transfer with Ria, Western Union or Transfast, answering all your questions before you send.",
+        "From our store in La Seu d'Urgell we handle your international money transfer with Ria, Western Union, MoneyGram or Transfast, answering all your questions before you send.",
       ctaHint:
         "This way we have your details ready: we can serve you in minutes and you save up to 10 minutes of waiting in store.",
       featuresTitle: "Why do it with Celina",
@@ -1007,15 +1052,34 @@ export const translations = {
       closingTitle: "Don't leave your details for the last minute",
       closingText:
         "Fill them in now and when you arrive at the store we'll serve you right away — save up to 10 minutes of waiting.",
+      extrasTitle: "Also in store",
+      extras: [
+        {
+          title: "Parcel point",
+          text: "Send parcels, return online purchases and pick up your orders. Multi-service point of the Idoneo network, with MRW, GLS, SEUR, Correos Express, Amazon Hub, Collect+, Vinted Go, TIPSA and InPost (Mondial Relay).",
+        },
+        {
+          title: "Mobile: SIMs & top-ups",
+          text: "Digi and Vodafone SIM cards, and instant top-ups for your line.",
+        },
+        {
+          title: "Photocopies",
+          text: "Need a copy urgently? We do it on the spot.",
+        },
+        {
+          title: "Drinks & snacks",
+          text: "Soft drinks, water and a sweet treat for the road.",
+        },
+      ],
     },
     jewelryPage: {
-      seoTitle: "Jewelry | Celina Estilo que Une — La Seu d'Urgell",
+      seoTitle: "Jewelry Shop in La Seu d'Urgell | Celina",
       seoDesc:
         "Jewelry and accessories in La Seu d'Urgell: necklaces, bracelets, rings, earrings and more. Browse the catalog and reserve via WhatsApp.",
       overline: "Jewelry & style",
-      title: "Style that speaks about you",
+      title: "Jewelry and accessories in La Seu d'Urgell",
       subtitle:
-        "Pieces made to accompany you every day: necklaces, bracelets, rings, earrings and accessories for every occasion.",
+        "In our jewelry shop in La Seu d'Urgell you'll find pieces made to accompany you every day: necklaces, bracelets, rings, earrings and accessories for every occasion.",
       ctaCatalog: "Browse the catalog",
       featuresTitle: "How we work",
       features: [
@@ -1051,6 +1115,7 @@ export const translations = {
       services: {
         title: "Services | Celina Estilo que Une — La Seu d'Urgell",
         desc: "Money transfers, travel agency, jewelry and digital services in La Seu d'Urgell.",
+        h1: "Celina's Services in La Seu d'Urgell",
       },
       about: {
         title: "About Celina | Estilo que Une — La Seu d'Urgell",
@@ -1063,6 +1128,7 @@ export const translations = {
       contact: {
         title: "Contact | Celina Estilo que Une — La Seu d'Urgell",
         desc: "Contact Celina: money transfers, travel, jewelry and web design in La Seu d'Urgell.",
+        h1: "Contact Celina in La Seu d'Urgell",
       },
     },
     homeCta: "Go to contact",
@@ -1101,7 +1167,7 @@ export const translations = {
       overline: "Celina Studio — Digital",
       title: "Do you have a business?",
       sub: "Your digital presence can also make the difference.",
-      text: "At Celina Studio we design and develop websites, online stores and digital solutions for businesses that want to grow.",
+      text: "At Celina Studio we design and develop websites, online stores and digital solutions in La Seu d'Urgell for businesses that want to grow.",
       services: [
         "Web design & development",
         "Online stores",

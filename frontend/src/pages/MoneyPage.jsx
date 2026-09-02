@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Clock3, Globe2, HandHeart, MapPin, ShieldCheck, Smartphone } from "lucide-react";
+import { ArrowUpRight, Clock3, Coffee, Globe2, HandHeart, MapPin, Package, Printer, ShieldCheck, Smartphone } from "lucide-react";
 import { site } from "../config/site";
 import { trackEvent } from "../lib/analytics";
 import { useLanguage } from "../context/LanguageContext";
@@ -10,9 +10,11 @@ import { WhatsAppButton } from "../components/WhatsAppButton";
 import { ServicePageLayout } from "../components/ServicePageLayout";
 import { Reveal } from "../components/Reveal";
 import { PartnerLogos } from "../components/PartnerLogos";
-import { usePageSeo } from "../lib/seo";
+import { RelatedServices } from "../components/RelatedServices";
+import { usePageSeo, useBreadcrumbSchema } from "../lib/seo";
 
 const featureIcons = [Globe2, HandHeart, Smartphone];
+const extraIcons = [Package, Smartphone, Printer, Coffee];
 
 // Posiciones de los chips de destino alrededor del centro
 const chipPositions = [
@@ -117,6 +119,11 @@ export default function MoneyPage() {
   const { t } = useLanguage();
   const p = t.moneyPage;
   usePageSeo(p.seoTitle, p.seoDesc);
+  useBreadcrumbSchema([
+    { name: "Inicio", path: "/" },
+    { name: "Servicios", path: "/servicios" },
+    { name: "Envíos de dinero", path: "/envios-dinero" },
+  ]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -249,8 +256,38 @@ export default function MoneyPage() {
                 <p className="font-mono-brand text-[10px] tracking-[0.3em] uppercase text-[#78869A] mb-8">
                   {t.money.partners}
                 </p>
-                <PartnerLogos className="grid grid-cols-1 sm:grid-cols-3 gap-4" />
+                <PartnerLogos className="grid grid-cols-2 sm:grid-cols-4 gap-4" />
               </Reveal>
+            </div>
+          </section>
+
+          {/* También en tienda: paquetería, móvil, fotocopias, snacks */}
+          <section className="py-24 sm:py-28 bg-[#EEF7F2]" data-testid="money-page-extras">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <Reveal>
+                <h2 className="font-display text-3xl sm:text-4xl font-light tracking-tight text-[#1E2430]">
+                  {p.extrasTitle}
+                </h2>
+              </Reveal>
+              <div className="mt-12 grid sm:grid-cols-2 gap-5">
+                {p.extras.map((f, i) => {
+                  const Icon = extraIcons[i];
+                  return (
+                    <Reveal key={f.title} delay={i * 0.1}>
+                      <div
+                        className="group h-full rounded-3xl bg-white border border-[#C2E8D2] p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#2D7A54]/10"
+                        data-testid={`money-extra-${i}`}
+                      >
+                        <span className="inline-flex w-12 h-12 rounded-2xl bg-[#D3EEDD] text-[#2D7A54] items-center justify-center transition-transform duration-500 group-hover:scale-110">
+                          <Icon className="w-6 h-6" />
+                        </span>
+                        <h3 className="mt-5 font-display text-xl sm:text-2xl font-medium text-[#1E2430]">{f.title}</h3>
+                        <p className="mt-2 text-sm font-light text-[#475569] leading-relaxed">{f.text}</p>
+                      </div>
+                    </Reveal>
+                  );
+                })}
+              </div>
             </div>
           </section>
 
@@ -282,6 +319,7 @@ export default function MoneyPage() {
             </div>
           </section>
         </ServicePageLayout>
+        <RelatedServices exclude="transfers" />
       </main>
       <Footer />
       <WhatsAppButton />

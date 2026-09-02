@@ -9,6 +9,7 @@ const PARTNERS = [
     imgClass: "h-10 sm:h-12 w-auto rounded-lg",
   },
   { key: "transfast", alt: "Transfast", src: site.images.partners.transfast, imgClass: "h-8 sm:h-9 w-auto" },
+  { key: "moneygram", alt: "MoneyGram", src: site.images.partners.moneygram, imgClass: "h-8 sm:h-9 w-auto" },
 ];
 
 // Tarjetas con los logotipos reales de los proveedores de envío de dinero
