@@ -156,6 +156,7 @@ const Constellation = ({ t }) => {
                   alt={t.hero.imageAlt}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="eager"
+                  fetchpriority="high"
                   data-testid="hero-image"
                 />
               </div>

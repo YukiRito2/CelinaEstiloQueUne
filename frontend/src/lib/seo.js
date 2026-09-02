@@ -25,3 +25,33 @@ export const usePageSeo = (title, description) => {
     setMeta('meta[name="twitter:description"]', "content", description);
   }, [title, description]);
 };
+
+// Inyecta un BreadcrumbList (JSON-LD) para la ruta actual.
+// items: [{ name: "Inicio", path: "/" }, { name: "Servicios", path: "/servicios" }, ...]
+export const useBreadcrumbSchema = (items) => {
+  const key = JSON.stringify(items);
+  useEffect(() => {
+    const data = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: items.map((item, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: item.name,
+        item: `${site.seo.siteUrl}${item.path}`,
+      })),
+    };
+
+    let script = document.getElementById("breadcrumb-schema");
+    if (!script) {
+      script = document.createElement("script");
+      script.type = "application/ld+json";
+      script.id = "breadcrumb-schema";
+      document.head.appendChild(script);
+    }
+    script.textContent = JSON.stringify(data);
+
+    return () => script?.remove();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [key]);
+};

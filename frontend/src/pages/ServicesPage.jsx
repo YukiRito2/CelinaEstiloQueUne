@@ -42,6 +42,7 @@ export default function ServicesPage() {
     <div className="App">
       <Navbar />
       <main className="pt-20">
+        <h1 className="sr-only">{t.pagesSeo.services.h1}</h1>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BackButton to="/" label={t.travelPage.back} />
         </div>

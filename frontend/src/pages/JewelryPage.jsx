@@ -9,7 +9,8 @@ import { Footer } from "../components/Footer";
 import { WhatsAppButton } from "../components/WhatsAppButton";
 import { ServicePageLayout } from "../components/ServicePageLayout";
 import { Reveal } from "../components/Reveal";
-import { usePageSeo } from "../lib/seo";
+import { RelatedServices } from "../components/RelatedServices";
+import { usePageSeo, useBreadcrumbSchema } from "../lib/seo";
 
 const featureIcons = [Store, Gift, Smartphone];
 
@@ -17,6 +18,11 @@ export default function JewelryPage() {
   const { t } = useLanguage();
   const p = t.jewelryPage;
   usePageSeo(p.seoTitle, p.seoDesc);
+  useBreadcrumbSchema([
+    { name: "Inicio", path: "/" },
+    { name: "Servicios", path: "/servicios" },
+    { name: "Bisutería", path: "/bisuteria" },
+  ]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -156,6 +162,7 @@ export default function JewelryPage() {
             </div>
           </section>
         </ServicePageLayout>
+        <RelatedServices exclude="jewelry" />
       </main>
       <Footer />
       <WhatsAppButton />

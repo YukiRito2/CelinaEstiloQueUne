@@ -19,7 +19,8 @@ import { WhatsAppButton } from "../components/WhatsAppButton";
 import { TravelForm } from "../components/TravelForm";
 import { BackButton } from "../components/BackButton";
 import { Reveal, MaskedLine } from "../components/Reveal";
-import { usePageSeo } from "../lib/seo";
+import { RelatedServices } from "../components/RelatedServices";
+import { usePageSeo, useBreadcrumbSchema } from "../lib/seo";
 
 const serviceIcons = [Plane, Hotel, Globe2, Backpack];
 
@@ -27,6 +28,11 @@ export default function TravelPage() {
   const { t } = useLanguage();
   const tp = t.travelPage;
   usePageSeo(tp.seoTitle, tp.seoDesc);
+  useBreadcrumbSchema([
+    { name: "Inicio", path: "/" },
+    { name: "Servicios", path: "/servicios" },
+    { name: "Viajes", path: "/viajes" },
+  ]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -288,6 +294,7 @@ export default function TravelPage() {
             </Reveal>
           </div>
         </section>
+        <RelatedServices exclude="travel" />
       </main>
       <Footer />
       <WhatsAppButton />

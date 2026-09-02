@@ -9,7 +9,8 @@ import { Footer } from "../components/Footer";
 import { WhatsAppButton } from "../components/WhatsAppButton";
 import { ServicePageLayout } from "../components/ServicePageLayout";
 import { Reveal } from "../components/Reveal";
-import { usePageSeo } from "../lib/seo";
+import { RelatedServices } from "../components/RelatedServices";
+import { usePageSeo, useBreadcrumbSchema } from "../lib/seo";
 
 const featureIcons = [Clock3, Send, FileText];
 
@@ -17,6 +18,11 @@ export default function DocumentsPage() {
   const { t } = useLanguage();
   const p = t.documentsPage;
   usePageSeo(p.seoTitle, p.seoDesc);
+  useBreadcrumbSchema([
+    { name: "Inicio", path: "/" },
+    { name: "Servicios", path: "/servicios" },
+    { name: "CV y documentos", path: "/documentos" },
+  ]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -116,6 +122,7 @@ export default function DocumentsPage() {
             </div>
           </section>
         </ServicePageLayout>
+        <RelatedServices exclude="documents" />
       </main>
       <Footer />
       <WhatsAppButton />
