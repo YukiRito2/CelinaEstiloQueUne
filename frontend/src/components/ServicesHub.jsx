@@ -118,10 +118,10 @@ const ServiceCard = ({ s, m, index, externalHint }) => {
         >
           {m.num}
         </span>
+        {/* Solo decorativo: no es un boton, por eso sin fondo tipo pastilla (para no confundirse con el CTA real) */}
         <span
-          className={`absolute top-4 right-4 inline-flex w-11 h-11 rounded-2xl items-center justify-center backdrop-blur bg-white/90 transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6 ${
-            m.dark ? "text-[#7C5CD6]" : m.iconBox.split(" ")[1]
-          }`}
+          className="absolute top-4 right-4 inline-flex items-center justify-center text-white drop-shadow-[0_1px_4px_rgba(0,0,0,0.45)]"
+          aria-hidden="true"
         >
           <Icon className="w-5 h-5" />
         </span>
@@ -153,7 +153,7 @@ const ServiceCard = ({ s, m, index, externalHint }) => {
 
         <div className="mt-auto pt-6">
           <span
-            className={`inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full font-semibold px-6 py-3.5 text-sm transition-all duration-300 group-hover:gap-3 ${m.ctaBtn}`}
+            className={`inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full font-semibold px-6 py-3.5 text-sm shadow-md transition-all duration-300 group-hover:gap-3 group-hover:shadow-lg ${m.ctaBtn}`}
             data-testid={`service-card-${s.id}-cta`}
           >
             {s.cta}

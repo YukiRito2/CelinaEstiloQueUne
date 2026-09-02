@@ -20,6 +20,7 @@ export const translations = {
       ],
       whatsapp: "Hablar por WhatsApp",
       openMenu: "Abrir menú",
+      menuLabel: "Menú",
       closeMenu: "Cerrar menú",
     },
     hero: {
@@ -435,6 +436,7 @@ export const translations = {
       ],
       whatsapp: "Parlar per WhatsApp",
       openMenu: "Obrir el menú",
+      menuLabel: "Menú",
       closeMenu: "Tancar el menú",
     },
     hero: {
@@ -850,6 +852,7 @@ export const translations = {
       ],
       whatsapp: "Chat on WhatsApp",
       openMenu: "Open menu",
+      menuLabel: "Menu",
       closeMenu: "Close menu",
     },
     hero: {

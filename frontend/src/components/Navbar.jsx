@@ -158,14 +158,15 @@ export const Navbar = () => {
             <LangSwitch />
             <button
               ref={menuBtnRef}
-              className="inline-flex items-center justify-center w-11 h-11 rounded-full text-[#1E2430]"
+              className="inline-flex items-center gap-1.5 h-11 pl-3.5 pr-4 rounded-full bg-[#1E2430] text-white shadow-md shadow-[#1E2430]/20 active:scale-[0.97] transition-transform"
               onClick={() => setOpen(true)}
               aria-label={t.nav.openMenu}
               aria-expanded={open}
               aria-controls="mobile-menu"
               data-testid="nav-menu-open-button"
             >
-              <Menu className="w-6 h-6" />
+              <Menu className="w-5 h-5" />
+              <span className="text-sm font-semibold">{t.nav.menuLabel}</span>
             </button>
           </div>
         </nav>
