@@ -1,10 +1,13 @@
-import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { useLocation } from "react-router-dom";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { waLink } from "../lib/whatsapp";
 import { trackEvent } from "../lib/analytics";
 import { useLanguage } from "../context/LanguageContext";
+
+const FOCUSABLE_SELECTOR =
+  'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
 
 const LangSwitch = ({ className = "" }) => {
   const { lang, setLang } = useLanguage();
@@ -39,12 +42,56 @@ export const Navbar = () => {
   const [open, setOpen] = useState(false);
   const { t } = useLanguage();
   const { pathname } = useLocation();
+  const reduceMotion = useReducedMotion();
+  const menuBtnRef = useRef(null);
+  const closeBtnRef = useRef(null);
+  const panelRef = useRef(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // Cierra el menú si cambia de ruta (evita quedar abierto tras navegar)
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
+  // Bloquea el scroll del body y mueve el foco al abrir; lo devuelve al cerrar
+  useEffect(() => {
+    if (!open) return;
+    const triggerEl = menuBtnRef.current;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    closeBtnRef.current?.focus();
+
+    const onKeyDown = (e) => {
+      if (e.key === "Escape") {
+        setOpen(false);
+        return;
+      }
+      if (e.key !== "Tab" || !panelRef.current) return;
+      const focusable = panelRef.current.querySelectorAll(FOCUSABLE_SELECTOR);
+      if (focusable.length === 0) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
+    document.addEventListener("keydown", onKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", onKeyDown);
+      triggerEl?.focus();
+    };
+  }, [open]);
 
   return (
     <>
@@ -110,9 +157,12 @@ export const Navbar = () => {
           <div className="lg:hidden flex items-center gap-3">
             <LangSwitch />
             <button
+              ref={menuBtnRef}
               className="inline-flex items-center justify-center w-11 h-11 rounded-full text-[#1E2430]"
               onClick={() => setOpen(true)}
               aria-label={t.nav.openMenu}
+              aria-expanded={open}
+              aria-controls="mobile-menu"
               data-testid="nav-menu-open-button"
             >
               <Menu className="w-6 h-6" />
@@ -124,16 +174,22 @@ export const Navbar = () => {
       <AnimatePresence>
         {open && (
           <motion.div
+            ref={panelRef}
+            id="mobile-menu"
+            role="dialog"
+            aria-modal="true"
+            aria-label={t.nav.openMenu}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-[60] bg-[#26232E] text-white flex flex-col"
+            transition={{ duration: reduceMotion ? 0 : 0.3 }}
+            className="fixed inset-0 z-[60] bg-[#26232E] text-white flex flex-col overflow-y-auto overscroll-contain pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)] pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)]"
             data-testid="mobile-menu"
           >
-            <div className="h-16 px-4 flex items-center justify-between">
+            <div className="h-16 px-4 flex items-center justify-between shrink-0">
               <span className="font-display text-2xl">CELINA</span>
               <button
+                ref={closeBtnRef}
                 className="w-11 h-11 inline-flex items-center justify-center"
                 onClick={() => setOpen(false)}
                 aria-label={t.nav.closeMenu}
@@ -142,7 +198,7 @@ export const Navbar = () => {
                 <X className="w-6 h-6" />
               </button>
             </div>
-            <nav className="flex-1 flex flex-col justify-center px-8 gap-2">
+            <nav className="flex-1 flex flex-col justify-center px-8 gap-2 py-6">
               {t.nav.links.map((l, i) => {
                 const active = pathname === l.href;
                 return (
@@ -151,9 +207,9 @@ export const Navbar = () => {
                     href={l.href}
                     onClick={() => setOpen(false)}
                     aria-current={active ? "page" : undefined}
-                    initial={{ opacity: 0, x: -24 }}
+                    initial={{ opacity: 0, x: reduceMotion ? 0 : -24 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.08 * i, duration: 0.5 }}
+                    transition={{ delay: reduceMotion ? 0 : 0.08 * i, duration: reduceMotion ? 0 : 0.5 }}
                     className={`font-display text-4xl py-3 border-b border-white/10 transition-colors flex items-center gap-3 ${
                       active ? "text-[#D99776]" : "hover:text-[#D99776]"
                     }`}
@@ -165,7 +221,7 @@ export const Navbar = () => {
                 );
               })}
             </nav>
-            <div className="p-8">
+            <div className="p-8 shrink-0">
               <a
                 href={waLink(t.messages.general)}
                 target="_blank"
