@@ -155,3 +155,21 @@ Web principal moderna y orientada a conversión para Celina (La Seu d'Urgell). F
 - P1: Añadir Facebook/TikTok cuando existan.
 - P2: ~~Versión en catalán~~ (hecho: selector ES/CAT). Valorar versión en inglés.
 - P2: Formulario de contacto con envío a email (además de WhatsApp).
+
+## Actualización 2026-06 (Servicio Fibra óptica + telefonía móvil, Nasertel)
+- Nuevo servicio "Fibra óptica y telefonía móvil para empresas" en colaboración con Nasertel (nasertel.es, distribuidor telecom desde 2011). Celina capta el lead; Nasertel gestiona la contratación. Fibra y móvil (Simyo, MasMóvil, Jazztel, Pepephone) conviven en UNA sola página /fibra-optica como dos secciones separadas.
+- Archivos: site.js (links.fiber, links.fiberPartner, whatsappMessages.fiber/mobile, images.fiber, images.partners.nasertel=null con TODO logo); i18n.js (es/ca/en: services.cards id "fiber", bloque fiberPage completo con features/faq/facts/mobile/partner, messages.fiber/mobile); ServicesHub.jsx (meta.fiber, icono Wifi, paleta teal #0E7C86, card full-width); ServicePageLayout.jsx (nuevo theme "teal"); pages/FiberPage.jsx (nueva, patrón DocumentsPage); App.js (ruta lazy /fibra-optica); RelatedServices.jsx (href fiber); seo.js (nuevo hook useFaqSchema → FAQPage JSON-LD); scripts/generate-static-snapshots.mjs + public/sitemap.xml (ruta añadida para SEO/prerender).
+- CTA principal (fibra y móvil) capta lead por WhatsApp hacia Celina; nasertel.es queda como referencia secundaria de confianza (target _blank). Logo Nasertel: badge de texto provisional hasta recibir el PNG.
+- Grid home: 4 tarjetas media anchura (envíos, viajes, bisutería, documentos) + 2 a ancho completo (Celina Studio 05, Fibra 06) para evitar hueco visual. No se tocó ningún servicio existente.
+- data-testid nuevos: service-card-fiber, fiber-page-features/faq/facts/mobile/partner/visit, fiber-page-mobile-whatsapp-btn (evento mobile_whatsapp_click), fiber-page-partner-link (evento nasertel_click), fiber-page-whatsapp-btn (evento fiber_whatsapp_click).
+- Verificado: yarn build compila limpio y genera 12 snapshots (incl. /fibra-optica); FiberPage renderiza correctamente (hero teal + todas las secciones en DOM); home/servicios renderizan las tarjetas. NOTA: el preview de Emergent en modo dev NO renderiza rutas con code-splitting (lazy) al abrirlas directamente — afecta por igual a /viajes y /documentos (páginas previas intactas); en el build de producción/Vercel funciona con normalidad.
+
+## Actualización 2026-06 (Tarifas Simyo y Jazztel en /fibra-optica)
+- Añadida sección de tarifas con pestañas (Tabs shadcn) Simyo / Jazztel dentro de FiberPage, tras la sección de móvil y antes del bloque partner.
+- Datos en nuevo `config/tariffs.js` (neutros: precios/GB/Mb); etiquetas traducibles en `i18n.fiberPage.tariffs` (es/ca/en). Componente `components/TariffTables.jsx` (compone nombres de plan según idioma, precio + /mes|/mo, chips de etiqueta, notas por grupo, WhatsApp por plan con evento `tariff_whatsapp_click` y `tariff_tab`).
+- Simyo: badge "Prepago y contrato"; grupos Solo móvil (15/50/100/300GB), Fibra+Móvil (600Mb/1Gb × 100/150GB), Solo fibra (500Mb/1Gb), Líneas adicionales, Fibra segunda residencia. Jazztel: badge "Solo contrato"; Fibra+Móvil (con +8€ para 1Gb), Solo fibra (600Mb 19,95 / 1Gb 30,95), Líneas adicionales, TV y extras (Disney+/Netflix/Prime·HBO/Orange TV Libre, +3€ llamadas). MasMóvil y Pepephone: nota "consúltanos" (sin tarifas facilitadas aún).
+- Disclaimer de precios orientativos. data-testid: fiber-page-tariffs, tariff-tab-{op}, tariff-item-{op}-{grupo}-{i}, tariff-cta-*, tariff-disclaimer.
+- Verificado: yarn build compila limpio (12 snapshots); sección presente en DOM. (Preview dev no renderiza rutas lazy en carga directa; verificado con import eager temporal.)
+
+## Actualización 2026-06 (Filtro rápido de tarifas)
+- Chips de filtro sobre las tarifas: Todas / Fibra+Móvil / Solo fibra / Solo móvil (i18n es/ca/en en fiberPage.tariffs.filters). Cada grupo tiene `kind` en config/tariffs.js (mobile|combo|fiber|extras); "extras" (Jazztel TV) solo visible en "Todas". Estado local en TariffTables, evento tariff_filter. data-testid: tariff-filters, tariff-filter-{all|combo|fiber|mobile}. Build OK.

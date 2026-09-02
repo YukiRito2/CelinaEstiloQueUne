@@ -55,3 +55,32 @@ export const useBreadcrumbSchema = (items) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [key]);
 };
+
+// Inyecta un FAQPage (JSON-LD) para las preguntas del acordeón de la página.
+// items: [{ question, answer }, ...]
+export const useFaqSchema = (items) => {
+  const key = JSON.stringify(items);
+  useEffect(() => {
+    const data = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: items.map((it) => ({
+        "@type": "Question",
+        name: it.question,
+        acceptedAnswer: { "@type": "Answer", text: it.answer },
+      })),
+    };
+
+    let script = document.getElementById("faq-schema");
+    if (!script) {
+      script = document.createElement("script");
+      script.type = "application/ld+json";
+      script.id = "faq-schema";
+      document.head.appendChild(script);
+    }
+    script.textContent = JSON.stringify(data);
+
+    return () => script?.remove();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [key]);
+};

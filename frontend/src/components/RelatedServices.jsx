@@ -8,6 +8,7 @@ const hrefs = {
   travel: site.links.travel,
   jewelry: site.links.jewelry,
   documents: site.links.documents,
+  fiber: site.links.fiber,
 };
 
 // Enlaces internos a los demás servicios, para no dejar cada

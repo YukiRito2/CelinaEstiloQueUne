@@ -64,6 +64,8 @@ export const site = {
     documents: "/documentos",
     documentsForm: "https://cv.celinaestiloqueune.com/",
     studio: "https://studio.celinaestiloqueune.com/",
+    fiber: "/fibra-optica",
+    fiberPartner: "https://nasertel.es",
   },
 
   whatsappMessages: {
@@ -72,6 +74,8 @@ export const site = {
     travel: "Hola, quiero información sobre un viaje.",
     jewelry: "Hola, quiero información sobre un producto de bisutería.",
     studio: "Hola, quiero información sobre una página web para mi negocio.",
+    fiber: "Hola, quiero información sobre fibra óptica para mi empresa.",
+    mobile: "Hola, quiero información sobre líneas de telefonía móvil.",
   },
 
   images: {
@@ -89,11 +93,14 @@ export const site = {
     ],
     studio: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&q=80&fm=auto",
     documents: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80&fm=auto",
+    fiber: "https://images.unsplash.com/photo-1604869515882-4d10fa4b0492?crop=entropy&cs=srgb&fm=auto&w=1200&q=85",
     partners: {
       ria: "/ria-Biw3tYS-.png",
       westernUnion: "/westernUnion-CJWZ6tgq.png",
       transfast: "/transfast-logo.png",
       moneygram: "/moneygram.png",
+      // TODO: sustituir por el logo real de Nasertel en PNG (placeholder de texto por ahora)
+      nasertel: null,
     },
     jewelry: [
       "https://images.unsplash.com/photo-1585960622850-ed33c41d6418?crop=entropy&cs=srgb&fm=auto&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjBnb2xkJTIwamV3ZWxyeSUyMG1vZGVsJTIwd29tYW58ZW58MHx8fHwxNzgzOTgwMDc0fDA&ixlib=rb-4.1.0&q=85",

@@ -36,6 +36,16 @@ const themes = {
     primaryBtn: "bg-[#E2D4F0] hover:bg-white text-[#2B2638]",
     alt: "text-[#25D366]",
   },
+  teal: {
+    bg: "bg-[#E9F6F6]",
+    accent: "text-[#0E7C86]",
+    subtitle: "text-[#475569]",
+    title: "text-[#1E2430]",
+    orb1: "bg-[#CFEDED]",
+    orb2: "bg-[#D8E8FD]",
+    primaryBtn: "bg-[#0E7C86] hover:bg-[#0B6870] text-white",
+    alt: "text-[#128C7E]",
+  },
 };
 
 // Layout común de las páginas de servicio: botón volver + hero temático + CTAs + contenido

@@ -99,6 +99,13 @@ const routes = [
     intro: es.documentsPage.subtitle,
   },
   {
+    path: "/fibra-optica",
+    title: es.fiberPage.seoTitle,
+    description: es.fiberPage.seoDesc,
+    h1: es.fiberPage.title,
+    intro: es.fiberPage.subtitle,
+  },
+  {
     path: "/sobre-celina",
     title: es.pagesSeo.about.title,
     description: es.pagesSeo.about.desc,

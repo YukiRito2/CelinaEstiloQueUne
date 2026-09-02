@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, ArrowUpRight, Banknote, Plane, Gem, FileText, MonitorSmartphone } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Banknote, Plane, Gem, FileText, MonitorSmartphone, Wifi } from "lucide-react";
 import { site } from "../config/site";
 import { trackEvent } from "../lib/analytics";
 import { useLanguage } from "../context/LanguageContext";
@@ -86,6 +86,22 @@ const meta = {
     chip: "",
     shadow: "hover:shadow-black/40",
     dark: true,
+  },
+  fiber: {
+    num: "06",
+    icon: Wifi,
+    href: site.links.fiber,
+    event: "fiber_click",
+    span: "md:col-span-12",
+    image: site.images.fiber,
+    blend: "from-[#E9F6F6]",
+    card: "bg-[#E9F6F6] border-[#BFE6E6]",
+    tag: "bg-[#0E7C86] text-white",
+    iconBox: "bg-[#CFEDED] text-[#0E7C86]",
+    ctaBtn: "bg-[#0E7C86] hover:bg-[#0B6870] text-white",
+    chip: "bg-white/70 border-[#BFE6E6] text-[#0B5158]",
+    shadow: "hover:shadow-[#0E7C86]/15",
+    dark: false,
   },
 };
 
