@@ -1,0 +1,241 @@
+{
+  "project_name": "CELINA — ESTILO QUE UNE (Hero Banner Concept Awwwards Level)",
+  "archetype": "EUROPEAN_PASTEL_BOUTIQUE_3D",
+  "description": "Concepto de Hero Banner de nivel Awwwards para CELINA en La Seu d'Urgell, que une visualmente sus 4 servicios principales (Envíos de Dinero Ria/Western Union, Agencia de Viajes, Joyería de Autor y Celina Studio Marketing) a través de una constelación orbital 3D interactiva, arcos de conexión dinámicos y física de puntero.",
+  "user_customizations": {
+    "color_preference": "Pastel System Respetado: Crema #FAF7F2, Menta #EEF7F2, Celeste #F0F6FF, Rosa Empolvado #FDF2F0, Lavanda Oscuro #2B2638, Terracota #C88463, WhatsApp Green #25D366 e Tinta #1E2430.",
+    "hero_banner": "Hero Banner Ultra-Impactante — Constelación de 4 nodos interconectados con profundidades Z (3D tilt por framer-motion), líneas de arcos dinámicos SVG con pulsos de luz viajando entre servicios, tarjetas de cristal flotantes con imágenes reales del catálogo y CTAs prominentes.",
+    "whatsapp_brand_identity": "Verde WhatsApp (#25D366) hiper-destacado con badge interactivo de atención inmediata.",
+    "language": "Trilingüe ES / CA / EN con soporte para comarca de l'Alt Urgell y Andorra."
+  },
+  "color_palette": {
+    "page_background": "#FAF7F2",
+    "page_background_secondary": "#F5EFE6",
+    "ink_primary": "#1E2430",
+    "ink_secondary": "#475569",
+    "ink_muted": "#78869A",
+    "border_pastel": "rgba(30, 36, 48, 0.08)",
+    "border_pastel_accent": "rgba(217, 119, 6, 0.2)",
+    "primary_pastel_cta": "#D99776",
+    "primary_pastel_cta_hover": "#C88463",
+    "whatsapp_green": "#25D366",
+    "whatsapp_green_hover": "#20BD5A",
+    "whatsapp_green_subtle": "rgba(37, 211, 102, 0.12)",
+    "services_pastel_map": {
+      "money_transfers": {
+        "bg_surface": "#EEF7F2",
+        "border": "#C2E8D2",
+        "accent": "#2D7A54",
+        "pill": "#D3EEDD",
+        "badge_text": "#1E5238",
+        "tag": "Ria & Western Union — Envíos Seguros"
+      },
+      "travel_agency": {
+        "bg_surface": "#F0F6FF",
+        "border": "#C7E0FE",
+        "accent": "#2B6CB0",
+        "pill": "#D8E8FD",
+        "badge_text": "#1A497A",
+        "tag": "Vuelos & Paquetes Internacionales"
+      },
+      "jewelry_bisuteria": {
+        "bg_surface": "#FDF2F0",
+        "border": "#F7D8D3",
+        "accent": "#C47B62",
+        "pill": "#FBE3DF",
+        "badge_text": "#874B38",
+        "tag": "Joyería & Bisutería de Autor"
+      },
+      "celina_studio": {
+        "bg_surface": "#2B2638",
+        "bg_surface_card": "#363046",
+        "border": "rgba(226, 207, 248, 0.15)",
+        "accent": "#E2D4F0",
+        "accent_glow": "#A78BFA",
+        "ink_primary": "#F8F5FC",
+        "ink_secondary": "#C8C2DB",
+        "tag": "Estudio Digital & Marketing"
+      }
+    }
+  },
+  "hero_concept_specification": {
+    "concept_name": "LA CONSTELACIÓN DE CONEXIÓN (Estilo que Une 4-Service Orbital Web)",
+    "creative_direction": "Representar físicamente el lema 'Estilo que Une' transformando el lado derecho del hero en un escenario 3D donde la elegancia central (Joyería/Retrato) orbita en equilibrio con los otros 3 servicios clave (Giros de dinero, Viajes y Studio Digital), enlazados mediante arcos de luz SVG en movimiento continuo.",
+    "tech_stack": "Framer Motion (Tilt physics & MotionValues) + SVG Connection Mesh + CSS preserve-3d / perspective",
+    "desktop_layout_grid": {
+      "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-8 items-center min-h-[90vh]",
+      "left_column": "lg:col-span-6 z-10 space-y-6",
+      "right_column": "lg:col-span-6 relative perspective-[1400px] h-[580px] flex items-center justify-center"
+    },
+    "mobile_layout_fallback": {
+      "behavior": "En dispositivos móviles (<768px), la composición se adapta a una tarjeta principal con slider táctil o cuadrícula limpia 2x2 para preservar rendimiento y jerarquía sin solapar botones CTA de conversión.",
+      "padding_top": "pt-28",
+      "cta_stack": "flex-col w-full gap-3"
+    },
+    "z_depth_layers_composition": [
+      {
+        "layer_id": "layer_0_orbs_and_mesh",
+        "z_index": "-60px",
+        "description": "Gradientes fluidos pasteles animados (Menta #EEF7F2, Rosa #FDF2F0, Celeste #F0F6FF) con desenfoque backdrop-blur-3xl para dar calidez y atmósfera boutique."
+      },
+      {
+        "layer_id": "layer_1_connection_arcs",
+        "z_index": "10px",
+        "description": "Malla SVG con 4 arcos curvados Bézier que unen el nodo central con cada servicio. Cada arco cuenta con un punto de luz animado simulando el flujo constante de dinero, viajes, joyas y código."
+      },
+      {
+        "layer_id": "layer_2_center_jewel_portrait",
+        "z_index": "40px",
+        "dimensions": "w-[260px] sm:w-[300px] aspect-[3/4]",
+        "style": "Rounded-t-full rounded-b-3xl border-2 border-white/80 shadow-2xl overflow-hidden bg-white",
+        "image_source": "site.images.hero (photo-1585960622850-ed33c41d6418 - Joyería de autor & elegancia)",
+        "content": "Imagen principal de modelo con joyería de autor y capa sutil de degradado a la base."
+      },
+      {
+        "layer_id": "layer_3_satellite_money_transfers",
+        "z_index": "110px",
+        "position": "Top-Right (-top-4 -right-2 sm:-right-8)",
+        "dimensions": "px-4 py-3 rounded-2xl max-w-[210px]",
+        "style": "backdrop-blur-xl bg-[#EEF7F2]/95 border border-[#C2E8D2] shadow-xl text-[#1E5238]",
+        "content": "Icono de Giro + Badges de Ria & Western Union + '0% Comisiones Ocultas' + Indicador de estado en verde vivo."
+      },
+      {
+        "layer_id": "layer_4_satellite_travel_agency",
+        "z_index": "85px",
+        "position": "Top-Left (-top-6 -left-4 sm:-left-10)",
+        "dimensions": "w-[170px] rounded-2xl overflow-hidden shadow-xl border border-white/80",
+        "style": "backdrop-blur-md bg-white/90 p-2 text-xs",
+        "image_source": "site.images.travel (photo-1759340875604-84a9d7473b21 - Destino mediterráneo y avión)",
+        "content": "Miniatura foto de destino mediterráneo + Etiqueta 'Vuelos & Paquetes' en Celeste Pastel #F0F6FF."
+      },
+      {
+        "layer_id": "layer_5_satellite_celina_studio",
+        "z_index": "130px",
+        "position": "Bottom-Right (-bottom-6 -right-2 sm:-right-6)",
+        "dimensions": "w-[185px] rounded-2xl p-3 border border-purple-300/30 shadow-2xl",
+        "style": "backdrop-blur-xl bg-[#2B2638]/95 text-[#F8F5FC]",
+        "image_source": "site.images.studio (photo-1779949294758-f2728920623c - Workspace creativo)",
+        "content": "Miniatura workspace studio + Badge 'Celina Studio Web' + Glow púrpura suave."
+      },
+      {
+        "layer_id": "layer_6_location_hub_badge",
+        "z_index": "70px",
+        "position": "Bottom-Left (bottom-2 -left-6 sm:-left-8)",
+        "dimensions": "px-4 py-2.5 rounded-full border border-[#F7D8D3] shadow-lg",
+        "style": "backdrop-blur-xl bg-[#FDF2F0]/95 text-[#874B38] flex items-center gap-2 text-xs font-medium",
+        "content": "Icono MapPin + 'La Seu d'Urgell & Andorra Hub'"
+      }
+    ],
+    "motion_specification": {
+      "entrances": [
+        {"element": "Overline & H1 Typography", "type": "Masked line reveal + Y slide", "duration": "0.8s", "delay": "0.15s"},
+        {"element": "SVG Connection Arcs", "type": "Stroke pathLength draw (0 to 1)", "duration": "1.2s", "delay": "0.3s"},
+        {"element": "Center Portrait Card", "type": "Scale up with spring physics (0.88 to 1.0)", "duration": "1.0s", "delay": "0.4s"},
+        {"element": "Satellite Cards (4 Nodos)", "type": "Staggered pop & Z-translate fade in", "duration": "0.6s", "delay": "0.6s to 1.0s"}
+      ],
+      "floating_idle_physics": {
+        "description": "Cada nodo satélite posee una fluctuación flotante armónica independiente para simular gravedad cero boutique.",
+        "nodes": [
+          {"id": "money_card", "keyframes_y": [-8, 8, -8], "duration": "4.2s"},
+          {"id": "travel_card", "keyframes_y": [6, -10, 6], "duration": "5.0s"},
+          {"id": "studio_card", "keyframes_y": [-10, 6, -10], "duration": "4.6s"},
+          {"id": "location_badge", "keyframes_y": [4, -6, 4], "duration": "3.8s"}
+        ]
+      },
+      "tilt_gyro_engine": {
+        "max_rotate_x": "±14deg",
+        "max_rotate_y": "±18deg",
+        "spring_config": {"stiffness": 190, "damping": 28},
+        "cursor_leave": "Reseteo suave a (0, 0) con amortiguación natural"
+      }
+    }
+  },
+  "typography": {
+    "heading_font": "Cormorant Garamond, Serif, Playfair Display",
+    "body_font": "Plus Jakarta Sans, sans-serif",
+    "mono_font": "JetBrains Mono, monospace",
+    "scale": {
+      "hero_title": "text-4xl sm:text-6xl lg:text-7xl font-light tracking-tight leading-[1.05] text-[#1E2430]",
+      "section_title": "text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight leading-tight text-[#1E2430]",
+      "card_title": "text-xl sm:text-2xl font-normal tracking-tight text-[#1E2430]",
+      "subtitle": "text-base sm:text-lg font-light text-[#475569] leading-relaxed",
+      "overline": "text-xs uppercase tracking-[0.25em] font-medium text-[#C88463]"
+    }
+  },
+  "visual_enhancers": {
+    "glassmorphism_pastel": "backdrop-blur-xl bg-white/75 border border-white/80 shadow-lg shadow-slate-900/5",
+    "glassmorphism_studio": "backdrop-blur-xl bg-[#363046]/80 border border-purple-300/20 shadow-2xl shadow-black/30",
+    "card_hover_effect": "transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-slate-900/8",
+    "editorial_marquee": "Cinta continua sutil en tono crema suave #F5EFE6 con tipografía serif y micro-iconos de servicios celestes, dorados y verdes."
+  },
+  "image_urls": {
+    "hero_lifestyle": {
+      "url": "https://images.unsplash.com/photo-1585960622850-ed33c41d6418?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjBnb2xkJTIwamV3ZWxyeSUyMG1vZGVsJTIwd29tYW58ZW58MHx8fHwxNzgzOTgwMDc0fDA&ixlib=rb-4.1.0&q=85",
+      "placement": "Hero 3D Section - Main visual portrait overlay (Joyería & Estilo)",
+      "alt": "Celina Estilo - Elegancia y Conexión en La Seu d'Urgell"
+    },
+    "jewelry_featured": [
+      {
+        "url": "https://images.unsplash.com/photo-1585960622850-ed33c41d6418?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjBnb2xkJTIwamV3ZWxyeSUyMG1vZGVsJTIwd29tYW58ZW58MHx8fHwxNzgzOTgwMDc0fDA&ixlib=rb-4.1.0&q=85",
+        "title": "Collares Finos & Medallas",
+        "category": "Collares",
+        "price": "Desde €24.90"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1633934542430-0905ccb5f050?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBnb2xkJTIwamV3ZWxyeSUyMG1vZGVsJTIwd29tYW58ZW58MHx8fHwxNzgzOTgwMDc0fDA&ixlib=rb-4.1.0&q=85",
+        "title": "Pulseras Bañadas en Oro",
+        "category": "Pulseras",
+        "price": "Desde €19.90"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1620656798579-1984d9e87df7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwzfHxsdXh1cnklMjBnb2xkJTIwamV3ZWxyeSUyMG1vZGVsJTIwd29tYW58ZW58MHx8fHwxNzgzOTgwMDc0fDA&ixlib=rb-4.1.0&q=85",
+        "title": "Anillos Escultóricos & Circones",
+        "category": "Anillos",
+        "price": "Desde €18.50"
+      }
+    ],
+    "travel_showcase": {
+      "url": "https://images.unsplash.com/photo-1759340875604-84a9d7473b21?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwzfHxtZWRpdGVycmFuZWFuJTIwdHJhdmVsJTIwZmxpZ2h0JTIwYWlycGxhbmUlMjB3YW5kZXJsdXN0JTIwYmVhY2glMjBkZXN0aW5hdGlvbnxlbnwwfHx8fDE3ODgxOTU0Mjl8MA&ixlib=rb-4.1.0&q=85",
+      "placement": "Travel Section Card Showcase & Hero Satellite Node",
+      "alt": "Vuelos y Destinos Internacionales Celina Viajes"
+    },
+    "studio_showcase": {
+      "url": "https://images.unsplash.com/photo-1779949294758-f2728920623c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w8NjAzMjV8MHwxfHNlYXJjaHwxfHxwYXN0ZWwlMjB3YXJtJTIwYWVzdGhldGljJTIwZGlnaXRhbCUyMGNyZWF0aXZlJTIwc3R1ZGlvJTIwd29ya3NwYWNlfGVufDB8fHx8MTc4ODE5NjMyNnww&ixlib=rb-4.1.0&q=85",
+      "placement": "Celina Studio Digital Workspace & Hero Satellite Node",
+      "alt": "Diseño Web y Marketing Digital Celina Studio"
+    },
+    "location_pyrenees": {
+      "url": "https://images.unsplash.com/photo-1604863046148-917557d161fe?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwxfHxtZWRpdGVycmFuZWFuJTIwdHJhdmVsJTIwZGVzdGluYXRpb24lMjBweXJlbmVlcyUyMHN1bnxlbnwwfHx8fDE3ODgxOTYzMjZ8MA&ixlib=rb-4.1.0&q=85",
+      "placement": "Location Section — La Seu d'Urgell Town Visual",
+      "alt": "La Seu d'Urgell — Pirineus i Alt Urgell"
+    }
+  },
+  "testing_attributes": {
+    "rule": "All interactive elements, buttons, cards, links, tabs, and form inputs must have descriptive data-testid attributes in kebab-case.",
+    "examples": [
+      "data-testid=\"nav-whatsapp-button\"",
+      "data-testid=\"hero-explore-services-btn\"",
+      "data-testid=\"hero-3d-tilt-card\"",
+      "data-testid=\"hero-satellite-money-card\"",
+      "data-testid=\"hero-satellite-travel-card\"",
+      "data-testid=\"hero-satellite-studio-card\"",
+      "data-testid=\"hero-satellite-location-badge\"",
+      "data-testid=\"service-card-transfers\"",
+      "data-testid=\"service-card-travel\"",
+      "data-testid=\"service-card-jewelry\"",
+      "data-testid=\"service-card-studio\"",
+      "data-testid=\"transfer-calculator-amount-input\"",
+      "data-testid=\"jewelry-tab-collares\"",
+      "data-testid=\"studio-request-audit-btn\"",
+      "data-testid=\"contact-option-whatsapp-transfers\"",
+      "data-testid=\"floating-whatsapp-fab\""
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Verify that /app/design_guidelines.json contains the new 'LA CONSTELACIÓN DE CONEXIÓN' Hero Banner specification.",
+    "Implement the 4 satellite service nodes surrounding the central portrait with Framer Motion Z-depth parallax and individual floating physics.",
+    "Add animated SVG connection arcs with glowing light points traveling between the core and each satellite card.",
+    "Ensure total compatibility on mobile viewports with an adaptive vertical stack and non-overlapping CTAs.",
+    "Preserve data-testid attributes across all elements."
+  ]
+}
