@@ -44,6 +44,16 @@ export const TariffTables = () => {
   const L = t.fiberPage.tariffs;
   const [filter, setFilter] = useState("all");
 
+  const recommendedPlans = tariffs
+    .map((op) => {
+      for (const group of op.groups) {
+        const it = group.items.find((x) => x.recommended);
+        if (it) return { op, group, it };
+      }
+      return null;
+    })
+    .filter(Boolean);
+
   const filterKeys = ["all", "combo", "fiber", "mobile"];
   const matchFilter = (group) => (filter === "all" ? true : group.kind === filter);
 
@@ -55,6 +65,65 @@ export const TariffTables = () => {
           <h2 className="font-display text-3xl sm:text-4xl font-light tracking-tight text-[#1E2430]">{L.title}</h2>
           <p className="mt-4 max-w-2xl text-sm sm:text-base font-light text-[#475569] leading-relaxed">{L.subtitle}</p>
         </Reveal>
+
+        {recommendedPlans.length > 0 && (
+          <Reveal delay={0.05}>
+            <div className="mt-10" data-testid="tariff-compare">
+              <p className="font-mono-brand text-[10px] tracking-[0.2em] uppercase text-[#0E7C86] mb-4">
+                {L.compareTitle}
+              </p>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {recommendedPlans.map(({ op, group, it }) => {
+                  const name = composeName(group, it, L);
+                  const sub = subLabel(group, it, L);
+                  const msg = `${L.cta}: ${op.name} — ${name}${sub ? ` (${sub})` : ""} · ${priceText(it, L)}`;
+                  return (
+                    <div
+                      key={op.id}
+                      data-testid={`tariff-compare-${op.id}`}
+                      className="relative rounded-3xl bg-white border-2 border-[#0E7C86] p-6 flex flex-col shadow-md shadow-[#0E7C86]/10"
+                    >
+                      <div className="flex items-center justify-between gap-3">
+                        <span className="font-display text-xl font-semibold" style={{ color: op.accent }}>
+                          {op.name}
+                        </span>
+                        <span className="inline-flex items-center gap-1 font-mono-brand text-[9px] tracking-[0.12em] uppercase px-2.5 py-1 rounded-full bg-[#0E7C86] text-white">
+                          <Star className="w-3 h-3" fill="currentColor" />
+                          {L.recommended}
+                        </span>
+                      </div>
+                      <p className="mt-4 text-sm font-semibold text-[#1E2430] leading-snug">{name}</p>
+                      {sub && <p className="mt-1 text-xs font-light text-[#64748B] leading-snug">{sub}</p>}
+                      <p className="mt-3 font-display text-3xl font-medium text-[#0E7C86]">
+                        {it.price}
+                        <span className="text-xs font-light text-[#64748B]">{L.perMonth}</span>
+                      </p>
+                      <span className="mt-1 font-mono-brand text-[9px] tracking-[0.12em] uppercase text-[#0B5158]">
+                        {L.badges[op.badgeKey]}
+                      </span>
+                      {L.reasons?.[op.id] && (
+                        <p className="mt-3 text-xs font-light text-[#0B5158] leading-snug">{L.reasons[op.id]}</p>
+                      )}
+                      <a
+                        href={waLink(msg)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() =>
+                          trackEvent("tariff_whatsapp_click", { operator: op.id, plan: name, source: "compare" })
+                        }
+                        data-testid={`tariff-compare-cta-${op.id}`}
+                        className="mt-5 inline-flex items-center justify-center gap-2 rounded-full bg-[#0E7C86] hover:bg-[#0B6870] text-white font-semibold px-6 py-3 text-sm transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] self-start"
+                      >
+                        <MessageCircle className="w-4 h-4" />
+                        {L.cta}
+                      </a>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </Reveal>
+        )}
 
         <Reveal delay={0.05}>
           <div className="mt-8 flex flex-wrap gap-2" data-testid="tariff-filters">

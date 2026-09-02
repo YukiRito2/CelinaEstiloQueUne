@@ -356,6 +356,7 @@ export const translations = {
           jazztel: "Ideal para empezar: fibra rápida con una línea móvil incluida a buen precio.",
         },
         filters: { all: "Todas", fiber: "Solo fibra", combo: "Fibra + Móvil", mobile: "Solo móvil" },
+        compareTitle: "Nuestra recomendación",
         badges: { simyo: "Prepago y contrato", jazztel: "Solo contrato" },
         groups: {
           mobile: "Solo móvil",
@@ -868,6 +869,7 @@ export const translations = {
           jazztel: "Ideal per començar: fibra ràpida amb una línia mòbil inclosa a bon preu.",
         },
         filters: { all: "Totes", fiber: "Només fibra", combo: "Fibra + Mòbil", mobile: "Només mòbil" },
+        compareTitle: "La nostra recomanació",
         badges: { simyo: "Prepagament i contracte", jazztel: "Només contracte" },
         groups: {
           mobile: "Només mòbil",
@@ -1380,6 +1382,7 @@ export const translations = {
           jazztel: "Great to start: fast fiber with a mobile line included at a good price.",
         },
         filters: { all: "All", fiber: "Fiber only", combo: "Fiber + Mobile", mobile: "Mobile only" },
+        compareTitle: "Our recommendation",
         badges: { simyo: "Prepaid & contract", jazztel: "Contract only" },
         groups: {
           mobile: "Mobile only",
