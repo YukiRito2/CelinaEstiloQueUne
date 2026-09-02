@@ -14,7 +14,7 @@ const meta = [
     testid: "contact-option-transfers",
     card: "bg-[#EEF7F2] border-[#C2E8D2] hover:border-[#2D7A54]/40",
     iconBox: "bg-[#D3EEDD] text-[#2D7A54]",
-    cta: "text-[#2D7A54]",
+    ctaBtn: "bg-[#2D7A54] group-hover:bg-[#256646] text-white",
     spot: "rgba(45,122,84,0.20)",
     href: site.links.money,
   },
@@ -24,7 +24,7 @@ const meta = [
     testid: "contact-option-travel",
     card: "bg-[#F0F6FF] border-[#C7E0FE] hover:border-[#2B6CB0]/40",
     iconBox: "bg-[#D8E8FD] text-[#2B6CB0]",
-    cta: "text-[#2B6CB0]",
+    ctaBtn: "bg-[#2B6CB0] group-hover:bg-[#235a94] text-white",
     spot: "rgba(43,108,176,0.18)",
     href: site.links.travel,
   },
@@ -34,7 +34,7 @@ const meta = [
     testid: "contact-option-jewelry",
     card: "bg-[#FDF2F0] border-[#F7D8D3] hover:border-[#C47B62]/40",
     iconBox: "bg-[#FBE3DF] text-[#C47B62]",
-    cta: "text-[#C47B62]",
+    ctaBtn: "bg-[#C47B62] group-hover:bg-[#ac6850] text-white",
     spot: "rgba(196,123,98,0.20)",
     href: site.links.jewelry,
   },
@@ -44,7 +44,7 @@ const meta = [
     testid: "contact-option-documents",
     card: "bg-[#FBF1E6] border-[#EAD2B3] hover:border-[#B8763F]/40",
     iconBox: "bg-[#F3E1C8] text-[#B8763F]",
-    cta: "text-[#B8763F]",
+    ctaBtn: "bg-[#B8763F] group-hover:bg-[#9c632f] text-white",
     spot: "rgba(184,118,63,0.20)",
     href: site.links.documents,
   },
@@ -54,7 +54,7 @@ const meta = [
     testid: "contact-option-studio",
     card: "bg-[#2B2638] border-[#E2D4F0]/15 hover:border-[#A78BFA]/50",
     iconBox: "bg-[#A78BFA]/15 text-[#A78BFA]",
-    cta: "text-[#E2D4F0]",
+    ctaBtn: "bg-[#A78BFA] group-hover:bg-[#c4b5fc] text-[#2B2638]",
     spot: "rgba(167,139,250,0.28)",
     href: site.links.studio,
     external: true,
@@ -129,9 +129,11 @@ const SpotlightCard = ({ o, m, i }) => {
         <h3 className={`font-display text-2xl font-medium ${m.dark ? "text-[#F8F5FC]" : "text-[#1E2430]"}`}>
           {o.title}
         </h3>
-        <span className={`mt-3 inline-flex items-center gap-1.5 text-sm font-semibold ${m.cta}`}>
+        <span
+          className={`mt-4 inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-semibold shadow-sm transition-all duration-300 group-hover:gap-2.5 group-hover:shadow-md ${m.ctaBtn}`}
+        >
           {o.cta}
-          <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+          <ArrowUpRight className="w-4 h-4" />
         </span>
       </div>
     </motion.a>
