@@ -45,7 +45,7 @@ const tint = (hex, alpha = "1A") => `${hex}${alpha}`;
 export const TariffTables = () => {
   const { t } = useLanguage();
   const L = t.fiberPage.tariffs;
-  const [filter, setFilter] = useState("mobile");
+  const [filter, setFilter] = useState("all");
 
   // La tarjeta "recomendada" respeta el filtro activo: si estás viendo
   // "Solo móvil" no tiene sentido destacar una recomendación de combo

@@ -154,6 +154,8 @@ const Constellation = ({ t }) => {
                 <img
                   src={site.images.hero}
                   alt={t.hero.imageAlt}
+                  width="480"
+                  height="640"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="eager"
                   fetchpriority="high"
@@ -201,7 +203,14 @@ const Constellation = ({ t }) => {
             testid="hero-satellite-travel-card"
           >
             <div className="w-[168px] rounded-2xl overflow-hidden border border-white/80 shadow-xl shadow-[#2B6CB0]/15 bg-white/90 backdrop-blur-md">
-              <img src={site.images.travel} alt="" className="h-20 w-full object-cover" loading="lazy" />
+              <img
+                src={site.images.travel}
+                alt={t.hero.nodes.travel}
+                width="168"
+                height="80"
+                className="h-20 w-full object-cover"
+                loading="lazy"
+              />
               <p className="px-3 py-2 text-[11px] font-semibold text-[#1A497A] flex items-center gap-1.5">
                 <Plane className="w-3.5 h-3.5" />
                 {t.hero.nodes.travel}
@@ -222,7 +231,14 @@ const Constellation = ({ t }) => {
             testid="hero-satellite-studio-card"
           >
             <div className="w-[180px] rounded-2xl overflow-hidden border border-[#E2D4F0]/25 shadow-2xl shadow-black/30 bg-[#2B2638]/95 backdrop-blur-xl">
-              <img src={site.images.studio} alt="" className="h-16 w-full object-cover opacity-90" loading="lazy" />
+              <img
+                src={site.images.studio}
+                alt={t.hero.nodes.studio}
+                width="180"
+                height="64"
+                className="h-16 w-full object-cover opacity-90"
+                loading="lazy"
+              />
               <p className="px-3 py-2 text-[11px] font-semibold text-[#E2D4F0] flex items-center gap-1.5">
                 <MonitorSmartphone className="w-3.5 h-3.5" />
                 {t.hero.nodes.studio}
@@ -242,7 +258,14 @@ const Constellation = ({ t }) => {
             testid="hero-satellite-jewelry-card"
           >
             <div className="w-[168px] rounded-2xl overflow-hidden border border-white/80 shadow-xl shadow-[#C47B62]/15 bg-white/90 backdrop-blur-md">
-              <img src={site.images.jewelry[1]} alt="" className="h-20 w-full object-cover" loading="lazy" />
+              <img
+                src={site.images.jewelry[1]}
+                alt={t.hero.nodes.jewelry}
+                width="168"
+                height="80"
+                className="h-20 w-full object-cover"
+                loading="lazy"
+              />
               <p className="px-3 py-2 text-[11px] font-semibold text-[#874B38] flex items-center gap-1.5">
                 <Gem className="w-3.5 h-3.5" />
                 {t.hero.nodes.jewelry}
@@ -319,7 +342,14 @@ const MobileNodes = ({ t }) => (
       className="rounded-2xl overflow-hidden bg-[#F0F6FF] border border-[#C7E0FE]"
       data-testid="hero-mobile-node-travel"
     >
-      <img src={site.images.travel} alt="" className="h-16 w-full object-cover" loading="lazy" />
+      <img
+        src={site.images.travel}
+        alt={t.hero.nodes.travel}
+        width="200"
+        height="64"
+        className="h-16 w-full object-cover"
+        loading="lazy"
+      />
       <p className="p-3 text-xs font-semibold text-[#1A497A]">{t.hero.nodes.travel}</p>
     </motion.a>
     <motion.a
@@ -331,7 +361,14 @@ const MobileNodes = ({ t }) => (
       className="rounded-2xl overflow-hidden bg-[#FDF2F0] border border-[#F7D8D3]"
       data-testid="hero-mobile-node-jewelry"
     >
-      <img src={site.images.hero} alt="" className="h-16 w-full object-cover" loading="lazy" />
+      <img
+        src={site.images.hero}
+        alt={t.services.cards[2].title}
+        width="200"
+        height="64"
+        className="h-16 w-full object-cover"
+        loading="lazy"
+      />
       <p className="p-3 text-xs font-semibold text-[#874B38]">{t.services.cards[2].title}</p>
     </motion.a>
     <motion.a
@@ -345,7 +382,14 @@ const MobileNodes = ({ t }) => (
       className="rounded-2xl overflow-hidden bg-[#2B2638] border border-[#E2D4F0]/20"
       data-testid="hero-mobile-node-studio"
     >
-      <img src={site.images.studio} alt="" className="h-16 w-full object-cover" loading="lazy" />
+      <img
+        src={site.images.studio}
+        alt={t.hero.nodes.studio}
+        width="200"
+        height="64"
+        className="h-16 w-full object-cover"
+        loading="lazy"
+      />
       <div className="p-3 flex items-center gap-1.5">
         <MonitorSmartphone className="w-3.5 h-3.5 text-[#A78BFA] shrink-0" />
         <p className="text-xs font-semibold text-[#E2D4F0]">{t.hero.nodes.studio}</p>

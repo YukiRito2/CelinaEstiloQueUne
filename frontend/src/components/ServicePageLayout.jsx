@@ -172,7 +172,15 @@ export const ServicePageLayout = ({
                 className="relative"
               >
                 <div className="overflow-hidden rounded-t-[9rem] rounded-b-[2rem] border-2 border-white/80 shadow-2xl shadow-[#1E2430]/15 aspect-[4/5] max-w-sm mx-auto bg-white">
-                  <img src={image} alt={imageAlt} className="w-full h-full object-cover" loading="eager" data-testid="service-page-image" />
+                  <img
+                    src={image}
+                    alt={imageAlt}
+                    width="480"
+                    height="600"
+                    className="w-full h-full object-cover"
+                    loading="eager"
+                    data-testid="service-page-image"
+                  />
                 </div>
                 {(imageBadgeOver || imageBadgeSub) && (
                   <motion.div

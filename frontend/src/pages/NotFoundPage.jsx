@@ -37,20 +37,21 @@ export default function NotFoundPage() {
           </div>
 
           <div className="relative text-center max-w-xl">
-            <h1
+            <div
               className="font-display text-[#1E2430] font-light leading-none tracking-tight text-[34vw] sm:text-[12rem]"
               data-testid="not-found-code"
+              aria-hidden="true"
             >
               <MaskedLine delay={0.15}>404</MaskedLine>
-            </h1>
-            <motion.h2
+            </div>
+            <motion.h1
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.45 }}
               className="font-display text-2xl sm:text-3xl font-medium text-[#1E2430] -mt-4 sm:-mt-8"
             >
               {nf.title}
-            </motion.h2>
+            </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}

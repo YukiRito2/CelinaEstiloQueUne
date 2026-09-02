@@ -251,7 +251,7 @@ export const translations = {
       ],
     },
     jewelryPage: {
-      seoTitle: "Tienda de bisutería en La Seu d'Urgell | Celina",
+      seoTitle: "Tienda de bisutería en La Seu d'Urgell | Celina Estilo que Une",
       seoDesc:
         "Bisutería y accesorios en La Seu d'Urgell: collares, pulseras, anillos, aretes y más. Explora el catálogo y reserva por WhatsApp.",
       overline: "Bisutería & estilo",
@@ -268,7 +268,7 @@ export const translations = {
       visitTitle: "Ven a probártelas",
     },
     documentsPage: {
-      seoTitle: "Hacer un CV y documentos | Celina, La Seu d'Urgell",
+      seoTitle: "Hacer un CV y documentos | Celina Estilo que Une, La Seu d'Urgell",
       seoDesc:
         "Preparamos tu CV, cartas de presentación, formularios y cualquier documento en La Seu d'Urgell. Mecanografiado rápido, normalmente en el mismo día.",
       overline: "CV y documentos · La Seu d'Urgell",
@@ -290,7 +290,7 @@ export const translations = {
       visitNote: "Y para cualquier otra cosa que necesites, ¡pásate a vernos!",
     },
     fiberPage: {
-      seoTitle: "Fibra óptica y telefonía móvil para empresas | Celina, La Seu d'Urgell",
+      seoTitle: "Fibra óptica y telefonía móvil para empresas | Celina Estilo que Une",
       seoDesc:
         "Contrata fibra óptica y líneas móviles (Simyo, MasMóvil, Jazztel y Pepephone) para tu empresa en La Seu d'Urgell, de la mano de Nasertel. Conexión rápida, estable y segura.",
       overline: "Móvil y fibra óptica · Empresas",
@@ -402,8 +402,8 @@ export const translations = {
         h1: "Servicios de Celina en La Seu d'Urgell",
       },
       about: {
-        title: "Sobre Celina | Estilo que Une — La Seu d'Urgell",
-        desc: "Celina es más que un local: atención presencial, cercana e internacional en La Seu d'Urgell.",
+        title: "Celina Estilo que Une | Sobre nosotros — La Seu d'Urgell",
+        desc: "Celina Estilo que Une es más que un local: atención presencial, cercana e internacional en La Seu d'Urgell.",
       },
       location: {
         title: "Ubicación y horario | Celina Estilo que Une",
@@ -515,6 +515,7 @@ export const translations = {
         { label: "Viajes", href: "/viajes" },
         { label: "Bisutería", href: "/bisuteria" },
         { label: "CV y documentos", href: "/documentos" },
+        { label: "Fibra óptica y móvil", href: "/fibra-optica" },
         { label: "Contacto", href: "/contacto" },
       ],
       legal: [
@@ -782,7 +783,7 @@ export const translations = {
       ],
     },
     jewelryPage: {
-      seoTitle: "Botiga de bisuteria a la Seu d'Urgell | Celina",
+      seoTitle: "Botiga de bisuteria a la Seu d'Urgell | Celina Estilo que Une",
       seoDesc:
         "Bisuteria i accessoris a la Seu d'Urgell: collars, polseres, anells, arracades i més. Explora el catàleg i reserva per WhatsApp.",
       overline: "Bisuteria & estil",
@@ -799,7 +800,7 @@ export const translations = {
       visitTitle: "Vine a provar-te-les",
     },
     documentsPage: {
-      seoTitle: "Fer un CV i documents | Celina, la Seu d'Urgell",
+      seoTitle: "Fer un CV i documents | Celina Estilo que Une, la Seu d'Urgell",
       seoDesc:
         "Preparem el teu CV, cartes de presentació, formularis i qualsevol document a la Seu d'Urgell. Mecanografiat ràpid, normalment el mateix dia.",
       overline: "CV i documents · la Seu d'Urgell",
@@ -821,7 +822,7 @@ export const translations = {
       visitNote: "I per qualsevol altra cosa que necessitis, passa't a veure'ns!",
     },
     fiberPage: {
-      seoTitle: "Fibra òptica i telefonia mòbil per a empreses | Celina, la Seu d'Urgell",
+      seoTitle: "Fibra òptica i telefonia mòbil per a empreses | Celina Estilo que Une",
       seoDesc:
         "Contracta fibra òptica i línies mòbils (Simyo, MasMóvil, Jazztel i Pepephone) per a la teva empresa a la Seu d'Urgell, de la mà de Nasertel. Connexió ràpida, estable i segura.",
       overline: "Mòbil i fibra òptica · Empreses",
@@ -933,8 +934,8 @@ export const translations = {
         h1: "Serveis de Celina a la Seu d'Urgell",
       },
       about: {
-        title: "Sobre Celina | Estilo que Une — la Seu d'Urgell",
-        desc: "Celina és més que un local: atenció presencial, propera i internacional a la Seu d'Urgell.",
+        title: "Celina Estilo que Une | Sobre nosaltres — la Seu d'Urgell",
+        desc: "Celina Estilo que Une és més que un local: atenció presencial, propera i internacional a la Seu d'Urgell.",
       },
       location: {
         title: "Ubicació i horari | Celina Estilo que Une",
@@ -1046,6 +1047,7 @@ export const translations = {
         { label: "Viatges", href: "/viajes" },
         { label: "Bisuteria", href: "/bisuteria" },
         { label: "CV i documents", href: "/documentos" },
+        { label: "Fibra òptica i mòbil", href: "/fibra-optica" },
         { label: "Contacte", href: "/contacto" },
       ],
       legal: [
@@ -1577,6 +1579,7 @@ export const translations = {
         { label: "Travel", href: "/viajes" },
         { label: "Jewelry", href: "/bisuteria" },
         { label: "CV & documents", href: "/documentos" },
+        { label: "Fiber & mobile", href: "/fibra-optica" },
         { label: "Contact", href: "/contacto" },
       ],
       legal: [

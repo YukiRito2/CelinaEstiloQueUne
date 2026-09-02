@@ -1,0 +1,21 @@
+{
+  "short_name": "Celina",
+  "name": "Celina Estilo que Une",
+  "description": "Envíos de dinero, agencia de viajes, bisutería, documentos y fibra óptica/móvil en La Seu d'Urgell.",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    }
+  ],
+  "start_url": ".",
+  "display": "browser",
+  "theme_color": "#1E2430",
+  "background_color": "#FAF7F2"
+}

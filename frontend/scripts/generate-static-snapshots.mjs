@@ -33,6 +33,46 @@ const { legalDocs } = await importSrc("src/config/legal.js");
 
 const es = translations.es;
 
+const siteUrl = site.seo.siteUrl;
+const BUSINESS_ID = `${siteUrl}/#business`;
+const WEBSITE_ID = `${siteUrl}/#website`;
+
+// Entidad canonica del negocio. Un solo bloque, reutilizado (via @id) en
+// todas las paginas, en vez de repetir un LocalBusiness distinto por ruta.
+// Datos reales confirmados (direccion, telefono, email, horario) — no se
+// inventa nada aqui.
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": BUSINESS_ID,
+  name: "Celina Estilo que Une",
+  alternateName: "Celina — Estilo que Une",
+  description: es.seo.description,
+  url: siteUrl,
+  telephone: site.contact.phone,
+  email: site.contact.email,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: site.address.street,
+    postalCode: "25700",
+    addressLocality: "La Seu d'Urgell",
+    addressRegion: "Lleida",
+    addressCountry: "ES",
+  },
+  openingHours: "Mo-Su 08:00-22:00",
+  sameAs: [site.social.instagram].filter(Boolean),
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": WEBSITE_ID,
+  name: "Celina Estilo que Une",
+  url: siteUrl,
+  inLanguage: "es",
+  publisher: { "@id": BUSINESS_ID },
+};
+
 const escapeHtml = (str = "") =>
   String(str)
     .replace(/&/g, "&amp;")
@@ -76,6 +116,16 @@ const routes = [
     description: es.moneyPage.seoDesc,
     h1: es.moneyPage.title,
     intro: es.moneyPage.subtitle,
+    breadcrumb: [
+      { name: "Inicio", path: "/" },
+      { name: "Servicios", path: "/servicios" },
+      { name: "Envíos de dinero", path: "/envios-dinero" },
+    ],
+    service: {
+      name: "Envíos de dinero",
+      serviceType: "Envío de dinero internacional",
+      description: es.moneyPage.seoDesc,
+    },
   },
   {
     path: "/viajes",
@@ -83,6 +133,16 @@ const routes = [
     description: es.travelPage.seoDesc,
     h1: es.travelPage.title,
     intro: es.travelPage.subtitle,
+    breadcrumb: [
+      { name: "Inicio", path: "/" },
+      { name: "Servicios", path: "/servicios" },
+      { name: "Viajes", path: "/viajes" },
+    ],
+    service: {
+      name: "Agencia de viajes",
+      serviceType: "Agencia de viajes",
+      description: es.travelPage.seoDesc,
+    },
   },
   {
     path: "/bisuteria",
@@ -90,6 +150,16 @@ const routes = [
     description: es.jewelryPage.seoDesc,
     h1: es.jewelryPage.title,
     intro: es.jewelryPage.subtitle,
+    breadcrumb: [
+      { name: "Inicio", path: "/" },
+      { name: "Servicios", path: "/servicios" },
+      { name: "Bisutería", path: "/bisuteria" },
+    ],
+    service: {
+      name: "Bisutería",
+      serviceType: "Venta de bisutería y accesorios",
+      description: es.jewelryPage.seoDesc,
+    },
   },
   {
     path: "/documentos",
@@ -97,6 +167,16 @@ const routes = [
     description: es.documentsPage.seoDesc,
     h1: es.documentsPage.title,
     intro: es.documentsPage.subtitle,
+    breadcrumb: [
+      { name: "Inicio", path: "/" },
+      { name: "Servicios", path: "/servicios" },
+      { name: "CV y documentos", path: "/documentos" },
+    ],
+    service: {
+      name: "CV y documentos",
+      serviceType: "Mecanografiado y preparación de documentos",
+      description: es.documentsPage.seoDesc,
+    },
   },
   {
     path: "/fibra-optica",
@@ -104,6 +184,17 @@ const routes = [
     description: es.fiberPage.seoDesc,
     h1: es.fiberPage.title,
     intro: es.fiberPage.subtitle,
+    breadcrumb: [
+      { name: "Inicio", path: "/" },
+      { name: "Servicios", path: "/servicios" },
+      { name: "Móvil y fibra óptica", path: "/fibra-optica" },
+    ],
+    service: {
+      name: "Fibra óptica y línea móvil",
+      serviceType: "Fibra óptica y telefonía móvil para empresas",
+      description: es.fiberPage.seoDesc,
+    },
+    faq: es.fiberPage.faq,
   },
   {
     path: "/sobre-celina",
@@ -118,6 +209,10 @@ const routes = [
     description: es.pagesSeo.contact.desc,
     h1: es.pagesSeo.contact.h1,
     intro: es.contact.subtitle,
+    breadcrumb: [
+      { name: "Inicio", path: "/" },
+      { name: "Contacto", path: "/contacto" },
+    ],
   },
   ...legalRoutes,
 ];
@@ -140,6 +235,57 @@ const snapshotHtml = (route) => `
 const replaceTag = (html, regex, replacement) =>
   regex.test(html) ? html.replace(regex, replacement) : html;
 
+// JSON-LD por pagina: LocalBusiness+WebSite siempre (referenciados por @id,
+// no duplicados por ruta), mas BreadcrumbList/Service/FAQPage cuando la ruta
+// los define. Mismo criterio que usan los hooks useBreadcrumbSchema /
+// useFaqSchema en runtime (src/lib/seo.js), para que el HTML estatico y el
+// hidratado no diverjan.
+const schemaScripts = (route) => {
+  const blocks = [localBusinessSchema, websiteSchema];
+
+  if (route.breadcrumb) {
+    blocks.push({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: route.breadcrumb.map((item, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: item.name,
+        item: `${site.seo.siteUrl}${item.path}`,
+      })),
+    });
+  }
+
+  if (route.service) {
+    blocks.push({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: route.service.name,
+      serviceType: route.service.serviceType,
+      description: route.service.description,
+      provider: { "@id": BUSINESS_ID },
+      areaServed: "La Seu d'Urgell",
+      url: `${site.seo.siteUrl}${route.path}`,
+    });
+  }
+
+  if (route.faq?.length) {
+    blocks.push({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: route.faq.map((it) => ({
+        "@type": "Question",
+        name: it.question,
+        acceptedAnswer: { "@type": "Answer", text: it.answer },
+      })),
+    });
+  }
+
+  return blocks
+    .map((data) => `<script type="application/ld+json">${JSON.stringify(data)}</script>`)
+    .join("");
+};
+
 const buildPageHtml = (template, route) => {
   const url = `${site.seo.siteUrl}${route.path}`;
   const title = escapeHtml(route.title);
@@ -154,6 +300,7 @@ const buildPageHtml = (template, route) => {
   html = replaceTag(html, /<meta property="og:url" content="[^"]*"\/>/, `<meta property="og:url" content="${url}"/>`);
   html = replaceTag(html, /<meta name="twitter:title" content="[^"]*"\/>/, `<meta name="twitter:title" content="${title}"/>`);
   html = replaceTag(html, /<meta name="twitter:description" content="[^"]*"\/>/, `<meta name="twitter:description" content="${desc}"/>`);
+  html = html.replace("</head>", `${schemaScripts(route)}</head>`);
   html = html.replace('<div id="root"></div>', `<div id="root">${snapshotHtml(route)}</div>`);
   return html;
 };

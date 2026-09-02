@@ -9,6 +9,8 @@
         <meta name="description" content="Celina Estilo que Une en La Seu d'Urgell: envíos de dinero a todo el mundo, agencia de viajes, bisutería y servicios digitales, con atención cercana." />
         <link rel="canonical" href="https://celinaestiloqueune.com/" />
         <link rel="icon" type="image/svg+xml" href="%PUBLIC_URL%/favicon.svg" />
+        <link rel="apple-touch-icon" href="%PUBLIC_URL%/apple-touch-icon.png" />
+        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
         <link
             rel="preload"
             as="image"
@@ -25,7 +27,7 @@
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="es_ES" />
-        <meta property="og:site_name" content="Celina — Estilo que Une" />
+        <meta property="og:site_name" content="Celina Estilo que Une" />
 
         <!-- Twitter / X -->
         <meta name="twitter:card" content="summary_large_image" />
@@ -41,29 +43,13 @@
             rel="stylesheet"
         />
 
-        <!-- Schema.org: LocalBusiness -->
-        <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "Celina — Estilo que Une",
-            "description": "Envíos de dinero a todo el mundo (Ria, Western Union, MoneyGram, Transfast), agencia de viajes, bisutería, punto de paquetería multiservicio y servicios digitales en La Seu d'Urgell.",
-            "image": "https://images.unsplash.com/photo-1585960622850-ed33c41d6418?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjBnb2xkJTIwamV3ZWxyeSUyMG1vZGVsJTIwd29tYW58ZW58MHx8fHwxNzgzOTgwMDc0fDA&ixlib=rb-4.1.0&q=85",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Avinguda del Salòria, 34",
-                "addressLocality": "La Seu d'Urgell",
-                "postalCode": "25700",
-                "addressRegion": "Lleida",
-                "addressCountry": "ES"
-            },
-            "telephone": "+34621428021",
-            "email": "celina.env.r@gmail.com",
-            "openingHours": "Mo-Su 08:00-22:00",
-            "url": "https://celinaestiloqueune.com/",
-            "sameAs": ["https://www.instagram.com/celina_estilqueuneix/"]
-        }
-        </script>
+        <!--
+          Schema.org (LocalBusiness, WebSite, BreadcrumbList, Service, FAQPage)
+          se inyecta por pagina en scripts/generate-static-snapshots.mjs
+          (postbuild), a partir de los mismos datos que usa la app en
+          src/config/site.js e i18n.js. No se hardcodea aqui para no acabar
+          con dos bloques LocalBusiness distintos en cada pagina.
+        -->
 
         <!-- GA4 / Meta Pixel: se activan solo si las variables de entorno tienen valor -->
         <script>

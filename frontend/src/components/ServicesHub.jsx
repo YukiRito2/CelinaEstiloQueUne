@@ -124,7 +124,9 @@ const ServiceCard = ({ s, m, index, externalHint }) => {
       <div className="relative h-40 sm:h-48 overflow-hidden shrink-0">
         <img
           src={m.image}
-          alt=""
+          alt={s.title}
+          width="800"
+          height="480"
           loading="lazy"
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
@@ -181,7 +183,7 @@ const ServiceCard = ({ s, m, index, externalHint }) => {
           </span>
           {m.external && (
             <p className="mt-3 font-mono-brand text-[10px] tracking-[0.15em] uppercase text-[#9F99B0]">
-              {externalHint} · celina-studio-app.vercel.app
+              {externalHint} · {new URL(m.href).host}
             </p>
           )}
         </div>
