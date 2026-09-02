@@ -160,6 +160,14 @@ export const TariffTables = () => {
                                   {it.price}
                                   <span className="text-xs font-light text-[#64748B]">{L.perMonth}</span>
                                 </p>
+                                {it.recommended && L.reasons?.[op.id] && (
+                                  <p
+                                    className="mt-2 text-xs font-light text-[#0B5158] leading-snug"
+                                    data-testid={`tariff-reason-${op.id}`}
+                                  >
+                                    {L.reasons[op.id]}
+                                  </p>
+                                )}
                                 <a
                                   href={waLink(msg)}
                                   target="_blank"

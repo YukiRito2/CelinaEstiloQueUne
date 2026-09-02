@@ -351,6 +351,10 @@ export const translations = {
         from: "desde",
         cta: "Quiero esta tarifa",
         recommended: "Recomendada",
+        reasons: {
+          simyo: "La más equilibrada: máxima velocidad y datos de sobra para el día a día de tu negocio.",
+          jazztel: "Ideal para empezar: fibra rápida con una línea móvil incluida a buen precio.",
+        },
         filters: { all: "Todas", fiber: "Solo fibra", combo: "Fibra + Móvil", mobile: "Solo móvil" },
         badges: { simyo: "Prepago y contrato", jazztel: "Solo contrato" },
         groups: {
@@ -859,6 +863,10 @@ export const translations = {
         from: "des de",
         cta: "Vull aquesta tarifa",
         recommended: "Recomanada",
+        reasons: {
+          simyo: "La més equilibrada: màxima velocitat i dades de sobra per al dia a dia del teu negoci.",
+          jazztel: "Ideal per començar: fibra ràpida amb una línia mòbil inclosa a bon preu.",
+        },
         filters: { all: "Totes", fiber: "Només fibra", combo: "Fibra + Mòbil", mobile: "Només mòbil" },
         badges: { simyo: "Prepagament i contracte", jazztel: "Només contracte" },
         groups: {
@@ -1367,6 +1375,10 @@ export const translations = {
         from: "from",
         cta: "I want this plan",
         recommended: "Recommended",
+        reasons: {
+          simyo: "The most balanced: top speed and plenty of data for your day-to-day business.",
+          jazztel: "Great to start: fast fiber with a mobile line included at a good price.",
+        },
         filters: { all: "All", fiber: "Fiber only", combo: "Fiber + Mobile", mobile: "Mobile only" },
         badges: { simyo: "Prepaid & contract", jazztel: "Contract only" },
         groups: {
