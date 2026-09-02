@@ -337,6 +337,38 @@ export const translations = {
       operators: ["Simyo", "MasMóvil", "Jazztel", "Pepephone"],
       visitTitle: "¿Lista tu empresa para el siguiente nivel?",
       visitNote: "Conéctate sin riesgos — te asesoramos antes de contratar, ya sea fibra o línea móvil.",
+      tariffs: {
+        title: "Tarifas de fibra y móvil",
+        subtitle:
+          "Estas son las tarifas de Simyo y Jazztel. Para MasMóvil y Pepephone, consúltanos y te pasamos la oferta vigente.",
+        perMonth: "/mes",
+        fiber: "Fibra",
+        mobile: "Móvil",
+        unlimited: "GB ilimitados",
+        share: "a compartir",
+        line1: "1 línea móvil",
+        lines2: "2 líneas móviles",
+        from: "desde",
+        cta: "Quiero esta tarifa",
+        badges: { simyo: "Prepago y contrato", jazztel: "Solo contrato" },
+        groups: {
+          mobile: "Solo móvil",
+          fibraMobile: "Fibra + Móvil",
+          fibra: "Solo fibra",
+          additional: "Líneas móviles adicionales",
+          secondHome: "Fibra segunda residencia",
+          tv: "TV y extras",
+        },
+        tags: { best: "Acierto seguro", new: "Novedad", limited: "Por tiempo limitado" },
+        footnotes: {
+          simyoMobileNote: "Todas incluyen llamadas ilimitadas · 5G · sin permanencia · acumulas gigas hasta 3 meses.",
+          limitedOffer: "Oferta por tiempo limitado.",
+          upgrade1gb: "Sube a Fibra 1Gb en cualquier tarifa por +8€/mes.",
+          callsAddon: "Añade llamadas ilimitadas fijo + móvil por +3€/mes.",
+        },
+        disclaimer:
+          "Precios de los operadores, orientativos y sujetos a sus condiciones. Te confirmamos la tarifa vigente antes de contratar.",
+      },
     },
     pagesSeo: {
       services: {
@@ -811,6 +843,38 @@ export const translations = {
       operators: ["Simyo", "MasMóvil", "Jazztel", "Pepephone"],
       visitTitle: "La teva empresa, a punt per al següent nivell?",
       visitNote: "Connecta't sense riscos — t'assessorem abans de contractar, ja sigui fibra o línia mòbil.",
+      tariffs: {
+        title: "Tarifes de fibra i mòbil",
+        subtitle:
+          "Aquestes són les tarifes de Simyo i Jazztel. Per a MasMóvil i Pepephone, consulta'ns i t'enviem l'oferta vigent.",
+        perMonth: "/mes",
+        fiber: "Fibra",
+        mobile: "Mòbil",
+        unlimited: "GB il·limitats",
+        share: "a compartir",
+        line1: "1 línia mòbil",
+        lines2: "2 línies mòbils",
+        from: "des de",
+        cta: "Vull aquesta tarifa",
+        badges: { simyo: "Prepagament i contracte", jazztel: "Només contracte" },
+        groups: {
+          mobile: "Només mòbil",
+          fibraMobile: "Fibra + Mòbil",
+          fibra: "Només fibra",
+          additional: "Línies mòbils addicionals",
+          secondHome: "Fibra segona residència",
+          tv: "TV i extres",
+        },
+        tags: { best: "Encert segur", new: "Novetat", limited: "Per temps limitat" },
+        footnotes: {
+          simyoMobileNote: "Totes inclouen trucades il·limitades · 5G · sense permanència · acumules gigues fins a 3 mesos.",
+          limitedOffer: "Oferta per temps limitat.",
+          upgrade1gb: "Puja a Fibra 1Gb en qualsevol tarifa per +8€/mes.",
+          callsAddon: "Afegeix trucades il·limitades fix + mòbil per +3€/mes.",
+        },
+        disclaimer:
+          "Preus dels operadors, orientatius i subjectes a les seves condicions. Et confirmem la tarifa vigent abans de contractar.",
+      },
     },
     pagesSeo: {
       services: {
@@ -1285,6 +1349,38 @@ export const translations = {
       operators: ["Simyo", "MasMóvil", "Jazztel", "Pepephone"],
       visitTitle: "Is your business ready for the next level?",
       visitNote: "Connect risk-free — we advise you before you sign up, whether it's fiber or a mobile line.",
+      tariffs: {
+        title: "Fiber & mobile plans",
+        subtitle:
+          "These are the Simyo and Jazztel plans. For MasMóvil and Pepephone, ask us and we'll send you the current offer.",
+        perMonth: "/mo",
+        fiber: "Fiber",
+        mobile: "Mobile",
+        unlimited: "Unlimited data",
+        share: "shared",
+        line1: "1 mobile line",
+        lines2: "2 mobile lines",
+        from: "from",
+        cta: "I want this plan",
+        badges: { simyo: "Prepaid & contract", jazztel: "Contract only" },
+        groups: {
+          mobile: "Mobile only",
+          fibraMobile: "Fiber + Mobile",
+          fibra: "Fiber only",
+          additional: "Extra mobile lines",
+          secondHome: "Second-home fiber",
+          tv: "TV & extras",
+        },
+        tags: { best: "Best value", new: "New", limited: "Limited time" },
+        footnotes: {
+          simyoMobileNote: "All include unlimited calls · 5G · no lock-in · roll over data up to 3 months.",
+          limitedOffer: "Limited-time offer.",
+          upgrade1gb: "Upgrade to Fiber 1Gb on any plan for +€8/mo.",
+          callsAddon: "Add unlimited landline + mobile calls for +€3/mo.",
+        },
+        disclaimer:
+          "Operator prices, indicative and subject to their terms. We'll confirm the current plan before you sign up.",
+      },
     },
     pagesSeo: {
       services: {

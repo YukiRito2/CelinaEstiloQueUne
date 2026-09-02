@@ -18,6 +18,7 @@ import { WhatsAppButton } from "../components/WhatsAppButton";
 import { ServicePageLayout } from "../components/ServicePageLayout";
 import { Reveal } from "../components/Reveal";
 import { RelatedServices } from "../components/RelatedServices";
+import { TariffTables } from "../components/TariffTables";
 import { usePageSeo, useBreadcrumbSchema, useFaqSchema } from "../lib/seo";
 import {
   Accordion,
@@ -215,6 +216,9 @@ export default function FiberPage() {
               </Reveal>
             </div>
           </section>
+
+          {/* Tarifas de los operadores */}
+          <TariffTables />
 
           {/* Partner: Nasertel */}
           <section className="py-20 sm:py-24 bg-[#E9F6F6]" data-testid="fiber-page-partner">
