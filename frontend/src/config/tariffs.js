@@ -34,9 +34,9 @@ export const tariffs = [
         footnoteKey: "limitedOffer",
         items: [
           { fiber: "600Mb", mobile: "100GB", price: "33,99€" },
-          { fiber: "1Gb", mobile: "100GB", price: "35,99€" },
+          { fiber: "1Gb", mobile: "100GB", price: "35,99€", recommended: true },
           { fiber: "600Mb", mobile: "150GB", price: "37,99€" },
-          { fiber: "1Gb", mobile: "150GB", price: "39,99€", featured: true },
+          { fiber: "1Gb", mobile: "150GB", price: "39,99€" },
         ],
       },
       {
@@ -83,10 +83,10 @@ export const tariffs = [
         kind: "combo",
         footnoteKey: "upgrade1gb",
         items: [
-          { fiber: "600Mb", data: "50GB", lines: 1, price: "39,95€" },
+          { fiber: "600Mb", data: "50GB", lines: 1, price: "39,95€", recommended: true },
           { fiber: "600Mb", data: "120GB", share: true, lines: 2, price: "44,95€" },
           { fiber: "600Mb", unlimited: true, lines: 1, price: "49,95€" },
-          { fiber: "600Mb", unlimited: true, lines: 2, price: "59,95€", featured: true },
+          { fiber: "600Mb", unlimited: true, lines: 2, price: "59,95€" },
         ],
       },
       {

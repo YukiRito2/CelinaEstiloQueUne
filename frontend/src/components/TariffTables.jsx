@@ -1,4 +1,4 @@
-import { Check, MessageCircle, Smartphone, Tv, Wifi } from "lucide-react";
+import { Check, MessageCircle, Smartphone, Star, Tv, Wifi } from "lucide-react";
 import { useState } from "react";
 import { tariffs } from "../config/tariffs";
 import { waLink } from "../lib/whatsapp";
@@ -136,10 +136,18 @@ export const TariffTables = () => {
                               <div
                                 key={i}
                                 className={`group relative rounded-2xl bg-white p-5 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#0E7C86]/10 ${
-                                  it.featured ? "border-2 border-[#0E7C86]" : "border border-[#BFE6E6]"
+                                  it.recommended
+                                    ? "border-2 border-[#0E7C86] shadow-md shadow-[#0E7C86]/10"
+                                    : "border border-[#BFE6E6]"
                                 }`}
                                 data-testid={`tariff-item-${op.id}-${group.key}-${i}`}
                               >
+                                {it.recommended && (
+                                  <span className="self-start mb-2 inline-flex items-center gap-1 font-mono-brand text-[9px] tracking-[0.12em] uppercase px-2.5 py-1 rounded-full bg-[#0E7C86] text-white">
+                                    <Star className="w-3 h-3" fill="currentColor" />
+                                    {L.recommended}
+                                  </span>
+                                )}
                                 {it.tag && (
                                   <span className="self-start mb-2 font-mono-brand text-[9px] tracking-[0.12em] uppercase px-2.5 py-1 rounded-full bg-[#0E7C86] text-white">
                                     {L.tags[it.tag]}
