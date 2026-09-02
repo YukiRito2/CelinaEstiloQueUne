@@ -5,6 +5,7 @@
 // i18n (fiberPage.tariffs). Actualiza aquí precios y planes.
 //
 // Simyo: prepago y contrato. Jazztel: solo contrato.
+// `kind` alimenta el filtro rápido: "mobile" | "combo" | "fiber" | "extras".
 // ============================================================
 
 export const tariffs = [
@@ -17,6 +18,7 @@ export const tariffs = [
       {
         key: "mobile",
         type: "mobile",
+        kind: "mobile",
         footnoteKey: "simyoMobileNote",
         items: [
           { mobile: "15GB", price: "5€" },
@@ -28,6 +30,7 @@ export const tariffs = [
       {
         key: "fibraMobile",
         type: "combo",
+        kind: "combo",
         footnoteKey: "limitedOffer",
         items: [
           { fiber: "600Mb", mobile: "100GB", price: "33,99€" },
@@ -39,6 +42,7 @@ export const tariffs = [
       {
         key: "fibra",
         type: "fiber",
+        kind: "fiber",
         items: [
           { fiber: "500Mb", price: "25,99€", tag: "new" },
           { fiber: "1Gb", price: "29,99€" },
@@ -47,6 +51,7 @@ export const tariffs = [
       {
         key: "additional",
         type: "mobile",
+        kind: "mobile",
         items: [
           { mobile: "15GB", price: "3€" },
           { mobile: "50GB", price: "5€" },
@@ -57,6 +62,7 @@ export const tariffs = [
       {
         key: "secondHome",
         type: "fiber",
+        kind: "fiber",
         items: [
           { fiber: "300Mb", price: "15€" },
           { fiber: "600Mb", price: "21,99€" },
@@ -74,6 +80,7 @@ export const tariffs = [
       {
         key: "fibraMobile",
         type: "jazztelCombo",
+        kind: "combo",
         footnoteKey: "upgrade1gb",
         items: [
           { fiber: "600Mb", data: "50GB", lines: 1, price: "39,95€" },
@@ -85,6 +92,7 @@ export const tariffs = [
       {
         key: "fibra",
         type: "fiber",
+        kind: "fiber",
         items: [
           { fiber: "600Mb", price: "19,95€", tag: "limited" },
           { fiber: "1Gb", price: "30,95€" },
@@ -93,6 +101,7 @@ export const tariffs = [
       {
         key: "additional",
         type: "jazztelMobile",
+        kind: "mobile",
         items: [
           { mobile: "20GB", share: true, price: "6€" },
           { mobile: "50GB", share: true, price: "9€" },
@@ -102,6 +111,7 @@ export const tariffs = [
       {
         key: "tv",
         type: "named",
+        kind: "extras",
         footnoteKey: "callsAddon",
         items: [
           { name: "Jazztel TV + Disney+", price: "6,99€" },

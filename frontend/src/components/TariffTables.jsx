@@ -1,4 +1,5 @@
 import { Check, MessageCircle, Smartphone, Tv, Wifi } from "lucide-react";
+import { useState } from "react";
 import { tariffs } from "../config/tariffs";
 import { waLink } from "../lib/whatsapp";
 import { trackEvent } from "../lib/analytics";
@@ -41,6 +42,10 @@ const priceText = (it, L) => `${it.from ? `${L.from} ` : ""}${it.price}${L.perMo
 export const TariffTables = () => {
   const { t } = useLanguage();
   const L = t.fiberPage.tariffs;
+  const [filter, setFilter] = useState("all");
+
+  const filterKeys = ["all", "combo", "fiber", "mobile"];
+  const matchFilter = (group) => (filter === "all" ? true : group.kind === filter);
 
   return (
     <section className="py-20 sm:py-24 bg-[#FAF7F2]" data-testid="fiber-page-tariffs">
@@ -51,10 +56,34 @@ export const TariffTables = () => {
           <p className="mt-4 max-w-2xl text-sm sm:text-base font-light text-[#475569] leading-relaxed">{L.subtitle}</p>
         </Reveal>
 
+        <Reveal delay={0.05}>
+          <div className="mt-8 flex flex-wrap gap-2" data-testid="tariff-filters">
+            {filterKeys.map((k) => (
+              <button
+                key={k}
+                type="button"
+                onClick={() => {
+                  setFilter(k);
+                  trackEvent("tariff_filter", { filter: k });
+                }}
+                data-testid={`tariff-filter-${k}`}
+                aria-pressed={filter === k}
+                className={`font-mono-brand text-[11px] tracking-[0.12em] uppercase px-4 py-2 rounded-full border transition-all duration-300 ${
+                  filter === k
+                    ? "bg-[#0E7C86] border-[#0E7C86] text-white shadow-md"
+                    : "bg-white border-[#BFE6E6] text-[#0B5158] hover:border-[#0E7C86]"
+                }`}
+              >
+                {L.filters[k]}
+              </button>
+            ))}
+          </div>
+        </Reveal>
+
         <Reveal delay={0.1}>
           <Tabs
             defaultValue={tariffs[0].id}
-            className="mt-10"
+            className="mt-8"
             onValueChange={(v) => trackEvent("tariff_tab", { operator: v })}
           >
             <TabsList className="h-auto flex-wrap gap-1 rounded-full bg-white border border-[#BFE6E6] p-1.5">
@@ -85,7 +114,7 @@ export const TariffTables = () => {
                 </div>
 
                 <div className="space-y-10">
-                  {op.groups.map((group) => {
+                  {op.groups.filter(matchFilter).map((group) => {
                     const Icon = groupIcon[group.key] || Wifi;
                     return (
                       <div key={group.key} data-testid={`tariff-group-${op.id}-${group.key}`}>

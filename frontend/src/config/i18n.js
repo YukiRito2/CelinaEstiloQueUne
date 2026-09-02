@@ -350,6 +350,7 @@ export const translations = {
         lines2: "2 líneas móviles",
         from: "desde",
         cta: "Quiero esta tarifa",
+        filters: { all: "Todas", fiber: "Solo fibra", combo: "Fibra + Móvil", mobile: "Solo móvil" },
         badges: { simyo: "Prepago y contrato", jazztel: "Solo contrato" },
         groups: {
           mobile: "Solo móvil",
@@ -856,6 +857,7 @@ export const translations = {
         lines2: "2 línies mòbils",
         from: "des de",
         cta: "Vull aquesta tarifa",
+        filters: { all: "Totes", fiber: "Només fibra", combo: "Fibra + Mòbil", mobile: "Només mòbil" },
         badges: { simyo: "Prepagament i contracte", jazztel: "Només contracte" },
         groups: {
           mobile: "Només mòbil",
@@ -1362,6 +1364,7 @@ export const translations = {
         lines2: "2 mobile lines",
         from: "from",
         cta: "I want this plan",
+        filters: { all: "All", fiber: "Fiber only", combo: "Fiber + Mobile", mobile: "Mobile only" },
         badges: { simyo: "Prepaid & contract", jazztel: "Contract only" },
         groups: {
           mobile: "Mobile only",

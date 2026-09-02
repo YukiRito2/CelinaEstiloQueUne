@@ -170,3 +170,6 @@ Web principal moderna y orientada a conversión para Celina (La Seu d'Urgell). F
 - Simyo: badge "Prepago y contrato"; grupos Solo móvil (15/50/100/300GB), Fibra+Móvil (600Mb/1Gb × 100/150GB), Solo fibra (500Mb/1Gb), Líneas adicionales, Fibra segunda residencia. Jazztel: badge "Solo contrato"; Fibra+Móvil (con +8€ para 1Gb), Solo fibra (600Mb 19,95 / 1Gb 30,95), Líneas adicionales, TV y extras (Disney+/Netflix/Prime·HBO/Orange TV Libre, +3€ llamadas). MasMóvil y Pepephone: nota "consúltanos" (sin tarifas facilitadas aún).
 - Disclaimer de precios orientativos. data-testid: fiber-page-tariffs, tariff-tab-{op}, tariff-item-{op}-{grupo}-{i}, tariff-cta-*, tariff-disclaimer.
 - Verificado: yarn build compila limpio (12 snapshots); sección presente en DOM. (Preview dev no renderiza rutas lazy en carga directa; verificado con import eager temporal.)
+
+## Actualización 2026-06 (Filtro rápido de tarifas)
+- Chips de filtro sobre las tarifas: Todas / Fibra+Móvil / Solo fibra / Solo móvil (i18n es/ca/en en fiberPage.tariffs.filters). Cada grupo tiene `kind` en config/tariffs.js (mobile|combo|fiber|extras); "extras" (Jazztel TV) solo visible en "Todas". Estado local en TariffTables, evento tariff_filter. data-testid: tariff-filters, tariff-filter-{all|combo|fiber|mobile}. Build OK.
