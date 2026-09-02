@@ -65,6 +65,7 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
+    "postbuild": "node scripts/generate-static-snapshots.mjs",
     "test": "craco test"
   },
   "browserslist": {
