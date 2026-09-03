@@ -145,7 +145,7 @@ const ServiceCard = ({ s, m, index, externalHint }) => {
       <div className="relative h-40 sm:h-48 overflow-hidden shrink-0">
         <img
           src={m.image}
-          alt={s.title}
+          alt=""
           width="800"
           height="480"
           loading="lazy"

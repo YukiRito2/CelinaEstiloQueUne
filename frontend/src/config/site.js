@@ -91,9 +91,9 @@ export const site = {
       "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=800&q=80&fm=auto",
       "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80&fm=auto",
     ],
-    studio: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1000&q=80&fm=auto",
-    documents: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1000&q=80&fm=auto",
-    fiber: "https://images.unsplash.com/photo-1606420187127-dae7c868fa7a?crop=entropy&cs=srgb&fm=auto&w=1000&q=80",
+    studio: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80&fm=auto",
+    documents: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80&fm=auto",
+    fiber: "https://images.unsplash.com/photo-1606420187127-dae7c868fa7a?crop=entropy&cs=srgb&fm=auto&w=800&q=80",
     // Logos alojados en Cloudinary (f_auto,q_auto: formato y calidad optimos
     // automaticamente segun el navegador, para que pesen lo minimo).
     partners: {

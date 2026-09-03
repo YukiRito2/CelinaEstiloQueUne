@@ -38,10 +38,25 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <!--
+          Carga la hoja de fuentes sin bloquear el renderizado: se pide con
+          prioridad baja (media="print") y se activa en cuanto llega
+          (onload). display=swap ya hace que el texto se vea con la fuente
+          del sistema mientras tanto, así que esto solo evita que la propia
+          peticion de la hoja de estilos retrase el primer pintado.
+        -->
         <link
             href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
             rel="stylesheet"
+            media="print"
+            onload="this.media='all'"
         />
+        <noscript>
+            <link
+                href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+                rel="stylesheet"
+            />
+        </noscript>
 
         <!--
           Schema.org (LocalBusiness, WebSite, BreadcrumbList, Service, FAQPage)

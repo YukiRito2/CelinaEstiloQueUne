@@ -8,7 +8,7 @@ const PARTNERS = [
     alt: "Western Union",
     src: site.images.partners.westernUnion,
     imgClass: "h-10 sm:h-12 w-auto rounded-lg",
-    w: 160,
+    w: 88,
     h: 48,
   },
   {
@@ -16,7 +16,7 @@ const PARTNERS = [
     alt: "Transfast",
     src: site.images.partners.transfast,
     imgClass: "h-8 sm:h-9 w-auto",
-    w: 160,
+    w: 120,
     h: 36,
   },
   {
@@ -24,7 +24,7 @@ const PARTNERS = [
     alt: "MoneyGram",
     src: site.images.partners.moneygram,
     imgClass: "h-8 sm:h-9 w-auto",
-    w: 160,
+    w: 36,
     h: 36,
   },
 ];

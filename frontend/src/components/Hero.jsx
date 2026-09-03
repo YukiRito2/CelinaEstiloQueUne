@@ -195,14 +195,14 @@ const Constellation = ({ t }) => {
                 <img
                   src={cloudinaryWidth(site.images.partners.westernUnion, 96)}
                   alt="Western Union"
-                  width="64"
+                  width="29"
                   height="16"
                   className="h-4 w-auto rounded"
                 />
                 <img
                   src={cloudinaryWidth(site.images.partners.transfast, 96)}
                   alt="Transfast"
-                  width="64"
+                  width="40"
                   height="12"
                   className="h-3 w-auto"
                 />
@@ -224,7 +224,7 @@ const Constellation = ({ t }) => {
             <div className="w-[168px] rounded-2xl overflow-hidden border border-white/80 shadow-xl shadow-[#2B6CB0]/15 bg-white/90 backdrop-blur-md">
               <img
                 src={site.images.travel}
-                alt={t.hero.nodes.travel}
+                alt=""
                 width="168"
                 height="80"
                 className="h-20 w-full object-cover"
@@ -252,7 +252,7 @@ const Constellation = ({ t }) => {
             <div className="w-[180px] rounded-2xl overflow-hidden border border-[#E2D4F0]/25 shadow-2xl shadow-black/30 bg-[#2B2638]/95 backdrop-blur-xl">
               <img
                 src={site.images.studio}
-                alt={t.hero.nodes.studio}
+                alt=""
                 width="180"
                 height="64"
                 className="h-16 w-full object-cover opacity-90"
@@ -279,7 +279,7 @@ const Constellation = ({ t }) => {
             <div className="w-[168px] rounded-2xl overflow-hidden border border-white/80 shadow-xl shadow-[#C47B62]/15 bg-white/90 backdrop-blur-md">
               <img
                 src={site.images.jewelry[1]}
-                alt={t.hero.nodes.jewelry}
+                alt=""
                 width="168"
                 height="80"
                 className="h-20 w-full object-cover"
@@ -357,14 +357,14 @@ const MobileNodes = ({ t }) => (
         <img
           src={cloudinaryWidth(site.images.partners.westernUnion, 80)}
           alt="Western Union"
-          width="56"
+          width="22"
           height="12"
           className="h-3 w-auto rounded"
         />
         <img
           src={cloudinaryWidth(site.images.partners.transfast, 80)}
           alt="Transfast"
-          width="56"
+          width="27"
           height="8"
           className="h-2 w-auto"
         />
@@ -381,7 +381,7 @@ const MobileNodes = ({ t }) => (
     >
       <img
         src={site.images.travel}
-        alt={t.hero.nodes.travel}
+        alt=""
         width="200"
         height="64"
         className="h-16 w-full object-cover"
@@ -400,7 +400,7 @@ const MobileNodes = ({ t }) => (
     >
       <img
         src={site.images.hero}
-        alt={t.services.cards[2].title}
+        alt=""
         width="200"
         height="64"
         className="h-16 w-full object-cover"
@@ -421,7 +421,7 @@ const MobileNodes = ({ t }) => (
     >
       <img
         src={site.images.studio}
-        alt={t.hero.nodes.studio}
+        alt=""
         width="200"
         height="64"
         className="h-16 w-full object-cover"
@@ -472,7 +472,7 @@ export const Hero = () => {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.75 }}
+            transition={{ duration: 0.3, delay: 0.1 }}
             className="mt-4 text-base sm:text-lg font-light text-[#475569] max-w-xl leading-relaxed"
             data-testid="hero-subtitle"
           >

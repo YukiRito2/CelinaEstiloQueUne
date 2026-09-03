@@ -97,14 +97,14 @@ const MoneyVisual = ({ t }) => {
             <img
               src={cloudinaryWidth(site.images.partners.westernUnion, 80)}
               alt="Western Union"
-              width="56"
+              width="26"
               height="14"
               className="h-3.5 w-auto rounded"
             />
             <img
               src={cloudinaryWidth(site.images.partners.transfast, 80)}
               alt="Transfast"
-              width="56"
+              width="33"
               height="10"
               className="h-2.5 w-auto"
             />
