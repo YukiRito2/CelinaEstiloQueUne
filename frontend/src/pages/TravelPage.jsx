@@ -46,17 +46,17 @@ export default function TravelPage() {
       <main>
         {/* Hero */}
         <section
-          className="noise relative overflow-hidden bg-[#F0F6FF] pt-32 pb-20 sm:pb-28"
+          className="noise relative overflow-hidden bg-[#CFF8F3] pt-32 pb-20 sm:pb-28"
           data-testid="travel-page-hero"
         >
           <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-            <div className="orb-float absolute top-16 right-[15%] w-56 h-56 rounded-full bg-[#D8E8FD] blur-2xl opacity-80" />
+            <div className="orb-float absolute top-16 right-[15%] w-56 h-56 rounded-full bg-[#A5F3FC] blur-2xl opacity-80" />
             <div className="orb-float-slow absolute bottom-0 left-[10%] w-64 h-64 rounded-full bg-[#FDE8E1] blur-2xl opacity-70" />
           </div>
           <svg className="absolute inset-x-0 top-10 w-full h-56 opacity-50 pointer-events-none" viewBox="0 0 1200 220" fill="none" aria-hidden="true">
-            <path d="M-60 190 C 300 60, 750 200, 1260 40" stroke="#2B6CB0" strokeWidth="1.6" strokeDasharray="6 9" strokeOpacity="0.4" />
+            <path d="M-60 190 C 300 60, 750 200, 1260 40" stroke="#0891B2" strokeWidth="1.6" strokeDasharray="6 9" strokeOpacity="0.4" />
             <g>
-              <path d="M0,-7 L14,0 L0,7 L4,0 Z" fill="#2B6CB0">
+              <path d="M0,-7 L14,0 L0,7 L4,0 Z" fill="#0891B2">
                 <animateMotion dur="10s" repeatCount="indefinite" rotate="auto" path="M-60 190 C 300 60, 750 200, 1260 40" />
               </path>
             </g>
@@ -72,7 +72,7 @@ export default function TravelPage() {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.15 }}
-                className="font-mono-brand text-[11px] sm:text-xs tracking-[0.35em] uppercase text-[#2B6CB0] mb-6"
+                className="font-mono-brand text-[11px] sm:text-xs tracking-[0.35em] uppercase text-[#0891B2] mb-6"
                 data-testid="travel-page-overline"
               >
                 {tp.overline}
@@ -126,7 +126,7 @@ export default function TravelPage() {
                 transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
                 className="relative"
               >
-                <div className="overflow-hidden rounded-t-[9rem] rounded-b-[2rem] border-2 border-white/80 shadow-2xl shadow-[#2B6CB0]/20 aspect-[4/5] max-w-sm mx-auto bg-white">
+                <div className="overflow-hidden rounded-t-[9rem] rounded-b-[2rem] border-2 border-white/80 shadow-2xl shadow-[#0891B2]/20 aspect-[4/5] max-w-sm mx-auto bg-white">
                   <img
                     src={site.images.travel}
                     alt={t.travel.imageAlt}
@@ -139,12 +139,12 @@ export default function TravelPage() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 1.1, duration: 0.7 }}
-                  className="absolute -bottom-4 left-1/2 -translate-x-1/2 backdrop-blur-xl bg-white/90 border border-[#C7E0FE] shadow-xl rounded-2xl px-5 py-3 whitespace-nowrap"
+                  className="absolute -bottom-4 left-1/2 -translate-x-1/2 backdrop-blur-xl bg-white/90 border border-[#5EEAD4] shadow-xl rounded-2xl px-5 py-3 whitespace-nowrap"
                 >
                   <p className="font-mono-brand text-[10px] tracking-[0.25em] uppercase text-[#626E7E]">
                     {t.travel.badgeOver}
                   </p>
-                  <p className="text-sm font-semibold text-[#1A497A]">{tp.heroBadge}</p>
+                  <p className="text-sm font-semibold text-[#0E7490]">{tp.heroBadge}</p>
                 </motion.div>
               </motion.div>
             </div>
@@ -163,7 +163,7 @@ export default function TravelPage() {
         <section id="destinos" className="py-24 sm:py-32 bg-[#FAF7F2]" data-testid="travel-page-destinations">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Reveal className="text-center">
-              <p className="font-mono-brand text-[11px] tracking-[0.35em] uppercase text-[#2B6CB0] mb-4">
+              <p className="font-mono-brand text-[11px] tracking-[0.35em] uppercase text-[#0891B2] mb-4">
                 {t.travel.overline}
               </p>
               <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight text-[#1E2430]">
@@ -206,7 +206,7 @@ export default function TravelPage() {
         </section>
 
         {/* Servicios */}
-        <section className="py-24 sm:py-32 bg-[#F0F6FF]" data-testid="travel-page-services">
+        <section className="py-24 sm:py-32 bg-[#CFF8F3]" data-testid="travel-page-services">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Reveal className="text-center">
               <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight text-[#1E2430]">
@@ -219,10 +219,10 @@ export default function TravelPage() {
                 return (
                   <Reveal key={s.title} delay={i * 0.08}>
                     <div
-                      className="group h-full rounded-3xl bg-white/85 border border-[#C7E0FE] p-7 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#2B6CB0]/10"
+                      className="group h-full rounded-3xl bg-white/85 border border-[#5EEAD4] p-7 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#0891B2]/10"
                       data-testid={`travel-service-${i}`}
                     >
-                      <span className="inline-flex w-12 h-12 rounded-2xl bg-[#D8E8FD] text-[#2B6CB0] items-center justify-center transition-transform duration-500 group-hover:scale-110">
+                      <span className="inline-flex w-12 h-12 rounded-2xl bg-[#A5F3FC] text-[#0891B2] items-center justify-center transition-transform duration-500 group-hover:scale-110">
                         <Icon className="w-6 h-6" />
                       </span>
                       <h3 className="mt-5 font-display text-xl sm:text-2xl font-medium text-[#1E2430]">{s.title}</h3>

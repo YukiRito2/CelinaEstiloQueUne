@@ -33,7 +33,7 @@ export default function DocumentsPage() {
       <Navbar />
       <main>
         <ServicePageLayout
-          theme="mint"
+          theme="amber"
           overline={p.overline}
           title={p.title}
           subtitle={p.subtitle}
@@ -65,10 +65,10 @@ export default function DocumentsPage() {
                   return (
                     <Reveal key={f.title} delay={i * 0.1}>
                       <div
-                        className="group h-full rounded-3xl bg-white border border-[#1E2430]/8 p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#2D7A54]/10"
+                        className="group h-full rounded-3xl bg-white border border-[#1E2430]/8 p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#C2792F]/10"
                         data-testid={`documents-feature-${i}`}
                       >
-                        <span className="inline-flex w-12 h-12 rounded-2xl bg-[#D3EEDD] text-[#2D7A54] items-center justify-center transition-transform duration-500 group-hover:scale-110">
+                        <span className="inline-flex w-12 h-12 rounded-2xl bg-[#F0D4A8] text-[#C2792F] items-center justify-center transition-transform duration-500 group-hover:scale-110">
                           <Icon className="w-6 h-6" />
                         </span>
                         <h3 className="mt-5 font-display text-xl sm:text-2xl font-medium text-[#1E2430]">{f.title}</h3>
@@ -86,7 +86,7 @@ export default function DocumentsPage() {
             className="noise relative overflow-hidden bg-[#2B2638] py-20 sm:py-24 text-[#F8F5FC]"
             data-testid="documents-page-visit"
           >
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(45,122,84,0.18),transparent_55%)]" aria-hidden="true" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(194,121,47,0.18),transparent_55%)]" aria-hidden="true" />
             <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
               <Reveal>
                 <h2 className="font-display text-3xl sm:text-4xl font-light tracking-tight">{p.visitTitle}</h2>

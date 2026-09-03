@@ -124,24 +124,24 @@
    ServicesHub (tag/iconBox/ctaBtn), para que el boton encaje con el
    resto de la tarjeta en vez de traer una paleta nueva. */
 .money {
-  --ib-accent: #2d7a54;
-  --ib-accent-2: #3f9b6e;
-  --ib-glow: rgba(45, 122, 84, 0.5);
+  --ib-accent: #1e2430;
+  --ib-accent-2: #333e52;
+  --ib-glow: rgba(30, 36, 48, 0.5);
 }
 .travel {
-  --ib-accent: #2b6cb0;
-  --ib-accent-2: #4a8fd6;
-  --ib-glow: rgba(43, 108, 176, 0.5);
+  --ib-accent: #0891b2;
+  --ib-accent-2: #22d3ee;
+  --ib-glow: rgba(8, 145, 178, 0.5);
 }
 .jewelry {
-  --ib-accent: #c47b62;
-  --ib-accent-2: #d99776;
-  --ib-glow: rgba(196, 123, 98, 0.5);
+  --ib-accent: #d9714f;
+  --ib-accent-2: #e2916a;
+  --ib-glow: rgba(217, 113, 79, 0.5);
 }
 .documents {
-  --ib-accent: #b8763f;
-  --ib-accent-2: #d0955f;
-  --ib-glow: rgba(184, 118, 63, 0.5);
+  --ib-accent: #c2792f;
+  --ib-accent-2: #dd9a4e;
+  --ib-glow: rgba(194, 121, 47, 0.5);
 }
 .studio {
   --ib-accent: #a78bfa;
@@ -150,9 +150,9 @@
   --ib-ink: #2b2638;
 }
 .fiber {
-  --ib-accent: #0e7c86;
-  --ib-accent-2: #14a0ac;
-  --ib-glow: rgba(14, 124, 134, 0.5);
+  --ib-accent: #16a34a;
+  --ib-accent-2: #4ade80;
+  --ib-glow: rgba(22, 163, 74, 0.5);
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -12,26 +12,29 @@ const meta = [
     icon: Banknote,
     event: "money_transfer_click",
     testid: "contact-option-transfers",
-    card: "bg-[#EEF7F2] border-[#C2E8D2] hover:border-[#2D7A54]/40",
-    iconBox: "bg-[#D3EEDD] text-[#2D7A54]",
-    ctaBtn: "bg-[#2D7A54] group-hover:bg-[#256646] text-white",
-    spot: "rgba(45,122,84,0.20)",
+    image: site.images.money,
+    card: "bg-[#FADD7A] border-[#EFC766] hover:border-[#1E2430]/40",
+    iconBox: "bg-[#1E2430] text-[#F6DFA0]",
+    ctaBtn: "bg-[#1E2430] group-hover:bg-[#2A3242] text-white",
+    spot: "rgba(30,36,48,0.20)",
     href: site.links.money,
   },
   {
     icon: Plane,
     event: "travel_click",
     testid: "contact-option-travel",
-    card: "bg-[#F0F6FF] border-[#C7E0FE] hover:border-[#2B6CB0]/40",
-    iconBox: "bg-[#D8E8FD] text-[#2B6CB0]",
-    ctaBtn: "bg-[#2B6CB0] group-hover:bg-[#235a94] text-white",
-    spot: "rgba(43,108,176,0.18)",
+    image: site.images.travelDestinations[0],
+    card: "bg-[#CFF8F3] border-[#5EEAD4] hover:border-[#0891B2]/40",
+    iconBox: "bg-[#A5F3FC] text-[#0891B2]",
+    ctaBtn: "bg-[#0891B2] group-hover:bg-[#0A7A91] text-white",
+    spot: "rgba(8,145,178,0.22)",
     href: site.links.travel,
   },
   {
     icon: Gem,
     event: "jewelry_click",
     testid: "contact-option-jewelry",
+    image: site.images.jewelry[0],
     card: "bg-[#FDF2F0] border-[#F7D8D3] hover:border-[#C47B62]/40",
     iconBox: "bg-[#FBE3DF] text-[#C47B62]",
     ctaBtn: "bg-[#C47B62] group-hover:bg-[#ac6850] text-white",
@@ -42,16 +45,18 @@ const meta = [
     icon: FileText,
     event: "documents_click",
     testid: "contact-option-documents",
-    card: "bg-[#FBF1E6] border-[#EAD2B3] hover:border-[#B8763F]/40",
-    iconBox: "bg-[#F3E1C8] text-[#B8763F]",
-    ctaBtn: "bg-[#B8763F] group-hover:bg-[#9c632f] text-white",
-    spot: "rgba(184,118,63,0.20)",
+    image: site.images.documents,
+    card: "bg-[#F7E1C4] border-[#E0B67D] hover:border-[#C2792F]/40",
+    iconBox: "bg-[#F0D4A8] text-[#C2792F]",
+    ctaBtn: "bg-[#C2792F] group-hover:bg-[#A8621F] text-white",
+    spot: "rgba(194,121,47,0.20)",
     href: site.links.documents,
   },
   {
     icon: MonitorSmartphone,
     event: "studio_click",
     testid: "contact-option-studio",
+    image: site.images.studio,
     card: "bg-[#2B2638] border-[#E2D4F0]/15 hover:border-[#A78BFA]/50",
     iconBox: "bg-[#A78BFA]/15 text-[#A78BFA]",
     ctaBtn: "bg-[#A78BFA] group-hover:bg-[#c4b5fc] text-[#2B2638]",
@@ -110,31 +115,44 @@ const SpotlightCard = ({ o, m, i }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-10% 0px" }}
       transition={{ duration: 0.7, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-      className={`group relative overflow-hidden flex flex-col justify-between rounded-3xl border p-7 min-h-[240px] transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#1E2430]/8 ${m.card}`}
+      className={`group relative overflow-hidden flex flex-col rounded-3xl border transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#1E2430]/8 ${m.card}`}
       data-testid={m.testid}
     >
-      <span ref={ref} onMouseMove={onMove} className="absolute inset-0" aria-hidden="true">
-        <span
-          className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-          style={{ background: `radial-gradient(240px circle at var(--mx, 50%) var(--my, 50%), ${m.spot}, transparent 70%)` }}
+      <div className="relative h-32 sm:h-36 overflow-hidden shrink-0">
+        <img
+          src={m.image}
+          alt=""
+          width="400"
+          height="200"
+          loading="lazy"
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
-      </span>
+      </div>
 
-      <span
-        className={`relative inline-flex w-12 h-12 rounded-2xl items-center justify-center transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6 ${m.iconBox}`}
-      >
-        <m.icon className="w-6 h-6" />
-      </span>
-      <div className="relative mt-8">
-        <h3 className={`font-display text-2xl font-medium ${m.dark ? "text-[#F8F5FC]" : "text-[#1E2430]"}`}>
-          {o.title}
-        </h3>
-        <span
-          className={`mt-4 inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-semibold shadow-sm transition-all duration-300 group-hover:gap-2.5 group-hover:shadow-md ${m.ctaBtn}`}
-        >
-          {o.cta}
-          <ArrowUpRight className="w-4 h-4" />
+      <div className="relative flex flex-col justify-between flex-1 p-7 min-h-[168px]">
+        <span ref={ref} onMouseMove={onMove} className="absolute inset-0" aria-hidden="true">
+          <span
+            className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+            style={{ background: `radial-gradient(240px circle at var(--mx, 50%) var(--my, 50%), ${m.spot}, transparent 70%)` }}
+          />
         </span>
+
+        <span
+          className={`relative inline-flex w-12 h-12 rounded-2xl items-center justify-center transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6 ${m.iconBox}`}
+        >
+          <m.icon className="w-6 h-6" />
+        </span>
+        <div className="relative mt-8">
+          <h3 className={`font-display text-2xl font-medium ${m.dark ? "text-[#F8F5FC]" : "text-[#1E2430]"}`}>
+            {o.title}
+          </h3>
+          <span
+            className={`mt-4 inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-semibold shadow-sm transition-all duration-300 group-hover:gap-2.5 group-hover:shadow-md ${m.ctaBtn}`}
+          >
+            {o.cta}
+            <ArrowUpRight className="w-4 h-4" />
+          </span>
+        </div>
       </div>
     </motion.a>
   );

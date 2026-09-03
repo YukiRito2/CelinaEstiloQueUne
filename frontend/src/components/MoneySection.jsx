@@ -14,22 +14,22 @@ export const MoneySection = () => {
   return (
     <section
       id="envios-dinero"
-      className="noise relative overflow-hidden bg-[#EEF7F2] py-24 sm:py-32"
+      className="noise relative overflow-hidden bg-[#FADD7A] py-24 sm:py-32"
       data-testid="money-transfer-section"
     >
       <div
-        className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(37,211,102,0.10),transparent_60%)]"
+        className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(30,36,48,0.10),transparent_60%)]"
         aria-hidden="true"
       />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-14 items-center">
         <Reveal>
-          <p className="font-mono-brand text-[11px] tracking-[0.35em] uppercase text-[#2D7A54] mb-4">
+          <p className="font-mono-brand text-[11px] tracking-[0.35em] uppercase text-[#92400E] mb-4">
             {t.money.overline}
           </p>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight leading-tight text-[#1E2430]">
             {t.money.title}
           </h2>
-          <p className="mt-5 text-base sm:text-lg font-light text-[#475569] leading-relaxed max-w-lg">
+          <p className="mt-5 text-base sm:text-lg font-light text-[#5B4A2E] leading-relaxed max-w-lg">
             {t.money.text}
           </p>
 
@@ -38,7 +38,7 @@ export const MoneySection = () => {
               const Icon = icons[i];
               return (
                 <li key={text} className="flex items-center gap-3 text-sm sm:text-base text-[#1E2430]/85">
-                  <span className="inline-flex w-9 h-9 rounded-xl bg-[#D3EEDD] items-center justify-center text-[#2D7A54] shrink-0">
+                  <span className="inline-flex w-9 h-9 rounded-xl bg-[#1E2430] items-center justify-center text-[#F6DFA0] shrink-0">
                     <Icon className="w-5 h-5" />
                   </span>
                   {text}
@@ -77,7 +77,7 @@ export const MoneySection = () => {
               rel="noopener noreferrer"
               onClick={() => trackEvent("whatsapp_click", { source: "money_section" })}
               data-testid="money-consult-whatsapp-btn"
-              className="inline-flex items-center justify-center gap-2 text-[#118476] font-semibold px-2 py-2 link-underline"
+              className="inline-flex items-center justify-center gap-2 text-[#92400E] font-semibold px-2 py-2 link-underline"
             >
               <MessageCircle className="w-5 h-5" />
               {t.money.ctaWhatsapp}
@@ -86,12 +86,12 @@ export const MoneySection = () => {
         </Reveal>
 
         <Reveal delay={0.15}>
-          <div className="backdrop-blur-xl bg-white/60 border border-[#C2E8D2] rounded-[2rem] p-8 sm:p-12 shadow-xl shadow-[#2D7A54]/8">
-            <p className="font-mono-brand text-[10px] tracking-[0.3em] uppercase text-[#626E7E] mb-8 text-center">
+          <div className="backdrop-blur-xl bg-white/70 border border-[#EFC766] rounded-[2rem] p-8 sm:p-12 shadow-xl shadow-[#1E2430]/8">
+            <p className="font-mono-brand text-[10px] tracking-[0.3em] uppercase text-[#7A6A4D] mb-8 text-center">
               {t.money.partners}
             </p>
             <PartnerLogos />
-            <p className="mt-8 text-center text-xs text-[#626E7E] font-light">{t.money.note}</p>
+            <p className="mt-8 text-center text-xs text-[#7A6A4D] font-light">{t.money.note}</p>
           </div>
         </Reveal>
       </div>

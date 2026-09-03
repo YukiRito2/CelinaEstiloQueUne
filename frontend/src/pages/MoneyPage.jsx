@@ -29,11 +29,11 @@ const chipPositions = [
 ];
 
 const chipColors = [
-  "bg-white/90 border-[#C2E8D2] text-[#1E5238]",
+  "bg-white/90 border-[#EFC766] text-[#92400E]",
   "bg-white/90 border-[#C7E0FE] text-[#1A497A]",
   "bg-white/90 border-[#F7D8D3] text-[#874B38]",
   "bg-white/90 border-[#E2D4F0] text-[#5B4B8A]",
-  "bg-white/90 border-[#D3EEDD] text-[#2D7A54]",
+  "bg-white/90 border-[#EFC766] text-[#92400E]",
   "bg-[#1E2430] border-[#1E2430] text-white",
 ];
 
@@ -61,7 +61,7 @@ const MoneyVisual = ({ t }) => {
           <motion.path
             key={i}
             d={d}
-            stroke="#2D7A54"
+            stroke="#92400E"
             strokeOpacity="0.35"
             strokeWidth="1.4"
             strokeDasharray="5 6"
@@ -79,9 +79,9 @@ const MoneyVisual = ({ t }) => {
         transition={{ type: "spring", stiffness: 180, damping: 18, delay: 0.5 }}
         className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
       >
-        <div className="backdrop-blur-xl bg-white/90 border-2 border-[#C2E8D2] shadow-2xl shadow-[#2D7A54]/20 rounded-3xl px-6 py-5 text-center">
-          <span className="inline-flex w-10 h-10 rounded-full bg-[#25D366]/15 items-center justify-center">
-            <MapPin className="w-5 h-5 text-[#2D7A54]" />
+        <div className="backdrop-blur-xl bg-white/90 border-2 border-[#EFC766] shadow-2xl shadow-[#1E2430]/15 rounded-3xl px-6 py-5 text-center">
+          <span className="inline-flex w-10 h-10 rounded-full bg-[#1E2430] items-center justify-center">
+            <MapPin className="w-5 h-5 text-[#F6DFA0]" />
           </span>
           <p className="mt-2 text-[10px] font-mono-brand tracking-[0.2em] uppercase text-[#626E7E]">
             {t.moneyPage.hereLabel}
@@ -154,7 +154,7 @@ export default function MoneyPage() {
       <Navbar />
       <main>
         <ServicePageLayout
-          theme="mint"
+          theme="gold"
           overline={p.overline}
           title={p.title}
           subtitle={p.subtitle}
@@ -176,11 +176,11 @@ export default function MoneyPage() {
           whatsappMessage={t.messages.money}
         >
           {/* Banda: adelanta tus datos y gana tiempo */}
-          <section className="bg-[#EEF7F2] pb-2 pt-4 sm:pt-6" data-testid="money-time-band">
+          <section className="bg-[#FADD7A] pb-2 pt-4 sm:pt-6" data-testid="money-time-band">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <Reveal>
                 <div className="rounded-3xl bg-[#1E2430] shadow-lg shadow-[#1E2430]/15 px-7 py-6 sm:px-10 sm:py-8 flex flex-col sm:flex-row items-start sm:items-center gap-5">
-                  <span className="inline-flex w-14 h-14 rounded-2xl bg-white/10 text-[#25D366] items-center justify-center shrink-0">
+                  <span className="inline-flex w-14 h-14 rounded-2xl bg-white/10 text-[#F6DFA0] items-center justify-center shrink-0">
                     <Clock3 className="w-7 h-7" />
                   </span>
                   <div>
@@ -195,11 +195,11 @@ export default function MoneyPage() {
           </section>
 
           {/* Banda de transparencia */}
-          <section className="bg-[#EEF7F2] pb-2 pt-4 sm:pt-6" data-testid="money-honesty-band">
+          <section className="bg-[#FADD7A] pb-2 pt-4 sm:pt-6" data-testid="money-honesty-band">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <Reveal>
-                <div className="rounded-3xl bg-white/85 border border-[#C2E8D2] shadow-lg shadow-[#2D7A54]/8 px-7 py-6 sm:px-10 sm:py-8 flex flex-col sm:flex-row items-start sm:items-center gap-5">
-                  <span className="inline-flex w-14 h-14 rounded-2xl bg-[#D3EEDD] text-[#2D7A54] items-center justify-center shrink-0">
+                <div className="rounded-3xl bg-white/85 border border-[#EFC766] shadow-lg shadow-[#1E2430]/8 px-7 py-6 sm:px-10 sm:py-8 flex flex-col sm:flex-row items-start sm:items-center gap-5">
+                  <span className="inline-flex w-14 h-14 rounded-2xl bg-[#1E2430] text-[#F6DFA0] items-center justify-center shrink-0">
                     <ShieldCheck className="w-7 h-7" />
                   </span>
                   <div>
@@ -227,10 +227,10 @@ export default function MoneyPage() {
                   return (
                     <Reveal key={f.title} delay={i * 0.1}>
                       <div
-                        className="group h-full rounded-3xl bg-[#EEF7F2] border border-[#C2E8D2] p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#2D7A54]/10"
+                        className="group h-full rounded-3xl bg-[#FADD7A] border border-[#EFC766] p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#1E2430]/10"
                         data-testid={`money-feature-${i}`}
                       >
-                        <span className="inline-flex w-12 h-12 rounded-2xl bg-[#D3EEDD] text-[#2D7A54] items-center justify-center transition-transform duration-500 group-hover:scale-110">
+                        <span className="inline-flex w-12 h-12 rounded-2xl bg-[#1E2430] text-[#F6DFA0] items-center justify-center transition-transform duration-500 group-hover:scale-110">
                           <Icon className="w-6 h-6" />
                         </span>
                         <h3 className="mt-5 font-display text-xl sm:text-2xl font-medium text-[#1E2430]">{f.title}</h3>
@@ -244,7 +244,7 @@ export default function MoneyPage() {
           </section>
 
           {/* Cómo funciona: línea de tiempo */}
-          <section className="py-24 sm:py-28 bg-[#EEF7F2]" data-testid="money-page-steps">
+          <section className="py-24 sm:py-28 bg-[#FADD7A]" data-testid="money-page-steps">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
               <Reveal className="text-center">
                 <h2 className="font-display text-3xl sm:text-4xl font-light tracking-tight text-[#1E2430]">
@@ -253,7 +253,7 @@ export default function MoneyPage() {
               </Reveal>
               <div className="mt-14 relative">
                 <div
-                  className="hidden sm:block absolute top-6 left-[16%] right-[16%] h-0.5 bg-gradient-to-r from-[#2D7A54]/20 via-[#2D7A54]/40 to-[#2D7A54]/20"
+                  className="hidden sm:block absolute top-6 left-[16%] right-[16%] h-0.5 bg-gradient-to-r from-[#1E2430]/20 via-[#1E2430]/40 to-[#1E2430]/20"
                   aria-hidden="true"
                 />
                 <div className="grid sm:grid-cols-3 gap-10 sm:gap-5">
@@ -270,7 +270,7 @@ export default function MoneyPage() {
                 </div>
               </div>
               <Reveal delay={0.2} className="text-center">
-                <p className="mt-12 text-xs text-[#626E7E] font-light">{t.money.note}</p>
+                <p className="mt-12 text-xs text-[#7A6A4D] font-light">{t.money.note}</p>
               </Reveal>
             </div>
           </section>
@@ -288,7 +288,7 @@ export default function MoneyPage() {
           </section>
 
           {/* También en tienda: paquetería, móvil, fotocopias, snacks */}
-          <section className="py-24 sm:py-28 bg-[#EEF7F2]" data-testid="money-page-extras">
+          <section className="py-24 sm:py-28 bg-[#FADD7A]" data-testid="money-page-extras">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <Reveal>
                 <h2 className="font-display text-3xl sm:text-4xl font-light tracking-tight text-[#1E2430]">
@@ -301,10 +301,10 @@ export default function MoneyPage() {
                   return (
                     <Reveal key={f.title} delay={i * 0.1}>
                       <div
-                        className="group h-full rounded-3xl bg-white border border-[#C2E8D2] p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#2D7A54]/10"
+                        className="group h-full rounded-3xl bg-white border border-[#EFC766] p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#1E2430]/10"
                         data-testid={`money-extra-${i}`}
                       >
-                        <span className="inline-flex w-12 h-12 rounded-2xl bg-[#D3EEDD] text-[#2D7A54] items-center justify-center transition-transform duration-500 group-hover:scale-110">
+                        <span className="inline-flex w-12 h-12 rounded-2xl bg-[#1E2430] text-[#F6DFA0] items-center justify-center transition-transform duration-500 group-hover:scale-110">
                           <Icon className="w-6 h-6" />
                         </span>
                         <h3 className="mt-5 font-display text-xl sm:text-2xl font-medium text-[#1E2430]">{f.title}</h3>
@@ -321,7 +321,7 @@ export default function MoneyPage() {
           <section className="py-20 sm:py-24 bg-[#1E2430]" data-testid="money-page-closing-cta">
             <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
               <Reveal>
-                <span className="inline-flex w-14 h-14 rounded-2xl bg-white/10 text-[#25D366] items-center justify-center mb-6">
+                <span className="inline-flex w-14 h-14 rounded-2xl bg-white/10 text-[#F6DFA0] items-center justify-center mb-6">
                   <Clock3 className="w-7 h-7" />
                 </span>
                 <h2 className="font-display text-3xl sm:text-4xl font-light tracking-tight text-white">

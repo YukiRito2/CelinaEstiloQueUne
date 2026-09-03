@@ -35,7 +35,7 @@ export const PartnerLogos = ({ className = "space-y-4" }) => (
     {PARTNERS.map((p) => (
       <div
         key={p.key}
-        className="rounded-2xl bg-white border border-[#C2E8D2] px-8 py-6 flex items-center justify-center shadow-sm"
+        className="rounded-2xl bg-white border border-[#EFC766] px-8 py-6 flex items-center justify-center shadow-sm"
         data-testid={`partner-badge-${p.key}`}
       >
         <img

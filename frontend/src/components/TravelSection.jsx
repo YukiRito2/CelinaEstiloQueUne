@@ -16,11 +16,11 @@ export const TravelSection = () => {
   const imgY = useTransform(scrollYProgress, [0, 1], [40, -40]);
 
   return (
-    <section id="viajes" ref={ref} className="py-24 sm:py-32 bg-[#F0F6FF] overflow-hidden" data-testid="travel-section">
+    <section id="viajes" ref={ref} className="py-24 sm:py-32 bg-[#CFF8F3] overflow-hidden" data-testid="travel-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-14 items-center">
         <div className="order-2 lg:order-1 relative">
           <motion.div style={{ y: imgY }} className="relative">
-            <div className="overflow-hidden rounded-[2rem] border border-white/70 shadow-2xl shadow-[#2B6CB0]/15 aspect-[4/3]">
+            <div className="overflow-hidden rounded-[2rem] border border-white/70 shadow-2xl shadow-[#0891B2]/15 aspect-[4/3]">
               <img
                 src={site.images.travel}
                 alt={t.travel.imageAlt}
@@ -28,20 +28,20 @@ export const TravelSection = () => {
                 loading="lazy"
                 data-testid="travel-image"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1A497A]/30 to-transparent" aria-hidden="true" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0E7490]/30 to-transparent" aria-hidden="true" />
             </div>
-            <div className="absolute -bottom-5 left-6 backdrop-blur-xl bg-white/90 border border-[#C7E0FE] shadow-xl shadow-[#2B6CB0]/10 rounded-2xl px-5 py-3">
+            <div className="absolute -bottom-5 left-6 backdrop-blur-xl bg-white/90 border border-[#5EEAD4] shadow-xl shadow-[#0891B2]/10 rounded-2xl px-5 py-3">
               <p className="font-mono-brand text-[10px] tracking-[0.25em] uppercase text-[#626E7E]">
                 {t.travel.badgeOver}
               </p>
-              <p className="text-sm font-semibold text-[#1A497A]">{t.travel.badgeSub}</p>
+              <p className="text-sm font-semibold text-[#0E7490]">{t.travel.badgeSub}</p>
             </div>
           </motion.div>
         </div>
 
         <div className="order-1 lg:order-2">
           <Reveal>
-            <p className="font-mono-brand text-[11px] tracking-[0.35em] uppercase text-[#2B6CB0] mb-4">
+            <p className="font-mono-brand text-[11px] tracking-[0.35em] uppercase text-[#0891B2] mb-4">
               {t.travel.overline}
             </p>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight text-[#1E2430] leading-tight">
@@ -58,10 +58,10 @@ export const TravelSection = () => {
               return (
                 <Reveal key={title} delay={i * 0.08}>
                   <div
-                    className="group rounded-2xl bg-white/80 border border-[#C7E0FE] p-5 transition-all duration-400 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#2B6CB0]/10"
+                    className="group rounded-2xl bg-white/80 border border-[#5EEAD4] p-5 transition-all duration-400 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#0891B2]/10"
                     data-testid={`travel-card-${i}`}
                   >
-                    <Icon className="w-6 h-6 text-[#2B6CB0] transition-transform duration-300 group-hover:scale-110" />
+                    <Icon className="w-6 h-6 text-[#0891B2] transition-transform duration-300 group-hover:scale-110" />
                     <p className="mt-3 font-medium text-[#1E2430]">{title}</p>
                   </div>
                 </Reveal>
@@ -88,7 +88,7 @@ export const TravelSection = () => {
                 rel="noopener noreferrer"
                 onClick={() => trackEvent("whatsapp_click", { source: "travel_section" })}
                 data-testid="travel-plan-whatsapp-btn"
-                className="inline-flex items-center gap-2 text-[#118476] font-semibold px-2 py-2 link-underline"
+                className="inline-flex items-center gap-2 text-[#0891B2] font-semibold px-2 py-2 link-underline"
               >
                 <MessageCircle className="w-5 h-5" />
                 {t.travelPage.form.whatsappAlt}

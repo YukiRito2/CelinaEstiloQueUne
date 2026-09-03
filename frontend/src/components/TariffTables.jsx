@@ -68,16 +68,16 @@ export const TariffTables = () => {
     <section className="py-20 sm:py-24 bg-[#FAF7F2]" data-testid="fiber-page-tariffs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal>
-          <p className="font-mono-brand text-[11px] tracking-[0.3em] uppercase text-[#0E7C86] mb-4">Nasertel</p>
+          <p className="font-mono-brand text-[11px] tracking-[0.3em] uppercase text-[#15803D] mb-4">Nasertel</p>
           <h2 className="font-display text-3xl sm:text-4xl font-light tracking-tight text-[#1E2430]">{L.title}</h2>
           <p className="mt-4 max-w-2xl text-sm sm:text-base font-light text-[#475569] leading-relaxed">{L.subtitle}</p>
-          <p className="mt-2 text-xs font-medium text-[#0B5158]">{t.fiberPage.partnerText}</p>
+          <p className="mt-2 text-xs font-medium text-[#14532D]">{t.fiberPage.partnerText}</p>
         </Reveal>
 
         {recommendedPlans.length > 0 && (
           <Reveal delay={0.05}>
             <div className="mt-10" data-testid="tariff-compare">
-              <p className="font-mono-brand text-[10px] tracking-[0.2em] uppercase text-[#0E7C86] mb-4">
+              <p className="font-mono-brand text-[10px] tracking-[0.2em] uppercase text-[#15803D] mb-4">
                 {L.compareTitle}
               </p>
               <div className="grid sm:grid-cols-2 gap-4">
@@ -122,7 +122,7 @@ export const TariffTables = () => {
                         {it.price}
                         <span className="text-xs font-light text-[#64748B]">{L.perMonth}</span>
                       </p>
-                      <span className="mt-1 font-mono-brand text-[9px] tracking-[0.12em] uppercase text-[#0B5158]">
+                      <span className="mt-1 font-mono-brand text-[9px] tracking-[0.12em] uppercase text-[#14532D]">
                         {L.badges[op.badgeKey]}
                       </span>
                       {L.reasons?.[op.id] && (
@@ -164,8 +164,8 @@ export const TariffTables = () => {
                 aria-pressed={filter === k}
                 className={`font-mono-brand text-[11px] tracking-[0.12em] uppercase px-4 py-2 rounded-full border transition-all duration-300 ${
                   filter === k
-                    ? "bg-[#0E7C86] border-[#0E7C86] text-white shadow-md"
-                    : "bg-white border-[#BFE6E6] text-[#0B5158] hover:border-[#0E7C86]"
+                    ? "bg-[#16A34A] border-[#16A34A] text-white shadow-md"
+                    : "bg-white border-[#86EFAC] text-[#14532D] hover:border-[#16A34A]"
                 }`}
               >
                 {L.filters[k]}
@@ -180,7 +180,7 @@ export const TariffTables = () => {
             className="mt-8"
             onValueChange={(v) => trackEvent("tariff_tab", { operator: v })}
           >
-            <TabsList className="h-auto flex-wrap gap-1 rounded-full bg-white border border-[#BFE6E6] p-1.5">
+            <TabsList className="h-auto flex-wrap gap-1 rounded-full bg-white border border-[#86EFAC] p-1.5">
               {tariffs.map((op) => (
                 <TabsTrigger
                   key={op.id}
@@ -264,7 +264,7 @@ export const TariffTables = () => {
                                 className={`group relative rounded-2xl bg-white p-5 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${
                                   it.recommended ? "border-2 shadow-md shadow-black/10" : "border"
                                 }`}
-                                style={{ borderColor: it.recommended ? op.accent : "#BFE6E6" }}
+                                style={{ borderColor: it.recommended ? op.accent : "#86EFAC" }}
                                 data-testid={`tariff-item-${op.id}-${group.key}-${i}`}
                               >
                                 {it.recommended && (
