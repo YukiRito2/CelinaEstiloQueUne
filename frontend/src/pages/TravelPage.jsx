@@ -8,6 +8,7 @@ import {
   MessageCircle,
   Navigation,
   Plane,
+  Send,
 } from "lucide-react";
 import { site } from "../config/site";
 import { waLink } from "../lib/whatsapp";
@@ -20,6 +21,7 @@ import { TravelForm } from "../components/TravelForm";
 import { BackButton } from "../components/BackButton";
 import { Reveal, MaskedLine } from "../components/Reveal";
 import { RelatedServices } from "../components/RelatedServices";
+import { IrresistibleButton } from "../components/IrresistibleButton/IrresistibleButton";
 import { usePageSeo, useBreadcrumbSchema } from "../lib/seo";
 
 const serviceIcons = [Plane, Hotel, Globe2, Backpack];
@@ -99,17 +101,14 @@ export default function TravelPage() {
                 transition={{ duration: 0.8, delay: 0.8 }}
                 className="mt-9 flex flex-col sm:flex-row gap-4"
               >
-                <a
-                  href={waLink(t.messages.travel)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => trackEvent("whatsapp_click", { source: "travel_page_hero" })}
-                  data-testid="travel-page-whatsapp-btn"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] hover:bg-[#20BD5A] text-[#1E2430] font-semibold px-8 py-4 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
-                >
-                  <MessageCircle className="w-5 h-5" />
-                  {tp.ctaPrimary}
-                </a>
+                <IrresistibleButton
+                  to={site.links.travelForm}
+                  label={tp.form.submit}
+                  variant="travel"
+                  icon={<Send className="w-4 h-4 sm:w-[18px] sm:h-[18px]" />}
+                  data-testid="travel-page-form-btn"
+                  onClick={() => trackEvent("travel_click", { source: "travel_page_hero" })}
+                />
                 <a
                   href="#destinos"
                   data-testid="travel-page-destinations-btn"
