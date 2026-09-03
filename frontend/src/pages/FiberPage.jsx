@@ -10,6 +10,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { site } from "../config/site";
+import { cloudinaryWidth } from "../lib/cloudinary";
 import { waLink } from "../lib/whatsapp";
 import { trackEvent } from "../lib/analytics";
 import { useLanguage } from "../context/LanguageContext";
@@ -116,7 +117,7 @@ export default function FiberPage() {
                       data-testid={`fiber-mobile-operator-${op.toLowerCase()}`}
                     >
                       {operatorLogos[op] && (
-                        <img src={operatorLogos[op]} alt="" loading="lazy" className="w-4 h-4 rounded-full object-cover" />
+                        <img src={cloudinaryWidth(operatorLogos[op], 40)} alt="" loading="lazy" width="16" height="16" className="w-4 h-4 rounded-full object-cover" />
                       )}
                       {op}
                     </span>
@@ -272,7 +273,7 @@ export default function FiberPage() {
                       data-testid={`fiber-partner-operator-${op.toLowerCase()}`}
                     >
                       {operatorLogos[op] && (
-                        <img src={operatorLogos[op]} alt="" loading="lazy" className="w-4 h-4 rounded-full object-cover" />
+                        <img src={cloudinaryWidth(operatorLogos[op], 40)} alt="" loading="lazy" width="16" height="16" className="w-4 h-4 rounded-full object-cover" />
                       )}
                       {op}
                     </span>

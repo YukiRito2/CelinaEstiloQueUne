@@ -9,6 +9,7 @@ import {
 } from "framer-motion";
 import { ArrowDown, Banknote, Gem, MessageCircle, MonitorSmartphone, Plane } from "lucide-react";
 import { site } from "../config/site";
+import { cloudinaryWidth } from "../lib/cloudinary";
 import { waLink } from "../lib/whatsapp";
 import { trackEvent } from "../lib/analytics";
 import { useLanguage } from "../context/LanguageContext";
@@ -184,9 +185,27 @@ const Constellation = ({ t }) => {
                 </p>
               </div>
               <div className="mt-2 flex items-center gap-2">
-                <img src={site.images.partners.ria} alt="Ria" className="h-5 w-5 rounded-md" />
-                <img src={site.images.partners.westernUnion} alt="Western Union" className="h-4 w-auto rounded" />
-                <img src={site.images.partners.transfast} alt="Transfast" className="h-3 w-auto" />
+                <img
+                  src={cloudinaryWidth(site.images.partners.ria, 48)}
+                  alt="Ria"
+                  width="20"
+                  height="20"
+                  className="h-5 w-5 rounded-md"
+                />
+                <img
+                  src={cloudinaryWidth(site.images.partners.westernUnion, 96)}
+                  alt="Western Union"
+                  width="64"
+                  height="16"
+                  className="h-4 w-auto rounded"
+                />
+                <img
+                  src={cloudinaryWidth(site.images.partners.transfast, 96)}
+                  alt="Transfast"
+                  width="64"
+                  height="12"
+                  className="h-3 w-auto"
+                />
               </div>
             </div>
           </Node>
@@ -328,9 +347,27 @@ const MobileNodes = ({ t }) => (
       <Banknote className="w-5 h-5 text-[#2D7A54]" />
       <p className="mt-2 text-xs font-semibold text-[#1E5238]">{t.hero.nodes.money}</p>
       <div className="mt-1 flex items-center gap-1.5">
-        <img src={site.images.partners.ria} alt="Ria" className="h-3.5 w-3.5 rounded" />
-        <img src={site.images.partners.westernUnion} alt="Western Union" className="h-3 w-auto rounded" />
-        <img src={site.images.partners.transfast} alt="Transfast" className="h-2 w-auto" />
+        <img
+          src={cloudinaryWidth(site.images.partners.ria, 40)}
+          alt="Ria"
+          width="14"
+          height="14"
+          className="h-3.5 w-3.5 rounded"
+        />
+        <img
+          src={cloudinaryWidth(site.images.partners.westernUnion, 80)}
+          alt="Western Union"
+          width="56"
+          height="12"
+          className="h-3 w-auto rounded"
+        />
+        <img
+          src={cloudinaryWidth(site.images.partners.transfast, 80)}
+          alt="Transfast"
+          width="56"
+          height="8"
+          className="h-2 w-auto"
+        />
       </div>
     </motion.a>
     <motion.a

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, ArrowUpRight, Banknote, Plane, Gem, FileText, MonitorSmartphone, Wifi } from "lucide-react";
 import { site } from "../config/site";
+import { cloudinaryWidth } from "../lib/cloudinary";
 import { trackEvent } from "../lib/analytics";
 import { useLanguage } from "../context/LanguageContext";
 import { Reveal } from "./Reveal";
@@ -193,7 +194,7 @@ const ServiceCard = ({ s, m, index, externalHint }) => {
                 className={`inline-flex items-center gap-1.5 font-mono-brand text-[10px] tracking-[0.15em] px-3 py-1.5 rounded-full border ${m.chip}`}
               >
                 {chipLogos[c] && (
-                  <img src={chipLogos[c]} alt="" loading="lazy" className="w-3.5 h-3.5 rounded-full object-cover" />
+                  <img src={cloudinaryWidth(chipLogos[c], 40)} alt="" loading="lazy" width="14" height="14" className="w-3.5 h-3.5 rounded-full object-cover" />
                 )}
                 {c}
               </span>

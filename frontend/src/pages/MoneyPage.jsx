@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Clock3, Coffee, Globe2, HandHeart, MapPin, Package, Printer, ShieldCheck, Smartphone } from "lucide-react";
 import { site } from "../config/site";
+import { cloudinaryWidth } from "../lib/cloudinary";
 import { trackEvent } from "../lib/analytics";
 import { useLanguage } from "../context/LanguageContext";
 import { Navbar } from "../components/Navbar";
@@ -86,9 +87,27 @@ const MoneyVisual = ({ t }) => {
           </p>
           <p className="text-base font-bold text-[#1E2430]">La Seu d'Urgell</p>
           <div className="mt-1.5 flex items-center justify-center gap-1.5">
-            <img src={site.images.partners.ria} alt="Ria" className="h-4 w-4 rounded-md" />
-            <img src={site.images.partners.westernUnion} alt="Western Union" className="h-3.5 w-auto rounded" />
-            <img src={site.images.partners.transfast} alt="Transfast" className="h-2.5 w-auto" />
+            <img
+              src={cloudinaryWidth(site.images.partners.ria, 40)}
+              alt="Ria"
+              width="16"
+              height="16"
+              className="h-4 w-4 rounded-md"
+            />
+            <img
+              src={cloudinaryWidth(site.images.partners.westernUnion, 80)}
+              alt="Western Union"
+              width="56"
+              height="14"
+              className="h-3.5 w-auto rounded"
+            />
+            <img
+              src={cloudinaryWidth(site.images.partners.transfast, 80)}
+              alt="Transfast"
+              width="56"
+              height="10"
+              className="h-2.5 w-auto"
+            />
           </div>
         </div>
       </motion.div>

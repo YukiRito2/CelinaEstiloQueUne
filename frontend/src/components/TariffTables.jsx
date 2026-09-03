@@ -1,6 +1,7 @@
 import { Check, MessageCircle, Smartphone, Star, Tv, Wifi } from "lucide-react";
 import { useState } from "react";
 import { tariffs } from "../config/tariffs";
+import { cloudinaryWidth } from "../lib/cloudinary";
 import { waLink } from "../lib/whatsapp";
 import { trackEvent } from "../lib/analytics";
 import { useLanguage } from "../context/LanguageContext";
@@ -94,7 +95,14 @@ export const TariffTables = () => {
                       <div className="flex items-center justify-between gap-3">
                         <div className="flex items-center gap-2.5">
                           {op.logo && (
-                            <img src={op.logo} alt="" loading="lazy" className="w-8 h-8 rounded-lg object-cover shrink-0" />
+                            <img
+                              src={cloudinaryWidth(op.logo, 80)}
+                              alt=""
+                              loading="lazy"
+                              width="32"
+                              height="32"
+                              className="w-8 h-8 rounded-lg object-cover shrink-0"
+                            />
                           )}
                           <span className="font-display text-xl font-semibold" style={{ color: op.accent }}>
                             {op.name}
@@ -182,7 +190,14 @@ export const TariffTables = () => {
                   className="inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-sm font-semibold data-[state=active]:bg-[var(--op-accent)] data-[state=active]:text-white"
                 >
                   {op.logo && (
-                    <img src={op.logo} alt="" loading="lazy" className="w-5 h-5 rounded-md object-cover shrink-0" />
+                    <img
+                      src={cloudinaryWidth(op.logo, 48)}
+                      alt=""
+                      loading="lazy"
+                      width="20"
+                      height="20"
+                      className="w-5 h-5 rounded-md object-cover shrink-0"
+                    />
                   )}
                   {op.name}
                 </TabsTrigger>
@@ -193,7 +208,14 @@ export const TariffTables = () => {
               <TabsContent key={op.id} value={op.id} className="mt-8" data-testid={`tariff-panel-${op.id}`}>
                 <div className="flex items-center gap-3 mb-8">
                   {op.logo && (
-                    <img src={op.logo} alt="" loading="lazy" className="w-10 h-10 rounded-xl object-cover shrink-0" />
+                    <img
+                      src={cloudinaryWidth(op.logo, 96)}
+                      alt=""
+                      loading="lazy"
+                      width="40"
+                      height="40"
+                      className="w-10 h-10 rounded-xl object-cover shrink-0"
+                    />
                   )}
                   <span
                     className="font-display text-2xl font-semibold tracking-tight"
