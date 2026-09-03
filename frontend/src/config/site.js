@@ -30,8 +30,8 @@ export const site = {
   maps: {
     embed:
       "https://www.google.com/maps?q=Avinguda+del+Sal%C3%B2ria+34,+25700+La+Seu+d'Urgell,+Lleida&output=embed",
-    directions: "https://maps.app.goo.gl/6inodAoKQkdFLPvv9", // Ficha Google del local
-    footerAddress: "https://maps.app.goo.gl/1CWSG3kMdLckyGGeA", // Enlace de la dirección en el pie de página
+    directions: "https://maps.app.goo.gl/9GxLuvjsdDoQm6v48", // Ficha Google del local
+    footerAddress: "https://maps.app.goo.gl/9GxLuvjsdDoQm6v48", // Enlace de la dirección en el pie de página
   },
 
   social: {
@@ -44,7 +44,7 @@ export const site = {
   // ({ name: "María G.", text: "...", rating: 5 }). Mientras esté
   // vacío, la sección muestra un enlace honesto a Google.
   reviews: {
-    googleUrl: "https://maps.app.goo.gl/6inodAoKQkdFLPvv9", // Ficha Google del local
+    googleUrl: "https://maps.app.goo.gl/9GxLuvjsdDoQm6v48", // Ficha Google del local
     items: [],
   },
 
