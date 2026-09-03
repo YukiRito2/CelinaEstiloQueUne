@@ -11,9 +11,9 @@ export const site = {
   pillars: "Personas. Destinos. Estilos. Negocios.",
 
   contact: {
-    phoneDisplay: "+34 621 42 80 21",
-    phone: "+34621428021",
-    whatsapp: "34621428021",
+    phoneDisplay: "+34 621 20 17 17",
+    phone: "+34621201717",
+    whatsapp: "34621201717",
     email: "celina.env.r@gmail.com",
   },
 

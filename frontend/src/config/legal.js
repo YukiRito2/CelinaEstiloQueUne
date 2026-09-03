@@ -6,7 +6,7 @@
 
 const contacto = "celina.env.r@gmail.com";
 const direccion = "Avinguda del Salòria, 34, 25700 La Seu d'Urgell, Lleida, España";
-const telefono = "+34 621 42 80 21";
+const telefono = "+34 621 20 17 17";
 
 export const legalDocs = {
   aviso: {

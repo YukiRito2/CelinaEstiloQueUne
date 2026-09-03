@@ -18,7 +18,7 @@ Web principal moderna y orientada a conversión para Celina (La Seu d'Urgell). F
 - Backend FastAPI: sin cambios (no necesario para esta landing).
 
 ## Datos de negocio configurados (reales)
-- WhatsApp / teléfono: +34 621 42 80 21 · Email: celina.env.r@gmail.com
+- WhatsApp / teléfono: +34 621 20 17 17 · Email: celina.env.r@gmail.com
 - Dirección: Avinguda del Salòria, 34, 25700 La Seu d'Urgell, Lleida
 - Horario: Todos los días 08:00 – 22:00
 - Instagram: https://www.instagram.com/celina_estilqueuneix/
@@ -73,7 +73,7 @@ Web principal moderna y orientada a conversión para Celina (La Seu d'Urgell). F
 - Verificado: /viajes en ES y CA (título cambia), nav vuelve a "/#inicio", home intacta, tarjeta travel del hub → /viajes, sin errores de consola.
 
 ## Actualización 2026-08-31 (6ª iteración)
-- Formulario de viaje (src/components/TravelForm.jsx) en /viajes entre pasos y CTA final: destino (obligatorio, validación), fecha ida/vuelta, nº personas, checkbox "fechas flexibles". Al enviar compone un mensaje estructurado y abre WhatsApp (wa.me/34621428021) en pestaña nueva — sin backend, igual que el flujo de envíos. Trilingüe (travelPage.form en i18n). Evento travel_click con source=travel_form y destino.
+- Formulario de viaje (src/components/TravelForm.jsx) en /viajes entre pasos y CTA final: destino (obligatorio, validación), fecha ida/vuelta, nº personas, checkbox "fechas flexibles". Al enviar compone un mensaje estructurado y abre WhatsApp (wa.me/34621201717) en pestaña nueva — sin backend, igual que el flujo de envíos. Trilingüe (travelPage.form en i18n). Evento travel_click con source=travel_form y destino.
 - Verificado e2e: error si falta destino, popup de WhatsApp con mensaje completo (Destino: Perú / Ida / Vuelta / Personas: 3 / Fechas flexibles: Sí).
 
 ## Actualización 2026-08-31 (7ª iteración)
