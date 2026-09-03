@@ -29,7 +29,7 @@ export const ReviewsSection = () => {
     <section id="resenas" className="py-24 sm:py-32 bg-[#FAF7F2]" data-testid="reviews-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal className="text-center">
-          <p className="font-mono-brand text-[11px] tracking-[0.35em] uppercase text-[#C88463] mb-4">{r.overline}</p>
+          <p className="font-mono-brand text-[11px] tracking-[0.35em] uppercase text-[#905F47] mb-4">{r.overline}</p>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight text-[#1E2430]">
             {r.title}
           </h2>

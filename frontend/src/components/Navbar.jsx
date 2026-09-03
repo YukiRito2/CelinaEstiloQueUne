@@ -111,7 +111,7 @@ export const Navbar = () => {
             <span className="font-display text-2xl sm:text-3xl font-medium tracking-tight text-[#1E2430]">
               CELINA
             </span>
-            <span className="hidden sm:block text-[10px] tracking-[0.3em] uppercase text-[#78869A]">
+            <span className="hidden sm:block text-[10px] tracking-[0.3em] uppercase text-[#626E7E]">
               Estilo que Une
             </span>
           </a>
@@ -126,7 +126,7 @@ export const Navbar = () => {
                   aria-current={active ? "page" : undefined}
                   data-testid={`nav-link-${slug(l.href)}`}
                   className={`relative px-1 py-1 text-sm font-medium transition-colors duration-300 ${
-                    active ? "text-[#C47B62]" : "link-underline text-[#1E2430]/75 hover:text-[#1E2430]"
+                    active ? "text-[#955D4A]" : "link-underline text-[#1E2430]/75 hover:text-[#1E2430]"
                   }`}
                 >
                   {l.label}
@@ -147,7 +147,7 @@ export const Navbar = () => {
               rel="noopener noreferrer"
               onClick={() => trackEvent("whatsapp_click", { source: "navbar" })}
               data-testid="nav-whatsapp-button"
-              className="inline-flex items-center gap-2 rounded-full bg-[#25D366] hover:bg-[#20BD5A] text-white text-sm font-semibold px-5 py-2.5 transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]"
+              className="inline-flex items-center gap-2 rounded-full bg-[#25D366] hover:bg-[#20BD5A] text-[#1E2430] text-sm font-semibold px-5 py-2.5 transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]"
             >
               <MessageCircle className="w-4 h-4" />
               {t.nav.whatsapp}
@@ -229,7 +229,7 @@ export const Navbar = () => {
                 rel="noopener noreferrer"
                 onClick={() => trackEvent("whatsapp_click", { source: "mobile_menu" })}
                 data-testid="mobile-nav-whatsapp-button"
-                className="flex items-center justify-center gap-2 rounded-full bg-[#25D366] text-white font-semibold px-6 py-4 text-base"
+                className="flex items-center justify-center gap-2 rounded-full bg-[#25D366] text-[#1E2430] font-semibold px-6 py-4 text-base"
               >
                 <MessageCircle className="w-5 h-5" />
                 {t.nav.whatsapp}

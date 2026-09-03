@@ -77,7 +77,7 @@ export const MoneySection = () => {
               rel="noopener noreferrer"
               onClick={() => trackEvent("whatsapp_click", { source: "money_section" })}
               data-testid="money-consult-whatsapp-btn"
-              className="inline-flex items-center justify-center gap-2 text-[#128C7E] font-semibold px-2 py-2 link-underline"
+              className="inline-flex items-center justify-center gap-2 text-[#118476] font-semibold px-2 py-2 link-underline"
             >
               <MessageCircle className="w-5 h-5" />
               {t.money.ctaWhatsapp}
@@ -87,11 +87,11 @@ export const MoneySection = () => {
 
         <Reveal delay={0.15}>
           <div className="backdrop-blur-xl bg-white/60 border border-[#C2E8D2] rounded-[2rem] p-8 sm:p-12 shadow-xl shadow-[#2D7A54]/8">
-            <p className="font-mono-brand text-[10px] tracking-[0.3em] uppercase text-[#78869A] mb-8 text-center">
+            <p className="font-mono-brand text-[10px] tracking-[0.3em] uppercase text-[#626E7E] mb-8 text-center">
               {t.money.partners}
             </p>
             <PartnerLogos />
-            <p className="mt-8 text-center text-xs text-[#78869A] font-light">{t.money.note}</p>
+            <p className="mt-8 text-center text-xs text-[#626E7E] font-light">{t.money.note}</p>
           </div>
         </Reveal>
       </div>

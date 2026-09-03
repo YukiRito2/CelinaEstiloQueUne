@@ -31,7 +31,7 @@ export const TravelSection = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-[#1A497A]/30 to-transparent" aria-hidden="true" />
             </div>
             <div className="absolute -bottom-5 left-6 backdrop-blur-xl bg-white/90 border border-[#C7E0FE] shadow-xl shadow-[#2B6CB0]/10 rounded-2xl px-5 py-3">
-              <p className="font-mono-brand text-[10px] tracking-[0.25em] uppercase text-[#78869A]">
+              <p className="font-mono-brand text-[10px] tracking-[0.25em] uppercase text-[#626E7E]">
                 {t.travel.badgeOver}
               </p>
               <p className="text-sm font-semibold text-[#1A497A]">{t.travel.badgeSub}</p>
@@ -88,7 +88,7 @@ export const TravelSection = () => {
                 rel="noopener noreferrer"
                 onClick={() => trackEvent("whatsapp_click", { source: "travel_section" })}
                 data-testid="travel-plan-whatsapp-btn"
-                className="inline-flex items-center gap-2 text-[#128C7E] font-semibold px-2 py-2 link-underline"
+                className="inline-flex items-center gap-2 text-[#118476] font-semibold px-2 py-2 link-underline"
               >
                 <MessageCircle className="w-5 h-5" />
                 {t.travelPage.form.whatsappAlt}

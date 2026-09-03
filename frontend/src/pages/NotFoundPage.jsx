@@ -79,7 +79,7 @@ export default function NotFoundPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-testid="not-found-whatsapp-btn"
-                className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#25D366] text-[#128C7E] font-semibold px-8 py-4 transition-all duration-300 hover:bg-[#25D366] hover:text-white hover:scale-[1.02] active:scale-[0.98]"
+                className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#25D366] text-[#118476] font-semibold px-8 py-4 transition-all duration-300 hover:bg-[#25D366] hover:text-[#1E2430] hover:scale-[1.02] active:scale-[0.98]"
               >
                 <MessageCircle className="w-4 h-4" />
                 {t.nav.whatsapp}

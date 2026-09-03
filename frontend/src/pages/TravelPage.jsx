@@ -105,7 +105,7 @@ export default function TravelPage() {
                   rel="noopener noreferrer"
                   onClick={() => trackEvent("whatsapp_click", { source: "travel_page_hero" })}
                   data-testid="travel-page-whatsapp-btn"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold px-8 py-4 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] hover:bg-[#20BD5A] text-[#1E2430] font-semibold px-8 py-4 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
                 >
                   <MessageCircle className="w-5 h-5" />
                   {tp.ctaPrimary}
@@ -142,7 +142,7 @@ export default function TravelPage() {
                   transition={{ delay: 1.1, duration: 0.7 }}
                   className="absolute -bottom-4 left-1/2 -translate-x-1/2 backdrop-blur-xl bg-white/90 border border-[#C7E0FE] shadow-xl rounded-2xl px-5 py-3 whitespace-nowrap"
                 >
-                  <p className="font-mono-brand text-[10px] tracking-[0.25em] uppercase text-[#78869A]">
+                  <p className="font-mono-brand text-[10px] tracking-[0.25em] uppercase text-[#626E7E]">
                     {t.travel.badgeOver}
                   </p>
                   <p className="text-sm font-semibold text-[#1A497A]">{tp.heroBadge}</p>
@@ -266,7 +266,7 @@ export default function TravelPage() {
                   rel="noopener noreferrer"
                   onClick={() => trackEvent("whatsapp_click", { source: "travel_page_visit" })}
                   data-testid="travel-page-visit-whatsapp-btn"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold px-8 py-4 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] hover:bg-[#20BD5A] text-[#1E2430] font-semibold px-8 py-4 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
                 >
                   <MessageCircle className="w-5 h-5" />
                   {tp.ctaWhats}

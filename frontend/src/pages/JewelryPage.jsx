@@ -90,7 +90,7 @@ export default function JewelryPage() {
                 ))}
               </div>
               <Reveal delay={0.2} className="mt-14 text-center">
-                <p className="text-sm font-light text-[#78869A] italic">{t.jewelry.sampleNote}</p>
+                <p className="text-sm font-light text-[#626E7E] italic">{t.jewelry.sampleNote}</p>
               </Reveal>
             </div>
           </section>
@@ -152,7 +152,7 @@ export default function JewelryPage() {
                     rel="noopener noreferrer"
                     onClick={() => trackEvent("whatsapp_click", { source: "jewelry_page_visit" })}
                     data-testid="jewelry-page-whatsapp-btn"
-                    className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#25D366] text-[#25D366] font-semibold px-8 py-4 transition-all duration-300 hover:bg-[#25D366] hover:text-white hover:scale-[1.02] active:scale-[0.98]"
+                    className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#25D366] text-[#188741] font-semibold px-8 py-4 transition-all duration-300 hover:bg-[#25D366] hover:text-[#1E2430] hover:scale-[1.02] active:scale-[0.98]"
                   >
                     <MessageCircle className="w-5 h-5" />
                     WhatsApp

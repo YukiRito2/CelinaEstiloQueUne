@@ -14,7 +14,7 @@ const themes = {
     orb1: "bg-[#D3EEDD]",
     orb2: "bg-[#FDE8E1]",
     primaryBtn: "bg-[#1E2430] hover:bg-[#2A3242] text-white",
-    alt: "text-[#128C7E]",
+    alt: "text-[#118476]",
   },
   blush: {
     bg: "bg-[#FDF2F0]",
@@ -24,7 +24,7 @@ const themes = {
     orb1: "bg-[#FBE3DF]",
     orb2: "bg-[#E8F2FC]",
     primaryBtn: "bg-[#1E2430] hover:bg-[#2A3242] text-white",
-    alt: "text-[#128C7E]",
+    alt: "text-[#118476]",
   },
   lavender: {
     bg: "bg-[#2B2638]",
@@ -44,7 +44,7 @@ const themes = {
     orb1: "bg-[#CFEDED]",
     orb2: "bg-[#D8E8FD]",
     primaryBtn: "bg-[#0E7C86] hover:bg-[#0B6870] text-white",
-    alt: "text-[#128C7E]",
+    alt: "text-[#118476]",
   },
 };
 
@@ -189,7 +189,7 @@ export const ServicePageLayout = ({
                     transition={{ delay: 1.1, duration: 0.7 }}
                     className="absolute -bottom-4 left-1/2 -translate-x-1/2 backdrop-blur-xl bg-white/90 border border-white/70 shadow-xl rounded-2xl px-5 py-3 whitespace-nowrap"
                   >
-                    <p className="font-mono-brand text-[10px] tracking-[0.25em] uppercase text-[#78869A]">{imageBadgeOver}</p>
+                    <p className="font-mono-brand text-[10px] tracking-[0.25em] uppercase text-[#626E7E]">{imageBadgeOver}</p>
                     <p className="text-sm font-semibold text-[#1E2430]">{imageBadgeSub}</p>
                   </motion.div>
                 )}

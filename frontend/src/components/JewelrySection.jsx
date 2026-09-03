@@ -73,7 +73,7 @@ export const JewelrySection = () => {
         </div>
 
         <Reveal delay={0.2} className="mt-16 text-center">
-          <p className="text-sm font-light text-[#78869A] italic">{t.jewelry.sampleNote}</p>
+          <p className="text-sm font-light text-[#626E7E] italic">{t.jewelry.sampleNote}</p>
           <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href={site.links.jewelry}
@@ -92,7 +92,7 @@ export const JewelrySection = () => {
               rel="noopener noreferrer"
               onClick={() => trackEvent("whatsapp_click", { source: "jewelry_section" })}
               data-testid="jewelry-view-whatsapp-btn"
-              className="inline-flex items-center gap-2 text-[#128C7E] font-semibold px-2 py-2 link-underline"
+              className="inline-flex items-center gap-2 text-[#118476] font-semibold px-2 py-2 link-underline"
             >
               <MessageCircle className="w-5 h-5" />
               {t.jewelry.ctaWhatsapp}

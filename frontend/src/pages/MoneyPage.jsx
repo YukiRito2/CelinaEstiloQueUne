@@ -81,7 +81,7 @@ const MoneyVisual = ({ t }) => {
           <span className="inline-flex w-10 h-10 rounded-full bg-[#25D366]/15 items-center justify-center">
             <MapPin className="w-5 h-5 text-[#2D7A54]" />
           </span>
-          <p className="mt-2 text-[10px] font-mono-brand tracking-[0.2em] uppercase text-[#78869A]">
+          <p className="mt-2 text-[10px] font-mono-brand tracking-[0.2em] uppercase text-[#626E7E]">
             {t.moneyPage.hereLabel}
           </p>
           <p className="text-base font-bold text-[#1E2430]">La Seu d'Urgell</p>
@@ -244,7 +244,7 @@ export default function MoneyPage() {
                 </div>
               </div>
               <Reveal delay={0.2} className="text-center">
-                <p className="mt-12 text-xs text-[#78869A] font-light">{t.money.note}</p>
+                <p className="mt-12 text-xs text-[#626E7E] font-light">{t.money.note}</p>
               </Reveal>
             </div>
           </section>
@@ -253,7 +253,7 @@ export default function MoneyPage() {
           <section className="py-24 sm:py-28 bg-[#FAF7F2]" data-testid="money-page-partners">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
               <Reveal>
-                <p className="font-mono-brand text-[10px] tracking-[0.3em] uppercase text-[#78869A] mb-8">
+                <p className="font-mono-brand text-[10px] tracking-[0.3em] uppercase text-[#626E7E] mb-8">
                   {t.money.partners}
                 </p>
                 <PartnerLogos className="grid grid-cols-2 sm:grid-cols-4 gap-4" />

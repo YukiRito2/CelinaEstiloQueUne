@@ -5,6 +5,13 @@ import { trackEvent } from "../lib/analytics";
 import { useLanguage } from "../context/LanguageContext";
 import { Reveal } from "./Reveal";
 
+// Logos disponibles por operador para los chips de servicio (los que aun no
+// tienen PNG/JPG en Cloudinary se muestran solo como texto, igual que en FiberPage)
+const chipLogos = {
+  SIMYO: site.images.partners.simyo,
+  JAZZTEL: site.images.partners.jazztel,
+};
+
 const meta = {
   transfers: {
     num: "01",
@@ -108,6 +115,19 @@ const meta = {
 const ServiceCard = ({ s, m, index, externalHint }) => {
   const Icon = m.icon;
   const CtaIcon = m.external ? ArrowUpRight : ArrowRight;
+
+  // Boton CTA repetido dos veces en la tarjeta (tras el texto y al final)
+  // para que sea imposible recorrer la tarjeta sin toparse con el
+  const Cta = ({ position }) => (
+    <span
+      className={`inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full font-bold px-7 py-4 text-sm sm:text-base shadow-lg ring-1 ring-black/5 transition-all duration-300 group-hover:gap-3 group-hover:shadow-xl group-hover:scale-[1.03] ${m.ctaBtn}`}
+      data-testid={`service-card-${s.id}-cta-${position}`}
+    >
+      {s.cta}
+      <CtaIcon className="w-4 h-4 sm:w-5 sm:h-5" />
+    </span>
+  );
+
   return (
     <motion.a
       href={m.href}
@@ -160,13 +180,21 @@ const ServiceCard = ({ s, m, index, externalHint }) => {
         >
           {s.text}
         </p>
+
+        <div className="mt-5">
+          <Cta position="top" />
+        </div>
+
         {s.chips.length > 0 && (
           <div className="mt-4 flex flex-wrap gap-2">
             {s.chips.map((c) => (
               <span
                 key={c}
-                className={`font-mono-brand text-[10px] tracking-[0.15em] px-3 py-1.5 rounded-full border ${m.chip}`}
+                className={`inline-flex items-center gap-1.5 font-mono-brand text-[10px] tracking-[0.15em] px-3 py-1.5 rounded-full border ${m.chip}`}
               >
+                {chipLogos[c] && (
+                  <img src={chipLogos[c]} alt="" loading="lazy" className="w-3.5 h-3.5 rounded-full object-cover" />
+                )}
                 {c}
               </span>
             ))}
@@ -174,13 +202,7 @@ const ServiceCard = ({ s, m, index, externalHint }) => {
         )}
 
         <div className="mt-auto pt-6">
-          <span
-            className={`inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full font-semibold px-6 py-3.5 text-sm shadow-md transition-all duration-300 group-hover:gap-3 group-hover:shadow-lg ${m.ctaBtn}`}
-            data-testid={`service-card-${s.id}-cta`}
-          >
-            {s.cta}
-            <CtaIcon className="w-4 h-4" />
-          </span>
+          <Cta position="bottom" />
           {m.external && (
             <p className="mt-3 font-mono-brand text-[10px] tracking-[0.15em] uppercase text-[#9F99B0]">
               {externalHint} · {new URL(m.href).host}
@@ -204,7 +226,7 @@ export const ServicesHub = () => {
           viewport={{ once: true, margin: "-10% 0px" }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
-          <p className="font-mono-brand text-[11px] tracking-[0.35em] uppercase text-[#C88463] mb-4">
+          <p className="font-mono-brand text-[11px] tracking-[0.35em] uppercase text-[#905F47] mb-4">
             {t.services.overline}
           </p>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight text-[#1E2430] max-w-2xl">

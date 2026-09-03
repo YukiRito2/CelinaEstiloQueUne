@@ -148,7 +148,7 @@ export default function FiberPage() {
                   rel="noopener noreferrer"
                   onClick={() => trackEvent("mobile_whatsapp_click", { source: "fiber_page_mobile" })}
                   data-testid="fiber-page-mobile-whatsapp-btn"
-                  className="mt-9 inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] hover:bg-[#1eb257] text-white font-semibold px-8 py-4 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+                  className="mt-9 inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] hover:bg-[#1eb257] text-[#1E2430] font-semibold px-8 py-4 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
                 >
                   <MessageCircle className="w-5 h-5" />
                   {p.mobile.ctaLabel}

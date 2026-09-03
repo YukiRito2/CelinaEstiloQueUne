@@ -413,7 +413,7 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15 }}
-            className="font-mono-brand text-[11px] sm:text-xs tracking-[0.35em] uppercase text-[#C88463] mb-6"
+            className="font-mono-brand text-[11px] sm:text-xs tracking-[0.35em] uppercase text-[#905F47] mb-6"
             data-testid="hero-overline"
           >
             {t.hero.overline}
@@ -462,7 +462,7 @@ export const Hero = () => {
               rel="noopener noreferrer"
               onClick={() => trackEvent("whatsapp_click", { source: "hero" })}
               data-testid="hero-whatsapp-btn"
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#25D366] text-[#128C7E] font-semibold px-8 py-4 text-sm sm:text-base transition-all duration-300 hover:bg-[#25D366] hover:text-white hover:scale-[1.02] active:scale-[0.98]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#25D366] text-[#118476] font-semibold px-8 py-4 text-sm sm:text-base transition-all duration-300 hover:bg-[#25D366] hover:text-[#1E2430] hover:scale-[1.02] active:scale-[0.98]"
             >
               <MessageCircle className="w-4 h-4" />
               {t.hero.ctaSecondary}

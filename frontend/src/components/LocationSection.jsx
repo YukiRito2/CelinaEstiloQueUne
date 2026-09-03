@@ -12,7 +12,7 @@ export const LocationSection = () => {
     <section id="ubicacion" className="py-24 sm:py-32 bg-[#FAF7F2]" data-testid="location-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal>
-          <p className="font-mono-brand text-[11px] tracking-[0.35em] uppercase text-[#C88463] mb-4">
+          <p className="font-mono-brand text-[11px] tracking-[0.35em] uppercase text-[#905F47] mb-4">
             {t.location.overline}
           </p>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight text-[#1E2430]">
@@ -28,7 +28,7 @@ export const LocationSection = () => {
                 data-testid="location-address-card"
               >
                 <div className="flex items-start gap-4">
-                  <span className="inline-flex w-11 h-11 rounded-xl bg-[#F5EFE6] text-[#C88463] items-center justify-center shrink-0">
+                  <span className="inline-flex w-11 h-11 rounded-xl bg-[#F5EFE6] text-[#905F47] items-center justify-center shrink-0">
                     <MapPin className="w-5 h-5" />
                   </span>
                   <div>
@@ -49,8 +49,8 @@ export const LocationSection = () => {
                   className="h-full rounded-3xl bg-white border border-[#1E2430]/8 p-7 shadow-sm"
                   data-testid="location-hours-card"
                 >
-                  <Clock className="w-5 h-5 text-[#C88463]" />
-                  <p className="mt-3 text-[10px] font-mono-brand tracking-[0.25em] uppercase text-[#78869A]">
+                  <Clock className="w-5 h-5 text-[#905F47]" />
+                  <p className="mt-3 text-[10px] font-mono-brand tracking-[0.25em] uppercase text-[#626E7E]">
                     {t.location.hours}
                   </p>
                   <p className="mt-1 text-sm font-medium text-[#1E2430]">{site.hours}</p>
@@ -63,8 +63,8 @@ export const LocationSection = () => {
                   data-testid="location-phone-card"
                   className="block h-full rounded-3xl bg-white border border-[#1E2430]/8 p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                 >
-                  <Phone className="w-5 h-5 text-[#C88463]" />
-                  <p className="mt-3 text-[10px] font-mono-brand tracking-[0.25em] uppercase text-[#78869A]">
+                  <Phone className="w-5 h-5 text-[#905F47]" />
+                  <p className="mt-3 text-[10px] font-mono-brand tracking-[0.25em] uppercase text-[#626E7E]">
                     {t.location.phone}
                   </p>
                   <p className="mt-1 text-sm font-medium text-[#1E2430]">{site.contact.phoneDisplay}</p>
@@ -76,8 +76,8 @@ export const LocationSection = () => {
                   data-testid="location-email-card"
                   className="block h-full rounded-3xl bg-white border border-[#1E2430]/8 p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                 >
-                  <Mail className="w-5 h-5 text-[#C88463]" />
-                  <p className="mt-3 text-[10px] font-mono-brand tracking-[0.25em] uppercase text-[#78869A]">
+                  <Mail className="w-5 h-5 text-[#905F47]" />
+                  <p className="mt-3 text-[10px] font-mono-brand tracking-[0.25em] uppercase text-[#626E7E]">
                     {t.location.email}
                   </p>
                   <p className="mt-1 text-sm font-medium text-[#1E2430] break-all">{site.contact.email}</p>
@@ -90,7 +90,7 @@ export const LocationSection = () => {
                   rel="noopener noreferrer"
                   onClick={() => trackEvent("whatsapp_click", { source: "location" })}
                   data-testid="location-whatsapp-card"
-                  className="block h-full rounded-3xl bg-[#25D366] p-7 shadow-sm text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#25D366]/30"
+                  className="block h-full rounded-3xl bg-[#25D366] p-7 shadow-sm text-[#1E2430] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#25D366]/30"
                 >
                   <MessageCircle className="w-5 h-5" />
                   <p className="mt-3 text-[10px] font-mono-brand tracking-[0.25em] uppercase text-white/80">

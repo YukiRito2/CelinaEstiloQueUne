@@ -84,7 +84,7 @@ const LiveStatus = () => {
       <span className="text-sm font-semibold text-[#1E2430]">
         {isOpen ? t.contact.openNow : t.contact.closedNow}
       </span>
-      <span className="text-sm font-light text-[#78869A]">{isOpen ? `· ${site.hours}` : `· ${t.contact.opensAt}`}</span>
+      <span className="text-sm font-light text-[#626E7E]">{isOpen ? `· ${site.hours}` : `· ${t.contact.opensAt}`}</span>
     </div>
   );
 };
@@ -155,7 +155,7 @@ export const ContactSection = () => {
       />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal className="text-center">
-          <p className="font-mono-brand text-[11px] tracking-[0.35em] uppercase text-[#C88463] mb-4">
+          <p className="font-mono-brand text-[11px] tracking-[0.35em] uppercase text-[#905F47] mb-4">
             {t.contact.overline}
           </p>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight text-[#1E2430]">

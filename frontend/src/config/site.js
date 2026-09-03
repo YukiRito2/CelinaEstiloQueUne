@@ -79,10 +79,10 @@ export const site = {
   },
 
   images: {
-    hero: "https://images.unsplash.com/photo-1585960622850-ed33c41d6418?crop=entropy&cs=srgb&fm=auto&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjBnb2xkJTIwamV3ZWxyeSUyMG1vZGVsJTIwd29tYW58ZW58MHx8fHwxNzgzOTgwMDc0fDA&ixlib=rb-4.1.0&w=1200&q=85",
+    hero: "https://images.unsplash.com/photo-1585960622850-ed33c41d6418?crop=entropy&cs=srgb&fm=auto&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjBnb2xkJTIwamV3ZWxyeSUyMG1vZGVsJTIwd29tYW58ZW58MHx8fHwxNzgzOTgwMDc0fDA&ixlib=rb-4.1.0&w=700&q=80",
     money: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80&fm=auto",
     travel:
-      "https://images.unsplash.com/photo-1759340875604-84a9d7473b21?crop=entropy&cs=srgb&fm=auto&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwzfHxtZWRpdGVycmFuZWFuJTIwdHJhdmVsJTIwZmxpZ2h0JTIwYWlycGxhbmUlMjB3YW5kZXJsdXN0JTIwYmVhY2glMjBkZXN0aW5hdGlvbnxlbnwwfHx8fDE3ODgxOTU0Mjl8MA&ixlib=rb-4.1.0&w=1200&q=85",
+      "https://images.unsplash.com/photo-1759340875604-84a9d7473b21?crop=entropy&cs=srgb&fm=auto&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwzfHxtZWRpdGVycmFuZWFuJTIwdHJhdmVsJTIwZmxpZ2h0JTIwYWlycGxhbmUlMjB3YW5kZXJsdXN0JTIwYmVhY2glMjBkZXN0aW5hdGlvbnxlbnwwfHx8fDE3ODgxOTU0Mjl8MA&ixlib=rb-4.1.0&w=700&q=80",
     travelDestinations: [
       "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80&fm=auto",
       "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80&fm=auto",
@@ -91,9 +91,9 @@ export const site = {
       "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=800&q=80&fm=auto",
       "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80&fm=auto",
     ],
-    studio: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&q=80&fm=auto",
-    documents: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80&fm=auto",
-    fiber: "https://images.unsplash.com/photo-1606420187127-dae7c868fa7a?crop=entropy&cs=srgb&fm=auto&w=1200&q=85",
+    studio: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1000&q=80&fm=auto",
+    documents: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1000&q=80&fm=auto",
+    fiber: "https://images.unsplash.com/photo-1606420187127-dae7c868fa7a?crop=entropy&cs=srgb&fm=auto&w=1000&q=80",
     // Logos alojados en Cloudinary (f_auto,q_auto: formato y calidad optimos
     // automaticamente segun el navegador, para que pesen lo minimo).
     partners: {
@@ -107,9 +107,9 @@ export const site = {
       jazztel: "https://res.cloudinary.com/iliifvu8/image/upload/f_auto,q_auto/celina/partners/jazztel",
     },
     jewelry: [
-      "https://images.unsplash.com/photo-1585960622850-ed33c41d6418?crop=entropy&cs=srgb&fm=auto&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjBnb2xkJTIwamV3ZWxyeSUyMG1vZGVsJTIwd29tYW58ZW58MHx8fHwxNzgzOTgwMDc0fDA&ixlib=rb-4.1.0&w=1200&q=85",
-      "https://images.unsplash.com/photo-1633934542430-0905ccb5f050?crop=entropy&cs=srgb&fm=auto&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBnb2xkJTIwamV3ZWxyeSUyMG1vZGVsJTIwd29tYW58ZW58MHx8fHwxNzgzOTgwMDc0fDA&ixlib=rb-4.1.0&w=1200&q=85",
-      "https://images.unsplash.com/photo-1620656798579-1984d9e87df7?crop=entropy&cs=srgb&fm=auto&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwzfHxsdXh1cnklMjBnb2xkJTIwamV3ZWxyeSUyMG1vZGVsJTIwd29tYW58ZW58MHx8fHwxNzgzOTgwMDc0fDA&ixlib=rb-4.1.0&w=1200&q=85",
+      "https://images.unsplash.com/photo-1585960622850-ed33c41d6418?crop=entropy&cs=srgb&fm=auto&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjBnb2xkJTIwamV3ZWxyeSUyMG1vZGVsJTIwd29tYW58ZW58MHx8fHwxNzgzOTgwMDc0fDA&ixlib=rb-4.1.0&w=700&q=80",
+      "https://images.unsplash.com/photo-1633934542430-0905ccb5f050?crop=entropy&cs=srgb&fm=auto&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBnb2xkJTIwamV3ZWxyeSUyMG1vZGVsJTIwd29tYW58ZW58MHx8fHwxNzgzOTgwMDc0fDA&ixlib=rb-4.1.0&w=700&q=80",
+      "https://images.unsplash.com/photo-1620656798579-1984d9e87df7?crop=entropy&cs=srgb&fm=auto&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwzfHxsdXh1cnklMjBnb2xkJTIwamV3ZWxyeSUyMG1vZGVsJTIwd29tYW58ZW58MHx8fHwxNzgzOTgwMDc0fDA&ixlib=rb-4.1.0&w=700&q=80",
     ],
   },
 

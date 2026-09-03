@@ -109,7 +109,7 @@ export default function AboutPage() {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.15 }}
-                className="font-mono-brand text-[11px] sm:text-xs tracking-[0.35em] uppercase text-[#C88463] mb-6"
+                className="font-mono-brand text-[11px] sm:text-xs tracking-[0.35em] uppercase text-[#905F47] mb-6"
                 data-testid="about-overline"
               >
                 {ap.overline}
@@ -140,7 +140,7 @@ export default function AboutPage() {
         <section className="py-10 sm:py-14 bg-[#FAF7F2]" data-testid="about-manifesto">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Reveal>
-              <p className="font-mono-brand text-[11px] tracking-[0.35em] uppercase text-[#78869A] mb-2">
+              <p className="font-mono-brand text-[11px] tracking-[0.35em] uppercase text-[#626E7E] mb-2">
                 {ap.manifestoOverline}
               </p>
             </Reveal>

@@ -29,13 +29,13 @@ export default function LegalPage({ doc }) {
         <section className="pb-24 sm:pb-32 pt-10" data-testid={`legal-${doc}`}>
           <div className="max-w-3xl mx-auto px-4 sm:px-6">
             <Reveal>
-              <span className="inline-flex w-12 h-12 rounded-2xl bg-[#F5EFE6] text-[#C88463] items-center justify-center">
+              <span className="inline-flex w-12 h-12 rounded-2xl bg-[#F5EFE6] text-[#905F47] items-center justify-center">
                 <Scale className="w-6 h-6" />
               </span>
               <h1 className="mt-6 font-display text-4xl sm:text-5xl font-light tracking-tight text-[#1E2430]">
                 {d.title}
               </h1>
-              <p className="mt-3 font-mono-brand text-[11px] tracking-[0.25em] uppercase text-[#78869A]">
+              <p className="mt-3 font-mono-brand text-[11px] tracking-[0.25em] uppercase text-[#626E7E]">
                 {d.updated}
               </p>
             </Reveal>

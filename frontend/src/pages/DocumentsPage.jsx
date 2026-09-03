@@ -112,7 +112,7 @@ export default function DocumentsPage() {
                     rel="noopener noreferrer"
                     onClick={() => trackEvent("whatsapp_click", { source: "documents_page_visit" })}
                     data-testid="documents-page-whatsapp-btn"
-                    className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#25D366] text-[#25D366] font-semibold px-8 py-4 transition-all duration-300 hover:bg-[#25D366] hover:text-white hover:scale-[1.02] active:scale-[0.98]"
+                    className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#25D366] text-[#188741] font-semibold px-8 py-4 transition-all duration-300 hover:bg-[#25D366] hover:text-[#1E2430] hover:scale-[1.02] active:scale-[0.98]"
                   >
                     <MessageCircle className="w-5 h-5" />
                     WhatsApp

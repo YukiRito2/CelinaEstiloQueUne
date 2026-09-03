@@ -21,7 +21,7 @@ export const RelatedServices = ({ exclude }) => {
     <section className="py-14 sm:py-16 bg-[#FAF7F2] border-t border-[#1E2430]/5" data-testid="related-services">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <Reveal>
-          <p className="font-mono-brand text-[11px] tracking-[0.3em] uppercase text-[#78869A] mb-5">
+          <p className="font-mono-brand text-[11px] tracking-[0.3em] uppercase text-[#626E7E] mb-5">
             {t.services.discoverAlso}
           </p>
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-3">

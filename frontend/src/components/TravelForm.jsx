@@ -39,7 +39,7 @@ export const TravelForm = () => {
             <div className="px-7 sm:px-10 pt-8 pb-7">
               <div className="flex items-center justify-between gap-4">
                 <div className="text-left">
-                  <p className="font-mono-brand text-[10px] tracking-[0.25em] uppercase text-[#78869A]">
+                  <p className="font-mono-brand text-[10px] tracking-[0.25em] uppercase text-[#626E7E]">
                     {f.ticketOriginLabel}
                   </p>
                   <p className="font-display text-2xl sm:text-3xl font-medium text-[#1E2430] leading-tight">
@@ -54,7 +54,7 @@ export const TravelForm = () => {
                   <span className="w-2 h-2 rounded-full bg-[#D99776] shrink-0" />
                 </div>
                 <div className="text-right">
-                  <p className="font-mono-brand text-[10px] tracking-[0.25em] uppercase text-[#78869A]">
+                  <p className="font-mono-brand text-[10px] tracking-[0.25em] uppercase text-[#626E7E]">
                     {f.ticketDestLabel}
                   </p>
                   <p className="font-display text-2xl sm:text-3xl italic font-medium text-[#C47B62] leading-tight">
@@ -117,12 +117,12 @@ export const TravelForm = () => {
                 rel="noopener noreferrer"
                 onClick={() => trackEvent("whatsapp_click", { source: "travel_form_alt" })}
                 data-testid="travel-form-whatsapp-alt"
-                className="mt-4 w-full inline-flex items-center justify-center gap-2 text-[#128C7E] font-semibold py-2 link-underline"
+                className="mt-4 w-full inline-flex items-center justify-center gap-2 text-[#118476] font-semibold py-2 link-underline"
               >
                 <MessageCircle className="w-5 h-5" />
                 {f.whatsappAlt}
               </a>
-              <p className="mt-4 text-center text-xs text-[#78869A] font-light">{f.note}</p>
+              <p className="mt-4 text-center text-xs text-[#626E7E] font-light">{f.note}</p>
             </div>
           </div>
         </Reveal>

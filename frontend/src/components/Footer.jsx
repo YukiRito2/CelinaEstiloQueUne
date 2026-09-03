@@ -139,7 +139,7 @@ export const Footer = () => {
           </div>
           <div className="flex flex-col sm:flex-row justify-between items-center gap-3">
           <p className="text-xs font-light text-[#9F99B0]">{t.footer.rights}</p>
-          <p className="font-mono-brand text-[10px] tracking-[0.25em] uppercase text-[#9F99B0]/60">
+          <p className="font-mono-brand text-[10px] tracking-[0.25em] uppercase text-[#9F99B0]">
             {t.hero.pillars}
           </p>
           </div>
