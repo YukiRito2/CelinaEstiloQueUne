@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Clock3, Coffee, Globe2, HandHeart, MapPin, Package, Printer, ShieldCheck, Smartphone } from "lucide-react";
+import { Clock3, Coffee, Globe2, HandHeart, MapPin, Package, Printer, Send, ShieldCheck, Smartphone } from "lucide-react";
 import { site } from "../config/site";
 import { cloudinaryWidth } from "../lib/cloudinary";
 import { trackEvent } from "../lib/analytics";
@@ -12,6 +12,7 @@ import { ServicePageLayout } from "../components/ServicePageLayout";
 import { Reveal } from "../components/Reveal";
 import { PartnerLogos } from "../components/PartnerLogos";
 import { RelatedServices } from "../components/RelatedServices";
+import { IrresistibleButton } from "../components/IrresistibleButton/IrresistibleButton";
 import { usePageSeo, useBreadcrumbSchema } from "../lib/seo";
 
 const featureIcons = [Globe2, HandHeart, Smartphone];
@@ -160,10 +161,16 @@ export default function MoneyPage() {
           backTo="/servicios"
           backLabel={t.ui.backServices}
           right={<MoneyVisual t={t} />}
-          ctaLabel={p.ctaForm}
-          ctaHref={site.links.moneyForm}
-          ctaExternal
-          ctaEvent="money_transfer_click"
+          ctaButton={
+            <IrresistibleButton
+              to={site.links.moneyForm}
+              label={p.ctaForm}
+              variant="money"
+              icon={<Send className="w-4 h-4 sm:w-[18px] sm:h-[18px]" />}
+              data-testid="service-page-cta-btn"
+              onClick={() => trackEvent("money_transfer_click", { source: "service_page_hero" })}
+            />
+          }
           ctaHint={p.ctaHint}
           whatsappLabel={t.money.ctaWhatsapp}
           whatsappMessage={t.messages.money}
@@ -323,17 +330,17 @@ export default function MoneyPage() {
                 <p className="mt-4 text-base sm:text-lg font-light text-[#C8CFDB] leading-relaxed max-w-xl mx-auto">
                   {p.closingText}
                 </p>
-                <a
-                  href={site.links.moneyForm}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => trackEvent("money_transfer_click", { source: "money_page_closing" })}
-                  data-testid="money-page-closing-cta-btn"
-                  className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-white hover:bg-[#EEF7F2] text-[#1E2430] font-semibold px-10 py-5 text-base sm:text-lg transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-xl shadow-black/20"
-                >
-                  {p.ctaForm}
-                  <ArrowUpRight className="w-5 h-5" />
-                </a>
+                <div className="mt-8 flex justify-center">
+                  <IrresistibleButton
+                    to={site.links.moneyForm}
+                    label={p.ctaForm}
+                    variant="money"
+                    size="lg"
+                    icon={<Send className="w-4 h-4 sm:w-[18px] sm:h-[18px]" />}
+                    data-testid="money-page-closing-cta-btn"
+                    onClick={() => trackEvent("money_transfer_click", { source: "money_page_closing" })}
+                  />
+                </div>
               </Reveal>
             </div>
           </section>

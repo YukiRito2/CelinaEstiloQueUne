@@ -66,6 +66,7 @@ export const ServicePageLayout = ({
   ctaExternal = false,
   ctaEvent,
   ctaHint,
+  ctaButton,
   whatsappLabel,
   whatsappMessage,
   children,
@@ -124,16 +125,18 @@ export const ServicePageLayout = ({
               transition={{ duration: 0.8, delay: 0.8 }}
               className="mt-9 flex flex-col sm:flex-row sm:items-center gap-4"
             >
-              <a
-                href={ctaHref}
-                {...(ctaExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                onClick={ctaEvent ? () => trackEvent(ctaEvent, { source: "service_page_hero" }) : undefined}
-                data-testid="service-page-cta-btn"
-                className={`inline-flex items-center justify-center gap-2 rounded-full font-semibold px-8 py-4 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] ${th.primaryBtn}`}
-              >
-                {ctaLabel}
-                <ArrowUpRight className="w-5 h-5" />
-              </a>
+              {ctaButton ?? (
+                <a
+                  href={ctaHref}
+                  {...(ctaExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                  onClick={ctaEvent ? () => trackEvent(ctaEvent, { source: "service_page_hero" }) : undefined}
+                  data-testid="service-page-cta-btn"
+                  className={`inline-flex items-center justify-center gap-2 rounded-full font-semibold px-8 py-4 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] ${th.primaryBtn}`}
+                >
+                  {ctaLabel}
+                  <ArrowUpRight className="w-5 h-5" />
+                </a>
+              )}
               <a
                 href={waLink(whatsappMessage)}
                 target="_blank"
