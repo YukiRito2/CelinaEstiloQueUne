@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
-import { ArrowRight, ArrowUpRight, Banknote, Plane, Gem, FileText, MonitorSmartphone, Wifi } from "lucide-react";
+import { ArrowRight, Banknote, Plane, Gem, FileText, MonitorSmartphone, Wifi } from "lucide-react";
 import { site } from "../config/site";
 import { cloudinaryWidth } from "../lib/cloudinary";
 import { trackEvent } from "../lib/analytics";
 import { useLanguage } from "../context/LanguageContext";
 import { Reveal } from "./Reveal";
+import { IrresistibleButton } from "./IrresistibleButton/IrresistibleButton";
 
 // Logos disponibles por operador para los chips de servicio (los que aun no
 // tienen PNG/JPG en Cloudinary se muestran solo como texto, igual que en FiberPage)
@@ -16,6 +17,7 @@ const chipLogos = {
 const meta = {
   transfers: {
     num: "01",
+    variant: "money",
     icon: Banknote,
     href: site.links.money,
     event: "money_transfer_click",
@@ -25,13 +27,13 @@ const meta = {
     card: "bg-[#EEF7F2] border-[#C2E8D2]",
     tag: "bg-[#2D7A54] text-white",
     iconBox: "bg-[#D3EEDD] text-[#2D7A54]",
-    ctaBtn: "bg-[#2D7A54] hover:bg-[#256646] text-white",
     chip: "bg-white/70 border-[#C2E8D2] text-[#1E5238]",
     shadow: "hover:shadow-[#2D7A54]/15",
     dark: false,
   },
   travel: {
     num: "02",
+    variant: "travel",
     icon: Plane,
     href: site.links.travel,
     event: "travel_click",
@@ -41,13 +43,13 @@ const meta = {
     card: "bg-[#F0F6FF] border-[#C7E0FE]",
     tag: "bg-[#2B6CB0] text-white",
     iconBox: "bg-[#D8E8FD] text-[#2B6CB0]",
-    ctaBtn: "bg-[#2B6CB0] hover:bg-[#235a94] text-white",
     chip: "bg-white/70 border-[#C7E0FE] text-[#1A497A]",
     shadow: "hover:shadow-[#2B6CB0]/15",
     dark: false,
   },
   jewelry: {
     num: "03",
+    variant: "jewelry",
     icon: Gem,
     href: site.links.jewelry,
     event: "jewelry_click",
@@ -57,13 +59,13 @@ const meta = {
     card: "bg-[#FDF2F0] border-[#F7D8D3]",
     tag: "bg-[#C47B62] text-white",
     iconBox: "bg-[#FBE3DF] text-[#C47B62]",
-    ctaBtn: "bg-[#C47B62] hover:bg-[#ac6850] text-white",
     chip: "bg-white/70 border-[#F7D8D3] text-[#874B38]",
     shadow: "hover:shadow-[#C47B62]/15",
     dark: false,
   },
   documents: {
     num: "04",
+    variant: "documents",
     icon: FileText,
     href: site.links.documents,
     event: "documents_click",
@@ -73,13 +75,13 @@ const meta = {
     card: "bg-[#FBF1E6] border-[#EAD2B3]",
     tag: "bg-[#B8763F] text-white",
     iconBox: "bg-[#F3E1C8] text-[#B8763F]",
-    ctaBtn: "bg-[#B8763F] hover:bg-[#9c632f] text-white",
     chip: "bg-white/70 border-[#EAD2B3] text-[#7A4E24]",
     shadow: "hover:shadow-[#B8763F]/15",
     dark: false,
   },
   studio: {
     num: "05",
+    variant: "studio",
     icon: MonitorSmartphone,
     href: site.links.studio,
     event: "studio_click",
@@ -90,13 +92,13 @@ const meta = {
     card: "bg-[#2B2638] border-[#E2D4F0]/15",
     tag: "bg-[#A78BFA] text-[#2B2638]",
     iconBox: "bg-[#A78BFA]/15 text-[#A78BFA]",
-    ctaBtn: "bg-[#A78BFA] hover:bg-[#c4b5fc] text-[#2B2638]",
     chip: "",
     shadow: "hover:shadow-black/40",
     dark: true,
   },
   fiber: {
     num: "06",
+    variant: "fiber",
     icon: Wifi,
     href: site.links.fiber,
     event: "fiber_click",
@@ -106,7 +108,6 @@ const meta = {
     card: "bg-[#E9F6F6] border-[#BFE6E6]",
     tag: "bg-[#0E7C86] text-white",
     iconBox: "bg-[#CFEDED] text-[#0E7C86]",
-    ctaBtn: "bg-[#0E7C86] hover:bg-[#0B6870] text-white",
     chip: "bg-white/70 border-[#BFE6E6] text-[#0B5158]",
     shadow: "hover:shadow-[#0E7C86]/15",
     dark: false,
@@ -115,19 +116,6 @@ const meta = {
 
 const ServiceCard = ({ s, m, index, externalHint }) => {
   const Icon = m.icon;
-  const CtaIcon = m.external ? ArrowUpRight : ArrowRight;
-
-  // Boton CTA repetido dos veces en la tarjeta (tras el texto y al final)
-  // para que sea imposible recorrer la tarjeta sin toparse con el
-  const Cta = ({ position }) => (
-    <span
-      className={`inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full font-bold px-7 py-4 text-sm sm:text-base shadow-lg ring-1 ring-black/5 transition-all duration-300 group-hover:gap-3 group-hover:shadow-xl group-hover:scale-[1.03] ${m.ctaBtn}`}
-      data-testid={`service-card-${s.id}-cta-${position}`}
-    >
-      {s.cta}
-      <CtaIcon className="w-4 h-4 sm:w-5 sm:h-5" />
-    </span>
-  );
 
   return (
     <motion.a
@@ -182,10 +170,6 @@ const ServiceCard = ({ s, m, index, externalHint }) => {
           {s.text}
         </p>
 
-        <div className="mt-5">
-          <Cta position="top" />
-        </div>
-
         {s.chips.length > 0 && (
           <div className="mt-4 flex flex-wrap gap-2">
             {s.chips.map((c) => (
@@ -203,7 +187,14 @@ const ServiceCard = ({ s, m, index, externalHint }) => {
         )}
 
         <div className="mt-auto pt-6">
-          <Cta position="bottom" />
+          <IrresistibleButton
+            as="span"
+            label={s.cta}
+            variant={m.variant}
+            icon={<Icon className="w-4 h-4 sm:w-[18px] sm:h-[18px]" />}
+            className="w-full sm:w-auto"
+            data-testid={`service-card-${s.id}-cta`}
+          />
           {m.external && (
             <p className="mt-3 font-mono-brand text-[10px] tracking-[0.15em] uppercase text-[#9F99B0]">
               {externalHint} · {new URL(m.href).host}

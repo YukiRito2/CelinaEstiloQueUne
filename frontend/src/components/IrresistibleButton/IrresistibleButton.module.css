@@ -1,0 +1,174 @@
+.btn {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  min-width: 44px;
+  border-radius: 999px;
+  font-weight: 700;
+  color: var(--ib-ink, #fff);
+  background: linear-gradient(135deg, var(--ib-accent) 0%, var(--ib-accent-2) 100%);
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 6px 18px -6px var(--ib-glow);
+  transition:
+    transform 220ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 260ms ease,
+    filter 200ms ease;
+  animation: ib-rest-pulse 3.6s ease-in-out infinite;
+}
+
+.size-sm {
+  padding: 0.6rem 1.2rem;
+  font-size: 0.8125rem;
+}
+
+.size-md {
+  padding: 0.8rem 1.5rem;
+  font-size: 0.875rem;
+}
+
+.size-lg {
+  padding: 1rem 1.75rem;
+  font-size: 0.9375rem;
+}
+
+@keyframes ib-rest-pulse {
+  0%,
+  100% {
+    box-shadow: 0 6px 18px -6px var(--ib-glow);
+  }
+  50% {
+    box-shadow: 0 10px 30px -6px var(--ib-glow);
+  }
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(115deg, transparent 20%, rgba(255, 255, 255, 0.55) 48%, transparent 76%);
+  transform: translateX(-130%);
+  transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+}
+
+.btn:hover::before,
+.btn:focus-visible::before {
+  transform: translateX(130%);
+}
+
+.btn:hover,
+.btn:focus-visible {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 16px 34px -8px var(--ib-glow);
+  animation-play-state: paused;
+}
+
+.btn:active {
+  transform: translateY(0) scale(0.97);
+  transition-duration: 80ms;
+}
+
+.btn:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.9);
+  outline-offset: 3px;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon {
+  display: inline-flex;
+}
+
+.arrow {
+  display: inline-flex;
+  transition: transform 260ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.btn:hover .arrow,
+.btn:focus-visible .arrow,
+.btn:active .arrow {
+  transform: translateX(5px);
+}
+
+.ripple {
+  position: absolute;
+  z-index: 2;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+  transform: scale(0);
+  pointer-events: none;
+  animation: ib-ripple 600ms ease-out forwards;
+}
+
+@keyframes ib-ripple {
+  to {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+}
+
+/* Variantes: mismos colores de marca que ya usa cada servicio en
+   ServicesHub (tag/iconBox/ctaBtn), para que el boton encaje con el
+   resto de la tarjeta en vez de traer una paleta nueva. */
+.money {
+  --ib-accent: #2d7a54;
+  --ib-accent-2: #3f9b6e;
+  --ib-glow: rgba(45, 122, 84, 0.5);
+}
+.travel {
+  --ib-accent: #2b6cb0;
+  --ib-accent-2: #4a8fd6;
+  --ib-glow: rgba(43, 108, 176, 0.5);
+}
+.jewelry {
+  --ib-accent: #c47b62;
+  --ib-accent-2: #d99776;
+  --ib-glow: rgba(196, 123, 98, 0.5);
+}
+.documents {
+  --ib-accent: #b8763f;
+  --ib-accent-2: #d0955f;
+  --ib-glow: rgba(184, 118, 63, 0.5);
+}
+.studio {
+  --ib-accent: #a78bfa;
+  --ib-accent-2: #c4b5fc;
+  --ib-glow: rgba(167, 139, 250, 0.5);
+  --ib-ink: #2b2638;
+}
+.fiber {
+  --ib-accent: #0e7c86;
+  --ib-accent-2: #14a0ac;
+  --ib-glow: rgba(14, 124, 134, 0.5);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .btn::before,
+  .arrow,
+  .ripple {
+    animation: none !important;
+    transition: none !important;
+  }
+  .btn:hover,
+  .btn:focus-visible,
+  .btn:active {
+    transform: none;
+  }
+  .btn::before {
+    display: none;
+  }
+}

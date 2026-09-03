@@ -7,10 +7,9 @@ import {
   useSpring,
   useTransform,
 } from "framer-motion";
-import { ArrowDown, Banknote, Gem, MessageCircle, MonitorSmartphone, Plane } from "lucide-react";
+import { ArrowDown, Banknote, Gem, MonitorSmartphone, Plane } from "lucide-react";
 import { site } from "../config/site";
 import { cloudinaryWidth } from "../lib/cloudinary";
-import { waLink } from "../lib/whatsapp";
 import { trackEvent } from "../lib/analytics";
 import { useLanguage } from "../context/LanguageContext";
 import { MaskedLine } from "./Reveal";
@@ -483,7 +482,7 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.95 }}
-            className="mt-9 flex flex-col sm:flex-row gap-4"
+            className="mt-9"
           >
             <a
               href="/servicios"
@@ -492,17 +491,6 @@ export const Hero = () => {
             >
               {t.hero.ctaPrimary}
               <ArrowDown className="w-4 h-4" />
-            </a>
-            <a
-              href={waLink(t.messages.general)}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => trackEvent("whatsapp_click", { source: "hero" })}
-              data-testid="hero-whatsapp-btn"
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#25D366] text-[#118476] font-semibold px-8 py-4 text-sm sm:text-base transition-all duration-300 hover:bg-[#25D366] hover:text-[#1E2430] hover:scale-[1.02] active:scale-[0.98]"
-            >
-              <MessageCircle className="w-4 h-4" />
-              {t.hero.ctaSecondary}
             </a>
           </motion.div>
 
