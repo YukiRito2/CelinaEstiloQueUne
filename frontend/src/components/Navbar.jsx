@@ -1,13 +1,44 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { useLocation } from "react-router-dom";
-import { Menu, X, MessageCircle } from "lucide-react";
+import { X, MessageCircle } from "lucide-react";
 import { waLink } from "../lib/whatsapp";
 import { trackEvent } from "../lib/analytics";
 import { useLanguage } from "../context/LanguageContext";
 
 const FOCUSABLE_SELECTOR =
   'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
+// Curva "expo-out": arranca rapido y frena con suavidad — se siente mas
+// premium que un ease lineal para revelar paneles grandes
+const EASE_OUT_EXPO = [0.16, 1, 0.3, 1];
+
+// Icono hamburguesa que se transforma en X (en vez del intercambio brusco
+// de iconos Menu/X): dos barras que rotan y convergen, la del medio se
+// desvanece. Se ve en el instante antes de que el panel cubra el boton,
+// y de nuevo al cerrar, cuando el panel se retira y el boton reaparece.
+const HamburgerIcon = ({ open, reduceMotion }) => {
+  const barTransition = { duration: reduceMotion ? 0 : 0.35, ease: EASE_OUT_EXPO };
+  return (
+    <span className="relative w-5 h-5 shrink-0" aria-hidden="true">
+      <motion.span
+        className="absolute left-0 top-1.5 h-[2px] w-5 rounded-full bg-white"
+        animate={{ rotate: open ? 45 : 0, y: open ? 6 : 0 }}
+        transition={barTransition}
+      />
+      <motion.span
+        className="absolute left-0 top-[9px] h-[2px] w-5 rounded-full bg-white"
+        animate={{ opacity: open ? 0 : 1 }}
+        transition={{ duration: reduceMotion ? 0 : 0.2 }}
+      />
+      <motion.span
+        className="absolute left-0 bottom-1.5 h-[2px] w-5 rounded-full bg-white"
+        animate={{ rotate: open ? -45 : 0, y: open ? -6 : 0 }}
+        transition={barTransition}
+      />
+    </span>
+  );
+};
 
 const LangSwitch = ({ className = "" }) => {
   const { lang, setLang } = useLanguage();
@@ -159,13 +190,13 @@ export const Navbar = () => {
             <button
               ref={menuBtnRef}
               className="inline-flex items-center gap-1.5 h-11 pl-3.5 pr-4 rounded-full bg-[#1E2430] text-white shadow-md shadow-[#1E2430]/20 active:scale-[0.97] transition-transform"
-              onClick={() => setOpen(true)}
-              aria-label={t.nav.openMenu}
+              onClick={() => setOpen((v) => !v)}
+              aria-label={open ? t.nav.closeMenu : t.nav.openMenu}
               aria-expanded={open}
               aria-controls="mobile-menu"
               data-testid="nav-menu-open-button"
             >
-              <Menu className="w-5 h-5" />
+              <HamburgerIcon open={open} reduceMotion={reduceMotion} />
               <span className="text-sm font-semibold">{t.nav.menuLabel}</span>
             </button>
           </div>
@@ -180,14 +211,18 @@ export const Navbar = () => {
             role="dialog"
             aria-modal="true"
             aria-label={t.nav.openMenu}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: reduceMotion ? 0 : 0.3 }}
+            initial={{ opacity: 0, scale: reduceMotion ? 1 : 1.04 }}
+            animate={{ opacity: 1, scale: 1, transition: { duration: reduceMotion ? 0 : 0.45, ease: EASE_OUT_EXPO } }}
+            exit={{ opacity: 0, scale: reduceMotion ? 1 : 0.98, transition: { duration: reduceMotion ? 0 : 0.25, ease: [0.4, 0, 1, 1] } }}
             className="fixed inset-0 z-[60] bg-[#26232E] text-white flex flex-col overflow-y-auto overscroll-contain pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)] pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)]"
             data-testid="mobile-menu"
           >
-            <div className="h-16 px-4 flex items-center justify-between shrink-0">
+            <motion.div
+              initial={{ opacity: 0, y: reduceMotion ? 0 : -8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: reduceMotion ? 0 : 0.4, ease: EASE_OUT_EXPO }}
+              className="h-16 px-4 flex items-center justify-between shrink-0"
+            >
               <span className="font-display text-2xl">CELINA</span>
               <button
                 ref={closeBtnRef}
@@ -198,7 +233,7 @@ export const Navbar = () => {
               >
                 <X className="w-6 h-6" />
               </button>
-            </div>
+            </motion.div>
             <nav className="flex-1 flex flex-col justify-center px-8 gap-2 py-6">
               {t.nav.links.map((l, i) => {
                 const active = pathname === l.href;
@@ -208,9 +243,9 @@ export const Navbar = () => {
                     href={l.href}
                     onClick={() => setOpen(false)}
                     aria-current={active ? "page" : undefined}
-                    initial={{ opacity: 0, x: reduceMotion ? 0 : -24 }}
+                    initial={{ opacity: 0, x: reduceMotion ? 0 : -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: reduceMotion ? 0 : 0.08 * i, duration: reduceMotion ? 0 : 0.5 }}
+                    transition={{ delay: reduceMotion ? 0 : 0.07 * i + 0.1, duration: reduceMotion ? 0 : 0.45, ease: EASE_OUT_EXPO }}
                     className={`font-display text-4xl py-3 border-b border-white/10 transition-colors flex items-center gap-3 ${
                       active ? "text-[#D99776]" : "hover:text-[#D99776]"
                     }`}
@@ -222,19 +257,24 @@ export const Navbar = () => {
                 );
               })}
             </nav>
-            <div className="p-8 shrink-0">
+            <motion.div
+              initial={{ opacity: 0, y: reduceMotion ? 0 : 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: reduceMotion ? 0 : 0.07 * t.nav.links.length + 0.15, duration: reduceMotion ? 0 : 0.45, ease: EASE_OUT_EXPO }}
+              className="p-8 shrink-0"
+            >
               <a
                 href={waLink(t.messages.general)}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackEvent("whatsapp_click", { source: "mobile_menu" })}
                 data-testid="mobile-nav-whatsapp-button"
-                className="flex items-center justify-center gap-2 rounded-full bg-[#25D366] text-[#1E2430] font-semibold px-6 py-4 text-base"
+                className="flex items-center justify-center gap-2 rounded-full bg-[#25D366] text-[#1E2430] font-semibold px-6 py-4 text-base transition-transform duration-300 active:scale-[0.98]"
               >
                 <MessageCircle className="w-5 h-5" />
                 {t.nav.whatsapp}
               </a>
-            </div>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
